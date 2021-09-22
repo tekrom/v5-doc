@@ -1,20 +1,6 @@
-[![DocSearch][1]][2]
 
-The easiest way to add search to your documentation. For free.
 
-[![Netlify Status][3]][4]
-
-DocSearch will crawl your documentation website, push its content to an Algolia
-index, and allow you to add a dropdown search menu for your users to find
-relevant content in no time.
-
-Check out our [website][2] for a complete explanation and documentation.
-
-[![Bootstrap demo][5]][2]
-
-## Related projects
-
-DocSearch gathers 4 repositories:
+## DocSearch gathers 4 repositories
 
 - [algolia/docsearch][6] contains the `docsearch.js` code source.
 - [algolia/docsearch-configs][7] contains the JSON files representing all the
@@ -24,8 +10,6 @@ DocSearch gathers 4 repositories:
   Docker image
 - [algolia/docsearch-website][9] contains the documentation website built
   [thanks to docusaurus 2][10]
-
-## Website
 
 ### Installation
 
@@ -39,12 +23,6 @@ DocSearch gathers 4 repositories:
 Netlify handles the deployment of this website. If you are part of the DocSearch
 core team. [Access the Netlify Dashboard][11].
 
-[1]: ./static/img/docsearch-logo.svg
-[2]: https://docsearch.algolia.com/
-[3]:
-  https://api.netlify.com/api/v1/badges/30eacc09-d4b2-4a53-879b-04d40aaea454/deploy-status
-[4]: https://app.netlify.com/sites/docsearch/deploys
-[5]: ./static/img/demos/example-bootstrap.gif
 [6]: https://github.com/algolia/docsearch
 [7]: https://github.com/algolia/docsearch-configs
 [8]: https://github.com/algolia/docsearch-scraper
