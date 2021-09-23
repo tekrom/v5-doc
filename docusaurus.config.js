@@ -9,7 +9,7 @@ module.exports = {
   title: 'v5 Documentation',
   tagline:
     'T-SOFT v5 standart temasına ait tüm detayları bulabileceğiniz dökümantasyon.',
-  url: 'https://docsearch.algolia.com',
+  url: 'https://v5-doc.netlify.app/',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'T-SOFT',
@@ -18,7 +18,7 @@ module.exports = {
   plugins: ['my-loaders'], // loader required for .svg
   themeConfig: {
     algolia: {
-      apiKey: '893369d8c36809bd27bda6c92fc817e8',
+      apiKey: 'd2ffaf1ae5e513d062f12e7c4dcc16a2',
       indexName: 'v5doc',
     },
     navbar: {
