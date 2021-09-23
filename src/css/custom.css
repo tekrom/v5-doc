@@ -32,7 +32,6 @@ html[data-theme='dark'] {
   bottom: 0;
   right: 0;
   background-repeat: no-repeat;
-  background-image: url('../../static/img/assets/bg-analytics.svg');
   background-size: cover;
   background-position: center -300px;
 }
@@ -165,6 +164,9 @@ html[data-theme='dark'] [class*='light-Card'] {
   border-width: 1px 0 0;
 }
 
+.text-nowrap {
+  white-space: nowrap;
+}
 /* v5 all css */
 
 .noUi-target,
@@ -405,9 +407,6 @@ html[data-theme='dark'] [class*='light-Card'] {
   transform: translate(0, -18px);
   top: auto;
   right: 28px
-}
-.lg-icon {
-  font-family: "tsoft-icon"
 }
 .lg-actions .lg-next,
 .lg-actions .lg-prev {
@@ -2520,8 +2519,8 @@ span.flatpickr-weekday {
 }
 ::-webkit-scrollbar {
   background: #e6e6e6;
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   border-radius: 5px
 }
 ::-webkit-scrollbar-button {
@@ -3230,10 +3229,11 @@ body [v-cloak] > *,
 }
 @media(min-width:768px) {
   .col-md-auto {
-    flex: 1 0 0%;
+    flex: 0 0 auto;
     max-width: 100%;
     padding-left: 15px;
-    padding-right: 15px
+    padding-right: 15px;
+    width: auto;
   }
   .col-md-1 {
     flex-basis: 8.3333333333%;

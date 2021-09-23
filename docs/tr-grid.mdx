@@ -46,10 +46,9 @@ Full genişlik için <code>.container-fluid</code>: tüm görünüm alanları ve
 kapsayacak şekilde ayarlar.
 
 ## Izgara seçenekleri
-v5 ızgara sistemi, altı varsayılan kesme noktasının tümüne ve özelleştirdiğiniz kesme noktalarına uyum sağlayabilir.
-Altı varsayılan ızgara katmanı aşağıdaki gibidir:
+v5 ızgara sistemi, beş varsayılan kesme noktasının tümüne ve özelleştirdiğiniz kesme noktalarına uyum sağlayabilir.
+Beş varsayılan ızgara katmanı aşağıdaki gibidir:
 
-* Extra small (xs)
 * Small (sm)
 * Medium (md)
 * Large (lg)
@@ -57,15 +56,14 @@ Altı varsayılan ızgara katmanı aşağıdaki gibidir:
 * Extra extra large (xxl)
 
 Yukarıda belirtildiği gibi, bu kesme noktalarının her birinin kendi konteyneri, benzersiz sınıf öneki ve
-değiştiricileri vardır. Kılavuzun bu kesme noktalarında nasıl değiştiği aşağıda açıklanmıştır.
+değiştiricileri vardır. Bu kesme noktalarında nasıl değiştiği aşağıdaki tabloda açıklanmıştır.
 
-<table class="table mb-4">
+<table class="text-left mb-4">
   <thead>
     <tr>
       <th scope="col"></th>
       <th scope="col">
-        xs
-        <span class="fw-normal">&lt;576px</span>
+        &nbsp;
       </th>
       <th scope="col">
         sm
@@ -81,7 +79,7 @@ değiştiricileri vardır. Kılavuzun bu kesme noktalarında nasıl değiştiği
       </th>
       <th scope="col">
         xl
-        <span class="fw-normal">≥1200px</span>
+        <span class="fw-normal">≥1170px</span>
       </th>
       <th scope="col">
         xxl
@@ -91,22 +89,22 @@ değiştiricileri vardır. Kılavuzun bu kesme noktalarında nasıl değiştiği
   </thead>
   <tbody>
     <tr>
-      <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
+      <th scope="row"><span class="d-block">Container</span> <code class="fw-normal">max-width</code></th>
       <td>None (auto)</td>
-      <td>540px</td>
-      <td>720px</td>
-      <td>960px</td>
+      <td>560px</td>
+      <td>738px</td>
+      <td>962px</td>
       <td>1140px</td>
-      <td>1320px</td>
+      <td>1370px</td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Class prefix</th>
-      <td><code>.col-</code></td>
-      <td><code>.col-sm-</code></td>
-      <td><code>.col-md-</code></td>
-      <td><code>.col-lg-</code></td>
-      <td><code>.col-xl-</code></td>
-      <td><code>.col-xxl-</code></td>
+      <td><code class="text-nowrap">.col-</code></td>
+      <td><code class="text-nowrap">.col-sm-</code></td>
+      <td><code class="text-nowrap">.col-md-</code></td>
+      <td><code class="text-nowrap">.col-lg-</code></td>
+      <td><code class="text-nowrap">.col-xl-</code></td>
+      <td><code class="text-nowrap">.col-xxl-</code></td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row"># of columns</th>
@@ -114,7 +112,7 @@ değiştiricileri vardır. Kılavuzun bu kesme noktalarında nasıl değiştiği
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Gutter width</th>
-      <td colspan="6">1.5rem (.75rem on left and right)</td>
+      <td colspan="6">md>30px (15px on left and right) | md&lt;16px  (8px on left and right)</td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Custom gutters</th>
@@ -122,7 +120,7 @@ değiştiricileri vardır. Kılavuzun bu kesme noktalarında nasıl değiştiği
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Nestable</th>
-      <td colspan="6"><a href="#nesting">Yes</a></td>
+      <td colspan="6"><a href="#">Yes</a></td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Column ordering</th>
@@ -131,30 +129,32 @@ değiştiricileri vardır. Kılavuzun bu kesme noktalarında nasıl değiştiği
   </tbody>
 </table>
 
+---
+
 ## Otomatik mizanpaj sütunları
 col-sm-6, col-md-4 gibi değerler olmadan esnek yapı ile kesme noktasına özgü sütun sınıflarını kullanın.
 
 ### Eşit genişlik
 
 <div class="p-2 border bdr-2 mb-3">
-    <div class="container">
+    <div class="px-1">
       <div class="row">
         <div class="col p-2 border bg-gray">
-          1 of 2
+          1 / 2
         </div>
         <div class="col p-2 border bg-gray">
-          2 of 2
+          2 / 2
         </div>
       </div>
       <div class="row">
         <div class="col p-2 border bg-gray">
-          1 of 3
+          1 / 3
         </div>
         <div class="col p-2 border bg-gray">
-          2 of 3
+          2 / 3
         </div>
         <div class="col p-2 border bg-gray">
-          3 of 3
+          3 / 3
         </div>
       </div>
     </div>
@@ -164,52 +164,54 @@ col-sm-6, col-md-4 gibi değerler olmadan esnek yapı ile kesme noktasına özg�
 <div class="container">
   <div class="row">
     <div class="col">
-      1 of 2
+      1 / 2
     </div>
     <div class="col">
-      2 of 2
+      2 / 2
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      1 / 3
     </div>
     <div class="col">
-      2 of 3
+      2 / 3
     </div>
     <div class="col">
-      3 of 3
+      3 / 3
     </div>
   </div>
 </div>
 ```
+
+---
 
 ### Bir sütun genişliğini ayarlama
 Flexbox ızgara sütunları için otomatik yerleşim, bir sütunun genişliğini ayarlayabileceğiniz ve diğer
 sütunların ölçüsünü otomatik olarak yeniden boyutlandırılmasını sağlayabileceğiniz anlamına gelir.
 
 <div class="p-2 border bdr-2 mb-3">
-    <div class="container">
+    <div class="px-1">
       <div class="row">
         <div class="col p-2 border bg-gray">
-          1 of 3
+          1 / 3
         </div>
         <div class="col-6 p-2 border bg-gray">
-          2 of 3 (wider)
+          2 / 3 (daha geniş)
         </div>
         <div class="col p-2 border bg-gray">
-          3 of 3
+          3 / 3
         </div>
       </div>
       <div class="row">
         <div class="col p-2 border bg-gray">
-          1 of 3
+          1 / 3
         </div>
         <div class="col-5 p-2 border bg-gray">
-          2 of 3 (wider)
+          2 / 3 (daha geniş)
         </div>
         <div class="col p-2 border bg-gray">
-          3 of 3
+          3 / 3
         </div>
       </div>
     </div>
@@ -219,25 +221,95 @@ sütunların ölçüsünü otomatik olarak yeniden boyutlandırılmasını sağl
 <div class="container">
   <div class="row">
     <div class="col">
-      1 of 3
+      1 / 3
     </div>
     <div class="col-6">
-      2 of 3 (daha geniş)
+      2 / 3 (daha geniş)
     </div>
     <div class="col">
-      3 of 3
+      3 / 3
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      1 / 3
     </div>
     <div class="col-5">
-      2 of 3 (daha geniş)
+      2 / 3 (daha geniş)
     </div>
     <div class="col">
-      3 of 3
+      3 / 3
     </div>
   </div>
 </div>
 ```
+
+---
+
+### Dinamik içerik genişliği
+Sütunları içerik genişliğine göre boyutlandırmak için <strong>col-{breakpoint}-auto</strong> sınıflarını kullanın.
+
+<!-- ToDo: col-auto: flex: 0 0 auto; width: auto; şeklinde güncellenecek -->
+
+<div class="p-2 border bdr-2 mb-3">
+    <div class="px-1 mb-1">
+        <div class="row justify-content-center">
+            <div class="col-lg-2 p-2 border bg-gray">
+                1 / 3
+            </div>
+            <div class="col-md-auto p-2 border bg-gray">
+                İçeriğe göre genişlik
+            </div>
+            <div class="col-lg-2 p-2 border bg-gray">
+                3 / 3
+            </div>
+        </div>
+    </div>
+    <div class="px-1">
+        <div class="row">
+            <div class="col p-2 border bg-gray">
+                1 / 3
+            </div>
+            <div class="col-md-auto p-2 border bg-gray">
+                İçeriğe göre genişlik
+            </div>
+            <div class="col-lg-2 p-2 border bg-gray">
+                3 / 3
+            </div>
+        </div>
+    </div>
+</div>
+
+```html title="html"
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-2">
+      1 / 3
+    </div>
+    <div class="col-md-auto">
+      İçeriğe göre genişlik
+    </div>
+    <div class="col-lg-2">
+      3 / 3
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 / 3
+    </div>
+    <div class="col-md-auto">
+      İçeriğe göre genişlik
+    </div>
+    <div class="col-lg-2">
+      3 / 3
+    </div>
+  </div>
+</div>
+```
+
+---
+
+### Duyarlı sınıflar (Responsive)
+v5'in ızgarası, karmaşık ve duyarlı düzenler oluşturmak için beş katman ile önceden tanımlanmış sınıf içerir.
+Sütunlarınızın boyutunu <strong>küçük, orta, büyük veya çok büyük</strong> ekran çözünürlüğüne sahip cihazlarda
+uygun gördüğünüz şekilde özelleştirmenize imkan tanır.
