@@ -7,25 +7,14 @@
 
 module.exports = {
   docs: {
-    'Getting Started': [
-      'what-is-docsearch',
-      'how-does-it-work',
-      'who-can-apply',
-      'apply',
+    'Başlangıç': [
+      'tr-introduction',
     ],
-    'Adding DocSearch to your UI': ['dropdown', 'styling', 'behavior'],
-    'Requirements, tips, FAQ': [
-      'required-configuration',
-      'tips',
-      'faq',
-      'integrations',
+    'Bilgi': [
+      'tr-scss',
     ],
-    'Under the Hood': [
-      'scraper',
-      'inside-the-engine',
-      'config-file',
-      'how-do-we-build-an-index',
-      'run-your-own',
+    'Layout': [
+      'tr-grid',
     ],
   },
 };

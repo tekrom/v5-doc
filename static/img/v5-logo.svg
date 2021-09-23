@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="209" height="57" viewBox="0 0 209 57">
+    <defs>
+        <filter id="7xibfdxe2a" width="140%" height="161.5%" x="-20%" y="-30.8%" filterUnits="objectBoundingBox">
+            <feOffset dy="3" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1.5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.229294143 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F9F9F9" d="M31.229 5H196c2.21 0 4 1.79 4 4v22c0 2.21-1.79 4-4 4H20L31.229 5z" transform="translate(9 9)"/>
+        <text font-family="Mulish-Regular_Black, Mulish" font-size="15" font-weight="700" letter-spacing=".833" transform="translate(9 9)">
+            <tspan x="70.3" y="23" fill="#FD6905">Version</tspan> <tspan x="131.408" y="23" fill="#373738" font-family="Mulish-Italic_Black-Italic, Mulish" font-style="italic">5</tspan> <tspan x="141.242" y="23" fill="#636363" font-family="Mulish-Italic_ExtraLight-Italic, Mulish" font-style="italic" font-weight="300">Theme</tspan> <tspan x="70" y="35" fill="#636363" font-family="Mulish-Italic_Black-Italic, Mulish" font-style="italic">one</tspan>
+        </text>
+        <g fill-rule="nonzero" filter="url(#7xibfdxe2a)" transform="translate(9 9)">
+            <path fill="#C75405" d="M.968 9.561l2.19 4.884h15.898c.18 0 .347.062.498.187.151.126.257.254.317.387l.09.177 9.117 23.514L45.16 8.193c.782-1.482 2.32-2.41 3.995-2.41h7.525L59.834 0H47.391c-2.184 0-4.183 1.225-5.174 3.171L30.004 27.154 24.667 12.53c-.65-1.783-2.345-2.969-4.242-2.969H.968z"/>
+            <path fill="#373738" d="M36.594 19.835h-8.617L35.11 6.218c1.4-2.672 4.128-4.34 7.097-4.34h15.858l-2.389 6.25H43.374c-1.315 0-2.516.763-3.095 1.968L38.46 13.87c16.749 0 18.437 21.606.618 24.469-1.264.203-12.589 0-14.051 0-4.742-11.442-8.282-20.073-10.622-25.895-.029-.072-4.508-1.033-13.438-2.884L0 6.218h13.306c1.844 0 3.502 1.121 4.19 2.832l9.475 23.577h8.14c4.709 0 5.567-.466 6.95-3.256 2.278-4.598.121-9.536-5.467-9.536z"/>
+            <path fill="#FD6905" d="M.968 9.561l2.19 4.884h6.22c.182 0 .348.062.499.187.15.126.256.254.317.387l.09.177L19.4 38.71 35.483 8.193c.781-1.482 2.32-2.41 3.995-2.41H56.68L59.834 0h-22.12C35.53 0 33.53 1.225 32.54 3.171L20.326 27.154 14.99 12.53c-.65-1.783-2.345-2.969-4.242-2.969H.968z"/>
+        </g>
+    </g>
+</svg>

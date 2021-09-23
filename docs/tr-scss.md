@@ -1,0 +1,11 @@
+---
+title: SCSS
+---
+
+### SCSS Nedir?
+
+En çok kullanılan css ön-işlemcilerinden biridir. Kütüphanemizi oluştururken bu teknolojiyi kullandık.
+
+CSS yazmayı dinamik hale getirmek için ortaya çıkan bir teknolojidir. CSS'te bulunmayan bir çok özelliği içinde bulundurmaktadır, değişken tanımlama, fonksiyon oluşturma, iç içe yapılar kullanma vb. SCSS hakkında daha detaylı bilgi edinmek kendi sitesini ziyaret edebilirsiniz.
+
+https://sass-lang.com/guide

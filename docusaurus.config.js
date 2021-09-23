@@ -6,14 +6,14 @@
  */
 
 module.exports = {
-  title: 'DocSearch',
+  title: 'v5 Documentation',
   tagline:
-    'The best search experience for docs, integrated in minutes, for free',
+    'T-SOFT v5 standart temasına ait tüm detayları bulabileceğiniz dökümantasyon.',
   url: 'https://docsearch.algolia.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'Algolia',
-  projectName: 'DocSearch',
+  organizationName: 'T-SOFT',
+  projectName: 'T-SOFT v5 Documentation',
   themes: ['@docusaurus/theme-live-codeblock'],
   plugins: ['my-loaders'], // loader required for .svg
   themeConfig: {
@@ -23,23 +23,17 @@ module.exports = {
     },
     navbar: {
       logo: {
-        alt: 'DocSearch',
+        alt: 'T-SOFT',
         src: 'img/docsearch-logo.svg',
         srcDark: 'img/docsearch-logo-white.svg',
       },
-      title: 'by Algolia',
       hideOnScroll: true,
       items: [
         {
           label: 'Documentation',
-          to: 'docs/what-is-docsearch',
+          to: 'docs/tr-introduction',
           position: 'right',
-        },
-        {
-          label: 'GitHub',
-          href: 'https://github.com/algolia/DocSearch',
-          position: 'right',
-        },
+        }
       ],
     },
     colorMode: {
@@ -50,96 +44,14 @@ module.exports = {
     announcementBar: {
       id: 'supportus',
       content:
-        '⭐️ If you like DocSearch, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/algolia/docsearch">GitHub</a>! ⭐️',
+        '⭐️ v5 doc ⭐️',
     },
     footer: {
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Getting Started',
-              to: 'docs/what-is-docsearch',
-            },
-            {
-              label: 'FAQ',
-              to: 'docs/faq',
-            },
-            {
-              label: 'DocSearch.js',
-              to: 'docs/dropdown',
-            },
-            {
-              label: 'Run your own scraper',
-              to: 'docs/run-your-own',
-            },
-            {
-              label: 'Playground',
-              to: 'playground',
-            },
-          ],
-        },
-        {
-          title: 'DocSearch',
-          items: [
-            {
-              label: 'Issues',
-              to: 'https://github.com/algolia/docsearch/issues',
-            },
-            {
-              label: 'Scraper',
-              to: 'https://github.com/algolia/docsearch-scraper',
-            },
-            {
-              label: 'Configurations',
-              to: 'https://github.com/algolia/docsearch-configs',
-            },
-            {
-              label: 'Privacy',
-              to: 'https://www.algolia.com/policies/privacy/',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Apply',
-              to: 'apply',
-            },
-            {
-              label: 'Forum',
-              href: 'https://discourse.algolia.com/tags/docsearch',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discord.gg/tXdr5mP',
-            },
-          ],
-        },
-        {
-          title: 'Social',
-          items: [
-            {
-              label: 'GitHub',
-              to: 'https://github.com/algolia/docsearch',
-            },
-            {
-              label: 'Twitter',
-              to: 'https://twitter.com/docsearch_',
-            },
-            {
-              label: 'Algolia Blog',
-              to: 'https://blog.algolia.com/',
-            },
-          ],
-        },
-      ],
       logo: {
-        alt: 'Algolia',
-        src: 'img/algolia-logo.svg',
+        alt: 'v5 Documentation',
+        src: 'img/v5-logo.svg',
       },
-      copyright: `DocSearch 2015-now • Designed and Built by Algolia`,
+      copyright: `v5 Documentation - Prepared by T-Soft E-Commerce.`,
     },
     image: 'img/og_image.png',
   },

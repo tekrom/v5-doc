@@ -3120,28 +3120,28 @@
   }
 }
 .p-0 {
-  padding: 0;
+  padding: 0 !important;
 }
 .p-1 {
-  padding: 0.5rem;
+  padding: 0.5rem !important;
 }
 .p-2 {
-  padding: 1rem;
+  padding: 1rem !important;
 }
 .p-3 {
-  padding: 1.5rem;
+  padding: 1.5rem !important;
 }
 .p-4 {
-  padding: 2rem;
+  padding: 2rem !important;
 }
 .p-5 {
-  padding: 3.5rem;
+  padding: 3.5rem !important;
 }
 .p-6 {
-  padding: 5rem;
+  padding: 5rem !important;
 }
 .p-7 {
-  padding: 7.5rem;
+  padding: 7.5rem !important;
 }
 @media (min-width: 31.25em) {
   .xs\:p-0 {
