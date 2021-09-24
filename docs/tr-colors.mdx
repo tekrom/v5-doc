@@ -1,0 +1,736 @@
+---
+title: Renkler
+---
+
+Komponentleri (bileşen) hazırlarken kullandığımız renk paletimiz. 
+
+### Tema renkleri (v5 Standart)
+
+Renk paletindeki renkleri panelinizden site kimliğinize göre değiştirerek kullanabilirsiniz.
+
+<table class="mt-1">
+  <thead>
+    <tr>
+      <th scope="col-auto">
+        <span class="text-nowrap">Renk</span>
+      </th>
+      <th scope="col-auto">
+        <span class="text-nowrap text-center">SCSS Değişken</span>
+      </th>
+      <th scope="col-auto">
+        <span class="text-nowrap text-center">Class Adı</span>
+      </th>
+      <th scope="col-auto">
+        <span class="text-nowrap text-center">Değer</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr>
+      <th scope="row" class="fw-normal text-left p-0">
+          <div class="p-2 bg-primary text-white">Birincil</div>
+      </th>
+      <td>
+        <code>
+            $bgPrimary
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-primary
+        </code>
+      </td>
+      <td>
+        <code>
+            #fd6905
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-0">
+          <div class="p-2 bg-secondary text-black">İkincil</div>
+      </th>
+      <td>
+        <code>
+            $bgSecondary
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-secondary
+        </code>
+      </td>
+      <td>
+        <code>
+            #dddddd
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-0">
+          <div class="p-2 bg-white text-black">Beyaz</div>
+      </th>
+      <td>
+        <code>
+            $bgWhite
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-white
+        </code>
+      </td>
+      <td>
+        <code>
+            #ffffff
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-0">
+          <div class="p-2 bg-black text-white">Siyah</div>
+      </th>
+      <td>
+        <code>
+            $bgBlack
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-black
+        </code>
+      </td>
+      <td>
+        <code>
+            #000000
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-0">
+          <div class="p-2 bg-gray text-black">Gri</div>
+      </th>
+      <td>
+        <code>
+            $bgGray
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-gray
+        </code>
+      </td>
+      <td>
+        <code>
+            #a0a0a0
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-0">
+          <div class="p-2 bg-light text-black">Açık Gri</div>
+      </th>
+      <td>
+        <code>
+            $bgLight
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-light
+        </code>
+      </td>
+      <td>
+        <code>
+            #f9f9f9
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-0">
+          <div class="p-2 bg-dark text-white">Koyu Gri</div>
+      </th>
+      <td>
+        <code>
+            $bgDarkGray
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-dark
+        </code>
+      </td>
+      <td>
+        <code>
+            #2c2a28
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-0">
+          <div class="p-2 bg-success text-white">Yeşil</div>
+      </th>
+      <td>
+        <code>
+            $bgSuccess
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-success
+        </code>
+      </td>
+      <td>
+        <code>
+            #44c61f
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-0">
+          <div class="p-2 bg-info text-black">Turkuaz</div>
+      </th>
+      <td>
+        <code>
+            $bgInfo
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-info
+        </code>
+      </td>
+      <td>
+        <code>
+            #93d8dd
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-0">
+          <div class="p-2 bg-warning text-black">Sarı</div>
+      </th>
+      <td>
+        <code>
+            $bgWarning
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-warning
+        </code>
+      </td>
+      <td>
+        <code>
+            #fcdf27
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-0">
+          <div class="p-2 bg-danger text-white">Kırmızı</div>
+      </th>
+      <td>
+        <code>
+            $bgDanger
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-danger
+        </code>
+      </td>
+      <td>
+        <code>
+            #ff0000
+        </code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Çerçeve renk plaleti (border)
+
+<table class="mt-1">
+  <thead>
+    <tr>
+      <th scope="col-auto">
+        <span class="text-nowrap">Renk</span>
+      </th>
+      <th scope="col-auto">
+        <span class="text-nowrap text-center">SCSS Değişken</span>
+      </th>
+      <th scope="col-auto">
+        <span class="text-nowrap text-center">Class Adı</span>
+      </th>
+      <th scope="col-auto">
+        <span class="text-nowrap text-center">Değer</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 border border-primary text-black">Birincil</div>
+      </th>
+      <td>
+        <code>
+            $borderPrimary
+        </code>
+      </td>
+      <td>
+        <code>
+            border-primary
+        </code>
+      </td>
+      <td>
+        <code>
+            #fd6905
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 bg-white border border-secondary text-black">İkincil</div>
+      </th>
+      <td>
+        <code>
+            $borderSecondary
+        </code>
+      </td>
+      <td>
+        <code>
+            border-secondary
+        </code>
+      </td>
+      <td>
+        <code>
+            #d8d8d8
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 border border-black text-black">Siyah</div>
+      </th>
+      <td>
+        <code>
+            $borderBlack (eksik eklenecek)
+        </code>
+      </td>
+      <td>
+        <code>
+            border-black
+        </code>
+      </td>
+      <td>
+        <code>
+            #000000
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 border border-white text-black">Beyaz</div>
+      </th>
+      <td>
+        <code>
+            $borderWhite (eksik eklenecek)
+        </code>
+      </td>
+      <td>
+        <code>
+            border-white
+        </code>
+      </td>
+      <td>
+        <code>
+            #ffffff
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2 bg-white">
+          <div class="p-1 border border-gray text-black">Gri</div>
+      </th>
+      <td>
+        <code>
+            $borderGray
+        </code>
+      </td>
+      <td>
+        <code>
+            border-gray
+        </code>
+      </td>
+      <td>
+        <code>
+            #f0f0f0
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 bg-white border border-light text-black">Açık Gri</div>
+      </th>
+      <td>
+        <code>
+            $borderLight
+        </code>
+      </td>
+      <td>
+        <code>
+            border-light
+        </code>
+      </td>
+      <td>
+        <code>
+            #eaeaea
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 bg-white border border-dark text-black">Koyu Gri</div>
+      </th>
+      <td>
+        <code>
+            $borderDarkGray
+        </code>
+      </td>
+      <td>
+        <code>
+            border-dark
+        </code>
+      </td>
+      <td>
+        <code>
+            #2c2a28
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 border border-success text-black">Yeşil</div>
+      </th>
+      <td>
+        <code>
+            $borderSuccess
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-success
+        </code>
+      </td>
+      <td>
+        <code>
+            #44c61f
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 border border-info text-black">Turkuaz</div>
+      </th>
+      <td>
+        <code>
+            $borderInfo
+        </code>
+      </td>
+      <td>
+        <code>
+            border-info
+        </code>
+      </td>
+      <td>
+        <code>
+            #93d8dd
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 border border-warning text-black">Sarı</div>
+      </th>
+      <td>
+        <code>
+            $bgWarning
+        </code>
+      </td>
+      <td>
+        <code>
+            bg-warning
+        </code>
+      </td>
+      <td>
+        <code>
+            #fcdf27
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 border border-danger text-black">Sarı</div>
+      </th>
+      <td>
+        <code>
+            $borderDanger
+        </code>
+      </td>
+      <td>
+        <code>
+            border-danger
+        </code>
+      </td>
+      <td>
+        <code>
+            #ff0000
+        </code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Yazı rengi paleti (font)
+
+<table class="mt-1">
+  <thead>
+    <tr>
+      <th scope="col-auto">
+        <span class="text-nowrap">Renk</span>
+      </th>
+      <th scope="col-auto">
+        <span class="text-nowrap text-center">SCSS Değişken</span>
+      </th>
+      <th scope="col-auto">
+        <span class="text-nowrap text-center">Class Adı</span>
+      </th>
+      <th scope="col-auto">
+        <span class="text-nowrap text-center">Değer</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 text-primary">Birincil</div>
+      </th>
+      <td>
+        <code>
+            $textPrimary
+        </code>
+      </td>
+      <td>
+        <code>
+            text-primary
+        </code>
+      </td>
+      <td>
+        <code>
+            #fd6905
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 bg-black text-secondary">İkincil</div>
+      </th>
+      <td>
+        <code>
+            $textSecondary
+        </code>
+      </td>
+      <td>
+        <code>
+            text-secondary
+        </code>
+      </td>
+      <td>
+        <code>
+            #d8d8d8
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 text-black">Siyah</div>
+      </th>
+      <td>
+        <code>
+            $textBlack
+        </code>
+      </td>
+      <td>
+        <code>
+            text-black
+        </code>
+      </td>
+      <td>
+        <code>
+            #000000
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 bg-black text-white">Beyaz</div>
+      </th>
+      <td>
+        <code>
+            $textWhite
+        </code>
+      </td>
+      <td>
+        <code>
+            text-white
+        </code>
+      </td>
+      <td>
+        <code>
+            #ffffff
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2 bg-white">
+          <div class="p-1 text-gray">Gri</div>
+      </th>
+      <td>
+        <code>
+            $textGray
+        </code>
+      </td>
+      <td>
+        <code>
+            text-gray
+        </code>
+      </td>
+      <td>
+        <code>
+            #f0f0f0
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 bg-black text-light">Açık Gri</div>
+      </th>
+      <td>
+        <code>
+            $textLight
+        </code>
+      </td>
+      <td>
+        <code>
+            text-light
+        </code>
+      </td>
+      <td>
+        <code>
+            #eaeaea
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 text-dark">Koyu Gri</div>
+      </th>
+      <td>
+        <code>
+            $textDarkGray
+        </code>
+      </td>
+      <td>
+        <code>
+            text-dark
+        </code>
+      </td>
+      <td>
+        <code>
+            #2c2a28
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 text-success">Yeşil</div>
+      </th>
+      <td>
+        <code>
+            $textSuccess
+        </code>
+      </td>
+      <td>
+        <code>
+            text-success
+        </code>
+      </td>
+      <td>
+        <code>
+            #44c61f
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 text-info">Turkuaz</div>
+      </th>
+      <td>
+        <code>
+            $textInfo
+        </code>
+      </td>
+      <td>
+        <code>
+            text-info
+        </code>
+      </td>
+      <td>
+        <code>
+            #93d8dd
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 text-warning">Kırmızı</div>
+      </th>
+      <td>
+        <code>
+            $textWarning
+        </code>
+      </td>
+      <td>
+        <code>
+            text-warning
+        </code>
+      </td>
+      <td>
+        <code>
+            #fcdf27
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal text-left p-2">
+          <div class="p-1 text-danger">Kırmızı</div>
+      </th>
+      <td>
+        <code>
+            $textDanger
+        </code>
+      </td>
+      <td>
+        <code>
+            text-danger
+        </code>
+      </td>
+      <td>
+        <code>
+            #ff0000
+        </code>
+      </td>
+    </tr>
+  </tbody>
+</table>

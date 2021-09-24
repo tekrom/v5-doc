@@ -18,5 +18,8 @@ module.exports = {
       'tr-grid',
       'tr-utilities',
     ],
+    'Özelleştirme': [
+      'tr-colors',
+    ],
   },
 };
