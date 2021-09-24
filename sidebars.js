@@ -24,6 +24,7 @@ module.exports = {
     '* JavaScript': [
       'tr-javascript',
       'tr-javascript-selector',
+      'tr-javascript-component',
     ],
   },
 };
