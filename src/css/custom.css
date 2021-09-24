@@ -194,6 +194,10 @@ table {
   box-shadow: 0 3px 8px 0 rgba(116, 129, 141, .3);
 }
 
+.fst-italic {
+  font-style: italic;
+}
+
 /* v5 all css */
 
 .noUi-target,

@@ -1,0 +1,64 @@
+---
+title: Accordion
+---
+Akordeon menü bileşeni.
+
+Akordeon menü bileşeni ile daraltılabilir bloklar oluşturabilirsiniz.
+
+- <code>accordion-title</code> akordeon menü başlığı sınıfıdır.
+<div class="fst-italic">
+    Kullanımı zorunlu değil, sınıf tanımlanmadığı takdirde <code>data-toggle="accordion"</code> tanımlı element baz alınır.
+</div>
+- <code>.accordion-body</code> akordeon menü içerik kapsayıcısı için kullanılan sınıf.
+
+<code>data-toggle="accordion"</code> ön adı kullanarak js yazmadan bu bileşeni sayfanızda kullanabilirsiniz.
+
+### Aldığı parametreler / özellikler
+
+* Akordeon menü başlığı <code>a</code> elementi olarak kullanılabilir. Kullanıldığı taktirde <code>href</code> özelliğine tanımlanan seçici akordeon menü içeriği olarak baz alınır.
+* <code>data-target="#my-element-id"</code> şeklinde farklı bir seçici akordeon menü içeriği olarak tanımlanabilir.
+* <code>data-mobile="true"</code> özelliği ile sadece mobilde çalışacak akordeon menüler oluşturabilirsiniz.
+
+```html title="Örnek kullanımı - 1"
+<div class="accordion-title" data-toggle="accordion">
+    Akerdeon menü başlığı
+    <span class="icon-wrapper">
+        <i class="mdi mdi-plus"></i>
+        <i class="mdi mdi-minus"></i>
+    </span>
+</div>
+<div class="accordion-body">Akerdeon menü içeriği</div>
+```
+
+```html title="Örnek kullanımı - 2"
+<div class="accordion-title" data-toggle="accordion" data-target="#accodion-body">
+    Akerdeon menü başlığı
+    <span class="icon-wrapper">
+        <i class="mdi mdi-plus"></i>
+        <i class="mdi mdi-minus"></i>
+    </span>
+</div>
+<div id="accodion-body" class="accordion-body">Akerdeon menü içeriği</div>
+```
+
+```html title="Örnek kullanımı - 3"
+<a href="#accodion-body" data-toggle="accordion">
+    Akerdeon menü başlığı
+    <span class="icon-wrapper">
+        <i class="mdi mdi-plus"></i>
+        <i class="mdi mdi-minus"></i>
+    </span>
+</div>
+<div id="accodion-body" class="accordion-body">Akerdeon menü içeriği</div>
+```
+
+```html title="Mobilde çalışacak akordeon menü örnek kullanımı"
+<div class="accordion-title" data-toggle="accordion" data-mobile="true">
+    Akerdeon menü başlığı
+    <span class="icon-wrapper">
+        <i class="mdi mdi-plus"></i>
+        <i class="mdi mdi-minus"></i>
+    </span>
+</div>
+<div class="accordion-body">Akerdeon menü içeriği</div>
+```
