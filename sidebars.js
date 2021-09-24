@@ -27,6 +27,7 @@ module.exports = {
       'tr-javascript-component',
       'tr-javascript-component-dropdown',
       'tr-javascript-component-accordion',
+      'tr-javascript-component-tab',
     ],
   },
 };

@@ -1,0 +1,38 @@
+---
+title: Tab
+---
+Tab menü bileşeni.
+
+```html title="Örnek kullanım"
+<ul class="list-style-none tab-nav">
+    <li class="active">
+        <a href="#tab1" data-toggle="tab">Test 1 Başlık</a>
+    </li>
+    <li>
+        <a href="#tab2" data-toggle="tab">Test 2 Başlık</a>
+    </li>
+    <li>
+        <a href="#tab3" data-toggle="tab">Test 3 Başlık</a>
+    </li>
+</ul>
+<div class="tab-content">
+    <div id="tab1" class="tab-pane active">Tab1 lorem ipsum dolor sit amet...</div>
+    <div id="tab2" class="tab-pane">Tab2 it is a long established fact that a reader will...</div>
+    <div id="tab3" class="tab-pane">Tab3 the point of using Lorem Ipsum...</div>
+</div>
+```
+
+```html title="Ajax tab örnek kullanımı"
+<ul class="list-style-none tab-nav">
+    <li class="active">
+        <a href="#tab1" data-toggle="tab">Test 1 Başlık</a>
+    </li>
+    <li>
+        <a href="#tab2" data-toggle="tab" data-href="YOUR_SERVICE_URL">Dinamik Tab Başlık</a>
+    </li>
+</ul>
+<div class="tab-content">
+    <div id="tab1" class="tab-pane active">Tab1 lorem ipsum dolor sit amet...</div>
+    <div id="tab2" class="tab-pane"><!-- Dinamik içerik --></div>
+</div>
+```
