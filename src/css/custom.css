@@ -7216,3 +7216,7 @@ body.drawer-animated.drawer-left-active {
 table {
   display: inline-table !important;
 }
+
+.min-vh-75 {
+  min-height: 75vh;
+}
