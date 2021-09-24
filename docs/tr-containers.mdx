@@ -1,0 +1,91 @@
+---
+title: Kapsayıcı
+---
+
+Kapsayıcılar, içeriğinizi belirli bir cihaz veya görünüm alanında içeren, dolduran ve hizalayan temel bir
+v5 yapı taşıdır.
+
+> Flexbox'ta yeni misiniz veya aşina değil misiniz? Arka plan, terminoloji, yönergeler ve kod parçacıkları için
+[CSS Püf Noktaları esnek kutu kılavuzu](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+göz atabilirsiniz.
+
+### Nasıl çalışır?
+
+Kapsayıcılar, v5'teki en temel düzen öğesidir ve varsayılan ızgara sistemimizi kullanırken gereklidir.
+Konteyner, içeriği içlerinde tutmak, doldurmak ve (bazen) ortalamak için kullanılır.
+Kapsayıcılar iç içe yerleştirilebilir fakat <strong>tavsiye edilmez</strong>.
+
+#### v5 iki farklı kapsayıcı ile birlikte gelir:
+* <code>container</code>, maksimum genişlik ayarı olan konteyner.
+* <code>.container-fluid</code>, maksimum genişlik 100% olan konteyner.
+
+Aşağıdaki tablo, her bir kapsayıcının maksimum genişliğinin, her bir kesme noktasında orijinal 
+<code>container</code> ve <code>container-fluid</code> ile nasıl karşılaştırıldığını gösterir.
+
+<table class="w-100 mt-1">
+  <thead>
+    <tr>
+      <td></td>
+      <th scope="col-auto">
+        <span class="d-flex text-nowrap">Extra small</span>
+        <span class="fw-normal">&lt;576px</span>
+      </th>
+      <th scope="col-auto">
+        <span class="d-flex text-nowrap">Small</span>
+        <span class="fw-normal">≥576px</span>
+      </th>
+      <th scope="col-auto">
+        <span class="d-flex text-nowrap">Medium</span>
+        <span class="fw-normal">≥768px</span>
+      </th>
+      <th scope="col-auto">
+        <span class="d-flex text-nowrap">Large</span>
+        <span class="fw-normal">≥992px</span>
+      </th>
+      <th scope="col-auto">
+        <span class="d-flex text-nowrap">X-Large</span>
+        <span class="fw-normal">≥1200px</span>
+      </th>
+      <th scope="col-auto">
+        <span class="d-flex text-nowrap">XX-Large</span>
+        <span class="fw-normal">≥1400px</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr>
+      <th scope="row" class="fw-normal"><code>.container</code></th>
+      <td class="text-muted">100%</td>
+      <td>540px</td>
+      <td>720px</td>
+      <td>960px</td>
+      <td>1140px</td>
+      <td>1320px</td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal"><code>.container-fluid</code></th>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+    </tr>
+  </tbody>
+</table>
+
+### Varsayılan kapsayıcı
+
+```html title="html"
+<div class="container">
+  <!-- içerik alanı -->
+</div>
+```
+
+### Full kapsayıcı
+
+```html title="html"
+<div class="container-fluid">
+  <!-- içerik alanı -->
+</div>
+```

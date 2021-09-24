@@ -7212,3 +7212,7 @@ body.drawer-animated.drawer-left-active {
 .t-v5-mango-default-1051 .image-wrapper {
   padding-bottom: 100%
 }
+
+table {
+  display: inline-table !important;
+}

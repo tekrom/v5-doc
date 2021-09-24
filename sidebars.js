@@ -13,7 +13,8 @@ module.exports = {
     'Bilgi': [
       'tr-scss',
     ],
-    'Layout': [
+    'Yerleşim': [
+      'tr-containers',
       'tr-grid',
     ],
   },
