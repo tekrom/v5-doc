@@ -18,8 +18,8 @@ module.exports = {
   plugins: ['my-loaders'], // loader required for .svg
   themeConfig: {
     algolia: {
-      apiKey: 'c14f6962089c245d27cd097c943d3a9e',
-      indexName: 'docsearch',
+      apiKey: '74cc71d8c788370343b734750c915540',
+      indexName: 'docusaurus',
       appId: 'D3CV9EU7VN',
     },
     navbar: {
