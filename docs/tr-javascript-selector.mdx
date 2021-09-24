@@ -1,0 +1,195 @@
+---
+title: T Seçici (Selector)
+---
+
+<div class="mb-2">
+<code>T</code> seçici ile elementler üzerinde işlemler yapabilirsiniz.
+Sayfada bulunan elementleri "T" seçici ile bulabilirsiniz.
+</div>
+
+```javascript
+T('header');
+```
+
+---
+
+### .addClass()
+Sınıf ekleme işlemini gerçekleştirir.
+
+```javascript
+/* Tek Sınıf Ekleme */
+T('header').addClass('bg-primary');
+
+/* Çoklu Sınıf Ekleme */
+T('header').addClass('bg-primary text-white');
+```
+
+---
+
+### .removeClass()
+Sınıf silme işlemi gerçekleştirir.
+
+```javascript
+/* Tek Sınıf Silme */
+T('header').removeClass('bg-primary');
+
+/* Çoklu Sınıf Silme */
+T('header').removeClass('bg-primary text-white');
+```
+
+---
+
+### .toggleClass()
+Sınıf ekle ya da sil. Bu özellik elemente eklemek istediğiniz sınıf var ise siler yok ise ekleme işlemini gerçekleştirir.
+
+```javascript
+/* Tek Sınıf Ekle/Sil */
+T('header').toggleClass('bg-primary');
+
+/* Çoklu Sınıf Ekle/Sil */
+T('header').toggleClass('bg-primary text-white');
+```
+
+---
+
+### .hasClass()
+Elementlerde aradığınız sınıfın varlığını kontrol eder. true/false sonuç döner.
+
+```javascript
+T('header').hasClass('bg-primary');
+```
+
+---
+
+### .index()
+Element index (sıra) değerini döner. index değeri 0'dan başlar. Örneğin birinci sırada ise aradığınız element, 
+sonuç 0 dönecektir.
+
+```javascript
+T('header').index();
+```
+
+---
+
+### .on()
+Elementlere olay tanımlamaları yapmanızı sağlar.
+
+```javascript
+T('a').on(eventName, handler)
+```
+
+```javascript title="JavaScript - Function"
+T('a').on('click', function(e) {
+    //code here
+})
+```
+
+```javascript title="JavaScript - Arrow Function"
+T('a').on('click', e => {
+    //code here
+})
+```
+
+---
+
+### .off()
+Elementlere tanımlanmış olayları iptal etmenizi sağlar.
+
+```javascript
+T('a').off(eventName, handler)
+```
+
+```javascript title="JavaScript - Function"
+T('a').off('click', function(e) {
+    //code here
+})
+```
+
+```javascript title="JavaScript - Arrow Function"
+T('a').off('click', e => {
+    //code here
+})
+```
+
+---
+
+### .one()
+Elementlere bir kere tetiklenecek olay tanımlamaları yapmanızı sağlar.
+
+```javascript
+T('a').one(eventName, handler)
+```
+
+```javascript title="JavaScript - Function"
+T('a').one('click', function(e) {
+    //code here
+})
+```
+
+```javascript title="JavaScript - Arrow Function"
+T('a').one('click', e => {
+    //code here
+})
+```
+
+---
+
+### .trigger()
+Elemente daha önceden tanımlanmış bir olayı tetiklemek için kullanılır.
+
+```javascript
+T('a').trigger(eventName) // Olay adını değer olarak alır.
+```
+
+```javascript
+T('a').trigger('click');
+```
+
+---
+
+### .html()
+Elementin html içeriğini değiştirmenizi sağlar.
+
+```javascript
+T('a').html(`<span>Test html içerik</span>`);
+```
+
+---
+
+### .text()
+Elementin metin içeriğini değiştirmenizi sağlar.
+
+```javascript
+T('a').text('Test html içerik');
+```
+
+---
+
+### .height()
+Elementlere yükseklik değeri vermek için ya da elementlerin yükseklik değerini bulmak için kullanılır.
+
+```javascript
+T('element').height(400); // Elementin yükseklik değeri 400px yapıldı.
+```
+
+```javascript
+T('element').height(); // Elementin yükseklik değeri cevap olarak dönüldü.
+```
+
+---
+
+### .show()
+Gizli elementleri görünür yapmak için kullanılır.
+
+```javascript
+T('div').show();
+```
+
+---
+
+### .hide()
+Görünür elementleri gizlemek için kullanılır.
+
+```javascript
+T('div').hide();
+```

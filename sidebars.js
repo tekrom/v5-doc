@@ -21,5 +21,9 @@ module.exports = {
     'Özelleştirme': [
       'tr-colors',
     ],
+    '* JavaScript': [
+      'tr-javascript',
+      'tr-javascript-selector',
+    ],
   },
 };
