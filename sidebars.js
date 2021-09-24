@@ -16,6 +16,7 @@ module.exports = {
     'Yerleşim': [
       'tr-containers',
       'tr-grid',
+      'tr-utilities',
     ],
   },
 };
