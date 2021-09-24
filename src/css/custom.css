@@ -167,6 +167,33 @@ html[data-theme='dark'] [class*='light-Card'] {
 .text-nowrap {
   white-space: nowrap;
 }
+
+table {
+  display: inline-table !important;
+}
+
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+.shadow {
+  box-shadow: 0 3px 8px 0 rgba(116, 129, 141, .1);
+}
+
+.component-card {
+  color: inherit;
+  text-decoration: none;
+}
+.component-card span {
+  font-size: 10pt;
+}
+
+.component-card:hover {
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 3px 8px 0 rgba(116, 129, 141, .3);
+}
+
 /* v5 all css */
 
 .noUi-target,
@@ -7211,12 +7238,4 @@ body.drawer-animated.drawer-left-active {
 }
 .t-v5-mango-default-1051 .image-wrapper {
   padding-bottom: 100%
-}
-
-table {
-  display: inline-table !important;
-}
-
-.min-vh-75 {
-  min-height: 75vh;
 }
