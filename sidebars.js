@@ -25,6 +25,7 @@ module.exports = {
       'tr-javascript',
       'tr-javascript-selector',
       'tr-javascript-component',
+      'tr-javascript-component-dropdown',
     ],
   },
 };
