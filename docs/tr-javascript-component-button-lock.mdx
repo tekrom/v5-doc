@@ -1,0 +1,20 @@
+---
+title: Button Lock
+---
+Birden fazla tıklamayı engellemek için kullanılır.
+
+Herhangi bir tıklama (click) olayında birden fazla tıklama işlemini engellemek için kullanılır.
+
+
+```javascript
+T('form').on('submit', e => {
+    const button = T('#form_submit_button')[0];
+    T.buttonLock.dom = button;
+    T.buttonLock.tmp = button.innerHTML;
+    T.buttonLock.lock();
+
+    axios(e.target.action).then(response => {
+        T.buttonLock.unlock();
+    });
+});
+```

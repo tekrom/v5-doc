@@ -1,0 +1,27 @@
+---
+title: .popupWin
+---
+Açılır pencerede dinamik içerik gösterimi bileşeni.
+
+Açılır pencerede dinamik içerikler gösterebilmek için kullanılır. 
+<div class="mb-2">
+    <code>a</code> elementine  sınıf olarak tanımlanır ve elementin <code>href</code> değeri baz alınır.
+</div>
+
+```html title="Örnek kullanım" 
+<a href="YOUR_API_URL" class="popupwin">Popup'ta göster</a>
+```
+
+<div class="mb-1">
+    Eğer içerik servisten direkt içerik gelmiyorsa ve bir key içerisinde bu bilgi yer alıyorsa 
+</div>
+<div class="mb-2">
+    <code>data-property="RESPONSE_KEY"</code> ile servisten dönen yanıttaki key'e bu şekilde ulaşarak 
+    içeriğin popupta gösterimini sağlayabilirsiniz.
+</div>
+
+![t-bilesenler-component--popupwin](http://localhost:3000/img/doc/t-bilesenler-component--popupwin.png)
+
+```html title="Örnek kullanım" 
+<a href="YOUR_API_URL" data-property="CONTENT" class="popupwin">Popup'ta göster</a>
+```
