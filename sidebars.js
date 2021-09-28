@@ -23,6 +23,7 @@ module.exports = {
     ],
     'İçerik': [
       'css/tr-content-reboot',
+      'css/tr-content-typography',
     ],
     'Araçlar': [
       'css/tr-utilities-background',

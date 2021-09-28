@@ -1,0 +1,215 @@
+---
+title: Tipografi
+---
+Genel ayarlar, başlıklar, gövde metni, 
+listeler ve daha fazlası dahil olmak üzere v5 tipografisi için 
+bilgi ve örnekleri bu dökümanda bulabilirsiniz.
+
+### Genel Ayarlar
+
+v5, sıfırlama sonrası temel genel görüntüleme, tipografi ve bağlantı stillerini ayarlar. 
+
+### Başlıklar
+<code>&lt;h1&gt;</code> ile <code>&lt;h6&gt;</code> arasındaki tüm HTML başlıkları
+
+<table class="mt-1">
+  <tbody class="text-left">
+    <tr>
+      <td>
+          <h1 class="m-0">(h1) 1. Seviye v5 başlığı</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <h2 class="m-0">(h2) 2. Seviye v5 başlığı</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <h3 class="m-0">(h3) 3. Seviye v5 başlığı</h3>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <h4 class="m-0">(h4) 4. Seviye v5 başlığı</h4>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <h5 class="m-0">(h5) 5. Seviye v5 başlığı</h5>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <h6 class="m-0">(h6) 6. Seviye v5 başlığı</h6>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+Bir başlığın yazı boyutunu değiştirmek istiyorsunuz ama <code>&lt;h1&gt;</code> ... <code>&lt;h6&gt;</code> etiketlerini 
+kullanamadığınız durumlarda .h1 ila .h6 class'larını kullanabilirsiniz.
+
+<div class="p-2 bg-light">
+<p class="h1 m-0">h1. v5 heading</p>
+<p class="h2 m-0">h2. v5 heading</p>
+<p class="h3 m-0">h3. v5 heading</p>
+<p class="h4 m-0">h4. v5 heading</p>
+<p class="h5 m-0">h5. v5 heading</p>
+<p class="h6 m-0">h6. v5 heading</p>
+</div>
+
+```html title="html"
+<p class="h1">h1. v5 heading</p>
+<p class="h2">h2. v5 heading</p>
+<p class="h3">h3. v5 heading</p>
+<p class="h4">h4. v5 heading</p>
+<p class="h5">h5. v5 heading</p>
+<p class="h6">h6. v5 heading</p>
+```
+
+### Büyük ekran başlığı
+Standart başlık öğeleri, sayfa içeriğiniz en iyi 
+sonucu verecek şekilde tasarlanmıştır. 
+Öne çıkarılacak daha büyük bir başlığa ihtiyacınız olduğunda, <code>display-1</code> ... <code>display-6</code>
+değelerini kullanabilirsiniz.
+
+<div class="p-2 bg-light">
+<p class="display-1 m-0">Display 1</p>
+<p class="display-2 m-0">Display 2</p>
+<p class="display-3 m-0">Display 3</p>
+<p class="display-4 m-0">Display 4</p>
+<p class="display-5 m-0">Display 5</p>
+<p class="display-6 m-0">Display 6</p>
+</div>
+
+```html title="html"
+<h1 class="display-1">Display 1</h1>
+<h1 class="display-2">Display 2</h1>
+<h1 class="display-3">Display 3</h1>
+<h1 class="display-4">Display 4</h1>
+<h1 class="display-5">Display 5</h1>
+<h1 class="display-6">Display 6</h1>
+```
+
+### Satır içi metin öğeleri
+
+<div class="p-2 bg-light">
+<p><mark>Vurgulanan metin</mark></p>
+<p><del>Üstü çizili metin</del></p>
+<p><s>Artık doğru bilgi olmayan üstü çizili metin</s></p>
+<p><ins>Belgeye yeni eklenen bilgi.</ins></p>
+<p><u>Altı çizili metin</u></p>
+<p><small>Küçük metin satırı</small></p>
+<p><strong>Kalın metin satırı</strong></p>
+<p><em>İtalik metin satırı</em></p>
+</div>
+
+
+```html title="html"
+<mark>Vurgulanan metin</mark>
+<del>Üstü çizili metin</del>
+<s>Artık doğru bilgi olmayan üstü çizili metin</s>
+<ins>Belgeye yeni eklenen bilgi.</ins>
+<u>Altı çizili metin</u>
+<small>Küçük metin satırı</small>
+<strong>Kalın metin satırı</strong>
+<em>İtalik metin satırı</em>
+```
+
+##### Bu etiketlerin anlamları
+
+* <code>&lt;mark&gt;&lt;/mark&gt;</code> Bir metinde belirtilen alanın vurgulanmasına yarar.
+* <code>&lt;del&gt;&lt;/del&gt;</code> etiketi, bir belgeden silinen metni tanımlar.
+* <code>&lt;s&gt;&lt;/s&gt;</code> Bir metin satırının üstünü s ile çizmek artık o bilginin doğru olmadığını belirtir.
+* <code>&lt;ins&gt;&lt;/ins&gt;</code> Belgeye yeni eklenen bilgiyi belli etmek için kullanılır.
+* <code>&lt;u&gt;&lt;/u&gt;</code> Bir metin satırının altını çizmek için kullanabilirsiniz.
+* <code>&lt;small&gt;&lt;/small&gt;</code> Etiketi daha küçük metni tanımlar 
+* <code>&lt;strong&gt;&lt;/strong&gt;</code> İçindeki içerik kalın olarak görüntülenir.
+* <code>&lt;em&gt;&lt;/em&gt;</code> Bir belgede metni italik stil ile göstermenize yarar.
+
+> kaynak: https://www.w3schools.com/tags/
+
+### Kısaltmalar
+
+<div class="p-2 bg-light">
+<p><abbr title="attribute">attr</abbr></p>
+<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+</div>
+
+```html title="html"
+<mark>Vurgulanan metin</mark>
+<del>Üstü çizili metin</del>
+<s>Artık doğru bilgi olmayan üstü çizili metin</s>
+<ins>Belgeye yeni eklenen bilgi.</ins>
+<u>Altı çizili metin</u>
+<small>Küçük metin satırı</small>
+<strong>Kalın metin satırı</strong>
+<em>İtalik metin satırı</em>
+```
+
+### Alıntılar
+
+Başka bir kaynaktan içerik bloklarını alıntılamak için <code>&lt;blockquote&gt;...&lt;/blockquote&gt;</code> 
+kullanabilirsiniz.
+
+<div class="p-2 bg-light">
+<blockquote class="blockquote">
+  <p>v5 Belgeleri - T-Soft E-Commerce tarafından hazırlanmıştır.</p>
+</blockquote>
+</div>
+
+```html title="html"
+<blockquote class="blockquote">
+  <p>v5 Belgeleri - T-Soft E-Commerce tarafından hazırlanmıştır.</p>
+</blockquote>
+```
+
+### Listeleme
+
+
+<ul>
+<li>Liste maddesi</li>
+<li>1. Seviye
+<ul>
+<li>2. Seviye</li>
+<li>Liste maddesi</li>
+</ul>
+</li>
+<li>Liste maddesi</li>
+</ul>
+
+```html title="html"
+<ul>
+  <li>Liste maddesi</li>
+  <li>1. Seviye
+    <ul>
+      <li>2. Seviye</li>
+      <li>Liste maddesi</li>
+    </ul>
+  </li>
+  <li>Liste maddesi</li>
+</ul>
+```
+
+##### Sıralı bir liste örneği
+
+<ol>
+<li>TEKROM</li>
+<li>T-SOFT</li>
+<li>v5</li>
+<li>v4</li>
+<li>...</li>
+</ol>
+
+```html title="html"
+<ol>
+<li>TEKROM</li>
+<li>T-SOFT</li>
+<li>v5</li>
+<li>v4</li>
+<li>...</li>
+</ol>
+```
