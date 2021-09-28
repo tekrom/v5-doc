@@ -1,0 +1,119 @@
+---
+title: Sıfırlama
+---
+
+v5 de tarayıcı varsayılan stil ayarlarını (user agent stylesheet) sıfırlamamızdaki bazı temel sebepler şunlardır:
+* Ölçeklenebilir bileşen aralığı/ölçüsü için rem kullanmayı tercih ediyoruz. 
+* Varsayılan kenar boşluklarını temizleme
+* Kutu boyutu, border-box'a (*) <code>::before</code> ve <code>::after</code> dahil olmak üzere her 
+öğede global olarak ayarlama.
+* ...
+
+### Sayfa varsayılanları
+
+html ve body öğeleri, sayfa genelinde daha iyi varsayılanlar sağlamak için güncellenir. Daha spesifik olarak:
+
+### Başlıklar ve paragraflar
+Başlık ögeleri üst ve kenar boşlukları kaldırıldı.
+
+<table class="mt-1">
+  <thead>
+    <tr>
+      <th scope="col-auto">
+        <span class="text-nowrap">Başlık</span>
+      </th>
+      <th scope="col-auto">
+        <span class="text-nowrap text-center">Örnek</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr>
+      <th scope="row" class="fw-normal">
+        <code>
+            &lt;h1&gt;&lt;/h1&gt;
+        </code>
+      </th>
+      <td>
+          <h1>h1. v5 başlığı</h1>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal">
+        <code>
+            &lt;h2&gt;&lt;/h2&gt;
+        </code>
+      </th>
+      <td>
+          <h2>h2. v5 başlığı</h2>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal">
+        <code>
+            &lt;h3&gt;&lt;/h3&gt;
+        </code>
+      </th>
+      <td>
+          <h3>h3. v5 başlığı</h3>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal">
+        <code>
+            &lt;h4&gt;&lt;/h4&gt;
+        </code>
+      </th>
+      <td>
+          <h4>h4. v5 başlığı</h4>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal">
+        <code>
+            &lt;h5&gt;&lt;/h5&gt;
+        </code>
+      </th>
+      <td>
+          <h5>h5. v5 başlığı</h5>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal">
+        <code>
+            &lt;h6&gt;&lt;/h6&gt;
+        </code>
+      </th>
+      <td>
+          <h6>h6. v5 başlığı</h6>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Liste
+Tüm listeler &lt;ul&gt;, &lt;ol&gt; ve &lt;dl&gt; üst kenar boşluklarını ve alt kenar sıfırladık.
+İç içe listelerin kenar boşluğu önceki kapsayıcısı kadardır. 
+Ayrıca &lt;ul&gt; ve &lt;ol&gt; öğelerindeki sol boşluğunu da sıfırladık. <code>15px</code>
+
+<ul>
+<li>Tüm listelerin üst kenar boşlukları kaldırıldı</li>
+<li>Ve alt dış boşluk değerleri normalleştirildi</li>
+<li>İç içe listelerin kenar boşluğu kaldırıldı.
+<ul>
+<li>Bu sayede daha düzgün bir görünüme sahip.</li>
+<li>İç içe liste örnek</li>
+</ul>
+</li>
+<li>Sol boşluk 15px olarak ayarlandı.</li>
+</ul>
+
+##### Sıralı bir liste tanımlama
+
+<ol>
+<li>TEKROM</li>
+<li>T-SOFT</li>
+<li>v5</li>
+<li>v4</li>
+<li>...</li>
+</ol>

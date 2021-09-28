@@ -14,15 +14,18 @@ module.exports = {
       'css/tr-scss',
     ],
     'Yerleşim': [
-      'css/tr-containers',
-      'css/tr-grid',
-      'css/tr-utilities',
+      'css/tr-layout-containers',
+      'css/tr-layout-grid',
+      'css/tr-layout-utilities',
     ],
     'Özelleştirme': [
-      'css/tr-colors',
+      'css/tr-customize-colors',
     ],
     'İçerik': [
-      'css/tr-reboot',
+      'css/tr-content-reboot',
+    ],
+    'Araçlar': [
+      'css/tr-utilities-background',
     ],
     '* JavaScript': [
       'js/tr-javascript',
