@@ -259,6 +259,22 @@ table {
   }
 }
 
+.doc-image-example {
+  font-size: calc(1.4rem + 2.7vw);
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.doc-image-example svg {
+  border-radius: 5px;
+}
+
+[data-theme='dark'] .bg-light {
+  background-color: #000000 !important;
+}
+
 /* v5 all css */
 
 .noUi-target,

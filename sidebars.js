@@ -16,6 +16,7 @@ module.exports = {
     'Yerleşim': [
       'css/tr-layout-containers',
       'css/tr-layout-grid',
+      'css/tr-layout-gutters',
       'css/tr-layout-utilities',
     ],
     'Özelleştirme': [
@@ -24,6 +25,7 @@ module.exports = {
     'İçerik': [
       'css/tr-content-reboot',
       'css/tr-content-typography',
+      'css/tr-content-images',
     ],
     'Araçlar': [
       'css/tr-utilities-background',

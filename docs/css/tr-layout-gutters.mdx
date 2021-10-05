@@ -1,0 +1,125 @@
+---
+title: Kapsayıcılar Arası Boşluk
+---
+
+v5 ızgara sistemindeki içeriği duyarlı bir şekilde boşluk bırakmak ve hizalamak için 
+kullanılan sütunlarınız arasındaki dolgudur.
+
+### Nasıl çalışır?
+
+Kapsayıcı içerisindeki her bir satır içerisindeki sütun sağ ve sol dış boşluklar ile ayarlanmaktadır.
+
+#### v5 iki farklı yatay boşluk ile beraber gelir
+* <code>col-*</code> Varsayılan olarak sağ ve sol dış boşluk
+* <code>.no-gutters</code> sağ ve sol dış boşlukları sıfırlama
+
+
+Oluklar arası boşluklar <code>15px - 15px</code> olarak ayarlanmıştır.
+
+<table class="mt-1">
+  <thead>
+    <tr>
+      <td></td>
+      <th scope="col-auto">
+        <span class="d-flex text-nowrap">&nbsp;</span>
+        <span class="fw-normal">&lt;576px</span>
+      </th>
+      <th scope="col-auto">
+        <span class="d-flex justify-content-center text-nowrap">Small</span>
+        <span class="fw-normal">≥576px</span>
+      </th>
+      <th scope="col-auto">
+        <span class="d-flex justify-content-center text-nowrap">Medium</span>
+        <span class="fw-normal">≥768px</span>
+      </th>
+      <th scope="col-auto">
+        <span class="d-flex justify-content-center text-nowrap">Large</span>
+        <span class="fw-normal">≥992px</span>
+      </th>
+      <th scope="col-auto">
+        <span class="d-flex justify-content-center text-nowrap">X-Large</span>
+        <span class="fw-normal">≥1200px</span>
+      </th>
+      <th scope="col-auto">
+        <span class="d-flex justify-content-center text-nowrap">XX-Large</span>
+        <span class="fw-normal">≥1400px</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr>
+      <th scope="row" class="fw-normal"><code>.col-*</code></th>
+      <td class="text-muted">8px - 8px</td>
+      <td>8px - 8px</td>
+      <td>15px - 15px</td>
+      <td>15px - 15px</td>
+      <td>15px - 15px</td>
+      <td>15px - 15px</td>
+    </tr>
+    <tr>
+      <th scope="row" class="fw-normal"><code>.no-gutters</code></th>
+      <td class="text-muted">0</td>
+      <td class="text-muted">0</td>
+      <td class="text-muted">0</td>
+      <td class="text-muted">0</td>
+      <td class="text-muted">0</td>
+      <td class="text-muted">0</td>
+    </tr>
+  </tbody>
+</table>
+
+### Varsayılan yatay kutular arası boşluk
+
+<div class="p-2 border bdr-2 mb-3">
+    <div class="px-0 mb-0">
+      <div class="row">
+        <div class="col">
+        <div class="p-3 border bg-light text-right">Varsayılan kutular arası boşluk -></div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">&lt;- Varsayılan kutular arası boşluk</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+```html title="html"
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      Varsayılan kutular arası boşluk
+    </div>
+    <div class="col-6">
+      Varsayılan kutular arası boşluk
+    </div>
+  </div>
+</div>
+```
+
+### Kutular arası boşluk sıfırlama
+
+<div class="p-2 border bdr-2 mb-3">
+    <div class="px-0 mb-0">
+      <div class="row no-gutters">
+        <div class="col">
+        <div class="p-3 border bg-light text-center">Kutular arası boşluk sıfırlama</div>
+        </div>
+        <div class="col">
+        <div class="p-3 border bg-light text-center">Kutular arası boşluk sıfırlama</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+```html title="html"
+<div class="container">
+  <div class="row no-gutters">
+    <div class="col-6">
+      Kutular arası boşluk sıfırlama
+    </div>
+    <div class="col-6">
+      Kutular arası boşluk sıfırlama
+    </div>
+  </div>
+</div>
+```
