@@ -29,6 +29,7 @@ module.exports = {
     ],
     'Araçlar': [
       'css/tr-utilities-background',
+      'css/tr-utilities-borders',
     ],
     '* JavaScript': [
       'js/tr-javascript',
@@ -56,6 +57,9 @@ module.exports = {
       'js/tr-javascript-component-input-file',
       'js/tr-javascript-component-equal-height',
       'js/tr-javascript-component-mask',
+    ],
+    'Servisler': [
+      'api/tr-product-get-related-products',
     ],
   },
 };
