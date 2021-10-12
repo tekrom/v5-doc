@@ -59,6 +59,7 @@ module.exports = {
       'js/tr-javascript-component-mask',
     ],
     'Servisler': [
+      'api/tr-general-info-about-services',
       'api/tr-product-get-related-products',
     ],
   },
