@@ -64,6 +64,8 @@ module.exports = {
       'api/tr-address',
       'api/tr-brand',
       'api/tr-cart',
+      'api/tr-category',
+      'api/tr-combine',
       'api/tr-product-get-related-products-1',
       'api/tr-product-get-related-products-2',
       'api/tr-product-get-related-products-3',
