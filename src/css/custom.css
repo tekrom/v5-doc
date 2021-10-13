@@ -636,6 +636,47 @@ table {
   margin-right: 7px;
 }
 
+.v5-example-border-utils .v5-example-border {
+  width: 100px;
+  height: 100px;
+}
+
+html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
+  border-color: #dfdfdf !important;
+}
+
+.border-0 {
+  border: 0!important;
+}
+.border-top-0 {
+  border-top: 0!important;
+}
+.border-right-0 {
+  border-right: 0!important;
+}
+.border-bottom-0 {
+  border-bottom: 0!important;
+}
+.border-left-0 {
+  border-left: 0!important;
+}
+
+.border-1 {
+  border-width: 1px!important;
+}
+.border-2 {
+  border-width: 2px!important;
+}
+.border-3 {
+  border-width: 3px!important;
+}
+.border-4 {
+  border-width: 4px!important;
+}
+.border-5 {
+  border-width: 5px!important;
+}
+
 /* v5 all css */
 
 .noUi-target,
@@ -3391,7 +3432,7 @@ body [v-cloak] > *,
   padding-left: 0 !important
 }
 .col-auto {
-  flex: 1 0 0%;
+  flex: 0 0 auto;
   max-width: 100%;
   padding-left: 15px;
   padding-right: 15px
