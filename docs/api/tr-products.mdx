@@ -2,7 +2,7 @@
 title: Ürünler Servisi
 ---
 
-Ürünlerle ilgili servisler ile başlamaktadır.
+Ürünler servisi sabit alanı
 
 ```json
 /srv/service/product/
@@ -28,6 +28,76 @@ title: Ürünler Servisi
 ```json
 /srv/service/product/get-sub-product-images/{$P.ID}/{$P.VARIANT_ID}
 ```
+
+### Ürün bilgiler servisi
+Kullanılabilir Parametreler:
+'DOCUMENT_INFO', 'DETAIL', 'BARCODE', 'WARRANTY_INFO', 'DELIVERY_INFO', 'NOTES', 'PERSONALIZATION_ID'
+
+```json
+/srv/service/product/get/{$P.ID}/{PARAMS}
+/srv/service/product/get/{$P.ID}/document_info-detail-barcode-warranty_info-delivery_info-notes-personalization_id
+
+```
+`
+
+### İlk alt ürüne göre ikinci alt ürün servisi
+```json
+/srv/service/product/get-sub-two/{$P.ID}/{$P.VARIANT_ID}
+
+```
+### Alt ürün fotoğraf servisi
+```json
+/srv/service/product/get-sub-product-images/{$P.ID}/{$P.VARIANT_ID}
+
+```
+
+
+### Ürün arama servisi
+```json
+/srv/service/product/search/{WORD}
+
+```
+
+### Ürün JSON arama servisi
+```json
+/srv/service/product/search-json/{WORD}
+
+```
+### Ürün tüm arama servisi
+```json
+/srv/service/product/search-all/em{WORD}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/srv/service/product/filter/  //TODO: ///çalışmadı get yazınca değer getirdi
+/srv/service/product/loader   ///TODO:mantığı ne anlaşılamadı
+/srv/service/product/get-products-by-ids/443-2042  //TODO: ///çalışmadı
+/srv/service/product/get-products-by-barcodes   ///TODO:mantığı ne anlaşılamadı
+https://huseyindasci.1ticaret.com/srv/service/product/get-filter-brands/marka //TODO:çalışmadı
+https://huseyindasci.1ticaret.com/srv/service/product/get-filter-categories/cat //TODO:çalışmadı
+
+
+
+
+
+
+
+
+
+
 
 
 Servis detayları
