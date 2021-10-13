@@ -1,12 +1,12 @@
 ---
-title: Dış Çizgi
+title: Dış Çizgiler
 ---
 Bir öğenin kenarlığını ve kenarlık yarıçapını hızla biçimlendirmek için 
 bu classları kullanın. Resimler, butonlar veya başka herhangi bir öğe için kullanabilirsiniz.
 
 ### Dış çizgi rengi
 <div class="row">
-  <div class="col-4 p-1 bg-light">
+  <div class="col-4 p-1 bg-white">
     <div class="p-1 border border-primary text-black">
       <span class="text-primary">.border-primary</span>
     </div>
@@ -21,7 +21,7 @@ bu classları kullanın. Resimler, butonlar veya başka herhangi bir öğe için
       <span class="text-white">.border-white</span>
     </div>
   </div>
-  <div class="col-4 p-1 bg-light">
+  <div class="col-4 p-1 bg-white">
     <div class="p-1 border border-black">
       <span class="text-black">.border-black</span>
     </div>
@@ -31,62 +31,42 @@ bu classları kullanın. Resimler, butonlar veya başka herhangi bir öğe için
       <span class="text-gray">.border-gray</span>
     </div>
   </div>
+  <div class="col-4 p-1 bg-black">
+    <div class="p-1 border border-light">
+      <span class="text-light">.border-light</span>
+    </div>
+  </div>
+  <div class="col-4 p-1 bg-black">
+    <div class="p-1 border border-light">
+      <span class="text-light">.border-light</span>
+    </div>
+  </div>
+  <div class="col-4 p-1 bg-white">
+    <div class="p-1 border border-dark">
+      <span class="text-dark">.border-dark</span>
+    </div>
+  </div>
+  <div class="col-4 p-1 bg-white">
+    <div class="p-1 border border-success">
+      <span class="text-success">.border-success</span>
+    </div>
+  </div>
+  <div class="col-4 p-1 bg-white">
+    <div class="p-1 border border-info">
+      <span class="text-info">.border-info</span>
+    </div>
+  </div>
+  <div class="col-4 p-1 bg-white">
+    <div class="p-1 border border-warning">
+      <span class="text-warning">.border-warning</span>
+    </div>
+  </div>
+  <div class="col-4 p-1 bg-white">
+    <div class="p-1 border border-danger">
+      <span class="text-danger">.border-danger</span>
+    </div>
+  </div>
 </div>
-
-
-<table class="mt-1">
-  <tbody class="text-center">
-    <tr>
-      <th scope="row" class="fw-normal text-left p-0">
-          <div class="p-2 bg-gray text-black">
-            .bg-gray
-          </div>
-      </th>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal text-left p-0">
-          <div class="p-2 bg-light text-black">
-            .bg-light
-          </div>
-      </th>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal text-left p-0">
-          <div class="p-2 bg-dark text-white">
-            .bg-dark
-          </div>
-      </th>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal text-left p-0">
-          <div class="p-2 bg-success text-white">
-            .bg-success
-          </div>
-      </th>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal text-left p-0">
-          <div class="p-2 bg-info text-black">
-            .bg-info
-          </div>
-      </th>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal text-left p-0">
-          <div class="p-2 bg-warning text-black">
-            .bg-warning
-          </div>
-      </th>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal text-left p-0">
-          <div class="p-2 bg-danger text-white">
-            .bg-danger
-          </div>
-      </th>
-    </tr>
-  </tbody>
-</table>
 
 ### Sass
 Aşağıdaki Sass işlevine ek olarak, 
@@ -95,15 +75,117 @@ renkler ve daha fazlası için dahil edilen CSS özel özelliklerimizi
 ### Değişkenler
 
 ```scss
-$bgPrimary:     #fd6905;
-$bgSecondary:   #dddddd;
-$bgWhite:       #ffffff;
-$bgBlack:       #000000;
-$bgGray:        #a0a0a0;
-$bgLight:       #f9f9f9;
-$bgDarkGray:    #2c2a28;
-$bgSuccess:     #44c61f;
-$bgInfo:        #93d8dd;
-$bgWarning:     #fcdf27;
-$bgDanger:      #ff0000;
+$borderPrimary:     #fd6905;
+$borderSecondary:   #dddddd;
+$borderWhite:       #ffffff;
+$borderBlack:       #000000;
+$borderGray:        #a0a0a0;
+$borderLight:       #f9f9f9;
+$borderDarkGray:    #2c2a28;
+$borderSuccess:     #44c61f;
+$borderInfo:        #93d8dd;
+$borderWarning:     #fcdf27;
+$borderDanger:      #ff0000;
+```
+
+
+### Dış çizgi
+Bir öğeye kenarlık ekleme, bir kenar hariç uygulama ve köşeleri yumuşatmak için kullanabileceğiniz
+önceden tanımlanmış class'lar mevcuttur.
+
+<div class="p-2 border mb-1 v5-example-border-utils">
+    <div class="px-1">
+      <div class="row">
+        <div class="col-auto p-2">
+          <div class="p-2 border border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border-top border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border-right border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border-bottom border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border-left border-dark bg-gray v5-example-border"></div>
+        </div>
+        
+      </div>
+    </div>
+</div>
+
+```html
+<span class="border"></span>
+<span class="border-top"></span>
+<span class="border-end"></span>
+<span class="border-bottom"></span>
+<span class="border-start"></span>
+```
+
+### Tümü veya bir kenar hariç dış çizgi
+
+<div class="p-2 border mb-1 v5-example-border-utils">
+    <div class="px-1">
+      <div class="row">
+        <div class="col-auto p-2">
+          <div class="p-2 border border-0 border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border border-top-0 border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border border-right-0 border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border border-bottom-0 border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border border-left-0 border-dark bg-gray v5-example-border"></div>
+        </div>
+        
+      </div>
+    </div>
+</div>
+
+```html
+<span class="border-0"></span>
+<span class="border border-top-0"></span>
+<span class="border border-end-0"></span>
+<span class="border border-bottom-0"></span>
+<span class="border border-start-0"></span>
+```
+
+### Dış çizgi kalınlığı
+
+<div class="p-2 border mb-1 v5-example-border-utils">
+    <div class="px-1">
+      <div class="row">
+        <div class="col-auto p-2">
+          <div class="p-2 border border-1 border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border border-2 border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border border-3 border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border border-4 border-dark bg-gray v5-example-border"></div>
+        </div>
+        <div class="col-auto p-2">
+          <div class="p-2 border border-5 border-dark bg-gray v5-example-border"></div>
+        </div>
+        
+      </div>
+    </div>
+</div>
+
+```html
+<span class="border border-1"></span>
+<span class="border border-2"></span>
+<span class="border border-3"></span>
+<span class="border border-4"></span>
+<span class="border border-5"></span>
 ```
