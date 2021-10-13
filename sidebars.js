@@ -60,6 +60,7 @@ module.exports = {
     ],
     'Servisler': [
       'api/tr-general-info-about-services',
+      'api/tr-products',
       'api/tr-product-get-related-products-1',
       'api/tr-product-get-related-products-2',
       'api/tr-product-get-related-products-3',

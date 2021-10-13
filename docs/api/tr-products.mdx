@@ -1,0 +1,63 @@
+---
+title: Ürünler Servisi
+---
+
+Ürünlerle ilgili servisler ile başlamaktadır.
+
+```json
+/srv/service/product/
+```
+
+### İlgili (ilişkili) ürün servisi
+```json
+/srv/service/product/get-related-products/{$P.ID}/1
+```
+### İkame ürüm servisi
+```json
+/srv/service/product/get-related-products/{$P.ID}/2
+```
+### Aksesuar ürün servisi
+```json
+/srv/service/product/get-related-products/{$P.ID}/3
+```
+### Tamamlayıcı ürün servisi
+```json
+/srv/service/product/get-related-products/{$P.ID}/4
+```
+### Alt ürün resimleri servisi
+```json
+/srv/service/product/get-sub-product-images/{$P.ID}/{$P.VARIANT_ID}
+```
+
+
+Servis detayları
+
+<div class="row border rounded m-0">
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.ID</strong>
+        <sup class="d-block text-gray">ürün id</sup>
+    </div>
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.VARIANT_ID</strong>
+        <sup class="d-block text-gray">altürün id</sup>
+    </div>
+    <div class="col-4 p-2">
+        <code>number</code>
+        <sup class="d-block text-gray">ilgili ürün</sup>
+    </div>
+    <div class="col-5 p-2">
+        <div class="badge-rounded-pill">
+            GET
+        </div>
+        <sup class="d-block text-gray">method</sup>
+    </div>
+</div>
+
+<div class="p-2">
+    <div class="response-200"></div><span>200 : OK</span>
+    <p class="d-block text-gray pl-1">
+        açıklama
+    </p>
+</div>
+
+
