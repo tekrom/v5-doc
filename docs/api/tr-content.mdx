@@ -1,0 +1,70 @@
+---
+title: İçerik Servisi
+---
+İçerik sayfası servisi sabit alanı
+```json
+/srv/service/content/
+```
+
+
+
+### Blok sayfası servisi
+```json
+/srv/service/content/get/{BLOCK_ID}/{FOLDER}/{PARAMS}
+// /srv/service/content/get/1004/beni-ara
+// /srv/service/content/get/1110/set-location
+
+
+```
+### İçerik  blok servisi
+```json
+/srv/service/content/get-block/{BLOCK_ID}/{TYPE}/{PARAMS_ID}
+/srv/service/content/get-block/1018/content/1
+
+
+
+```
+### Sözleşmeler  blok servisi
+```json
+/srv/service/content/get-setting/{TITLE}
+// /srv/service/content/get-setting/KvkkMesaj
+// 'KvkkMesaj', 'UyelikSozlesmesi', 'SmsTicariOnayMetni', 'EmailTicariOnayMetni', 'TelefonTicariOnayMetni'  //izin verilen alanlar
+
+
+
+
+```
+
+
+
+<!-- /srv/service/content/get-products-tpl/v4/orta/firat -->
+
+
+Servis detayları
+
+<div class="row border rounded m-0">
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.ID</strong>
+        <sup class="d-block text-gray">ürün id</sup>
+    </div>
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.VARIANT_ID</strong>
+        <sup class="d-block text-gray">altürün id</sup>
+    </div>
+    <div class="col-4 p-2">
+        <code>number</code>
+        <sup class="d-block text-gray">ilgili ürün</sup>
+    </div>
+    <div class="col-5 p-2">
+        <div class="badge-rounded-pill">
+            GET
+        </div>
+        <sup class="d-block text-gray">method</sup>
+    </div>
+</div>
+<div class="p-2">
+    <div class="response-200"></div><span>200 : OK</span>
+    <p class="d-block text-gray pl-1">
+        açıklama
+    </p>
+</div>
