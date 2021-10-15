@@ -30,6 +30,7 @@ module.exports = {
     'Araçlar': [
       'css/tr-utilities-background',
       'css/tr-utilities-borders',
+      'css/tr-utilities-overflow',
     ],
     '* JavaScript': [
       'js/tr-javascript',
