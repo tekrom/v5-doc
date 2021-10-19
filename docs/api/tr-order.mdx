@@ -1,0 +1,82 @@
+---
+title: Sipraiş Servisi 
+---
+Sipariş servisi sabit alanı
+```json
+/srv/service/order/
+
+```
+
+<!-- TODO: buralar üye girişi istedi incelenmeli -->
+
+### Sipariş detayı
+```json
+/srv/service/order/detail/
+
+```
+### Fatura adresi 
+```json
+/srv/service/order/set-invoice-address/{ADDRESS_ID}/{SET_DELIVERY}/
+
+```
+### Teslimat adresi
+```json
+/srv/service/order/set-delivery-address/{ADDRESS_ID}/{INVOICE_DESPATCH_TYPE}/
+
+```
+### Adres Kontrolü
+```json
+/srv/service/order/check-address/{DATA}/{TYPE}/
+
+```
+### Kurye Kontrolü
+```json
+/srv/service/order/check-delivery-address-gold-kurye/
+
+```
+### Kurye adres
+```json
+srv/service/order/get-gold-kurye-delivery-address/
+
+```
+### Kurye ücreti
+```json
+/srv/service/order/get-gold-kurye-price/
+
+```
+### Kurye teslimat adresi
+```json
+/srv/service/order/set-gold-kurye-delivery-address/
+
+```
+
+
+
+Servis detayları
+
+<div class="row border rounded m-0">
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.ID</strong>
+        <sup class="d-block text-gray">ürün id</sup>
+    </div>
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.VARIANT_ID</strong>
+        <sup class="d-block text-gray">altürün id</sup>
+    </div>
+    <div class="col-4 p-2">
+        <code>number</code>
+        <sup class="d-block text-gray">ilgili ürün</sup>
+    </div>
+    <div class="col-5 p-2">
+        <div class="badge-rounded-pill">
+            GET
+        </div>
+        <sup class="d-block text-gray">method</sup>
+    </div>
+</div>
+<div class="p-2">
+    <div class="response-200"></div><span>200 : OK</span>
+    <p class="d-block text-gray pl-1">
+        açıklama
+    </p>
+</div>

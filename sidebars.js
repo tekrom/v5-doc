@@ -83,6 +83,8 @@ module.exports = {
       'api/tr-iyzico',
       'api/tr-language',
       'api/tr-model',
+      'api/tr-offer',
+      'api/tr-order',
       'api/tr-product-get-related-products-1',
       'api/tr-product-get-related-products-2',
       'api/tr-product-get-related-products-3',
