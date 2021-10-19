@@ -1,0 +1,54 @@
+---
+title: Filtre 
+---
+Filtre servisi sabit alanı
+```json
+/srv/service/filter
+
+```
+
+
+
+### Filtre servisi 
+```json
+/srv/service/filter/get/{PARAMS}?link={URL}
+// /srv/service/filter/get/filters-variants-brands-categories-price-models-suppliers?link=kisisel-bakim
+
+```
+### Filtre servisi tümü
+```json
+/srv/service/filter/get-all?link={URL}
+// /srv/service/filter/get-all?link=kisisel-bakim
+
+```
+
+
+
+Servis detayları
+
+<div class="row border rounded m-0">
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.ID</strong>
+        <sup class="d-block text-gray">ürün id</sup>
+    </div>
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.VARIANT_ID</strong>
+        <sup class="d-block text-gray">altürün id</sup>
+    </div>
+    <div class="col-4 p-2">
+        <code>number</code>
+        <sup class="d-block text-gray">ilgili ürün</sup>
+    </div>
+    <div class="col-5 p-2">
+        <div class="badge-rounded-pill">
+            GET
+        </div>
+        <sup class="d-block text-gray">method</sup>
+    </div>
+</div>
+<div class="p-2">
+    <div class="response-200"></div><span>200 : OK</span>
+    <p class="d-block text-gray pl-1">
+        açıklama
+    </p>
+</div>
