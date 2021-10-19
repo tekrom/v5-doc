@@ -81,6 +81,8 @@ module.exports = {
       'api/tr-guest-v5',
       'api/tr-hopi',
       'api/tr-iyzico',
+      'api/tr-language',
+      'api/tr-model',
       'api/tr-product-get-related-products-1',
       'api/tr-product-get-related-products-2',
       'api/tr-product-get-related-products-3',
