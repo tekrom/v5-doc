@@ -30,6 +30,7 @@ module.exports = {
     'Araçlar': [
       'css/tr-utilities-background',
       'css/tr-utilities-borders',
+      'css/tr-utilities-overflow',
     ],
     '* JavaScript': [
       'js/tr-javascript',
@@ -74,6 +75,7 @@ module.exports = {
       'api/tr-customer-service',
       'api/tr-customer-v5',
       'api/tr-e-invoice',
+      'api/tr-filter',
       'api/tr-product-get-related-products-1',
       'api/tr-product-get-related-products-2',
       'api/tr-product-get-related-products-3',
