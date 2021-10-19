@@ -76,6 +76,8 @@ module.exports = {
       'api/tr-customer-v5',
       'api/tr-e-invoice',
       'api/tr-filter',
+      'api/tr-gallery',
+      'api/tr-guest',
       'api/tr-product-get-related-products-1',
       'api/tr-product-get-related-products-2',
       'api/tr-product-get-related-products-3',
