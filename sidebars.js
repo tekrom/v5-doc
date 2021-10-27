@@ -31,6 +31,7 @@ module.exports = {
       'css/tr-utilities-background',
       'css/tr-utilities-borders',
       'css/tr-utilities-overflow',
+      'css/tr-utilities-position',
     ],
     '* JavaScript': [
       'js/tr-javascript',
