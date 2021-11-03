@@ -87,6 +87,8 @@ module.exports = {
       'api/tr-order',
       'api/tr-order-v4',
       'api/tr-order-v5',
+      'api/tr-personalization',
+      'api/tr-pritracker',
       'api/tr-product-get-related-products-1',
       'api/tr-product-get-related-products-2',
       'api/tr-product-get-related-products-3',
