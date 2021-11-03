@@ -1,0 +1,134 @@
+---
+title: Ürün Detay Servisi
+---
+
+Ürün Detay servisi sabit alanı
+
+```json
+/srv/service/product-detail/
+```
+
+### Detay json
+```json
+/srv/service/product-detail/json/{PRODUCT_ID}
+```
+### Detay alt ürün
+```json
+/srv/service/product-detail/variant/{PRODUCT_ID}
+// /srv/service/product-detail/variant/146/
+```
+### Detay ödeme seçenekleri
+```json
+/srv/service/product-detail/payment-options/{PRODUCT_ID}/
+// /srv/service/product-detail/payment-options/146/
+```
+### Detay tamamlayıcı ürünler
+```json
+/srv/service/product-detail/related-products/{PRODUCT_ID}/
+// /srv/service/product-detail/related-products/146/
+```
+### Detay resim (tab)
+```json
+/srv/service/product-detail/images/{PRODUCT_ID}/
+// /srv/service/product-detail/images/146/
+```
+### Detay yorum
+```json
+/srv/service/product-detail/comments/{PRODUCT_ID}/{TYPE=0}/{RETURN=false}
+// /srv/service/product-detail/comments/146/
+```
+### Detay yorum yapma
+```json
+/srv/service/product-detail/comment/{PRODUCT_ID}/
+// GoogleRecaptchaAktif,captchaCode, text, rate
+// /srv/service/product-detail/comment/146/
+```
+### Detay yorum oylama
+```json
+/srv/service/product-detail/vote-comment/{VOTE_ID}/{VOTE}
+// /srv/service/product-detail/vote-comment/13/1
+// {VOTE=1/0}
+```
+
+### Detay tavsiye et
+```json
+/srv/service/product-detail/recommend/146/
+// post: fromName, fromMail, toName, toMail,  g-recaptcha-response, message 
+```
+### Detay hızlı mesaj
+```json
+/srv/service/product-detail/quick-message/{PRODUCT_ID}/
+// /srv/service/product-detail/quick-message/146/
+// post: product_id, fullname, mobile_phone, email, message, security_code, g-recaptcha-response 
+
+```
+### Detay beni ara
+```json
+/srv/service/product-detail/call-me/{PRODUCT_ID}/
+// /srv/service/product-detail/call-me/146/
+// post: product_id, fullname, mobile_phone, email, message, security_code, g-recaptcha-response 
+
+```
+### Detay öneri kutusu
+```json
+/srv/service/product-detail/suggestion-box/{PRODUCT_ID}/
+// /srv/service/product-detail/suggestion-box/146/
+// post: product_id, fullname, mobile_phone, email, message, security_code, g-recaptcha-response 
+
+```
+### Detay taksitler
+```json
+srv/service/product-detail/credit-card-installment-list/{PRODUCT_ID}/{SUBPRODUCT_ID=0}/{IS_VAT=1}
+srv/service/product-detail/credit-card-installment-list/146/
+
+```
+### Detay filtreler
+```json
+srv/service/product-detail/filters/{PRODUCT_ID}/{CATEGORY_ID=0}
+srv/service/product-detail/filters/146/
+
+```
+### Detay yorum ortalaması
+```json
+/srv/service/product-detail/comment-average/{PRODUCT_ID}/
+// /srv/service/product-detail/comment-average/146
+
+```
+
+
+
+
+
+
+
+Servis detayları
+
+<div class="row border rounded m-0">
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.ID</strong>
+        <sup class="d-block text-gray">ürün id</sup>
+    </div>
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.VARIANT_ID</strong>
+        <sup class="d-block text-gray">altürün id</sup>
+    </div>
+    <div class="col-4 p-2">
+        <code>number</code>
+        <sup class="d-block text-gray">ilgili ürün</sup>
+    </div>
+    <div class="col-5 p-2">
+        <div class="badge-rounded-pill">
+            GET
+        </div>
+        <sup class="d-block text-gray">method</sup>
+    </div>
+</div>
+
+<div class="p-2">
+    <div class="response-200"></div><span>200 : OK</span>
+    <p class="d-block text-gray pl-1">
+        açıklama
+    </p>
+</div>
+
+

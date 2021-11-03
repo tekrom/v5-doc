@@ -62,7 +62,7 @@ module.exports = {
     ],
     '* Servisler': [
       'api/tr-all-info-about-services',
-      'api/tr-products',
+      'api/tr-product',
       'api/tr-address',
       'api/tr-brand',
       'api/tr-cart',
@@ -90,6 +90,7 @@ module.exports = {
       'api/tr-order-v5',
       'api/tr-personalization',
       'api/tr-pritracker',
+      'api/tr-product-detail',
       'api/tr-product-get-related-products-1',
       'api/tr-product-get-related-products-2',
       'api/tr-product-get-related-products-3',
