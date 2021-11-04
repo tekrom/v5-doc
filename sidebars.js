@@ -93,6 +93,8 @@ module.exports = {
       'api/tr-product-detail',
       'api/tr-product-showcase',
       'api/tr-profile',
+      'api/tr-region',
+      'api/tr-service',
       'api/tr-product-get-related-products-1',
       'api/tr-product-get-related-products-2',
       'api/tr-product-get-related-products-3',
