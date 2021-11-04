@@ -1,0 +1,182 @@
+---
+title: Kullanıcı Profile 
+---
+
+Kullanıcı profili servisi sabit alanı
+
+```json
+/srv/service/profile/
+```
+
+### Yeni mesaj formu
+```json
+/srv/service/profile/form-new-message/
+```
+
+### Yeni tedarikçi mesaj formu
+```json
+/srv/service/profile/form-supplier-message/{SUPPLIER_ID}/{PRODUCT}
+/srv/service/profile/form-supplier-message/0/
+```
+
+
+### Yeni mesaj gönder
+```json
+/srv/service/profile/send-new-message/
+post : departmentId, subject, message
+```
+### Mesaj sil
+```json
+/srv/service/profile/delete-message/
+post: id
+
+```
+### İd ile ürün sile
+```json
+/srv/service/profile/delete-shopping-products-by-product-id/
+post: products
+
+```
+###  ürün sile
+```json
+/srv/service/profile/delete-shopping-products/
+post: products
+
+```
+###  Alarm listesi silme
+```json
+/srv/service/profile/delete-alarm-products/
+post: products
+
+```
+
+<!-- TODO:buradan devam -->
+
+###  Fiyat Alarm listesine ekleme
+```json
+/srv/service/profile/add-to-alarm-list/{PRODUCT_ID}-{SUB_PRODUCT_ID}/
+//post:  productId currentPrice alarmPrice alarmDuration currency dipslayVat
+
+```
+###  Stock Alarm listesine ekleme
+```json
+/srv/service/profile/add-to-stock-alarm-list/{PRODUCT_ID}-{SUB_PRODUCT_ID}/
+
+
+```
+###  Mesaj listesi
+```json
+/srv/service/profile/get-message-list/
+
+
+```
+###  Mesaj departman listesi
+```json
+/srv/service/profile/get-message-department-list/
+
+
+```
+###  Mesaj detayı
+```json
+/srv/service/profile/get-message-detail/{ID}
+// /srv/service/profile/get-message-detail/1
+
+```
+### Kupon Listesi
+```json
+/srv/service/profile/get-coupon-list/{IS_MOBILE_APP=0}
+
+```
+### Alarm Listesi
+```json
+/srv/service/profile/get-alarm-list/price
+/srv/service/profile/get-alarm-list/{TYPE=price|stock}/{PARAMS=''}/{RETURNJSON=true}
+
+```
+### Alışveriş Listesi
+```json
+/srv/service/profile/get-shopping-list/{ID=''}/
+// /srv/service/profile/get-shopping-list/
+
+```
+### Alışveriş Listesine ekleme
+```json
+/srv/service/profile/add-to-shopping-list/
+// post: ids, cat_id
+
+```
+### Alışveriş Listesine linki oluşturma
+```json
+/srv/service/profile/create-shopping-link/{SHOPPING_LIST_ID}/{EXPIRE_DAY=30}
+/srv/service/profile/create-shopping-link/1
+
+```
+### Alışveriş Listesine linki paylaşma
+```json
+/srv/service/profile/share-shopping-link/{EMAIL}/{SHOPPING_LIST_ID}/{EXPIRE_DAY=30}
+/srv/service/profile/share-shopping-link/test@test.com/1
+
+```
+### Puanlar
+```json
+/srv/service/profile/load-points/{TYPE=0}
+/srv/service/profile/load-points/0
+
+```
+### Abone listesi
+```json
+/srv/service/profile/subscribe-list/
+
+```
+### Abone durdurma
+```json
+/srv/service/profile/subscribe-stop/{ID}
+/srv/service/profile/subscribe-stop/1
+
+```
+### İşlemleri durdurma
+```json
+/srv/service/profile/subscribe-transactions/1
+
+```
+### Anlık ödeme bildirimi
+```json
+/srv/service/profile/get-current-payment-list/{PG=1}
+/srv/service/profile/get-current-payment-list/?pg=1
+
+```
+
+
+
+
+Servis detayları
+
+<div class="row border rounded m-0">
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.ID</strong>
+        <sup class="d-block text-gray">ürün id</sup>
+    </div>
+    <div class="col-3 p-2">
+        <strong class="text-primary">$P.VARIANT_ID</strong>
+        <sup class="d-block text-gray">altürün id</sup>
+    </div>
+    <div class="col-4 p-2">
+        <code>number</code>
+        <sup class="d-block text-gray">ilgili ürün</sup>
+    </div>
+    <div class="col-5 p-2">
+        <div class="badge-rounded-pill">
+            GET
+        </div>
+        <sup class="d-block text-gray">method</sup>
+    </div>
+</div>
+
+<div class="p-2">
+    <div class="response-200"></div><span>200 : OK</span>
+    <p class="d-block text-gray pl-1">
+        açıklama
+    </p>
+</div>
+
+
