@@ -1,0 +1,23 @@
+---
+title: Alt Ürün 
+---
+
+Alt ürün servisi sabit alanı
+
+
+```json
+/srv/service/variant/
+```
+
+### Variant2 ye göre variant1 verilerini alma
+```json
+/srv/service/variant/get-variant1-list/{PRODUCT_ID}/{TYPE2_ID}
+// /srv/service/variant/get-variant1-list/146/33
+
+```
+### Variant1'e göre variant2 verilerini alma
+```json
+/srv/service/variant/get-variant1-list/{PRODUCT_ID}/{TYPE1_ID}
+// /srv/service/variant/get-variant1-list/146/46
+
+```
