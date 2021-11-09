@@ -100,6 +100,7 @@ module.exports = {
       'api/tr-store',
       'api/tr-supplier',
       'api/tr-variant',
+      'api/tr-zubizu',
       'api/tr-product-get-related-products-1',
       'api/tr-product-get-related-products-2',
       'api/tr-product-get-related-products-3',
