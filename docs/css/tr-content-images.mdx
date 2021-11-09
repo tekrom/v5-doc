@@ -3,19 +3,21 @@ title: Görüntüler / Resimler
 ---
 
 Tarayıcı ölçeğine duyarlı görüntüler, resimler vb. medyaları kullanırken sizler için 
-önceden tanımlanmış class'lardan faydalanabilirsiniz.
+önceden <code>img</code> seçicisine <code>max-width</code> değerini tanımladık.
 
-### Çözünürlük duyarlı görsel
+### Çözünürlüğe duyarlı görsel
 
-Medyalar <code>.img-fluid</code> ile duyarlı hale getirilir. 
-Bu, maksimum genişlik için: %100; ve yükseklik: otomatik; olacak şekilde ayarlayacaktır.
+Medyalara herhangi bir class yazmadan doğrudan duyarlı hale getirilebilir. 
+Maksimum genişlik için: %100; ve yükseklik: otomatik; olacak şekilde ayarlayacaktır.
 
-<div class="doc-image-example">
-  <svg class="img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+Buna ek olarak kapsayıcı genişliğini almasını isterseniz <code>w-100</code> verebilirsiniz.
+
+<div class="doc-image-example mt-2">
+  <svg class="w-100" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
     <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5 Responsive image</text>
   </svg>
 </div>
 
 ```html title="html"
-<img src="..." class="img-fluid" alt="...">
+<img src="..." class="w-100" alt="...">
 ```

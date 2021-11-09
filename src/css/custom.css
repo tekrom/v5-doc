@@ -700,6 +700,7 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
 .v5-example-position-utils .v5-example-position {
 
 }
+
 /* v5 all css */
 
 .noUi-target,
@@ -3120,15 +3121,16 @@ html.is-active-modal {
 }
 @keyframes slideInUp {
   from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+    
     visibility: visible;
-    opacity: 1
+    opacity: 0
   }
   to {
-    -webkit-transform: translate3d(0, -30%, 0);
-    transform: translate3d(0, -30%, 0);
-    opacity: 0
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1
   }
 }
 @-webkit-keyframes transformRotate {
@@ -3197,11 +3199,11 @@ html.is-active-modal {
 }
 .slide-in-down {
   -webkit-animation-name: slideInDown;
-  animation-name: slideInDown
+  animation-name: slideInDown;
 }
 .slide-in-up {
   -webkit-animation-name: slideInUp;
-  animation-name: slideInUp
+  animation-name: slideInUp;
 }
 .transform-rotate {
   -webkit-animation-name: transformRotate;

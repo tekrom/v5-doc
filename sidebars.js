@@ -26,6 +26,7 @@ module.exports = {
       'css/tr-content-reboot',
       'css/tr-content-typography',
       'css/tr-content-images',
+      'css/tr-content-animations',
     ],
     'Araçlar': [
       'css/tr-utilities-background',
