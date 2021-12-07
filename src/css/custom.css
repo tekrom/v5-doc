@@ -713,6 +713,12 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
   border-radius: 3px;
 }
 
+.justify-content-evenly {
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
 /* v5 all css */
 
 .noUi-target,

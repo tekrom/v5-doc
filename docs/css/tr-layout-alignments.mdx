@@ -14,34 +14,32 @@ Sütunları dikey ve yatay olarak hizalamak için esnek kutu hizalama yardımcı
 
 ## Dikey Hizalama
 
-##### .align-items-start
+### .align-items-flex-start
+(varsayılan) Öğeleri başlangıç noktasında (sola dayalı) hizalama.
 
-<div class="p-2 border bdr-2 mb-3">
-    <div class="px-0 mb-0 border bg-light bdr-2 v5-example-layout-alignment">
-      <div class="row m-0 p-2 w-100">
-        <div class="col border bg-gray p-3 bdr-2 text-center">
-          Hizalama öğeleri - Başlangıç
-        </div>
-      </div>
+<div class="px-0 mb-1 border bg-light bdr-2 v5-example-layout-alignment">
+  <div class="row m-0 p-2 w-100">
+    <div class="col border bg-dark text-white p-3 bdr-2 text-center">
+      Dikey Hizalama - Başlangıç
     </div>
+  </div>
 </div>
 
 ```html
-<div class="d-flex align-items-start">
+<div class="d-flex align-items-flex-start">
   ...
 </div>
 ```
 
 ### .align-items-center
+Öğeleri ortada hizalama.
 
-<div class="p-2 border bdr-2 mb-3">
-    <div class="px-0 mb-0 border bg-light bdr-2 v5-example-layout-alignment d-flex align-items-center">
-      <div class="row m-0 p-2 w-100">
-        <div class="col border bg-gray p-3 bdr-2 text-center">
-          Dikey hizalama öğeleri - Orta
-        </div>
-      </div>
+<div class="px-0 mb-1 border bg-light bdr-2 v5-example-layout-alignment d-flex align-items-center">
+  <div class="row m-0 p-2 w-100">
+    <div class="col border bg-dark text-white p-3 bdr-2 text-center">
+      Dikey Hizalama - Orta
     </div>
+  </div>
 </div>
 
 ```html
@@ -51,15 +49,14 @@ Sütunları dikey ve yatay olarak hizalamak için esnek kutu hizalama yardımcı
 ```
 
 ### .align-items-flex-end
+Öğeleri bitiş noktasında (sağa dayalı) hizalama.
 
-<div class="p-2 border bdr-2 mb-3">
-    <div class="px-0 mb-0 border bg-light bdr-2 v5-example-layout-alignment d-flex align-items-flex-end">
-      <div class="row m-0 p-2 w-100">
-        <div class="col border bg-gray p-3 bdr-2 text-center">
-          Dikey hizalama öğeleri - Son
-        </div>
-      </div>
+<div class="px-0 mb-1 border bg-light bdr-2 v5-example-layout-alignment d-flex align-items-flex-end">
+  <div class="row m-0 p-2 w-100">
+    <div class="col border bg-dark text-white p-3 bdr-2 text-center">
+      Dikey Hizalama - Son
     </div>
+  </div>
 </div>
 
 ```html
@@ -74,14 +71,12 @@ Sütunları dikey ve yatay olarak hizalamak için esnek kutu hizalama yardımcı
 
 ### .justify-content-flex-start
 
-<div class="p-2 border bdr-2 mb-3">
-    <div class="px-0 mb-0 border bg-light bdr-2">
-      <div class="row m-0 p-2 w-100 justify-content-flex-start">
-        <div class="col-6 border bg-gray p-3 bdr-2 text-center">
-          Yatay hizalama öğeleri - Başlangıç
-        </div>
-      </div>
+<div class="px-0 mb-1 border bg-light bdr-2">
+  <div class="row m-0 p-2 w-100 justify-content-flex-start">
+    <div class="col-6 border bg-dark text-white p-3 bdr-2 text-center">
+      Yatay Hizalama - Başlangıç
     </div>
+  </div>
 </div>
 
 ```html
@@ -92,14 +87,12 @@ Sütunları dikey ve yatay olarak hizalamak için esnek kutu hizalama yardımcı
 
 ### .justify-content-center
 
-<div class="p-2 border bdr-2 mb-3">
-    <div class="px-0 mb-0 border bg-light bdr-2">
-      <div class="row m-0 p-2 w-100 justify-content-center">
-        <div class="col-6 border bg-gray p-3 bdr-2 text-center">
-          Yatay hizalama öğeleri - Orta
-        </div>
-      </div>
+<div class="px-0 mb-1 border bg-light bdr-2">
+  <div class="row m-0 p-2 w-100 justify-content-center">
+    <div class="col-6 border bg-dark text-white p-3 bdr-2 text-center">
+      Yatay Hizalama - Orta
     </div>
+  </div>
 </div>
 
 ```html
@@ -110,14 +103,12 @@ Sütunları dikey ve yatay olarak hizalamak için esnek kutu hizalama yardımcı
 
 ### .justify-content-flex-end
 
-<div class="p-2 border bdr-2 mb-3">
-    <div class="px-0 mb-0 border bg-light bdr-2">
-      <div class="row m-0 p-2 w-100 justify-content-flex-end">
-        <div class="col-6 border bg-gray p-3 bdr-2 text-center">
-          Yatay hizalama öğeleri - Son
-        </div>
-      </div>
+<div class="px-0 mb-1 border bg-light bdr-2">
+  <div class="row m-0 p-2 w-100 justify-content-flex-end">
+    <div class="col-6 border bg-dark text-white p-3 bdr-2 text-center">
+      Yatay Hizalama - Son
     </div>
+  </div>
 </div>
 
 ```html
@@ -126,19 +117,38 @@ Sütunları dikey ve yatay olarak hizalamak için esnek kutu hizalama yardımcı
 </div>
 ```
 
-### .justify-content-around
+### .justify-content-evenly (eksik eklenecek)
+Tüm öğelerin arası aynı eşitlikte olacak şekilde hizalama.
 
-<div class="p-2 border bdr-2 mb-3">
-    <div class="px-0 mb-0 border bg-light bdr-2">
-      <div class="row m-0 p-2 w-100 justify-content-around">
-        <div class="col-auto border bg-gray p-3 bdr-2 text-center">
-          Yatay hizalama öğeleri
-        </div>
-        <div class="col-auto border bg-gray p-3 bdr-2 text-center">
-          Yatay hizalama öğeleri
-        </div>
-      </div>
+<div class="px-0 mb-1 border bg-light bdr-2">
+  <div class="row m-0 p-2 w-100 justify-content-evenly">
+    <div class="col-auto border bg-dark text-white p-3 bdr-2 text-center">
+      Yatay Hizalama
     </div>
+    <div class="col-auto border bg-dark text-white p-3 bdr-2 text-center">
+      Yatay Hizalama
+    </div>
+  </div>
+</div>
+
+```html
+<div class="d-flex justify-content-evenly">
+  ...
+</div>
+```
+
+### .justify-content-around
+İlk ve son öğe hariç diğerlerinin arası eşit olacak şekilde hizalama.
+
+<div class="px-0 mb-1 border bg-light bdr-2">
+  <div class="row m-0 p-2 w-100 justify-content-around">
+    <div class="col-auto border bg-dark text-white p-3 bdr-2 text-center">
+      Yatay Hizalama
+    </div>
+    <div class="col-auto border bg-dark text-white p-3 bdr-2 text-center">
+      Yatay Hizalama
+    </div>
+  </div>
 </div>
 
 ```html
@@ -148,18 +158,17 @@ Sütunları dikey ve yatay olarak hizalamak için esnek kutu hizalama yardımcı
 ```
 
 ### .justify-content-between
+İlk öğe sola dayalı, son öğe sağa dayalı ve diğerleri ortalı olacak şekilde hizalama.
 
-<div class="p-2 border bdr-2 mb-3">
-    <div class="px-0 mb-0 border bg-light bdr-2">
-      <div class="row m-0 p-2 w-100 justify-content-between">
-        <div class="col-auto border bg-gray p-3 bdr-2 text-center">
-          Yatay hizalama öğeleri
-        </div>
-        <div class="col-auto border bg-gray p-3 bdr-2 text-center">
-          Yatay hizalama öğeleri
-        </div>
-      </div>
+<div class="px-0 mb-1 border bg-light bdr-2">
+  <div class="row m-0 p-2 w-100 justify-content-between">
+    <div class="col-auto border bg-dark text-white p-3 bdr-2 text-center">
+      Yatay Hizalama
     </div>
+    <div class="col-auto border bg-dark text-white p-3 bdr-2 text-center">
+      Yatay Hizalama
+    </div>
+  </div>
 </div>
 
 ```html
