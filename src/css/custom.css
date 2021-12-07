@@ -697,8 +697,20 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
 .v5-example-position-utils {
   height: 150px;
 }
+
 .v5-example-position-utils .v5-example-position {
 
+}
+
+.v5-example-layout-alignment {
+  height: 200px;
+}
+
+.v5-example-alert-info {
+  background-color: #e8f2ff;
+  padding: 1.25rem 1rem;
+  border-left: 3px solid #0086ff;
+  border-radius: 3px;
 }
 
 /* v5 all css */

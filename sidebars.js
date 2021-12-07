@@ -16,6 +16,8 @@ module.exports = {
     'Yerleşim': [
       'css/tr-layout-containers',
       'css/tr-layout-grid',
+      'css/tr-layout-alignments',
+      'css/tr-layout-orders',
       'css/tr-layout-gutters',
       'css/tr-layout-utilities',
     ],

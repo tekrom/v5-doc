@@ -1,0 +1,132 @@
+---
+title: Sıralama
+---
+
+Esnek kutu ızgara sistemimiz sayesinde bir dizi sıralama 
+seçeneğiyle sütunları nasıl değiştireceğinizi öğrenin.
+
+<div class="v5-example-alert-info text-black">
+  Öncesinde <a href="/docs/css/tr-layout-grid">Izgara Sistemleri</a>'ni okuduğunuzdan emin olun.
+</div>
+
+## - Sıralama sınıfları
+Sütunları yeniden sıralamak için yardımcı classları kullanın.
+İçeriğinizin görsel sırasını kontrol etmek için .order- sınıflarını kullanın. 
+Izgara katmanının tamamında 1'den 10'a kadar destek içerir.
+
+```css
+.order-1 {
+    order: 1;
+}
+.order-2 {
+    order: 2;
+}
+
+...
+
+.order-10 {
+    order: 10;
+}
+```
+
+### Örnek kullanım
+
+<div class="p-2 border bdr-2 mb-3">
+  <div class="row m-0 py-1 w-100">
+    <div class="col order-2">
+      <div class="border bg-gray p-3 bdr-2 text-center">
+        1
+      </div>
+    </div>
+    <div class="col order-3">
+      <div class="border bg-gray p-3 bdr-2 text-center">
+        2
+      </div>
+    </div>
+    <div class="col order-1">
+      <div class="border bg-gray p-3 bdr-2 text-center">
+        3
+      </div>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="row">
+  <div class="col order-2">
+    1
+  </div>
+  <div class="col order-3">
+    2
+  </div>
+  <div class="col order-1">
+    3
+  </div>
+</div>
+```
+
+### Kırılma noktası ile kullanım
+
+Kırılma noktaları ile beraber kullanabilirsiniz. Örneğin, .order-1.order-md-2... 
+
+```css
+	
+@media (min-width: 992px) {
+  .order-lg-1 {
+      order: 1;
+  }
+  .order-lg-2 {
+      order: 2;
+  }
+  ...
+}
+	
+@media (min-width: 768px) {
+  .order-md-1 {
+      order: 1;
+  }
+  .order-md-2 {
+      order: 2;
+  }
+  ...
+}
+
+...
+
+```
+
+Değişimi görmek için ekranı küçültün. Genişlik < col-lg
+
+<div class="p-2 border bdr-2 mb-3">
+  <div class="row m-0 py-1 w-100">
+    <div class="col order-lg-1 order-2">
+      <div class="border bg-gray p-3 bdr-2 text-center">
+        1
+      </div>
+    </div>
+    <div class="col order-lg-2 order-3">
+      <div class="border bg-gray p-3 bdr-2 text-center">
+        2
+      </div>
+    </div>
+    <div class="col order-lg-3 order-1">
+      <div class="border bg-gray p-3 bdr-2 text-center">
+        3
+      </div>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="row">
+  <div class="col order-lg-1 order-2">
+    1
+  </div>
+  <div class="col order-lg-2 order-3">
+    2
+  </div>
+  <div class="col order-lg-3 order-1">
+    3
+  </div>
+</div>
+```
