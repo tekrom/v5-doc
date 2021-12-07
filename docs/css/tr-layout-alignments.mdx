@@ -1,0 +1,170 @@
+---
+title: Hizalama
+---
+
+Esnek kutu ızgara sistemimiz sayesinde bir dizi hizalama
+seçeneğiyle sütunları nasıl değiştireceğinizi öğrenin.
+
+<div class="v5-example-alert-info text-black">
+  Öncesinde <a href="/docs/css/tr-layout-grid">Izgara Sistemleri</a>'ni okuduğunuzdan emin olun.
+</div>
+
+# - Hizalama
+Sütunları dikey ve yatay olarak hizalamak için esnek kutu hizalama yardımcı classlarını kullanın.
+
+## Dikey Hizalama
+
+##### .align-items-start
+
+<div class="p-2 border bdr-2 mb-3">
+    <div class="px-0 mb-0 border bg-light bdr-2 v5-example-layout-alignment">
+      <div class="row m-0 p-2 w-100">
+        <div class="col border bg-gray p-3 bdr-2 text-center">
+          Hizalama öğeleri - Başlangıç
+        </div>
+      </div>
+    </div>
+</div>
+
+```html
+<div class="d-flex align-items-start">
+  ...
+</div>
+```
+
+### .align-items-center
+
+<div class="p-2 border bdr-2 mb-3">
+    <div class="px-0 mb-0 border bg-light bdr-2 v5-example-layout-alignment d-flex align-items-center">
+      <div class="row m-0 p-2 w-100">
+        <div class="col border bg-gray p-3 bdr-2 text-center">
+          Dikey hizalama öğeleri - Orta
+        </div>
+      </div>
+    </div>
+</div>
+
+```html
+<div class="d-flex align-items-center">
+  ...
+</div>
+```
+
+### .align-items-flex-end
+
+<div class="p-2 border bdr-2 mb-3">
+    <div class="px-0 mb-0 border bg-light bdr-2 v5-example-layout-alignment d-flex align-items-flex-end">
+      <div class="row m-0 p-2 w-100">
+        <div class="col border bg-gray p-3 bdr-2 text-center">
+          Dikey hizalama öğeleri - Son
+        </div>
+      </div>
+    </div>
+</div>
+
+```html
+<div class="d-flex align-items-flex-end">
+  ...
+</div>
+```
+
+---
+
+## Yatay Hizalama
+
+### .justify-content-flex-start
+
+<div class="p-2 border bdr-2 mb-3">
+    <div class="px-0 mb-0 border bg-light bdr-2">
+      <div class="row m-0 p-2 w-100 justify-content-flex-start">
+        <div class="col-6 border bg-gray p-3 bdr-2 text-center">
+          Yatay hizalama öğeleri - Başlangıç
+        </div>
+      </div>
+    </div>
+</div>
+
+```html
+<div class="d-flex justify-content-flex-start">
+  ...
+</div>
+```
+
+### .justify-content-center
+
+<div class="p-2 border bdr-2 mb-3">
+    <div class="px-0 mb-0 border bg-light bdr-2">
+      <div class="row m-0 p-2 w-100 justify-content-center">
+        <div class="col-6 border bg-gray p-3 bdr-2 text-center">
+          Yatay hizalama öğeleri - Orta
+        </div>
+      </div>
+    </div>
+</div>
+
+```html
+<div class="d-flex justify-content-center">
+  ...
+</div>
+```
+
+### .justify-content-flex-end
+
+<div class="p-2 border bdr-2 mb-3">
+    <div class="px-0 mb-0 border bg-light bdr-2">
+      <div class="row m-0 p-2 w-100 justify-content-flex-end">
+        <div class="col-6 border bg-gray p-3 bdr-2 text-center">
+          Yatay hizalama öğeleri - Son
+        </div>
+      </div>
+    </div>
+</div>
+
+```html
+<div class="d-flex justify-content-flex-end">
+  ...
+</div>
+```
+
+### .justify-content-around
+
+<div class="p-2 border bdr-2 mb-3">
+    <div class="px-0 mb-0 border bg-light bdr-2">
+      <div class="row m-0 p-2 w-100 justify-content-around">
+        <div class="col-auto border bg-gray p-3 bdr-2 text-center">
+          Yatay hizalama öğeleri
+        </div>
+        <div class="col-auto border bg-gray p-3 bdr-2 text-center">
+          Yatay hizalama öğeleri
+        </div>
+      </div>
+    </div>
+</div>
+
+```html
+<div class="d-flex justify-content-around">
+  ...
+</div>
+```
+
+### .justify-content-between
+
+<div class="p-2 border bdr-2 mb-3">
+    <div class="px-0 mb-0 border bg-light bdr-2">
+      <div class="row m-0 p-2 w-100 justify-content-between">
+        <div class="col-auto border bg-gray p-3 bdr-2 text-center">
+          Yatay hizalama öğeleri
+        </div>
+        <div class="col-auto border bg-gray p-3 bdr-2 text-center">
+          Yatay hizalama öğeleri
+        </div>
+      </div>
+    </div>
+</div>
+
+```html
+<div class="d-flex justify-content-between">
+  ...
+</div>
+```
+
