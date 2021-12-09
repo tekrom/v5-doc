@@ -1,0 +1,160 @@
+---
+title: Buton
+---
+
+Sizler için önceden tanımlanmış; boyut renk ve diğer özellikler. 
+v5'in özel buton stillerini kullanın.
+
+# Örnekler
+
+<!-- ToDo: my-md gibi classlar eksik eklenmeli -->
+
+<div class="px-0 mb-1 border bdr-2">
+  <div class="row m-0 p-2 w-100 justify-content-between">
+    <button type="button" class="btn btn-primary my-md-1">Primary</button>
+    <button type="button" class="btn btn-secondary text-black my-md-1">Secondary</button>
+    <button type="button" class="btn btn-success my-md-1">Success</button>
+    <button type="button" class="btn btn-danger my-md-1">Danger</button>
+    <button type="button" class="btn btn-warning text-black my-md-1">Warning</button>
+    <button type="button" class="btn btn-info text-black my-md-1">Info</button>
+    <button type="button" class="btn btn-light my-md-1">Light</button>
+    <button type="button" class="btn btn-dark my-md-1">Dark</button>
+    <button type="button" class="btn my-md-1">Link</button>
+  </div>
+</div>
+
+```html
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn">Link</button>
+```
+
+## Dış çizgi
+
+<div class="px-0 mb-1 border bg-light bdr-2">
+  <div class="row m-0 p-2 w-100 justify-content-between">
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <div class="bg-dark p-1">
+      <button type="button" class="btn btn-outline-light">Light</button>
+    </div>
+    <button type="button" class="btn btn-outline-dark">Dark</button>
+  </div>
+</div>
+
+```html
+<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+<button type="button" class="btn btn-outline-success">Success</button>
+<button type="button" class="btn btn-outline-danger">Danger</button>
+<button type="button" class="btn btn-outline-warning">Warning</button>
+<button type="button" class="btn btn-outline-info">Info</button>
+<button type="button" class="btn btn-outline-light">Light</button>
+<button type="button" class="btn btn-outline-dark">Dark</button>
+```
+
+## Boyutlar
+
+<div class="px-0 mb-1 border bg-light bdr-2">
+  <div class="row m-0 p-2 w-100">
+    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+    <button type="button" class="btn btn-secondary btn-lg ml-1">Large button</button>
+  </div>
+</div>
+
+```html
+<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+```
+
+<div class="px-0 mb-1 border bg-light bdr-2">
+  <div class="row m-0 p-2 w-100">
+    <button type="button" class="btn btn-primary btn-sm">Small button</button>
+    <button type="button" class="btn btn-secondary btn-sm ml-1">Small button</button>
+  </div>
+</div>
+
+```html
+<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+```
+
+## Durumlar
+
+### Devre dışı 
+
+Herhangi bir <code>&lt;button&gt;</code> öğesine devre dışı bırakılmış niteliğini ekleyerek 
+buton devre dışı görünmesini sağlayın. Devre dışı bırakılan düğmelerin işaretçi olayları vardır: 
+hiçbiri uygulanmaz, vurgulu ve etkin durumların tetiklenmesi engellenir. 
+
+<div class="px-0 mb-1 border bg-light bdr-2">
+  <div class="row m-0 p-2 w-100">
+    <button type="button" class="btn btn-primary" disabled>Primary button</button>
+    <button type="button" class="btn btn-secondary ml-1" disabled>Button</button>
+  </div>
+</div>
+
+```html
+<button type="button" class="btn btn-primary" disabled>Primary button</button>
+<button type="button" class="btn btn-secondary" disabled>Button</button>
+```
+
+##### &lt;a&gt; öğesini kullanan devre dışı bırakılan butonlar farklı davranır:
+* <code>&lt;a&gt;</code> disable niteliğini desteklemediğinden, görsel olarak devre dışı görünmesi için <code>.disabled</code> sınıfını eklemelisiniz.
+* Bağlantı butonlarına tüm <code>pointer-events</code> devre dışı bırakmak için bazı stiller dahil edilmiştir.
+
+<div class="v5-example-alert-info text-black">
+  Duyarlı bir tasarım için <code>aria-disabled="true"</code> içermesi tavsiye edilir.
+</div>
+
+<div class="px-0 mb-1 border bg-light bdr-2 mt-3">
+  <div class="row m-0 p-2 w-100">
+    <a href="#" class="btn btn-primary disabled" aria-disabled="true">Primary link</a>
+    <a href="#" class="btn btn-secondary disabled ml-1" aria-disabled="true">Link</a>
+  </div>
+</div>
+
+```html
+<a href="#" class="btn btn-primary disabled" aria-disabled="true">Primary link</a>
+<a href="#" class="btn btn-secondary disabled" aria-disabled="true">Link</a>
+```
+
+### Aktif
+
+Herhangi bir <code>&lt;button&gt;</code> öğesine veya <code>&lt;a&gt;</code> etiketine 
+aktif niteliğini ekleyerek butonun aktif duruma geçmesini sağlayın. 
+
+<div class="px-0 mb-1 border bg-light bdr-2">
+  <div class="row m-0 p-2 w-100 justify-content-evenly">
+    <div class="my-md-1">
+      <strong>Buton:</strong>
+      <button type="button" class="btn btn-primary active ml-1">Primary button</button>
+      <button type="button" class="btn btn-secondary active ml-1">Button</button>
+    </div>
+    <div class="my-md-1">
+      <strong>a tag:</strong>
+      <a href="#" class="btn btn-primary active ml-1">Primary link</a>
+      <a href="#" class="btn btn-secondary active ml-1">Link</a>
+    </div>
+    
+  </div>
+</div>
+
+```html
+<button type="button" class="btn btn-primary active">Primary button</button>
+<button type="button" class="btn btn-secondary active">Button</button>
+
+<a href="#" class="btn btn-primary active">Primary link</a>
+<a href="#" class="btn btn-secondary active">Link</a>
+```

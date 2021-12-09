@@ -36,6 +36,9 @@ module.exports = {
       'css/tr-utilities-overflow',
       'css/tr-utilities-position',
     ],
+    'Bileşenler': [
+      'css/tr-components-buttons',
+    ],
     '* JavaScript': [
       'js/tr-javascript',
       'js/tr-javascript-selector',
@@ -63,7 +66,7 @@ module.exports = {
       'js/tr-javascript-component-equal-height',
       'js/tr-javascript-component-mask',
     ],
-    '* Servisler': [
+    'Servisler': [
       'api/tr-all-info-about-services',
       'api/tr-product',
       'api/tr-address',
