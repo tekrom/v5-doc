@@ -1,0 +1,126 @@
+---
+title: Boyutlandırma
+---
+Genişlik ve yükseklik için önceden tanımlanmış classlar ile
+bir öğeyi kolayca geniş veya yüksek yapabilirsiniz.
+
+
+### Dış kapsayıcıya göre
+
+## Genişlik
+
+<div class="p-0 mb-1 border bdr-2">
+  <div class="m-0 p-2 w-100">
+    <div class="w-25 bg-gray border mb-1 p-1">
+      <strong>Genişlik 25%</strong>
+    </div>
+    <div class="w-50 bg-gray border my-1 p-1">
+      <strong>Genişlik 50%</strong>
+    </div>
+    <div class="w-75 bg-gray border my-1 p-1">
+      <strong>Genişlik 75%</strong>
+    </div>
+    <div class="w-100 bg-gray border my-1 p-1">
+      <strong>Genişlik 100%</strong>
+    </div>
+    <div class="w-auto bg-gray border p-1">
+      <strong>Genişlik otomatik</strong>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="w-25">Genişlik 25%</div>
+<div class="w-50">Genişlik 50%</div>
+<div class="w-75">Genişlik 75%</div>
+<div class="w-100">Genişlik 100%</div>
+<div class="w-auto">Genişlik auto</div>
+```
+
+## Yükseklik
+
+<div class="px-0 mb-1 border bdr-2 v5-example-utilities-sizing">
+  <div class="m-0 p-2 w-100 h-100">
+    <div class="d-inline-block bg-gray border mr-1 p-1 h-25">
+      <strong>Yükseklik 25%</strong>
+    </div>
+    <div class="d-inline-block bg-gray border mr-1 p-1 h-50">
+      <strong>Yükseklik 50%</strong>
+    </div>
+    <div class="d-inline-block bg-gray border mr-1 p-1 h-75">
+      <strong>Yükseklik 75%</strong>
+    </div>
+    <div class="d-inline-block bg-gray border mr-1 p-1 h-100">
+      <strong>Yükseklik 100%</strong>
+    </div>
+    <div class="d-inline-block bg-gray border p-1 h-auto">
+      <strong>Yükseklik otomatik</strong>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="h-25">Yükseklik 25%</div>
+<div class="h-50">Yükseklik 50%</div>
+<div class="h-75">Yükseklik 75%</div>
+<div class="h-100">Yükseklik 100%</div>
+<div class="h-auto">Yükseklik otomatik</div>
+```
+
+### Kırılma noktası ile kullanım
+
+Kırılma noktaları ile beraber kullanabilirsiniz. Örneğin, .w-25.w-md-100... 
+
+```css
+	
+@media (min-width: 1170px) {
+  .w-xl-100 {
+    width: 100%;
+  }
+  .w-xl-75 {
+    width: 75%;
+  }
+  ...
+}
+	
+@media (min-width: 768px) {
+  .h-md-100 {
+    height: 100%;
+  }
+  .h-md-75 {
+    height: 75%;
+  }
+  ...
+}
+
+...
+
+```
+
+Değişimi görmek için ekranı küçültün. Genişlik < col-xl
+
+#### Genişlik 
+
+<div class="p-0 mb-1 border bdr-2">
+  <div class="m-0 p-2 w-100">
+    <div class="w-100 w-xl-50 bg-gray border mb-1 p-1">
+      <strong>.w-100 .w-xl-50</strong>
+    </div>
+    <div class="w-50 w-xl-100 bg-gray border p-1">
+      <strong>.w-50 .w-xl-100</strong>
+    </div>
+  </div>
+</div>
+
+#### Yükseklik 
+
+<div class="px-0 mb-1 border bdr-2 v5-example-utilities-sizing">
+  <div class="m-0 p-2 w-100 h-100">
+    <div class="d-inline-block bg-gray border mr-1 p-1 h-25 h-xl-50">
+      <strong>.h-25 .h-xl-50</strong>
+    </div>
+    <div class="d-inline-block bg-gray border mr-1 p-1 h-50 h-xl-100">
+      <strong>.h-50 .h-xl-100</strong>
+    </div>
+  </div>
+</div>

@@ -719,6 +719,10 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
   justify-content: space-evenly;
 }
 
+.v5-example-utilities-sizing {
+  height: 200px;
+}
+
 /* v5 all css */
 
 .noUi-target,
