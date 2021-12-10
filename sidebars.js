@@ -36,6 +36,7 @@ module.exports = {
       'css/tr-utilities-overflow',
       'css/tr-utilities-position',
       'css/tr-utilities-sizing',
+      'css/tr-utilities-spacing',
     ],
     'Bileşenler': [
       'css/tr-components-buttons',

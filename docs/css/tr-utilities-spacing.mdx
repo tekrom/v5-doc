@@ -1,0 +1,138 @@
+---
+title: Dış Boşluk - İç Boşluk
+---
+![t-bilesenler-component--popupwin](http://localhost:3000/img/doc/tr-utilities-spacing-devtools.png)
+
+## Kullanım
+Sınıflar için <code>[özellik][nitelik]-[boşluk]</code> veya <code>[özellik][nitelik]-[Kırılma noktası]-[boşluk]</code> kullanarak uygulayabilirsiniz. 
+
+v5 iskelet düzeninde sizler için önceden tanımlanmış classları kullanarak hızlı yol kat edebilirsiniz.
+
+
+##### Özellik
+
+* <strong>m</strong> - Dış boşluk için (margin)
+* <strong>p</strong> - İç boşluk için (padding)
+
+##### Nitelik
+
+<table class="text-left mb-4">
+  <tbody>
+    <tr>
+      <td>
+        <strong>t</strong>
+      </td>
+      <td>
+        - Üst dış boşluk <code>(margin-top)</code> veya iç boşluk <code>(padding-top)</code>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <strong>b</strong>
+      </th>
+      <td>
+        - Alt dış boşluk <code>(margin-bottom)</code> veya iç boşluk <code>(padding-bottom)</code>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <strong>x</strong>
+      </th>
+      <td>
+        - Sol ve Sağ dış boşluk 
+        <code>(margin-left & margin-right)</code> veya iç boşluk <code>(padding-left & padding-right)</code> (X Ekseni)
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <strong>y</strong>
+      </th>
+      <td>
+        - Üst ve Alt dış boşluk <code>(margin-top & margin-bottom)</code> veya iç boşluk <code>(padding-top & padding-bottom)</code> (Y Ekseni)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+##### Boşluk (Dış veya İç)
+
+* <strong>0</strong> - Değerini sıfırlar.
+* <strong>1</strong> - 15px - Genişlik &lt; md = 8px
+---
+
+##### Kırılma noktası
+sm, md, lg, xl, ve xxl.
+<div class="v5-example-alert-info text-black">
+  Detaylı bilgi için <a href="/docs/css/tr-layout-grid">Izgara Sistemi</a> makalemize göz atabilirsiniz.
+</div>
+
+### Dış Boşluk (margin)
+<strong>Margin</strong> özelliği, elementin dört kenarına dıştan boşluk vermeye yarar. Negatif değer alabilir.
+Ayrıca kenar payları her kenar için ayrı ayrı <code>margin-bottom</code>, <code>margin-top</code>, 
+<code>margin-left</code> ve <code>margin-right</code> 
+özellikleri belirtildiği gibi  tek bir özellikle <strong>(margin)</strong> de tanımlama yapılabilir. 
+
+<div class="p-0 mb-1 mt-2 border bdr-2">
+  <div class="m-0 p-2 w-100">
+    <div class="bg-gray border mb-1">
+      <div class="col-lg-4 col-12 bg-dark text-white border p-2 ml-3">
+        <strong>.ml-3</strong>
+      </div>
+    </div>
+    <div class="bg-dark border mb-1">
+      <div class="col-lg-4 col-12 bg-light border p-2 mb-2">
+        <strong>.mb-2</strong>
+      </div>
+    </div>
+    <div class="bg-gray border mb-1">
+      <div class="col-lg-4 col-12 bg-dark text-white border p-2 mt-2">
+        <strong>.mt-2</strong>
+      </div>
+    </div>
+    <div class="bg-dark border mb-1">
+      <div class="col-lg-4 col-12 bg-gray border p-2 ml-2 mt-2">
+        <strong>.ml-1.mt-2</strong>
+      </div>
+    </div>
+    <div class="bg-gray border mb-1">
+      <div class="col-lg-4 col-12 bg-dark text-white border p-2 mx-4 my-2">
+        <strong>.mx-4.my-2</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="ml-3">.ml-3</div>
+<div class="ml-1">.ml-1</div>
+<div class="ml-2 mt-3">.ml-2.mt-3</div>
+```
+
+---
+
+### İç Boşluk (padding)
+Elementin içeriği ile kenarlığı arasındaki dolgu genişliğini belirler.
+CSS padding özelliği, bir elemanın her tarafta gerekli dolgu alanı ayarlar. Dolgu alanı, eleman ve 
+sınır içeriği arasındaki boşluktur. Negatif değerlere izin verilmez.
+
+<div class="p-0 mb-1 mt-2 border bdr-2">
+  <div class="m-0 p-2 w-100">
+    <div class="d-inline-block bg-gray border my-1 p-4">
+      <strong class="bg-white">.p-4</strong>
+    </div>
+    <div class="d-inline-block bg-gray border my-1 ml-1 pl-3">
+      <strong class="bg-white">.pl-3</strong>
+    </div>
+    <div class="d-inline-block bg-gray border my-1 ml-1 pr-2">
+      <strong class="bg-white">.pr-2</strong>
+    </div>
+    <div class="d-inline-block bg-gray border my-1 ml-1 pb-4 pt-2">
+      <strong class="bg-white">.pb-4.pt.2</strong>
+    </div>
+    <div class="d-inline-block bg-gray border my-1 ml-1 pb-4 pt-2 px-1">
+      <strong class="bg-white">.pb-3.pt.2.py-1</strong>
+    </div>
+  </div>
+</div>
