@@ -12,27 +12,93 @@ Bir elementi konumlandırmak için sizler için önceden tanımlanmış classlar
 <div class="position-sticky">...</div>
 ```
 
-### Örnek kullanım
+### Ögeleri konumlandırma
 
-position: absolute;
+##### position: absolute;
 
-<div class="v5-example-position-utils card bg-gray">
-  <div class="position-absolute top-0 start-0">asd</div>
-  <div class="position-absolute top-0 end-0">asd</div>
-  <div class="position-absolute top-50 start-50"></div>
-  <div class="position-absolute bottom-50 end-50"></div>
-  <div class="position-absolute bottom-0 start-0"></div>
-  <div class="position-absolute bottom-0 end-0"></div>
-    <div class="v5-example-position p-2 bg-primary text-white rounded position-absolute">
-        içerik
+<div class="v5-example-position-utils rounded bg-gray position-relative mb-2">
+    <div class="v5-example-position bg-primary text-white rounded position-absolute top-0 left-0">
+        1
+    </div>
+    <div class="v5-example-position bg-primary text-white rounded position-absolute top-0 right-0">
+        2
+    </div>
+    <div class="v5-example-position bg-primary text-white rounded position-absolute top-50 left-50">
+        3
+    </div>
+    <div class="v5-example-position bg-primary text-white rounded position-absolute bottom-50 right-50">
+        4
+    </div>
+    <div class="v5-example-position bg-primary text-white rounded position-absolute bottom-0 left-0">
+        5
+    </div>
+    <div class="v5-example-position bg-primary text-white rounded position-absolute bottom-0 right-0">
+        6
     </div>
 </div>
 
-<div class="position-relative">
-  <div class="position-absolute top-0 start-0"></div>
-  <div class="position-absolute top-0 end-0"></div>
-  <div class="position-absolute top-50 start-50"></div>
-  <div class="position-absolute bottom-50 end-50"></div>
-  <div class="position-absolute bottom-0 start-0"></div>
-  <div class="position-absolute bottom-0 end-0"></div>
+```html
+<div class="position-absolute top-0 left-0"> 1 </div> 
+<div class="position-absolute top-0 right-0"> 2 </div> 
+<div class="position-absolute top-50 left-50"> 3 </div> 
+<div class="position-absolute bottom-50 right-50"> 4 </div> 
+<div class="position-absolute bottom-0 left-0"> 5 </div> 
+<div class="position-absolute bottom-0 right-0"> 6 </div>
+```
+
+### Merkezi konumlandırma
+
+##### transform: translate(X, Y);
+
+<div class="v5-example-position-utils rounded bg-gray position-relative mb-2">
+    <div class="v5-example-position bg-primary text-white rounded position-absolute top-0 left-0 translate-middle">
+        1
+    </div>
+    <div class="v5-example-position bg-primary text-white rounded position-absolute top-0 left-100 translate-middle">
+        2
+    </div>
+    <div class="v5-example-position bg-primary text-white rounded position-absolute top-50 left-50 translate-middle">
+        3
+    </div>
+    <div class="v5-example-position bg-primary text-white rounded position-absolute bottom-50 right-50 translate-middle">
+        4
+    </div>
+    <div class="v5-example-position bg-primary text-white rounded position-absolute top-100 left-0 translate-middle">
+        5
+    </div>
+    <div class="v5-example-position bg-primary text-white rounded position-absolute top-100 left-100 translate-middle">
+        6
+    </div>
 </div>
+
+```html
+<div class="position-absolute top-0 left-0 translate-middle"> 1 </div> 
+<div class="position-absolute top-0 left-100 translate-middle"> 2 </div> 
+<div class="position-absolute top-50 left-50 translate-middle"> 3 </div> 
+<div class="position-absolute bottom-50 right-50 translate-middle"> 4 </div> 
+<div class="position-absolute top-100 left-0 translate-middle"> 5 </div> 
+<div class="position-absolute top-100 left-100 translate-middle"> 6 </div>
+```
+
+### Örnekler
+
+<div class="d-flex justify-content-around mb-2">
+  <button class="btn btn-primary position-relative">
+    Mesajlarım <span class="position-absolute top-0 left-100 translate-middle t-badge bg-dark">+9</span>
+  </button>
+  <button class="btn btn-dark position-relative ml-4">
+    İpucu <span class="position-absolute top-0 left-100 translate-middle badge border border-light border-circle bg-danger p-1"></span>
+  </button>
+</div>
+
+```html
+<button class="btn btn-primary position-relative">
+  Mesajlarım 
+  <span class="position-absolute top-0 left-100 translate-middle t-badge bg-dark">+9</span>
+</button>
+
+<button class="btn btn-dark position-relative ml-4">
+  İpucu 
+  <span class="position-absolute top-0 left-100 translate-middle badge border border-light border-circle bg-danger p-1"></span>
+</button>
+```
