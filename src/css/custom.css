@@ -645,6 +645,7 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
   border-color: #dfdfdf !important;
 }
 
+/* TODO: standart.css e eklenmesi gerekiyor */
 .border-0 {
   border: 0!important;
 }
@@ -695,11 +696,15 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
 }
 
 .v5-example-position-utils {
-  height: 150px;
+  min-height: 150px;
 }
 
 .v5-example-position-utils .v5-example-position {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
 }
 
 .v5-example-layout-alignment {
@@ -721,6 +726,73 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
 
 .v5-example-utilities-sizing {
   height: 200px;
+}
+
+/* position */
+.top-0 {
+  top: 0 !important;
+}
+.bottom-0 {
+  bottom: 0 !important;
+}
+.left-0 {
+  left: 0 !important;
+}
+.right-0 {
+  right: 0 !important;
+}
+
+.top-50 {
+  top: 50% !important;
+}
+.bottom-50 {
+  bottom: 50% !important;
+}
+
+.left-50 {
+  left: 50% !important;
+}
+.right-50 {
+  right: 50% !important;
+}
+
+.top-100 {
+  top: 100% !important;
+}
+.bottom-100 {
+  top: 100% !important;
+}
+
+.left-100 {
+  left: 100% !important;
+}
+.right-100 {
+  right: 100% !important;
+}
+/* translate */
+.translate-middle {
+  transform: translate(-50%, -50%) !important;
+}
+
+.translate-middle-x {
+  transform: translateX(-50%) !important;
+}
+
+.translate-middle-y {
+  transform: translateY(-50%) !important;
+}
+
+.t-badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
 }
 
 /* v5 all css */
