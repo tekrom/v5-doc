@@ -1,0 +1,93 @@
+---
+title: Rozetler
+---
+
+# Örnekler
+Rozetler, göreli yazı tipi boyutlandırması ve em birimleri kullanılarak hemen 
+üst öğenin boyutuyla eşleşecek şekilde ölçeklenir.
+
+### Başlıklar
+
+<div class="p-2 bg-light">
+<p class="h1 m-0">h1. v5 Başlık <span class="t-badge bg-primary">Etiket</span></p>
+<p class="h2 m-0">h2. v5 Başlık <span class="t-badge bg-primary">Etiket</span></p>
+<p class="h3 m-0">h3. v5 Başlık <span class="t-badge bg-primary">Etiket</span></p>
+<p class="h4 m-0">h4. v5 Başlık <span class="t-badge bg-primary">Etiket</span></p>
+<p class="h5 m-0">h5. v5 Başlık <span class="t-badge bg-primary">Etiket</span></p>
+<p class="h6 m-0">h6. v5 Başlık <span class="t-badge bg-primary">Etiket</span></p>
+</div>
+
+```html
+<h1>h1. v5 Başlık <span class="t-badge bg-primary">Etiket</span></h1>
+<h2>h2. v5 Başlık <span class="t-badge bg-primary">Etiket</span></h2>
+<h3>h3. v5 Başlık <span class="t-badge bg-primary">Etiket</span></h3>
+<h4>h4. v5 Başlık <span class="t-badge bg-primary">Etiket</span></h4>
+<h5>h5. v5 Başlık <span class="t-badge bg-primary">Etiket</span></h5>
+<h6>h6. v5 Başlık <span class="t-badge bg-primary">Etiket</span></h6>
+```
+
+### Konumlandırma
+
+Bir etiketi elementin köşesine yerleştirmek için önceden tanımlanmış classları kullanabilirsiniz.
+
+<div class="d-flex bg-light py-2 px-1 border-round">
+  <div class="bg-primary text-white position-relative p-1 border-round">
+    Sepet <span class="position-absolute top-0 left-100 translate-middle t-badge bg-dark">+9</span>
+  </div>
+</div>
+
+```html
+<div class="bg-primary text-white position-relative p-1 border-round">
+  Sepet <span class="position-absolute top-0 left-100 translate-middle t-badge bg-dark">+9</span>
+</div>
+```
+
+
+### Arka plan renkleri
+
+<div class="p-2 mb-2 border-round">
+  <span class="t-badge bg-primary ml-1">Primary</span>
+  <span class="t-badge bg-secondary text-black ml-1">Secondary</span>
+  <span class="t-badge bg-success ml-1">Success</span>
+  <span class="t-badge bg-danger ml-1">Danger</span>
+  <span class="t-badge bg-warning text-dark ml-1">Warning</span>
+  <span class="t-badge bg-info text-dark ml-1">Info</span>
+  <span class="t-badge bg-light text-dark ml-1">Light</span>
+  <span class="t-badge bg-dark ml-1">Dark</span>
+</div>
+
+```html
+<span class="t-badge bg-primary">Primary</span>
+<span class="t-badge bg-secondary text-black">Secondary</span>
+<span class="t-badge bg-success">Success</span>
+<span class="t-badge bg-danger">Danger</span>
+<span class="t-badge bg-warning text-dark">Warning</span>
+<span class="t-badge bg-info text-dark">Info</span>
+<span class="t-badge bg-light text-dark">Light</span>
+<span class="t-badge bg-dark">Dark</span>
+```
+
+### Köşeler oval
+
+
+<div class="p-2 mb-2 border-round">
+  <span class="t-badge rounded-pill bg-primary ml-1">Primary</span>
+  <span class="t-badge rounded-pill bg-secondary text-black ml-1">Secondary</span>
+  <span class="t-badge rounded-pill bg-success ml-1">Success</span>
+  <span class="t-badge rounded-pill bg-danger ml-1">Danger</span>
+  <span class="t-badge rounded-pill bg-warning text-dark ml-1">Warning</span>
+  <span class="t-badge rounded-pill bg-info text-dark ml-1">Info</span>
+  <span class="t-badge rounded-pill bg-light text-dark ml-1">Light</span>
+  <span class="t-badge rounded-pill bg-dark ml-1">Dark</span>
+</div>
+
+```html
+<span class="t-badge rounded-pill bg-primary">Primary</span>
+<span class="t-badge rounded-pill text-black bg-secondary">Secondary</span>
+<span class="t-badge bg-success">Success</span>
+<span class="t-badge bg-danger">Danger</span>
+<span class="t-badge bg-warning text-dark">Warning</span>
+<span class="t-badge bg-info text-dark">Info</span>
+<span class="t-badge bg-light text-dark">Light</span>
+<span class="t-badge bg-dark">Dark</span>
+```

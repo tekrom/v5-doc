@@ -40,6 +40,7 @@ module.exports = {
     ],
     'Bileşenler': [
       'css/tr-components-buttons',
+      'css/tr-components-badge',
     ],
     '* JavaScript': [
       'js/tr-javascript',

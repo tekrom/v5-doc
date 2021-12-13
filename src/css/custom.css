@@ -795,6 +795,25 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
   border-radius: 0.25rem;
 }
 
+.t-badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+.t-badge:empty {
+  display: none;
+}
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
 /* v5 all css */
 
 .noUi-target,
