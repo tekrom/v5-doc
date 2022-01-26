@@ -70,7 +70,7 @@ module.exports = {
       'js/tr-javascript-component-equal-height',
       'js/tr-javascript-component-mask',
     ],
-    'Servisler V4': [
+    '* Servisler V4': [
       'api/tr-all-info-about-services',
       'api/tr-product',
       'api/tr-address',
@@ -116,8 +116,10 @@ module.exports = {
       'api/tr-product-get-related-products-3',
       'api/tr-product-get-related-products-4',
     ],
-    'Servisler V5': [
-      'api/general',
+    '* Servisler V5': [
+      'apiv5/tr-general',
+      'apiv5/tr-filemanager',
+      'apiv5/tr-address',
     ],
   },
 };
