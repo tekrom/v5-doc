@@ -1,0 +1,53 @@
+---
+title: Mesajlar
+---
+
+
+## Üye mesajlarının listelenmesi
+```json
+{{API_URL}}/api/v1/customer/messages
+
+
+// get
+// departmentId, subject, message, parentId
+```
+
+
+## Üye mesaj detayının getirilmesi
+
+```json
+{{API_URL}}/api/v1/customer/messages/:id
+
+// get
+
+```
+
+## Departmana mail iletilmesi
+
+```json
+{{API_URL}}/api/v1/public/send-message/department
+
+// post
+// departmentId, subject, message, parentId
+
+```
+
+## Üye mesaj konunun kapatılması
+
+```json
+{{API_URL}}/api/v1/customer/messages/:id
+
+// post
+// departmentId, subject, message, parentId
+
+```
+
+
+
+
+
+
+
+
+
+

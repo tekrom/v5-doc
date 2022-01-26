@@ -120,6 +120,7 @@ module.exports = {
       'apiv5/tr-general',
       'apiv5/tr-filemanager',
       'apiv5/tr-address',
+      'apiv5/tr-messages',
     ],
   },
 };
