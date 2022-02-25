@@ -2,3 +2,220 @@
 title: Esnek Kutu (Flex)
 ---
 
+Flexbox v5'e dahildir. 
+
+Bileşenlerin ve daha fazlasının yerleşimini, 
+hizalamasını ve boyutlandırılmasını hızla yönetin.
+
+## Esnek kutu (Flexbox)
+Kapsayıcıyı esnek kutu modeline geçirmek için <code>d-flex</code> veya <code>d-inline-flex</code> değeri verilmelidir.
+
+<div class="px-0 mb-1 border bg-white bdr-2">
+  <div class="m-0 p-2 w-100">
+    <div class="d-flex bg-gray p-1 justify-content-center">d-flex</div>
+  </div>
+</div>
+
+```html
+<div class="d-flex">d-flex</div>
+```
+
+<div class="px-0 mb-1 border bg-white bdr-2">
+  <div class="m-0 p-2 w-100">
+    <div class="d-inline-flex bg-gray p-1">d-inline-flex</div>
+  </div>
+</div>
+
+```html
+<div class="d-flex">d-inline-flex</div>
+```
+
+### Duyurlar sınıflar (Responsive)
+<code>d-flex</code> ve <code>d-inline-flex</code> için duyarlı sınıflar mevcuttur.
+
+<div class="px-0 mb-2 mt-2 border bg-light bdr-2">
+  <div class="m-0 p-2 w-100">
+    <ul>
+        <li><code>.d-flex</code></li>
+        <li><code>.d-inline-flex</code></li>
+        <li><code>.d-sm-flex</code></li>
+        <li><code>.d-sm-inline-flex</code></li>
+        <li><code>.d-md-flex</code></li>
+        <li><code>.d-md-inline-flex</code></li>
+        <li><code>.d-lg-flex</code></li>
+        <li><code>.d-lg-inline-flex</code></li>
+        <li><code>.d-xl-flex</code></li>
+        <li><code>.d-xl-inline-flex</code></li>
+        <li><code>.d-xxl-flex</code></li>
+        <li><code>.d-xxl-inline-flex</code></li>
+    </ul>
+  </div>
+</div>
+
+## Esnek kutu yönü
+
+Kutu dizilim yönünü <code>flex-direction-*</code> ile belirleyebilirsiniz.
+
+### Yatay kutu yönü
+
+Yatay bir yön ayarlamak için <code>.flex-direction-row</code> (tarayıcı varsayılanı) veya yatay 
+yönü tersten başlatmak için <code>.flex-direction-row-reverse</code> kullanın.
+
+<div class="mb-1 border bg-white bdr-2 p-2">
+  <div class="d-flex flex-direction-row w-100 bg-secondary mb-1">
+    <div class="bg-gray p-1 border">Flex element 1</div>
+    <div class="bg-gray p-1 border">Flex element 2</div>
+    <div class="bg-gray p-1 border">Flex element 3</div>
+  </div>
+  <div class="d-flex flex-direction-row-reverse m-0 w-100 bg-secondary">
+    <div class="bg-gray p-1 border">Flex element 1</div>
+    <div class="bg-gray p-1 border">Flex element 2</div>
+    <div class="bg-gray p-1 border">Flex element 3</div>
+  </div>
+</div>
+
+```html
+<div class="d-flex">d-inline-flex</div>
+```
+
+### Dikey kutu yönü
+
+Dikey bir yön ayarlamak için <code>.flex-direction-column</code> (tarayıcı varsayılanı) veya dikey 
+yönü tersten başlatmak için <code>.flex-direction-column-reverse</code> kullanın.
+
+<div class="mb-1 border bg-white bdr-2 p-2">
+  <div class="d-flex flex-direction-column w-100 bg-secondary mb-1">
+    <div class="bg-gray p-1 border">Flex element 1</div>
+    <div class="bg-gray p-1 border">Flex element 2</div>
+    <div class="bg-gray p-1 border">Flex element 3</div>
+  </div>
+  <div class="d-flex flex-direction-column-reverse m-0 w-100 bg-secondary">
+    <div class="bg-gray p-1 border">Flex element 1</div>
+    <div class="bg-gray p-1 border">Flex element 2</div>
+    <div class="bg-gray p-1 border">Flex element 3</div>
+  </div>
+</div>
+
+```html
+<div class="d-flex flex-direction-column">
+  <div>Flex element 1</div>
+  <div>Flex element 2</div>
+  <div>Flex element 3</div>
+</div>
+<div class="d-flex flex-direction-column-reverse">
+  <div>Flex element 1</div>
+  <div>Flex element 2</div>
+  <div>Flex element 3</div>
+</div>
+```
+
+<div class="v5-example-alert-info text-black">
+  Kutuları Konumlandırma için <a href="/docs/css/tr-layout-alignments">Hizalama</a> makalemize göz atabilirsiniz.
+</div>
+
+## Flex-wrap
+<ul>
+  <li>
+    <code>nowrap</code> (varsayılan) = Tüm öğeleri tek bir satıda yan yana listeler.
+  </li>
+  <li>
+    <code>wrap</code> = Öğeler gerektiğinde birden fazla satırda aşağıdan yukarı doğru listelenir.
+  </li>
+  <li>
+    <code>wrap-reverse</code> = Öğeler gerektiğinde birden fazla satırda yukarıdan aşağı doğru listelenir.
+  </li>
+</ul>
+
+### nowrap
+Varsayılan olarak esnek öğeler tek bir satıra sığmaya çalışırlar. <code>flex-wrap: nowrap;</code>
+
+Varsayılan olduğu için bu yapı için ek bir class tanımlaması yapmanıza gerek kalmaz.
+
+<div class="mb-1 border bg-gray bdr-2 p-2">
+  <div class="d-flex v5-highlight v5-example-utilities-flex-nowrap">
+    <div class="v5-highlight p-1 border">Flex element</div>
+    <div class="v5-highlight p-1 border">Flex element</div>
+    <div class="v5-highlight p-1 border">Flex element</div>
+    <div class="v5-highlight p-1 border">Flex element</div>
+    <div class="v5-highlight p-1 border">Flex element</div>
+  </div>
+</div>
+
+```html
+<div class="d-flex">
+  <div>Flex element</div>
+  <div>Flex element</div>
+  <div>Flex element</div>
+  <div>Flex element</div>
+  <div>Flex element</div>
+</div>
+```
+
+### wrap
+Gerektiğinde birden fazla satıra yaymak için <code>flex-wrap: wrap;</code> özelliği kullanabilirsiniz.
+
+<div class="mb-1 border bg-gray bdr-2 p-2">
+  <div class="d-flex flex-wrap v5-highlight v5-example-utilities-flex-wrap">
+    <div class="v5-highlight p-1 border">Flex element 1</div>
+    <div class="v5-highlight p-1 border">Flex element 2</div>
+    <div class="v5-highlight p-1 border">Flex element 3</div>
+    <div class="v5-highlight p-1 border">Flex element 4</div>
+    <div class="v5-highlight p-1 border">Flex element 5</div>
+    <div class="v5-highlight p-1 border">Flex element 6</div>
+  </div>
+</div>
+
+```html
+<div class="d-flex flex-wrap">
+  <div>Flex element</div>
+  <div>Flex element</div>
+  <div>Flex element</div>
+</div>
+```
+
+### wrap-reverse
+Gerektiğinde birden fazla satıra yaymak için <code>flex-wrap: wrap;</code> özelliği kullanabilirsiniz.
+
+<div class="mb-1 border bg-gray bdr-2 p-2">
+  <div class="d-flex flex-wrap-reverse v5-highlight v5-example-utilities-flex-wrap-reverse">
+    <div class="v5-highlight p-1 border">Flex element 1</div>
+    <div class="v5-highlight p-1 border">Flex element 2</div>
+    <div class="v5-highlight p-1 border">Flex element 3</div>
+    <div class="v5-highlight p-1 border">Flex element 4</div>
+    <div class="v5-highlight p-1 border">Flex element 5</div>
+    <div class="v5-highlight p-1 border">Flex element 6</div>
+  </div>
+</div>
+
+```html
+<div class="d-flex flex-wrap">
+  <div>Flex element</div>
+  <div>Flex element</div>
+  <div>Flex element</div>
+</div>
+```
+
+## Order
+Öğelerin sıralanışını değiştirmek için kullanılır. 
+Burada dikkat edilmesi gereken, varsayılan olarak 0 olduğu için tüm öğeler, 
+eğer sonuncu öğeyi bir öncesine almak isterseniz, bir önceki öğeninde order değerini belirtmeniz gerekir.
+
+<div class="mb-1 border bg-white bdr-2 p-2">
+  <div class="d-flex w-100 bg-secondary">
+    <div class="order-3 bg-gray p-1 border">Flex element 1</div>
+    <div class="order-2 bg-gray p-1 border">Flex element 2</div>
+    <div class="order-1 bg-gray p-1 border">Flex element 3</div>
+  </div>
+</div>
+
+```html
+<div class="d-flex">
+  <div class="order-3">Flex element 1</div>
+  <div class="order-2">Flex element 2</div>
+  <div class="order-1">Flex element 3</div>
+</div>
+```
+
+<div class="v5-example-alert-info text-black">
+  Kutuları yeniden sıralamak için <a href="/docs/css/tr-layout-orders">Sıralama</a> makalemize göz atabilirsiniz.
+</div>

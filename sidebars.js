@@ -31,13 +31,13 @@ module.exports = {
       'css/tr-content-animations',
     ],
     'Araçlar': [
+      'css/tr-utilities-flex',
       'css/tr-utilities-background',
       'css/tr-utilities-borders',
       'css/tr-utilities-overflow',
       'css/tr-utilities-position',
       'css/tr-utilities-sizing',
       'css/tr-utilities-spacing',
-      'css/tr-utilities-flex',
     ],
     'Bileşenler': [
       'css/tr-components-buttons',
