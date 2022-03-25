@@ -41,6 +41,7 @@ module.exports = {
       'css/tr-utilities-text',
     ],
     'Bileşenler': [
+      'css/tr-components-icons',
       'css/tr-components-buttons',
       'css/tr-components-badge',
     ],
