@@ -905,6 +905,48 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
   flex-wrap: wrap-reverse !important;
 }
 
+
+.v5-example-utilities-spacing-devtools {
+  display: flex;
+  flex-direction: column;
+  background-color: #facda0;
+  border: 1px dashed #444444;
+  width: 250px;
+  padding: 10px 20px 20px;
+}
+
+.v5-example-utilities-spacing-devtools-border {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fddd9d;
+  border: 1px solid #444444;
+  padding: 10px 20px 20px;
+}
+
+.v5-example-utilities-spacing-devtools-padding {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #c4cf8b;
+  border: 1px dashed #444444;
+  padding: 10px 20px 20px;
+}
+
+.v5-example-utilities-spacing-devtools-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #8cb6c0;
+  border: 1px solid #444444;
+  padding: 10px 20px 20px;
+}
+
+.v5-example-utilities-buttons {
+  flex-wrap: nowrap !important;
+  gap: 10px;
+}
+
 /* v5 all css */
 
 .noUi-target,
