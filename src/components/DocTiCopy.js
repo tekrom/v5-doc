@@ -6,7 +6,7 @@ class ApplyContent extends Component {
   }
   render() {
     return (
-      <div onClick={this.demo}>import component demo</div>
+      <div>import component demo</div>
     );
   }
 }
