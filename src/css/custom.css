@@ -1,3 +1,5 @@
+@import url(skeleton.css);
+
 @import url(fragments.css);
 @import url(searchbox.css);
 
@@ -991,5 +993,3 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
   -ms-user-select: none;
   user-select: none;
 }
-
-@import url(skeleton.css);
