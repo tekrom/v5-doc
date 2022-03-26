@@ -993,14 +993,3 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
 }
 
 @import url(skeleton.css);
-
-html {
-  font-family: var(--ifm-font-family-base);
-  font-size: 16px;
-  line-height: normal;
-}
-
-body {
-  font-family: var(--ifm-font-family-base);
-  font-size: 16px;
-}
