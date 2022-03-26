@@ -986,6 +986,10 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
   margin-left: .2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @import url(skeleton.css);
