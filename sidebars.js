@@ -11,7 +11,8 @@ module.exports = {
       'tr-introduction',
     ],
     'Bilgi': [
-      'css/tr-scss',
+      'info/tr-scss',
+      'info/tr-smarty',
     ],
     'Yerleşim': [
       'css/tr-layout-containers',
