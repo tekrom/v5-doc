@@ -1,7 +1,6 @@
-@import url(skeleton.css);
-
 @import url(fragments.css);
 @import url(searchbox.css);
+@import url(skeleton.css);
 
 :root {
   --ifm-font-size-base: 16px;
