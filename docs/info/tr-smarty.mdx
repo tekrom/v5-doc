@@ -1,0 +1,100 @@
+---
+title: SMARTY
+---
+
+### SMARTY Nedir?
+En kısa tanım olarak bir PHP template motorudur. Template motoru php kodlarınız ile html
+kodlarınızı birbirinden ayırmanıza yarayan ve sizler hem zaman hem de işlevsellik kazandıran
+sistemdir. Bu sistem sayesinde html kodları içerisine php kodu gömmekten kurtulmuş olacak ve
+kodlarınız daha okunaklı ve daha kolay müdahale edilebilir bir hale gelecektir
+
+- https://www.smarty.net/docs/en/index.tpl
+
+T-Soft sisteminde bazı kullanımlar aşağıda anlatılmıştır.
+### - Debug
+```json
+{debug}
+```
+
+### - Özel Debug
+```json
+{$P|debug_print_var}
+{$smarty.server|debug_print_var}
+```
+
+### - Harfleri küçültmek / büyütmek
+```json
+{$M.NAME|lower}             // küçük harf
+{$M.NAME|upper}             // büyük harf
+{$M.NAME|capitalize}        // ilk harfi büyük
+{$M.NAME|capitalize:true}   // ilk harfi büyük, diğer harfleri küçük
+{$M.NAME|ucfirst}           // ilk harfi büyük
+{$M.NAME|ucwords}           // her kelimenin ilk harfi büyük
+```
+
+### - Sınırlama
+```json
+{$P.TITLE|truncate:10}          // 10 karakterden kısa olanı al
+{$P.TITLE|truncate:10:"..."}    // 10 karakterden kısa olanı al ve ... ile sonuçu değiştir
+```
+
+### - Değişkenin sonuna ekleme
+```json
+{#new#|cat:' Ürün'}
+```
+
+### - Ondalık kısmı ayarlamak (string_format)
+```json
+{($P.COMMENT_RANK/20)|string_format:"%.1f"} // 1.0
+{($P.COMMENT_RANK/20)|string_format:"%.2f"} // 1.00
+{($P.COMMENT_RANK/20)|string_format:"%.3f"} // 1.000
+{($P.COMMENT_RANK/20)|string_format:"%.4f"} // 1.0000
+{($P.COMMENT_RANK/20)|string_format:"%.5f"} // 1.00000
+```
+
+### - Ondalıklı kısmı hesaba katmadan, sadece ana değeri al
+```json
+{($P.COMMENT_RANK/20)|string_format:"%d"} // 20
+{($P.COMMENT_RANK/20)|string_format:"%f"} // 20.000000
+{($P.COMMENT_RANK/20)|string_format:"%s"} // 20
+```
+
+### - For Kullanımı
+```json
+{for $unit_count=1 to $P.STOCK}
+    ...
+{/for}
+```
+
+##### - For Örneği
+```html
+<input type="hidden" id="Adet{$P.ID}" name="Adet{$P.ID}" min="{$P.MIN_ORDER_COUNT}" value="{$P.MIN_ORDER_COUNT}" class="detayAdet{$P.ID}" />
+<select name="qty-count" id="qty-count" onChange="$('#Adet{$P.ID}').val(this.value);">
+    {for $unit_count=1 to $P.STOCK}
+        <option value="{$unit_count}">{$unit_count}</option>
+    {/for}
+</select>
+```
+
+---
+
+# Bonus
+
+##### - Explode
+```json
+{$fieldinfo="" value="|"|explode:$P.ADDITIONAL_FIELD_2}
+
+{for $count=0 to $fieldinfo|count}
+    <div>{$fieldinfo[$count]}</div>
+{/for}
+```
+
+### - Sepette Ek İndirim
+```json
+{$firstPrice = {vat price=$P.PRICE_SELL vat=$P.VAT}}
+{$discountRate = $P.ADDITIONAL_FIELD_1/100}
+{$lastPrice = $firstPrice - ($firstPrice*$discountRate)}
+{$lastPrice|string_format:"%.2f"} {$P.TARGET_CURRENCY}
+
+{math assign="SEPETTUTARI" equation="x*((100+v)/100)*((100- y)/100)" x=$P.PRICE_SELL y=$P.ADDITIONAL_FIELD_1 v=$P.VAT}
+```

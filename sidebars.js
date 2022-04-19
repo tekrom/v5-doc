@@ -11,7 +11,8 @@ module.exports = {
       'tr-introduction',
     ],
     'Bilgi': [
-      'css/tr-scss',
+      'info/tr-scss',
+      'info/tr-smarty',
     ],
     'Yerleşim': [
       'css/tr-layout-containers',
@@ -31,15 +32,17 @@ module.exports = {
       'css/tr-content-animations',
     ],
     'Araçlar': [
+      'css/tr-utilities-flex',
       'css/tr-utilities-background',
       'css/tr-utilities-borders',
       'css/tr-utilities-overflow',
       'css/tr-utilities-position',
       'css/tr-utilities-sizing',
       'css/tr-utilities-spacing',
-      'css/tr-utilities-flex',
+      'css/tr-utilities-text',
     ],
     'Bileşenler': [
+      'css/tr-components-icons',
       'css/tr-components-buttons',
       'css/tr-components-badge',
     ],
