@@ -126,5 +126,8 @@ module.exports = {
       'apiv5/tr-messages',
       'apiv5/tr-member-login-methods',
     ],
+    '* Extra': [
+      'extra/tr-list-layout',
+    ],
   },
 };

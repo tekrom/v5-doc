@@ -1,0 +1,49 @@
+---
+title: Ürün Liste Görünüm
+---
+
+
+## Ürün liste görünüm için buradaki yapı kullanılabilir. 
+
+```html
+<div class="col " id="page-layout">
+    <span class="box" data-id="2">
+        6 view
+    </span>
+    <span class="box " data-id="3">
+        4 view
+    </span>
+    <span class="box " data-id="4">
+        3 view
+    </span>
+    <span class="box " data-id="6">
+        2 view
+    </span>
+    <span class="box " data-id="12">
+        1 view
+    </span>
+</div>
+
+<div class="col-lg-{$smarty.cookies.layout|default:{12 / $SETTING.PERVIEW.LG}}">Loop Element v5</div>
+
+```
+
+
+```javascript
+
+let layoutName = "layout"
+let layoutGrid = T.getCookie(layoutName);
+
+T(`#page-layout [data-id="${layoutGrid}"]`).addClass(`active`);
+
+
+[...document.querySelectorAll('#page-layout span')].forEach(el => {
+    el.addEventListener("click",function(){
+        T.setCookie(layoutName, el.dataset.id, 3);
+         location.reload()
+    });
+});
+
+
+``` 
+
