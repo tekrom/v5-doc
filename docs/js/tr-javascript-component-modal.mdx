@@ -11,3 +11,24 @@ T.modal({
     close: true // boolean (show/hide close button)
 });
 ```
+
+---
+
+<code>openCallback</code> ve <code>closeCallback</code> 
+sayesinde popup açılışlarında ve kapanışlarında bu 
+fonksiyonlar ile işlemler yapabilirsiniz.
+
+```javascript 
+T.modal({
+    openCallback: () => console.log('open modal'),
+    closeCallback: () => console.log('close modal')
+});
+```
+
+Bu özelliği kullanan sitelerde, 
+istek doğrultusunda farklı aksiyon istekleri 
+için <code>publishingPopupCallback</code> adında bir fonksiyon 
+oluşturarak isteklerini karşılayabilirsiniz. 
+Bu fonksiyonu sizin tanımlamanız gerekmektedir. 
+Tanımlandığı taktirde popup açılışlarında gerekli 
+kontroller sağlanarak fonksiyon sistem tarafından çağrılmaktadır. 

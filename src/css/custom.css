@@ -22,6 +22,10 @@ html[data-theme='dark'] {
   --ifm-menu-color-background-active: #21243d;
 }
 
+.bg-gray {
+  background-color: var(--ifm-code-background) !important;
+}
+
 .bg-analytics {
   position: relative;
 }
