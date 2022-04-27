@@ -73,7 +73,7 @@ module.exports = {
       'js/tr-javascript-component-equal-height',
       'js/tr-javascript-component-mask',
     ],
-    '* Servisler V4': [
+    '* Servisler (legacy)': [
       'api/tr-all-info-about-services',
       'api/tr-product',
       'api/tr-address',
