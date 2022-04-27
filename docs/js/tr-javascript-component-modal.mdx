@@ -6,8 +6,34 @@ Açılır pencere bileşeni.
 ```javascript 
 T.modal({
     id: 'your-id-element',
+    class: '',
     width: '600px', // string variable or auto
+    title: 'Modal Title',
     html: 'your html content',
-    close: true // boolean (show/hide close button)
+    close: true, // boolean (show/hide close button)
+    openCallback: () => {},
+    closeCallback: () => {}
 });
 ```
+
+---
+
+<code>openCallback</code> ve 
+<code>closeCallback</code> sayesinde 
+popup açılışlarında ve kapanışlarında bu 
+fonksiyonlar ile işlemler yapabilirsiniz.
+
+Siteye eklenen anlık bildirimler için
+istek doğrultusunda farklı aksiyon istekleri 
+için <code>publishingPopupCallback</code> adında bir fonksiyon 
+oluşturarak isteklerini karşılayabilirsiniz. 
+
+```javascript 
+    window.publishingPopupCallback=function(){
+        console.log("tsoft")
+    }
+```
+
+Bu fonksiyonu sizin tanımlamanız gerekmektedir. 
+Tanımlandığı taktirde popup açılışlarında gerekli 
+kontroller sağlanarak fonksiyon sistem tarafından çağrılmaktadır. 
