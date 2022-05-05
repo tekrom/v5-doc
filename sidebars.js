@@ -51,6 +51,7 @@ module.exports = {
       'js/tr-javascript-selector',
       'js/tr-javascript-component',
       'js/tr-javascript-component-dropdown',
+      'js/tr-javascript-component-dropdown',
       'js/tr-javascript-component-accordion',
       'js/tr-javascript-component-tab',
       'js/tr-javascript-component-notify',
