@@ -129,6 +129,7 @@ module.exports = {
     ],
     '* Extra': [
       'extra/tr-list-layout',
+      'extra/tr-footer-social-media',
     ],
   },
 };
