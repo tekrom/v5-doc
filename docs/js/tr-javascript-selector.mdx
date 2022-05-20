@@ -61,6 +61,14 @@ T('header').hasClass('bg-primary');
 
 ---
 
+### .isMobile()
+Tarayıcının mobil olup olmadığını döner
+
+```javascript
+T.isMobile();
+```
+---
+
 ### .index()
 Element index (sıra) değerini döner. index değeri 0'dan başlar. Örneğin birinci sırada ise aradığınız element, 
 sonuç 0 dönecektir.
@@ -70,6 +78,27 @@ T('header').index();
 ```
 
 ---
+
+### T.ready
+DOM yüklendikten sonra kodların çalışmasını sağlar
+
+```javascript
+T.ready(function(){
+    
+})
+```
+### T.each
+Seçiciler arasında foreach döngüsü sağlar
+
+```javascript
+T.each(T(`div`),(i, el)=>{
+    console.log(i, el);
+});
+
+```
+
+
+
 
 ### .on()
 Elementlere olay tanımlamaları yapmanızı sağlar.
