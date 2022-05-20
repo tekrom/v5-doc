@@ -1,0 +1,17 @@
+---
+title: Cart.callback
+---
+Alt klasörlerin js ile beraber yüklenmesini sağlar.
+
+
+```javascript
+loadSubFolder({
+    pageId: 1,
+    blockParentId: 1000,
+    subFolder: 'subfoldername',
+    params: { oneparam: oneparam, twoparam: twoparam },
+    success:  function(loadRes){
+        T.modal({ html: loadRes, width:'801px' });
+    }
+});
+```
