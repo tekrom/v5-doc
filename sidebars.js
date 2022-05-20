@@ -134,8 +134,12 @@ module.exports = {
       'apiv5/tr-member-login-methods',
     ],
     '* Extra': [
-      'extra/tr-list-layout',
       'extra/tr-footer-social-media',
+      'extra/tr-list-instock',
+      'extra/tr-list-layout',
+      'extra/tr-detail-vertical-tab',
     ],
   },
 };
+
+
