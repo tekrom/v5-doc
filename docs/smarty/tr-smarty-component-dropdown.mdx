@@ -1,0 +1,43 @@
+---
+title: Dropdown
+---
+Açılır menü bileşeni
+
+Dropdown bileşeni, bir açılır menü kapsayıcısıdır.
+
+- <code>dropdown sınıfı</code> ana kapsayıcıdır.
+- - <code>dropdown-title</code> tıklanabilir buton başlığı kapsayıcısıdır.
+- - <code>dropdown-menu</code> açılır menü. Varsayılan olarak gizli gelir.
+
+<div class="mb-2">
+    <code>data-toggle="dropdown"</code> ön adı kullanarak js yazmadan bu bileşeni 
+    sayfanızda kullanabilirsiniz.
+</div>
+
+```html title="Örnek kullanımı"
+<div class="dropdown">
+    <a href="#" class="dropdown-title" data-toggle="dropdown">Button</a>
+    <div class="dropdown-menu">
+        <!-- HTML Your Codes -->
+    </div>
+</div>
+```
+
+Menü kapanma durumunda callback tetiklenebilmektedir. 
+
+Bu callback ile <code>data-toggle="dropdown"</code> tanımlı element ve tıklanılan elemente ulaşabilirsiniz. 
+
+```html title="Örnek kullanımı"
+<div class="dropdown">
+    <a href="#" class="dropdown-title" data-toggle="dropdown" data-callback="myCallback">Button</a>
+    <div class="dropdown-menu">
+        <!-- HTML Your Codes -->
+    </div>
+</div>
+```
+
+```javascript
+const myCallback = (el, target) => {
+    console.log(el, target);
+}
+```

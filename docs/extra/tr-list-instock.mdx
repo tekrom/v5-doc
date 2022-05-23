@@ -1,0 +1,52 @@
+---
+title: Ürün Liste Stoktakiler
+---
+## Ürün liste stoktatakiler
+Ürün liste stokta var stokta yok için bu yapı kullanılabilir.
+
+### tpl
+```html
+<span id="stock-control" class="d-flex align-items-center" >
+    <span class="input-checkbox d-flex align-items-center justify-content-center border-round">
+        <i class="ti-check"></i>
+    </span>
+    <span>{#in_stocks#}</span>
+</span>
+```
+
+### javascript 
+```javascript
+T(`#stock-control`).on(`click`, e => {
+  window.location.href=T.getLink('stock',getUrlParam('stock')?'':1, window.location.href)
+});
+ getUrlParam('stock')? T('stock-control').addClass('active'):'';
+```
+
+### scss 
+```scss
+    #stock-control {
+        cursor: pointer;
+        &.active {
+            .input-checkbox {
+                background-color: $bgPrimary;
+                i {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .input-checkbox { 
+            background-color: $bgGray;
+            width: 14px;
+            height: 14px;
+            margin-right: 5px;
+            i {
+                &::before {
+                    color: $textWhite;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+```	
