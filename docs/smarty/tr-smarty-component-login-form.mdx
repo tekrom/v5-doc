@@ -1,0 +1,34 @@
+---
+title: Login Form
+---
+Üye girişi için kullanılır.
+
+
+Üye girişi için kullanılan form blok yapısıdır. 
+
+Form elementine <code>data-toggle="login-form"</code> tanımlanarak aktif edilir. 
+Form elemanına data-prefix özelliği eklenerek bu prefix form elemanlarının id değerlerinde kullanılır. 
+Prefix özelliği diğer formlardan ayrıştırabilmek için kullanılmıştır.
+
+Giriş yapıldıktan sonra dönen cevapları yakalayabilmek için form elemanına <code>data-callback</code>
+ özelliği tanımlanması gerekmektedir. Bu callback js fonksiyon olarak kullanılmalıdır. 
+
+
+Elementlerin title niteliğini biçimlendirerek gösterimi sağlanır. 
+ön adı ile js yazmadan aktivasyonu gerçekleştirilebilir. Mouse ilgili elementin üzerine gelince görünür olur. 
+data-placement niteliği ile elementin altında ya da üstünde konumu değiştirilebilir.
+
+```html title="Örnek kullanım" 
+<form action="#" method="POST" data-toggle="login-form" data-prefix="t-" data-callback="callbackFn">
+    <input type="email" id="t-email" class="form-control" data-validate="required,email">
+    <input type="password" id="t-password" class="form-control">
+    <button type="submit" class="btn btn-primary">Giriş Yap</button>
+</form>
+```
+
+```javascript
+window.callbackFn = (result, options) => {
+    console.log(`Response => ${result}`);
+    console.log(`Options  => ${options}`);
+}
+```
