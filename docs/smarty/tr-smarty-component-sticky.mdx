@@ -1,0 +1,19 @@
+---
+title: Sticky
+---
+
+Scroll anında sticky olması için kullanılır.
+<code>data-mobile="true"</code> durumunda sadece mobilde sticky olarak çalışır. data-mobile="false" durumunda tüm tarayıcılarda çalışır. default değeri false'dır.
+<code>data-scroll="180"</code> yazılınca element en üst alandan 180px daha yukarı çıkınca sticky olarak çalışır. default değeri 0'dır.
+<code>data-class="header-sticky"</code> yazılınca element sticky olarak çalışırken kullanılacak class'ı belirtir. default değeri "sticky"dır.
+<code>data-parent="#header-middle"</code> yazılınca sticky olarak çalışırken kullanılacak parent elementi belirtir. belirtilmesi zorunludur.
+
+```html title="Örnek kullanım" 
+
+<div id="header-sticky" class="w-100 bg-white" data-toggle="sticky" data-parent="#header-middle" data-class="header-sticky" data-scroll="180" data-direction="true" data-mobile="false">
+    my dear sticky element
+
+</div>
+
+
+```
