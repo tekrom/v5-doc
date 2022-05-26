@@ -166,9 +166,11 @@ module.exports = {
     ],
     '* Extra': [
       'extra/tr-footer-social-media',
+      'extra/tr-filter-close',
       'extra/tr-list-instock',
       'extra/tr-list-layout',
       'extra/tr-detail-vertical-tab',
+      'extra/tr-detail-cargotime',
     ],
   },
 };

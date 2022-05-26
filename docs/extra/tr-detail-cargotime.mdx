@@ -1,15 +1,11 @@
 ---
-title: Ürün Liste Görünüm
+title: Ürün Detay Kargo Geri Sayım
 ---
-## Ürün liste görünüm için buradaki yapı kullanılabilir. 
-
-
-
+## Ürün detay kargo sayacı
+Ürün detay kargo sayacı için buradaki yapı kullanılabilir.
 ```html title="smarty"
 <div id="cargo-wrapper"> </div>
 ```
-
-
 ```javascript title="javascript"
 	const convertTimes = function (UNIX_timestamp = 0, format = "d.m.y") {
 		let time = parseInt(UNIX_timestamp);
@@ -124,14 +120,18 @@ title: Ürün Liste Görünüm
 			0: {target: null, inCargo: null,  elseDay:1,elseTarget: 15, elseCargo:1} // pazar
 		}))
 ``` 
-
-
-
 <p>
     <strong>target:</strong> o gün saat kaça kadar olan ürünler kargoda. Ör:15 ise, O gün saat 15 'e kadar olan ürünler için geri sayım yapılacak demektir.
+</p>
+<p>
     <strong>incarCago:</strong> 0 aynı gün kargoda demektir. 1 yarın, 2 ve üzeri ise 2 gün ve sonrası demektir. tarih yazar. hedef saatten gece 24'e kadar gün devam ettiğinden dolayı o alanların sağlıklı çalışabilmesi için aşağıdaki alanlar eklenmiştir. else ile başlayan aşağıdaki ifadeler hedef saatten gece 12'ye kadar olan zamanları kapsamaktadır. 
+</p>
+<p>
     <strong>elseDay:</strong> saat 15ten sonra ise bir sonraki geri sayım hedefi günüdür. 1 ertesi gün demektir. 
-    <strong>elseTarget:</strong> saat 15'ten sonra ise sonraki hedef saati belirtir. Yani elseDay 1 ve elseTarget:15 ise yarın 15'e kadar geri sayım olacak demektir.
+</p>
+<p>
+ <strong>elseTarget:</strong> saat 15'ten sonra ise sonraki hedef saati belirtir. Yani elseDay 1 ve elseTarget:15 ise yarın 15'e kadar geri sayım olacak demektir.
+</p>
+<p>
     <strong>elseCargo:</strong> saat 15ten sonra ise sonraki Kargo teslim zamanını belirtir. 1 yarın demektir.  Yani elseDay 1 ve elseTarget:15 ise ve elseCargo 1 ise yarın 15'e kadar olan siparişlerde karkargo yarın demektir.
 </p>
-

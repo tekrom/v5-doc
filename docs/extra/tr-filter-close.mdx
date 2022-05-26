@@ -1,0 +1,18 @@
+---
+title: Filtre Close Butonu
+---
+## Filtre mobilde drawer close alternative
+
+Mobil filtrede drawer close çalışmıyor çünkü product-filter içerisi sonradan yükleniyor.
+Bu yüzden standart bir şekilde kod yazmak  için aşağıdaki kodu kullanabiliriz.
+
+
+
+
+
+```html title="smarty "
+<div class="drawer-close d-inline-flex" onclick="T(`[data-rel='product-filter']`).trigger('click')" >{#close#}</div>
+```
+
+
+
