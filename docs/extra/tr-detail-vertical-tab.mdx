@@ -4,8 +4,8 @@ title: Ürün detay alt alta tab
 ## Ürün Detay vertical tab 
 Ürün detay sayfası alt alta yapılan tablar için bu yapı kullanılabilir.
 
-### tpl
-```html
+
+```html title="smarty"
 <div class="detail-accordion">
     {if $P.IS_DISPLAY_PRODUCT != true}
         <div class="col-12 accordion-title" data-toggle="accordion">
@@ -87,8 +87,8 @@ title: Ürün detay alt alta tab
 </div>
 ```
 
-### javascript 
-```javascript
+
+```javascript title="javascript"
 const detailAccordionLoader=function(title) {
          let nextContent=title.nextElementSibling
         if((title.dataset.href || '').trim() != '' && !T(nextContent).hasClass('loaded')) {
