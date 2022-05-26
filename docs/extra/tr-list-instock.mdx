@@ -4,8 +4,8 @@ title: Ürün Liste Stoktakiler
 ## Ürün liste stoktatakiler
 Ürün liste stokta var stokta yok için bu yapı kullanılabilir.
 
-### tpl
-```html
+
+```html title="smarty "
 <span id="stock-control" class="d-flex align-items-center" >
     <span class="input-checkbox d-flex align-items-center justify-content-center border-round">
         <i class="ti-check"></i>
@@ -14,16 +14,16 @@ title: Ürün Liste Stoktakiler
 </span>
 ```
 
-### javascript 
-```javascript
+
+```javascript title="javascript "" 
 T(`#stock-control`).on(`click`, e => {
   window.location.href=T.getLink('stock',getUrlParam('stock')?'':1, window.location.href)
 });
  getUrlParam('stock')? T('stock-control').addClass('active'):'';
 ```
 
-### scss 
-```scss
+
+```scss title="scss "
     #stock-control {
         cursor: pointer;
         &.active {
