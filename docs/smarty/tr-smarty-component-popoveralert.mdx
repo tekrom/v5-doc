@@ -1,0 +1,36 @@
+---
+title: PopoverAlert
+---
+Form elemanlarına yapılan veri girişlerinin geçerliliğini kontrol etmek için kullanılır.
+
+check validity ile uyarı verilmesini sağlar.
+
+```html title="Örnek kullanım" 
+<form id="form-check">
+    <div class="popover-wrapper">
+        <input type="email" class="form-control" data-validate="email"> <!-- Tek kontrol -->
+    </div>
+    <div class="popover-wrapper">
+        <input type="email" class="form-control" data-validate="required,email"> <!-- Çoklu kontrol -->
+    </div>
+    <button type="submit">Gönder</button>
+</form>
+```
+
+```javascript
+T('#form-check').on('submit', e => {
+    e.stopPropagation();
+    if(!T.checkValidity(e.target)) return;
+    /* if koşulu sağlanırsa (form elemanlarına değerler doğru girilince) console çalışır */
+    console.log('form gönderildi');
+});
+
+popoverAlert.show(
+    T(`selector`)[0], msg, false, `btn btn-danger text-left`, true, `inline`
+);  
+
+popoverAlert.hide(item, [`btn`, `btn-outline-danger`, `text-left`]);
+
+popoverAlert.hideAll();
+
+```
