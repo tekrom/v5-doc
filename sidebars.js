@@ -64,7 +64,6 @@ module.exports = {
       'components/tr-javascript-component-notify',
       'components/tr-javascript-component-time-converter',
       'components/tr-javascript-component-vat',
-      'components/tr-javascript-component',
     ],
     '* Smarty': [
       'smarty/tr-smarty',
@@ -91,7 +90,6 @@ module.exports = {
       'components/tr-smarty-component-tooltip',
       'components/tr-smarty-component-variant',
       'components/tr-smarty-component-zoom',
-      'components/tr-smarty-component',
     ],
     '* Components': [
       'components/tr-javascript-component-accordion',
@@ -109,7 +107,6 @@ module.exports = {
       'components/tr-javascript-component-notify',
       'components/tr-javascript-component-time-converter',
       'components/tr-javascript-component-vat',
-      'components/tr-javascript-component',
       'components/tr-smarty-component-addfavbtn',
       'components/tr-smarty-component-countdown',
       'components/tr-smarty-component-drawer',
@@ -133,7 +130,6 @@ module.exports = {
       'components/tr-smarty-component-tooltip',
       'components/tr-smarty-component-variant',
       'components/tr-smarty-component-zoom',
-      'components/tr-smarty-component',
     ],
     '* Servisler (legacy)': [
       'api-v4/tr-all-info-about-services',
