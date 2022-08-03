@@ -1,6 +1,7 @@
 ---
 title: Mask
 ---
+
 Anlık veri girerken hatalı girişleri önlemek için kullanılır.
 
 Form elemanlarına maskeleme yöntemi ile izin verilen tiplere göre veri girişi yaptırabilirsiniz. 
@@ -12,4 +13,14 @@ Kullanılabilecek maske tipleri:
 
 ```html title="Örnek kullanım" 
 <input type="text" data-toggle="mask" data-type="number">
+```
+
+---
+
+### Telefon numarasını maskleme işlemi için kullanılır.
+
+```html title="Örnek kullanım" 
+
+ <input type="tel" id="my-dear-id" class="form-control" data-flag-masked placeholder="{#enter_phone_number#}">
+
 ```
