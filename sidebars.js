@@ -145,6 +145,7 @@ module.exports = {
       'api-v5/tr-member-login-methods',
     ],
     '* Extra': [
+      'extra/tr-lightgallery',
       'extra/tr-footer-social-media',
       'extra/tr-filter-close',
       'extra/tr-list-instock',

@@ -1,0 +1,51 @@
+---
+title: Dış Kütüphane - lightgallery
+---
+
+v5 sistemimizde dışarıdan lightgallery.js kütüphanesi dahil edilmiştir.
+Bu kütüphane ile medyalar ek işlem gerektirmeden sayfa içi açılabilmektedir.
+Detaylı bilgi için kendi döküman sayfasını ziyaret edebilirsiniz.
+
+Kullanılan versiyon <code>V1.0.0</code>
+https://sachinchoolur.github.io/lightgallery.js/
+
+### Döküman
+https://sachinchoolur.github.io/lightgallery.js/docs/api.html
+
+
+## Örnek Kullanımlar
+
+### Görsel için
+```html title="javascript"
+ lightGallery('#image-gallery', {
+    actualSize : false,
+    download : false,
+    thumbnail: true,
+    animateThumb: false,
+    showThumbByDefault: true,
+    thumbWidth : 60,
+});
+```
+
+```html title="html"
+<div id="image-gallery">
+    <a href="/test1.jpg"><img src="/test1.jpg"></a>
+    <a href="/test2.jpg"><img src="/test2.jpg"></a>
+</div>
+```
+### Video için
+```html title="javascript"
+lightGallery(document.getElementById('video-gallery'));
+```
+
+```html title="html"
+<div id="video-gallery">
+  <a href="https://www.youtube.com/watch?v=meBbDqAXago" data-poster="video-poster1.jpg" >
+      <img src="img/thumb1.jpg" />
+  </a>
+  <a href="https://vimeo.com/1084537" data-poster="video-poster2.jpg">
+      <img src="img/thumb2.jpg" />
+  </a>
+</div>
+```
+
