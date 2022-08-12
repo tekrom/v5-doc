@@ -6,47 +6,17 @@ title: Ürün Liste Stoktakiler
 
 
 ```html title="smarty "
-<span id="stock-control" class="d-flex align-items-center" >
-    <span class="input-checkbox d-flex align-items-center justify-content-center border-round">
-        <i class="ti-check"></i>
-    </span>
-    <span>{#in_stocks#}</span>
-</span>
+
+<div class="col-auto d-none d-md-block">
+    <div class="position-relative">
+        <input type="checkbox" id="product-list-stock" class="form-control" {if $smarty.get.stock == 1} checked value="" {else} value="1" {/if} onchange="window.location.href = T.getLink('stock', this.value)">
+        <label for="product-list-stock" class="m-0 d-flex align-items-center fw-regular">
+            <span class="input-checkbox"><i class="ti-check"></i></span>{#in_stocks#}jkk
+        </label>
+    </div>
+</div>
+
 ```
 
 
-```javascript title="javascript "" 
-T(`#stock-control`).on(`click`, e => {
-  window.location.href=T.getLink('stock',getUrlParam('stock')?'':1, window.location.href)
-});
- getUrlParam('stock')? T('stock-control').addClass('active'):'';
-```
 
-
-```scss title="scss "
-    #stock-control {
-        cursor: pointer;
-        &.active {
-            .input-checkbox {
-                background-color: $bgPrimary;
-                i {
-                    &::before {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-        .input-checkbox { 
-            background-color: $bgGray;
-            width: 14px;
-            height: 14px;
-            margin-right: 5px;
-            i {
-                &::before {
-                    color: $textWhite;
-                    opacity: 0;
-                }
-            }
-        }
-    }
-```	

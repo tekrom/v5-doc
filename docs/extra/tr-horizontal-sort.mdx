@@ -1,0 +1,36 @@
+---
+title: Ürün Liste Yatay Sıralama
+---
+
+
+## Ürün liste yatay sıralama div yapısı için buradaki yapı kullanılabilir. 
+
+
+Önyüzden gizlenmek istenen değerler blok yönetimindeki ayarlardan gizlenebilir. 
+
+
+
+```html title="smarty"
+
+{if $SETTING.SORT|@count >= 1}
+    <div class="col-6 col-sm-auto">
+        {$SORT_NAMES = [
+            "{#order_by_default#}", 
+            "{#order_by_alphabetical_asc#}", 
+            "{#order_by_alphabetical_desc#}", 
+            "{#order_by_newest#}", 
+            "{#order_by_oldest#}", 
+            "{#order_by_price_asc#}", 
+            "{#order_by_price_desc#}", 
+            "{#order_by_random#}", 
+            "{#order_by_score#}"
+        ]}
+        <div name="sort" id="sort" class="text-body d-flex flex-wrap">
+            {foreach from=$SETTING.SORT item=S}
+                <div data-value="{$S}" {if $smarty.get.sort}{if $smarty.get.sort == $S}selected{/if}{else if $S==0}selected{/if}  onclick="window.location.href = T.getLink('sort', this.dataset.value)"  class="p-1" >{$SORT_NAMES[$S]}</div>
+            {/foreach}
+        </div>
+    </div>
+{/if}
+```
+
