@@ -22,7 +22,7 @@ title: Ürün Liste Varyant Resmi
 
 ## Standart resim değişimi
 ```javascript title="javascript ürün liste"
-window["variantCallback"]=function(el){
+window["changeVariantImage"]=function(el){
     let productId=el.dataset.pid;
     let variantId=el.dataset.id;
     let item=el.closest(".product-item");
@@ -39,6 +39,14 @@ window["variantCallback"]=function(el){
         console.log(error);
     })
 }
+
+
+window["variantCallback"]=function(el){
+    window["changeVariantImage"](el)
+}
+
+
+
 ``` 
 
 
@@ -62,6 +70,12 @@ window["variantCallback"]=function(el){
         console.log(error);
     })
 }
+
+
+window["variantCallback"]=function(el){
+    window["changeVariantImage"](el)
+}
+
 ``` 
 
 

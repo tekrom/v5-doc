@@ -145,13 +145,16 @@ module.exports = {
       'api-v5/tr-member-login-methods',
     ],
     '* Extra': [
-      'extra/tr-lightgallery',
-      'extra/tr-footer-social-media',
+      'extra/tr-detail-vertical-tab',
       'extra/tr-filter-close',
+      'extra/tr-footer-social-media',
+      'extra/tr-lightgallery',
+      'extra/tr-list-detail-extra-discount',
+      'extra/tr-list-horizontal-sort',
       'extra/tr-list-instock',
       'extra/tr-list-layout',
-      'extra/tr-detail-vertical-tab',
-      'extra/tr-detail-cargotime',
+      'extra/tr-list-variant-image',
+
     ],
   },
 };

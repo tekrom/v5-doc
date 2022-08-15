@@ -1,0 +1,57 @@
+---
+title: Ürün Liste Varyant Resmi
+---
+## Ürün liste görünüm için buradaki yapı kullanılabilir. 
+```html title="smarty"
+
+
+
+{if $P.NUMERIC1}                                                
+    <div class="px-1 extra-discount fw-bold" data-extra="{$P.NUMERIC1}">
+    Sepette
+        {if $P.DISPLAY_VAT === "1"}
+            <strong class="cart-price">{{vat price=($P.PRICE_SELL - ($P.PRICE_SELL * $P.NUMERIC1/100)) vat=$P.VAT}}</strong> {$P.TARGET_CURRENCY}
+        {else}
+            <strong class="cart-price"> {format price=($P.PRICE_SELL - ($P.PRICE_SELL * $P.NUMERIC1/100))}</strong> {$P.TARGET_CURRENCY} +{#vat#}
+        {/if}
+    </div>
+{/if}
+
+
+
+
+    {foreach from=$SUB_LIST item=SUB name=variant}
+        <a href="javascript:void(0);"
+        id="{$SUB.TYPE_ID}"
+        data-id="{$SUB.TYPE_ID}"
+        ...
+        ...
+        data-callback="variantCallback"
+
+            class="snap-item {if !$smarty.foreach.variant.last} mr-1{/if} border p-1 sub-button-item{if $SUB.TYPE_ID == $SELECTED && $IS_DEFAULT_VARIANT_ACTIVE|default:1 == 1} selected{/if}{if $SUB.IN_STOCK == false && $NEGATIVE_STOCK == 0} passive{/if}">
+            <span>{$SUB.TYPE}</span>
+        </a>
+    {/foreach}
+```
+
+
+
+
+## Standart resim değişimi
+```javascript title="javascript ürün liste"
+window["extraDiscount"]=function(el){
+    let item=el.closest(".product-item, #product-detail");
+    let discountPercent=parseFloat(item.querySelector("[data-extra]").getAttribute("data-extra"));
+    let oldPrice=T.priceToFloat(item.querySelector(".product-price").innerText);
+    let cartPrice=oldPrice-(oldPrice*discountPercent*0.01)
+    item.querySelector(".cart-price").innerText=T.format(cartPrice)
+}
+
+
+
+window["variantCallback"]=function(el){
+    window["extraDiscount"](el)
+}
+
+``` 
+
