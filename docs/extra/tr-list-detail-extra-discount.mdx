@@ -38,13 +38,17 @@ title: Ürün Liste Varyant Resmi
 
 
 ## Standart resim değişimi
-```javascript title="javascript ürün liste"
+```javascript title="javascript"
 window["extraDiscount"]=function(el){
     let item=el.closest(".product-item, #product-detail");
-    let discountPercent=parseFloat(item.querySelector("[data-extra]").getAttribute("data-extra"));
-    let oldPrice=T.priceToFloat(item.querySelector(".product-price").innerText);
+    let dataEl=item.querySelector("[data-extra]");
+    let cartPriceEl=item.querySelector(".cart-price");
+    if (!dataEl) return false;
+    let productPrice=item.querySelector(".product-price");
+    let discountPercent=parseFloat(dataEl.getAttribute("data-extra"));
+    let oldPrice=T.priceToFloat(productPrice.innerText);
     let cartPrice=oldPrice-(oldPrice*discountPercent*0.01)
-    item.querySelector(".cart-price").innerText=T.format(cartPrice)
+    cartPriceEl? cartPriceEl.innerText=T.format(cartPrice) :"";
 }
 
 
