@@ -534,7 +534,7 @@ table {
 }
 
 .bg-white {
-  background-color: #ffffff !important;
+  background-color: var(--ifm-bg-white) !important;
 }
 
 .bg-black {
@@ -3794,8 +3794,8 @@ html:not([dir="rtl"]) .mr-auto {
 }
 
 .px-1 {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }
 
 .py-1 {
@@ -3900,8 +3900,8 @@ html:not([dir="rtl"]) .mr-auto {
 }
 
 .px-2 {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
 }
 
 .py-2 {
@@ -4006,8 +4006,8 @@ html:not([dir="rtl"]) .mr-auto {
 }
 
 .px-3 {
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 45px !important;
+  padding-right: 45px !important;
 }
 
 .py-3 {
@@ -4112,8 +4112,8 @@ html:not([dir="rtl"]) .mr-auto {
 }
 
 .px-4 {
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
 }
 
 .py-4 {
@@ -4218,8 +4218,8 @@ html:not([dir="rtl"]) .mr-auto {
 }
 
 .px-5 {
-  padding-left: 75px;
-  padding-right: 75px;
+  padding-left: 75px !important;
+  padding-right: 75px !important;
 }
 
 .py-5 {
@@ -7678,7 +7678,7 @@ s,
 }
 
 .border {
-  border: 1px solid #f0f0f0 !important;
+  border: 1px solid var(--ifm-master-border) !important;
 }
 
 .border-top {
