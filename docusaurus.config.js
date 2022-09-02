@@ -9,7 +9,7 @@ module.exports = {
   title: 'v5 Documentation',
   tagline:
     'T-SOFT v5 standart temasına ait tüm detayları bulabileceğiniz dökümantasyon.',
-  url: 'https://v5-doc.netlify.app/',
+  url: 'https://v5-doc.tsoftthemes.com/',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'T-SOFT',
@@ -17,11 +17,6 @@ module.exports = {
   themes: ['@docusaurus/theme-live-codeblock'],
   plugins: ['my-loaders'], // loader required for .svg
   themeConfig: {
-    algolia: {
-      apiKey: '74cc71d8c788370343b734750c915540',
-      indexName: 'docusaurus',
-      appId: 'D3CV9EU7VN',
-    },
     navbar: {
       logo: {
         alt: 'T-SOFT',
@@ -42,11 +37,11 @@ module.exports = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    announcementBar: {
-      id: 'supportus',
-      content:
-        '⭐️ v5 doc ⭐️',
-    },
+    // announcementBar: {
+    //   id: 'supportus',
+    //   content:
+    //     '⭐️ v5 doc ⭐️',
+    // },
     footer: {
       logo: {
         alt: 'v5 Documentation',
@@ -62,6 +57,8 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          editUrl:
+            'https://github.com/hasanunal/v5-doc/edit/dev/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
