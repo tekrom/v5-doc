@@ -52,7 +52,7 @@ window["variantCallback"]=function(el){
 
 ## Ürün Detaya gidince de seçili rengin gelmesi için
 ```javascript title="javascript ürün liste"
-window["variantCallback"]=function(el){
+window["changeVariantImage"]=function(el){
     let productId=el.dataset.pid;
     let variantId=el.dataset.id;
     let item=el.closest(".product-item");
