@@ -146,6 +146,7 @@ module.exports = {
     ],
     '* Extra': [
       'extra/tr-detail-vertical-tab',
+      'extra/tr-detail-related',
       'extra/tr-filter-close',
       'extra/tr-footer-social-media',
       'extra/tr-lightgallery',
