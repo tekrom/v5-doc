@@ -155,6 +155,7 @@ module.exports = {
       'extra/tr-list-instock',
       'extra/tr-list-layout',
       'extra/tr-list-variant-image',
+      'extra/tr-showcase-dowry-percent',
 
     ],
   },
