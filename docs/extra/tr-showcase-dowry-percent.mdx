@@ -1,0 +1,778 @@
+---
+title: Çeyiz Paketi
+---
+## Vitrin (showcase) çeyiz paketi
+Kampanya ile tanımlanan yüzdelik indirimler ürün seç seçilerek tablı vitrin oluşturulur.
+
+
+
+```html title="smarty "
+
+{if $IS_LOADED_BY_SERVICE == 0}
+    <div class="col-12">
+        <div class="row mb-1">
+            <div class="col-12 mb-1">
+                {if $SETTING.DISPLAY_TITLE}
+                    <div class="w-100 d-flex align-items-center justify-content-between my-5">
+                        <div class="block-title">{$BLOCK.TITLE}</div>
+                    </div>
+                {/if}
+            </div>
+            <div class="col-12{if $SETTING.TABS|@count > 1} dowry-wrapper{/if}" data-percent="50" data-price="2000">
+                <div class="dowry-inner">
+                    {if $SETTING.TABS|@count > 1}
+                        <div class="col loaded active accordion-title" data-toggle="accordion">
+                            <div  class="py-1 mb-1 row  dowry-tab-item border-round bg-light">
+                                {if $SETTING.TABS.0.IMG1.PATH|strip != '' || true}
+                                    <span class="col-2 col-md-1 px-1 tab-img">
+                                            <img src="{$SETTING.TABS.0.IMG1.PATH|default:$LAZY_LOAD_LOADING_IMAGE}" alt="{$BLOCK.TITLE} - {$SETTING.TABS.TITLE}" width="75" height="75" class="border-round" >
+                                        </span>
+
+                                {/if}
+                                <div class="col-10 col-md-11 dowry-infos d-flex align-items-center flex-wrap" style="place-content: flex-start">
+                                    <span class="col-12 tab-name fw-bold">{$SETTING.TABS.0.TITLE}</span>
+                                    <span class="col-12 tab-desc p-1"><span>{#your_decision#}</span> :<strong class="col dowry-decision"></strong></span>
+                                    </div>
+                            </div>
+                        </div>
+                    {/if}
+                    
+                    <div id="producttab{$BLOCK.ID}{$BLOCK.PARENT_ID}1"  data-toggle="equalHeight" class="accordion-body dowry-box mb-1" data-selector=".product-detail-card" >
+                        {/if}
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    {foreach from=$PRODUCTS item=P}
+                                        <div class="swiper-slide product-item" data-hasvariant="{$P.HAS_VARIANT}" data-pid="{$P.ID}" data-bid="{$BLOCK.ID}">
+                                            <div class="w-100 bg-white ease border border-round">
+                                                <div class="w-100 position-relative">                            
+                                                    <span href="/{$P.URL}" class="image-wrapper {if $P.IMAGE_LIST.1.SMALL != ''}image-animate{/if}">
+                                                        <picture class="image-inner">
+                                                            {if $P.IMAGE.MEDIUM_WEBP_JPG != null}
+                                                                <source srcset="{$P.IMAGE.SMALL}">
+                                                                <img {if $IS_LAZY_LOAD_ACTIVE == '1'}src="{$LAZY_LOAD_LOADING_IMAGE}" data-src="{$P.IMAGE.MEDIUM_WEBP_JPG}" class="lazyload" loading="lazy"{else}src="{$P.IMAGE.MEDIUM_WEBP_JPG}"{/if} alt="{$P.TITLE} - {$P.BRAND}">
+                                                            {else}
+                                                                <img {if $IS_LAZY_LOAD_ACTIVE == '1'}src="{$LAZY_LOAD_LOADING_IMAGE}" data-src="{$P.IMAGE.SMALL}" class="lazyload" loading="lazy"{else}src="{$P.IMAGE.SMALL}"{/if} alt="{$P.TITLE} - {$P.BRAND}">
+                                                            {/if}
+                                                        </picture>
+                                                        {if $P.IMAGE_LIST.1.SMALL != ''}
+                                                            <picture class="image-inner">
+                                                                <img {if $IS_LAZY_LOAD_ACTIVE == '1'}src="{$LAZY_LOAD_LOADING_IMAGE}" data-src="{$P.IMAGE_LIST.1.SMALL}" class="lazyload image-nd" loading="lazy"{else}src="{$P.IMAGE_LIST.1.SMALL}" class="image-nd"{/if} alt="{$P.TITLE} - {$P.BRAND} (1)">
+                                                            </picture>
+                                                        {/if}
+                                                        {if $P.IS_DISPLAY_DISCOUNTED_ACTIVE == 1}
+                                                            <span class="discounted-badge position-absolute bg-primary text-white text-center border-round {if $P.DISCOUNT_PERCENT <= 0}d-none{/if}">
+                                                                <span><small>%</small><span class="product-discount">{$P.DISCOUNT_PERCENT}</span></span>{#discount#}
+                                                            </span>
+                                                        {/if}
+                                                        {if $P.IS_NEW_PRODUCT == true}
+                                                            <span class="new-badge position-absolute bg-gray text-white text-center border-round">
+                                                                <span>{#new#}</span>{#product#}
+                                                            </span>
+                                                        {/if}
+                                                        {if $P.IN_STOCK == false}
+                                                            <span class="out-of-stock position-absolute bg-gray text-white text-center border-round">{#out_of_stock#}</span>
+                                                        {/if}
+                                                    </a>
+                                                    {*if $IS_SELECTABLE_PRODUCT == 1 || true}
+                                                        <input type="checkbox" id="select-and-add-to-cart-input-{$P.ID}{$BLOCK.ID}" value="{$P.ID}" data-target="{$P.ID}{$BLOCK.ID}" class="form-control multiple-ids-cart">
+                                                        <label for="select-and-add-to-cart-input-{$P.ID}{$BLOCK.ID}" class="p-1 m-0 select-and-add-to-cart-input">
+                                                            <span class="input-checkbox">
+                                                                <i class="ti-check"></i>
+                                                            </span>
+                                                        </label>
+                                                    {/if*}
+                                                </div>
+                                                <div class="col-12 py-1 product-detail-card{if $P.IS_DISPLAY_PRODUCT == 0 && $P.HAS_VARIANT == true && ($P.VARIANT_FEATURE1_LIST|@count > 0 || $P.VARIANT_FEATURE2_LIST|@count > 0)} large{/if}">
+                                                    <div class="row">
+                                                        {if $DISPLAY_BRAND == 1 && $P.BRAND != ''}
+                                                            <span href="/{$P.BRAND_URL}" class="col-12 fw-bold text-body brand-title">{$P.BRAND}</span>
+                                                        {/if}
+                                                        <span href="/{$P.URL}" class="col-12 product-title">{$P.TITLE}</span>
+                                                        {if $P.IS_DISPLAY_PRODUCT == 0}
+                                                            <div class="col-12 pb-1 product-bottom-line">
+                                                                <div class="row">
+                                                                    <input type="hidden" name="subPro{$P.ID}{$BLOCK.ID}" id="subPro{$P.ID}{$BLOCK.ID}" value="0" />
+                                                                    <input type="number" id="ProductCount{$P.ID}{$BLOCK.ID}" class="d-none" name="ProductCount{$P.ID}{$BLOCK.ID}" min="{$P.MIN_ORDER_COUNT}" step="{$P.STOCK_INCREMENT}" value="{$P.MIN_ORDER_COUNT}">
+                                                                    {if $P.HAS_VARIANT == true}
+                                                                        <div class="col-12 pr-0 d-flex flex-wrap variant-wrapper">
+                                                                            {if $P.VARIANT_FEATURE1_LIST|@count > 0}
+                                                                                <div class="sub-one {if $P.VARIANT_FEATURE2_LIST|@count > 0}col-6{else}col-12{/if} pl-0">
+                                                                                    {include file='block/product-list/tpl/variants/select.tpl' SUB_LIST=$P.VARIANT_FEATURE1_LIST SELECTED=$P.VARIANT_FEATURE1_SELECTED GRUP_TIP_NO=1 VARIANT_TITLE=$P.VARIANT_FEATURE1_TITLE}
+                                                                                </div>
+                                                                            {/if}
+                                                                            {if $P.VARIANT_FEATURE2_LIST|@count > 0}
+                                                                                <div class="sub-two {if $P.VARIANT_FEATURE1_LIST|@count > 0}col-6{else}col-12{/if} pl-0">
+                                                                                    {include file='block/product-list/tpl/variants/select.tpl' SUB_LIST=$P.VARIANT_FEATURE2_LIST SELECTED=$P.VARIANT_FEATURE2_SELECTED GRUP_TIP_NO=2 VARIANT_TITLE=$P.VARIANT_FEATURE2_TITLE}
+                                                                                </div>
+                                                                            {/if}
+                                                                        </div>
+                                                                    {/if}
+                                                                    <div class="col-12 product-price-wrapper d-flex flex-wrap">
+                                                                        {if $P.IS_DISPLAY_DISCOUNTED_ACTIVE == 1}
+                                                                            <div class="mr-1 product-discounted-price text-delete {if $P.DISCOUNT_PERCENT <= 0}d-none{/if}">
+                                                                                <span class="product-price-not-discounted">{vat price=$P.PRICE_NOT_DISCOUNTED vat=$P.VAT}</span> {$P.TARGET_CURRENCY}
+                                                                            </div>
+                                                                        {/if}
+                                                                        <div class="current-price">
+                                                                            {if $P.DISPLAY_VAT === "1"}
+                                                                            <strong class="fw-black product-price">{vat price=$P.PRICE_SELL vat=$P.VAT}</strong> {$P.TARGET_CURRENCY}
+                                                                            {else}
+                                                                            <strong class="fw-black product-price-not-vat">{format price=$P.PRICE_SELL}</strong> {$P.TARGET_CURRENCY} <i class="ti-plus"></i> {#vat#}
+                                                                            {/if}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 pt-1 product-buttons d-flex">
+                                                                        {if $SETTING.DISPLAY_CART_BUTTON == 1}
+                                                                            <a id="product-addcart-button-{$BLOCK.ID}{$P.ID}" class="d-block border border-round add-to-cart-btn" href="javascript:void(0);" title="{#add_cart#}" onclick="addToCart({$P.ID}, document.getElementById('subPro{$P.ID}{$BLOCK.ID}').value, document.getElementById('ProductCount{$P.ID}{$BLOCK.ID}').value)"><i class="ti-basket"></i></a>
+                                                                        {/if}
+                                                                        {if $SETTING.IS_QUICK_VIEW_ACTIVE == 1}
+                                                                            <a id="product-quickview-button-{$BLOCK.ID}{$P.ID}" class="d-block border border-round popupwin quick-view-btn" href="/srv/service/content-v5/sub-folder/3/1004/quick-view/{$P.ID}/{$P.SERVICE_CODE}" data-width="1150" title="{#quick_view#}"><i class="ti-search"></i></a>
+                                                                        {/if}
+                                                                        {if $SETTING.DISPLAY_COMPARISON_BUTTON==1}
+                                                                            <a id="product-compare-button-{$BLOCK.ID}{$P.ID}" class="d-none d-md-block border border-round add-to-compare-btn" href="javascript:void(0);" data-id="{$P.ID}" onclick="return addToCompare(this);" title="{#add_compare#}"><i class="ti-shuffle"></i></a>
+                                                                        {/if}
+                                                                        {if $SETTING.DISPLAY_FAVOURITE_BUTTON == 1}
+                                                                            <a id="product-favourite-button-{$BLOCK.ID}{$P.ID}" class="d-block border border-round add-favourite-btn" href="javascript:void(0);" data-id="{$P.ID}" title="{#add_favourite#}"><i class="ti-heart-o"></i></a>
+                                                                        {/if}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        {/if}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {/foreach}
+                                </div>
+                                <div class="swiper-pagination bottom"></div>
+                            </div>
+                        {if $IS_LOADED_BY_SERVICE == 0}
+                    </div>
+                </div>
+                {if $SETTING.TABS|@count > 1}
+                    {foreach from=$SETTING.TABS item=TAB name=tab}
+                        {if !$smarty.foreach.tab.first}
+                            <div class="dowry-inner">
+                                <div class="col loaded active accordion-title"  data-toggle="accordion">
+                                    <div  class="py-1 mb-1 row dowry-tab-item border-round bg-light">
+                                        {if $TAB.IMG1.PATH|strip != '' || true}
+                                            <span class="col-2 col-md-1 px-1 tab-img">
+                                                <img src="{$TAB.IMG1.PATH|default:$LAZY_LOAD_LOADING_IMAGE}" alt="{$BLOCK.TITLE} - {$TAB.TITLE}" width="75" height="75" class="border-round">
+                                            </span>
+                                        {/if}
+                                        <div class="col-10 col-md-11 dowry-infos d-flex align-items-center flex-wrap" style="place-content: flex-start">
+                                            <span class="col-12 tab-name fw-bold">{$TAB.TITLE}</span>
+                                            <span class="col-12 tab-desc p-1"><span>{#your_decision#}</span> :<strong class="col dowry-decision"></strong></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="producttab{$BLOCK.ID}{$BLOCK.PARENT_ID}{$smarty.foreach.tab.iteration}" data-href="{$TAB.URL}" data-toggle="equalHeight"  class="accordion-body dowry-box mb-1 dowry-load" data-selector=".product-detail-card"></div>
+                            </div>
+                        {/if}
+                    {/foreach}
+                {/if}
+                <div class="py-2 dowry-total-wrapper d-flex flex-wrap">
+                    <div class="col-8 p-0 total-infos">
+                    <div class="total-not-discounted d-none"><i class="w-50">{#total_not_discounted#}</i> <span class="price px-1"></span><span>{$CURRENCY}</span></div>
+                    <div class="total-discounted"> <i class="w-50">{#total_discounted#}</i><span class="price px-1"></span><span>{$CURRENCY}</span></div>
+                    <div class="total-campaign"> <i class="w-50">{#total_campaign#}</i><span class="price px-1 d-none"></span><span class="info px-1">{#select_all_categorries#}</span> <span>{$CURRENCY}</span></div>
+                    <div class="total-cart text-bold"> <i class="w-50">{#total_price#}</i><span class="price px-1"></span><span>{$CURRENCY}</span></div>
+                    </div>
+                    <div class="col-4 total-btns">
+                        <div class="btn btn-primary dowry-add-to-cart">ADD TO CART</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{/if}
+```
+
+```javascript title="smarty "
+
+const runSlider = (el) => {
+  new Swiper(el, {
+    slidesPerView: 2,
+    spaceBetween: T.isMobile() ? 8 : 15,
+    // navigation: {
+    //     nextEl: `#swiper-next-${BLOCK.ID}`,
+    //     prevEl: `#swiper-prev-${BLOCK.ID}`,
+    // },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+    },
+  });
+};
+runSlider(`#producttab${BLOCK.ID}${BLOCK.PARENT_ID}1 > .swiper-container`);
+const dowry = {
+  load() {
+    T.each(T(`.dowry-load`), function (i, el) {
+      axios
+        .get(this.dataset.href)
+        .then((response) => {
+          el.innerHTML = response.data;
+          evalScripts(el.innerHTML);
+          runSlider(el.querySelector(".swiper-container"));
+          initComponents();
+        })
+        .catch((error) => console.log(`Tab content not loaded => ${error}`));
+    });
+    setTimeout(() => this.selectItem(), 500);
+  },
+  selectItem() {
+    let _this = this;
+    T.each(T(`.dowry-wrapper .product-item`), (i, el) => {
+      T(el).on(`click`, function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        let dowryInner = this.closest(`.dowry-inner`);
+        let yourDesicion = dowryInner.querySelector(`.dowry-decision`);
+        let selectedImg = dowryInner.querySelector(`.tab-img img`);
+        let productName = this.querySelector(`.product-title`).innerHTML;
+        let productImgUrl=this.querySelector('picture img').src;
+        T(yourDesicion).html(productName);
+        T(selectedImg)[0].src=productImgUrl;
+        T(dowryInner.querySelectorAll(`.product-item`)).removeClass("selected");
+        T(this).addClass("selected");
+        T(dowryInner).addClass("active");
+        _this.calculateTotal();
+      });
+    });
+  },
+  calculateTotal() {
+    let notdiscounted = 0;
+    let discounted = 0;
+    let extraPercent = T(`.dowry-wrapper`)[0].dataset.percent || 0;
+    let extraPrice = T(`.dowry-wrapper`)[0].dataset.price || 0;
+    let allSelected = T(`.dowry-inner:not(.active)`).length == 0;
+    T.each(T(`.product-item.selected`), function (i, el) {
+      notdiscounted += T.priceToFloat(
+        this.querySelector(`.product-price-not-discounted`)
+          ? this.querySelector(`.product-price-not-discounted`).innerHTML
+          : this.querySelector(`.product-price`).innerHTML
+      );
+      discounted += T.priceToFloat(
+        this.querySelector(`.product-price`)?.innerHTML
+      );
+    });
+    if (notdiscounted > discounted) {
+      T(`.total-not-discounted .price`).html(T.format(notdiscounted));
+      T(`.total-not-discounted`).removeClass(`d-none`);
+    } else {
+      T(`.total-not-discounted`).addClass(`d-none`);
+    }
+    T(`.total-discounted .price`).html(T.format(discounted));
+    if (allSelected) {
+      T(`.total-campaign .price`).removeClass("d-none");
+      T(`.total-campaign .info`).addClass("d-none");
+    }
+    if (extraPercent > 0) {
+      extraPrice = discounted * extraPercent * 0.01;
+    }
+    T(`.total-campaign .price`).html(T.format(extraPrice));
+    T(`.total-cart .price`).html(T.format(discounted - extraPrice));
+  },
+  addCartAll() {
+    T(`.dowry-add-to-cart`).on(`click`, function (e) {
+      let allSelected = T(`.dowry-inner:not(.active)`);
+      const selecteds = T('.product-item.selected');
+      if(allSelected.length >0) {
+          T.modal({
+            html: '{#select_all_categorries#}',
+          });
+          return;
+      }
+      const pids = [], 
+            variants = [],
+            counts = []
+        let variantErr=false;
+      Array.from(selecteds).forEach(input => {
+          const hasVariant=input.dataset.hasvariant;
+          const id = input.dataset.pid;
+          const bid= input.dataset.bid;
+          const variant = T(`#subPro${id}${bid}`);
+          const p_count = T(`#productCount${id}${bid}`);
+          if(hasVariant !='0' && variant[0].value=='0' && !variantErr){
+            variantErr=true;
+            T(`.product-item[data-pid='${id}']`).addClass('error');
+            setTimeout(() => {
+              T(`.product-item[data-pid='${id}']`).removeClass('error');
+            }, 3000);
+            T.modal({
+              html: '{#select_variant#}',
+            });
+          }
+          pids.push(id);
+          variants.push(variant.length > 0 ? variant[0].value : '');
+          counts.push(p_count.length > 0 ? p_count[0].value : '');
+      });
+      if(variantErr) return false;
+      multiCart = true;
+      addToCart(pids, variants, counts);
+    });
+  },
+  init() {
+    this.load();
+    this.addCartAll();
+  },
+};
+dowry.init();
+
+
+```
+
+
+```scss title="scss"
+@import "setting.scss";
+@import "mixin.scss";
+@include BLOCK {
+  .dowry-inner {
+    &.active {
+      .dowry-tab-item {
+        background-color: darken($color: $bgSuccess, $amount: 10) !important;
+        color: $textWhite ;
+      }
+    }
+    .product-item.selected {
+      .border {
+        border-color: $borderPrimary;
+      }
+      &.error .bg-white {
+        background-color: $bgDanger !important;
+      }
+    }
+    .tab-img {
+      img {
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+    }
+  }
+  .product-item {
+    .image-wrapper {
+      border-bottom: 2px solid $borderGray;
+    }
+    & > .bg-white {
+      border-width: 2px !important;
+    }
+    .brand-title {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 5px;
+    }
+    .product-title {
+      color: $textGray;
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 5px;
+      @include line-clamp(2);
+    }
+    .product-detail-card {
+      position: relative;
+      &:not(.large) {
+        padding-bottom: 90px;
+      }
+      &.large {
+        padding-bottom: 115px;
+      }
+      .product-bottom-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .product-price-wrapper {
+      font-size: 12px;
+      line-height: 14px;
+      .current-price {
+        color: $textColor;
+      }
+      .product-discounted-price {
+        color: #8c8c8c;
+        margin-right: 5px;
+        &:not(.d-none) + .current-price {
+          color: $textPrimary;
+        }
+      }
+    }
+    .product-buttons {
+      a {
+        color: #000;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        &:not(:last-of-type) {
+          margin-right: 5px;
+        }
+        &:hover {
+          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.08);
+        }
+        &.add-favourite-btn.fav-added {
+          color: $textPrimary;
+        }
+        &.add-to-compare-btn.active {
+          color: $textPrimary;
+        }
+      }
+    }
+    .variant-wrapper {
+      .sub-button-item {
+        padding: 4px 8px;
+        color: $textColor;
+        width: auto;
+        text-align: center;
+        font-size: 12px;
+        white-space: nowrap;
+        &.selected {
+          border-color: $borderPrimary !important;
+        }
+        &.passive {
+          opacity: 0.5;
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+          span {
+            text-decoration: line-through;
+          }
+        }
+      }
+      .sub-select-item {
+        height: 38px;
+        padding-left: 8px;
+        padding-right: 30px;
+        font-size: 12px;
+        .passive {
+          color: $textLight;
+        }
+      }
+    }
+    .discounted-badge,
+    .new-badge {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      top: 10px;
+      box-shadow: 0 2px 10px -5px rgb(0 0 0 / 19%);
+      z-index: 2;
+      font-size: 8px;
+      line-height: 1.3;
+      font-weight: bold;
+      text-transform: lowercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      span {
+        text-transform: uppercase;
+      }
+    }
+    .discounted-badge {
+      left: 10px;
+      span {
+        font-size: 14px;
+        small {
+          font-size: 8px;
+          vertical-align: top;
+          display: inline-block;
+          margin-top: 3px;
+          margin-right: 1px;
+        }
+      }
+    }
+    .new-badge {
+      right: 10px;
+      span {
+        font-size: 10px;
+      }
+    }
+    .out-of-stock {
+      @include d-flex;
+      @include justify-content-center;
+      @include align-items-center;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      height: 35px;
+      font-size: 10px;
+      font-weight: bold;
+    }
+    &:hover {
+      & > .bg-white {
+        border-color: $borderPrimary !important;
+      }
+      .image-wrapper {
+        border-color: transparent;
+      }
+      .product-buttons a {
+        color: $textPrimary;
+      }
+    }
+    .select-and-add-to-cart-input {
+      padding: 10px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      .input-checkbox {
+        border-color: $borderBlack;
+        margin: 0;
+      }
+    }
+  }
+  .showcase-tab-titles {
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    &::-webkit-scrollbar {
+      @include scrollbar(3px, 3px, $bgLight);
+    }
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $bgPrimary;
+    }
+  }
+  .compare-selected {
+    color: $textColor;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+    min-width: 144px;
+    & > a {
+      padding: 8px;
+    }
+    &:hover {
+      background: $bgLight;
+      .compare-hover {
+        display: block !important;
+      }
+    }
+    .compare-hover {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      padding: 10px;
+      border-radius: 0 0 4px 4px;
+      background: $bgLight;
+      z-index: 2;
+      .compare-list {
+        margin: 0 -5px 10px -5px;
+        div {
+          position: relative;
+          padding: 0 5px;
+          width: 25%;
+          i {
+            pointer-events: auto;
+            position: absolute;
+            right: -2px;
+            top: -4px;
+            width: 8px;
+            height: 8px;
+            cursor: pointer;
+            font-size: 6px;
+            background: $bgPrimary;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 8px;
+            color: $textWhite;
+            z-index: 2;
+          }
+        }
+      }
+      .btn {
+        padding: 3px 18px;
+        font-size: 12px;
+      }
+    }
+    i,
+    u {
+      pointer-events: none;
+    }
+  }
+  .showcase-tab-titles {
+    .showcase-tab-item {
+      padding-right: $gridPadding;
+      .tab-img {
+        width: 42px;
+        height: 42px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        overflow: hidden;
+        @include d-flex;
+        @include align-items-center;
+        @include justify-content-center;
+        img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .tab-name {
+        color: $textColor;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 13px;
+        &::after {
+          content: "";
+          background-color: #8c8c8c;
+          width: 15px;
+          height: 1.5px;
+          display: block;
+          margin-top: 5px;
+          border-radius: 1.5px;
+        }
+      }
+    }
+    .active .showcase-tab-item {
+      background-color: transparent !important;
+      border: 1px solid $borderPrimary !important;
+      .tab-name {
+        color: $textPrimary;
+        &::after {
+          background-color: $bgPrimary;
+        }
+      }
+    }
+  }
+  @media (min-width: $mdScreen) {
+    .product-item {
+      .brand-title {
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 10px;
+      }
+      .product-title {
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 10px;
+      }
+      .product-price-wrapper {
+        font-size: 14px;
+        line-height: 18px;
+        .product-discounted-price {
+          margin-right: 10px;
+        }
+      }
+      .product-buttons {
+        a {
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+          font-size: 16px;
+          &:not(:last-of-type) {
+            margin-right: 10px;
+          }
+        }
+      }
+      .product-detail-card {
+        &.large {
+          padding-bottom: 145px;
+        }
+      }
+    }
+    .showcase-tab-titles {
+      .showcase-tab-item {
+        .tab-img {
+          width: 84px;
+          height: 84px;
+        }
+        .tab-name {
+          font-size: 18px;
+          line-height: 23px;
+          &::after {
+            width: 30px;
+            height: 3px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    &[dir="rtl"] {
+      .product-item {
+        .product-price-wrapper {
+          .product-discounted-price {
+            margin-right: 0;
+            margin-left: 10px;
+          }
+        }
+        .product-buttons {
+          a {
+            &:not(:last-of-type) {
+              margin-right: 0;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[dir="rtl"] {
+    .product-item {
+      .product-price-wrapper {
+        .product-discounted-price {
+          margin-right: 0;
+          margin-left: 5px;
+        }
+      }
+      .product-buttons {
+        a {
+          &:not(:last-of-type) {
+            margin-right: 0;
+            margin-left: 5px;
+          }
+        }
+      }
+      .discounted-badge {
+        left: auto;
+        right: 10px;
+      }
+      .new-badge {
+        right: auto;
+        left: 10px;
+      }
+    }
+    .compare-selected {
+      .compare-hover {
+        .compare-list {
+          div {
+            i {
+              right: auto;
+              left: -2px;
+            }
+          }
+        }
+      }
+    }
+    .showcase-tab-titles {
+      .showcase-tab-item {
+        padding-right: 0;
+        padding-left: $gridPadding;
+        .tab-img {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+
+```
