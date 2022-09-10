@@ -9,6 +9,7 @@ module.exports = {
   docs: {
     'Başlangıç': [
       'tr-introduction',
+      'tr-vscode-extension',
     ],
     'Bilgi': [
       'info/tr-scss',
@@ -156,7 +157,6 @@ module.exports = {
       'extra/tr-list-layout',
       'extra/tr-list-variant-image',
       'extra/tr-showcase-dowry-percent',
-
     ],
   },
 };

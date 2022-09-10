@@ -1,0 +1,1395 @@
+---
+title: Tsoft V5 Snippets
+---
+
+# Tsoft V5 Snippets
+T-Soft v5 tema kodlarken kullanabileceğiniz snippet'ler
+
+Javascript, smarty (.tpl) ve scss snippet'lerine 
+bu eklenti ile kolaylıkla sahip olursunuz. 
+
+Amacı tsoft.com.tr ve tsoftecommerce.com 
+ön uç geliştiricilerine yardımcı olmaktır.
+
+## Kurulum
+
+#### Tavsiyeler
+---
+- .tpl dosyalarında daha iyi bir sözdizimi vurgulaması için 
+<a href="https://marketplace.visualstudio.com/items?itemName=aswinkumar863.smarty-template-support" target="_blank" rel="noreferrer noopener nofollow">Smarty Template Support</a>'u önceden kurmanız önerilir.
+---
+- Emmet Kısaltmaları için aşağıdakileri settings.json 
+dosyanıza yapıştırabilirsiniz (F1'e basın, 
+ardından Open Settings (JSON)'u arayın)
+
+<code>F1 + > Open Setting (JSON)</code>
+
+```json
+"emmet.includeLanguages": {
+  "smarty": "html"
+}
+```
+
+== veya ayar giriş alanına includeLanguages 
+yazabilir ve item => "smarty" ve value =>"html" ekleyebilirsiniz.
+
+---
+![Setting](https://github.com/gitorhub/tsoft-v5-snippet/raw/HEAD/images/setting.png)
+
+## Nasıl Görünüyor?
+
+### JavaScript
+![JavaScript](https://github.com/gitorhub/tsoft-v5-snippet/raw/HEAD/images/js.gif)
+
+### Smarty
+![Smarty](https://github.com/gitorhub/tsoft-v5-snippet/raw/HEAD/images/smarty.gif)
+
+### SCSS
+![SCSS](https://github.com/gitorhub/tsoft-v5-snippet/raw/HEAD/images/scss.gif)
+
+## Snippet Örnekleri
+
+<details id="JAVASCRIP">
+  <summary class="h2 text-primary cursor-pointer">JAVASCRIPT V5</summary>
+  T-Soft V5 için Javascript kod parçacıkları.
+
+  ### JavaScript Snippets
+
+  #### `cl ⇥`  
+```javascript
+console.log();
+```
+  #### `cv ⇥`  
+```javascript
+console.log('variable',variable);
+```
+  #### `ael ⇥`  
+```javascript
+selector.addEventListener("click",e=>{
+    console.log(e)
+});
+```
+  #### `docready ⇥`  
+```javascript
+document.addEventListener("DOMContentLoaded",e=>{
+    console.log(e)
+});
+```
+  #### `vuecreateapp ⇥`  
+```javascript
+Vue.createApp(appName).mount('#appSelector');
+```
+  #### `vuescript ⇥`  
+```javascript
+window['appName'] = {
+    data() {
+        return {
+            P:``,
+        }
+    },
+}
+Vue.creatApp(appName).mount(`#app-selector`);
+```
+  #### `tsubmitform ⇥`  
+```javascript
+T(`#selector`).on('submit', e => {
+    e.stopPropagation();
+    e.preventDefault();
+    const formEl = e.target;
+    if(!T.checkValidity(formEl))
+        return;
+    var data = new FormData(formEl);
+    axios.post('/srv/service/servicepath', data).then(response => {
+        const result = response.data;
+        console.log('result:', result);
+        formEl.reset();
+        T.notify({
+            text:"element",
+            className: 'success',
+            duration: 3200
+        });
+    });
+});
+```
+  #### `newswiper ⇥`  
+```javascript
+new Swiper(selector, {
+    slidesPerView: 2,
+    spaceBetween: T.isMobile() ? 8 : 15,
+    navigation: {
+        nextEl: `#swiper-next-${BLOCK.ID}`,
+        prevEl:`#swiper-prev-${BLOCK.ID}`,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 3
+        },
+        768: {
+            slidesPerView: 4
+        }
+    }
+});
+```
+  #### `axiosget ⇥`  
+```javascript
+axios.get("url").then((res)=> {
+    console.log(res.data);
+})
+.catch((error)=> {
+    console.log(error);
+})
+```
+  #### `axiospost ⇥`  
+```javascript
+axios.post("url", formData).then((res)=> {
+    console.log(res.data);
+})
+.catch((error)=> {
+    console.log(error);
+})
+```
+  #### `fetchget ⇥`  
+```javascript
+fetch("users.json").then(res=> res.json())
+.then(data=> {
+        data.forEach(el => {
+        console.log(el);
+    });
+})
+.catch(err => console.log(err))
+```
+
+  
+  #### `tcartcallback ⇥`  
+```javascript
+Cart.callback.add.push((res)=>{
+        console.log(res) 
+})
+```
+  #### `tready ⇥`  
+```javascript
+T.ready(function(){
+    
+})
+```
+  #### `tisEmptyObject ⇥`  
+```javascript
+T.isEmptyObject(obj)
+```
+
+  
+  #### `teach ⇥`  
+```javascript
+T.each(T(`div`),(i, el)=>{
+    console.log(i, el);
+});
+```
+  #### `tsetCookie ⇥`  
+```javascript
+T.setCookie(cookieName, cookieValue, exdays) 
+```
+  #### `tgetCookie ⇥`  
+```javascript
+T.getCookie(cookieName) 
+```
+  #### `tblock ⇥` BLOCK
+```javascript
+BLOCK.
+```
+  #### `tsetting ⇥` SETTING
+```javascript
+SETTING.
+```
+  #### `timage ⇥` IMAGE
+```javascript
+IMAGE.
+```
+  #### `tgetlink ⇥` 
+```javascript
+T.getLink(`param`,'value','link');
+```
+  #### `tpopshow ⇥` 
+```javascript
+popoverAlert.show(
+    T(`selector`)[0], msg, false, `btn btn-danger text-left`, true, `inline`
+);
+```
+  #### `tpophide ⇥` 
+```javascript
+popoverAlert.hide(item, [`btn`, `btn-outline-danger`, `text-left`]);
+```
+#### `tpophideall ⇥` 
+```javascript
+popoverAlert.hideAll();
+```
+#### `tloadSubFolder ⇥` 
+```javascript
+loadSubFolder({
+    pageId: 1,
+    blockParentId: 1000,
+    subFolder: 'subfoldername',
+    params: { oneparam: oneparam, twoparam: twoparam },
+    success:  function(loadRes){
+        T.modal({ html: loadRes, width:'480px' });
+        evalScripts(loadRes)
+    }
+});
+```
+#### `tisMobile ⇥` 
+```javascript
+T.isMobile()
+```
+#### `tgetUrlParam ⇥` 
+```javascript
+getUrlParam('param')
+```
+#### `tscrollToElm ⇥` 
+```javascript
+scrollToElm(`[href='#id']`);
+```
+#### `tlocalApi ⇥` 
+```javascript
+LocalApi.get(`key`);
+```
+#### `tevalScripts ⇥` 
+```javascript
+evalScripts(content);
+```
+#### `ts ⇥` tselector
+```javascript
+T(`selector`);
+```
+#### `twrap ⇥` 
+```javascript
+T.wrap(T(`toWrapSelector`)[0],'','classname');
+```
+#### `taddclass ⇥` 
+```javascript
+T(`selector`).addClass('active');
+```
+
+#### `tremoveclass ⇥` 
+```javascript
+T(`selector`).removeClass('active');
+```
+#### `ttoggleclass ⇥` 
+```javascript
+T(`selector`).toggleClass('active');
+```
+#### `thasclass ⇥` 
+```javascript
+T(`selector`).hasClass('active');
+```
+#### `tindex ⇥` 
+```javascript
+T(`selector`).index();
+```
+#### `tclick ⇥` 
+```javascript
+T(`#selector`).on(`click`, e => {
+    e.stopPropagation();
+    e.preventDefault();
+    const el = e.target;
+    
+});
+```
+#### `toffclick ⇥` 
+```javascript
+T(`#selector`).off(`click`, e => {
+    e.stopPropagation();
+    e.preventDefault();
+    const el = e.target;
+    
+});
+```
+#### `toneclick ⇥` 
+```javascript
+T(`#selector`).one(`click`, e => {
+    e.stopPropagation();
+    e.preventDefault();
+    const el = e.target;
+    
+});
+```
+#### `ttrigger ⇥` 
+```javascript
+T(`selector`).trigger('click');
+```
+
+#### `thtml ⇥` 
+```javascript
+T(`selector`).html('element');
+```
+#### `ttext ⇥` 
+```javascript
+T(`selector`).text('text');
+```
+#### `theightset ⇥` 
+```javascript
+T(`selector`).height(400);
+```
+#### `theightget ⇥` 
+```javascript
+T(`selector`).height();
+```
+#### `tshow ⇥` 
+```javascript
+T(`selector`).show(`flex`);
+```
+#### `thide ⇥` 
+```javascript
+T(`selector`).hide();
+```
+#### `tnotify ⇥` 
+```javascript
+T.notify({
+    text:`messageandtext`,
+    className: `success`,
+    duration: 3200,
+    stopOnFocus: true,
+    close: true,
+    gravity:`top`,
+    position: `left`,
+    iconClass: `ti-thumbs-up`,
+});
+```
+#### `tmodal ⇥` 
+```javascript
+T.modal({
+    id: 'new-modal',
+    class: `classname`,
+    width: `480px`,
+    title: `ModalTitle`,
+    html: result.statusText,
+    close: true,
+    openCallback: () => {
+    },
+    closeCallback: () => {
+    }
+});
+```
+#### `tpublishingPopupCallback ⇥` 
+```javascript
+window.publishingPopupCallback=function(){
+    
+}
+```
+#### `ttooltip ⇥` 
+```javascript
+T.tooltip(T(`selector`)[0], {
+    placement:`top`
+});
+```
+#### `tcheckvalidity ⇥` 
+```javascript
+if(!T.checkValidity(e.target)) return;
+```
+#### `tvat ⇥` 
+```javascript
+T.vat(price, vat);
+```
+
+#### `tformat ⇥` 
+```javascript
+T.format(number);
+```
+#### `ttimeconverter ⇥` 
+```javascript
+T.timeConverter(1652702396000, `d.m.y`);
+```
+
+#### `tbuttonlock ⇥` 
+```javascript
+const button = T(`#form_submit_button`)[0];
+T.buttonLock.dom = button;
+T.buttonLock.tmp = button.innerHTML;
+T.buttonLock.lock();
+```
+#### `tbuttonunlock ⇥` 
+```javascript
+T.buttonLock.unlock();
+```
+
+### Tsoft most used servives
+
+#### `sretrunnotes ⇥` 
+```javascript
+`/srv/service/order-v4/order-return/${product_id}`
+```
+#### `svideo ⇥` 
+```javascript
+`/srv/service/gallery/video-detail/${product_id}`
+```
+#### `sfastlook ⇥` 
+```javascript
+`/srv/service/product-detail/view/606`
+```
+#### `sfolders ⇥` 
+```javascript
+`/srv/service/content/get/${BLOCK.ID}/folder_name`
+```
+#### `slanguage ⇥` 
+```javascript
+`/srv/service/language/change/${tr}`
+```
+#### `scurrency ⇥` 
+```javascript
+`/srv/shopping/shopping/set-currency/${tl}`
+```
+
+#### `scountry ⇥` 
+```javascript
+`/srv/shopping/shopping/set-country/${TR}`
+```
+#### `sproductlist ⇥` 
+```javascript
+`/srv/service/content/get-block/1003/category/${catID}`
+```
+#### `scatservice ⇥` 
+```javascript
+`/srv/service/category/get/${catID}`
+```
+#### `scatproduct ⇥` 
+```javascript
+`/srv/service/product/filter/category/${catID}?pg=1`
+```
+#### `sgettree ⇥` 
+```javascript
+`/srv/service/category/getTree/${catID}`
+```
+#### `sgetblock ⇥` 
+```javascript
+`/srv/service/content/get-block/1018/content/${içerik_id}`
+```
+#### `sinstallment ⇥` 
+```javascript
+`/srv/service/product-detail/credit-card-installment-list/${product_id}/${sub_product_id}`
+```
+#### `spaymentoptions ⇥` 
+```javascript
+`/srv/service/product-detail/payment-options/${product_id}/${sub_product_id}`
+```
+#### `scampaignproduct ⇥` 
+```javascript
+`/srv/campaign-v2/campaign/get-list-by-type/product/${product_id}`
+```
+
+#### `scampaigncart ⇥` 
+```javascript
+`/srv/campaign-v2/campaign/get-list-by-type/cart`
+```
+#### `scampaigncat ⇥` 
+```javascript
+`/srv/campaign-v2/campaign/get-list-by-type/category/${id}`
+```
+
+#### `scart ⇥` 
+```javascript
+`/srv/service/cart/load?link=sepet`
+```
+#### `scomment ⇥` 
+```javascript
+`/srv/service/product-detail/comments/${product_id}`
+```
+#### `scommentpoint ⇥` 
+```javascript
+`/srv/service/product-detail/comment-average/${product_id}`
+```
+
+#### `sbrand ⇥` 
+```javascript
+`/srv/service/filter/get/brands`
+
+```
+#### `srelatedblock ⇥` 
+```javascript
+`/srv/service/content/getBlock/1070/product/${product_id}`
+```
+#### `srelated ⇥` 
+```javascript
+`/srv/service/product/get-related-products/${product_id}/1`
+
+```
+#### `ssubstitution ⇥` 
+```javascript
+`/srv/service/product/get-related-products/${product_id}/2`
+```
+
+#### `saccessory ⇥` 
+```javascript
+`/srv/service/product/get-related-products/${product_id}/3`
+```
+#### `scomplement ⇥` 
+```javascript
+`/srv/service/product/get-related-products/${product_id}/4`
+```
+</details>
+
+<details id="SMARTY">
+<summary class="h2 text-primary cursor-pointer">SMARTY</summary>
+
+T-Soft V5 için Smarty kod parçacıkları.
+
+### Smarty Snippets
+
+#### `border- ⇥` 
+```html
+border-options
+```
+#### `fw- ⇥` 
+```html
+fw-options
+```
+ 
+#### `text- ⇥` 
+```html
+text-options
+```
+#### `btn- ⇥` 
+```html
+btn-options
+```
+#### `btn-outline- ⇥` 
+```html
+btn-outline-options
+```
+#### `bg- ⇥` 
+```html
+btn-outline-options
+```
+#### `pos-rd ⇥` 
+```html
+position-desktop-relative
+```
+#### `pos-sd ⇥` 
+```html
+position-desktop-sticky
+```
+#### `pos-ad ⇥` 
+```html
+position-desktop-absolute
+```
+#### `pos-fd ⇥` 
+```html
+position-desktop-fixed
+```
+#### `pos-r ⇥` 
+```html
+position-relative
+```
+#### `pos-s ⇥` 
+```html
+position-sticky
+```
+#### `pos-a ⇥` 
+```html
+position-absolute
+```
+#### `pos-f ⇥` 
+```html
+position-fixed
+```
+#### `column ⇥` 
+```html
+flex-direction-column
+```
+#### `row-f ⇥` 
+```html
+flex-direction-row
+```
+#### `row-r ⇥` 
+```html
+flex-direction-row-reverse
+```
+#### `wrap ⇥` 
+```html
+flex-wrap
+```
+#### `wrap-r ⇥` 
+```html
+flex-wrap-reverse
+```
+#### `shrink ⇥` 
+```html
+flex-shrink-options
+```
+#### `a-center ⇥` 
+```html
+align-items-center
+```
+#### `a-end ⇥` 
+```html
+align-items-flex-end
+```
+#### `a-start ⇥` 
+```html
+align-items-flex-start
+```
+#### `j-center ⇥` 
+```html
+justify-content-center
+```
+#### `j-between ⇥` 
+```html
+justify-content-between
+```
+#### `j-between ⇥` 
+```html
+justify-content-between
+```
+#### `j-around ⇥` 
+```html
+justify-content-around
+```
+#### `j-evenly ⇥` 
+```html
+justify-content-evenly
+```
+#### `j-start ⇥` 
+```html
+justify-content-flex-start
+```
+#### `j-end ⇥` 
+```html
+justify-content-flex-end
+```
+#### `container ⇥` 
+```html
+container-options
+```
+#### `extraformat ⇥` 
+```html
+{format price=($P.PRICE_SELL - ($P.PRICE_SELL * $P.NUMERIC1/100))}
+```
+
+  
+#### `extraformat ⇥` 
+```html
+{format price=($P.PRICE_SELL - ($P.PRICE_SELL * $P.NUMERIC1/100))}
+```
+
+  
+#### `extravat ⇥` 
+```html
+{vat price=($P.PRICE_SELL - ($P.PRICE_SELL * $P.NUMERIC1/100)) vat=$P.VAT}
+```
+
+  
+  
+#### `vuetemplate ⇥` 
+```html
+<div id="selector" class="row" v-cloak>
+</div>
+
+<script>
+    const appName = {
+        data() {
+            return {
+                
+            }
+        }
+    };
+    Vue.createApp(appName).mount('selector');
+</script>
+```
+#### `IS_ADMIN_LOGGED ⇥` 
+```html
+IS_ADMIN_LOGGED
+```
+#### `IS_LAZY_LOAD_ACTIVE ⇥` 
+```html
+IS_LAZY_LOAD_ACTIVE
+```
+#### `IS_MEMBER_LOGGED_IN ⇥` 
+```html
+IS_MEMBER_LOGGED_IN
+```
+#### `IS_VENDOR ⇥` 
+```html
+IS_VENDOR
+```
+#### `LANGUAGE ⇥` 
+```html
+LANGUAGE
+```
+#### `LANGUAGE_SELECTED ⇥` 
+```html
+LANGUAGE_SELECTED
+```
+#### `LANGUAGE_LIST ⇥` 
+```html
+LANGUAGE_LIST
+```
+#### `IS_HTTPS_ACTIVE ⇥` 
+```html
+IS_HTTPS_ACTIVE
+```
+#### `FILTER_PROPERTY_LIST ⇥` 
+```html
+FILTER_PROPERTY_LIST
+```
+#### `IS_RECOMMENDATION_ACTIVE ⇥` 
+```html
+IS_RECOMMENDATION_ACTIVE
+```
+#### `SYMBOL_ ⇥` 
+```html
+SYMBOL_options
+```
+#### `LAZY_LOAD_LOADING_IMAGE ⇥` 
+```html
+LAZY_LOAD_LOADING_IMAGE
+```
+#### `DISPLAY_FAVOURITE_BUTTON ⇥` 
+```html
+DISPLAY_FAVOURITE_BUTTON
+```
+#### `DISPLAY_COMPARISON_BUTTON ⇥` 
+```html
+DISPLAY_COMPARISON_BUTTON
+```
+#### `DISPLAY_CART_BUTTON ⇥` 
+```html
+DISPLAY_CART_BUTTON
+```
+#### `DISPLAY_LANGUAGES ⇥` 
+```html
+DISPLAY_LANGUAGES
+```
+#### `CAMPAIGN_LIST ⇥` 
+```html
+CAMPAIGN_LIST
+```
+#### `CURRENCY_LIST ⇥` 
+```html
+CURRENCY_LIST
+```
+#### `data-toggle ⇥` 
+```html
+data-toggle="options"
+```
+#### `CURRENCY ⇥` 
+```html
+CURRENCY
+```
+#### `CHILDREN ⇥` 
+```html
+CHILDREN
+```
+#### `CHILDREN|@count ⇥` 
+```html
+CHILDREN|@count
+```
+#### `MEDIUM_WEBP_JPG ⇥` 
+```html
+MEDIUM_WEBP_JPG
+```
+#### `VARIANT_TYPE_ID ⇥` 
+```html
+VARIANT_TYPE_ID
+```
+#### `VARIANT_IDS ⇥` 
+```html
+VARIANT_IDS
+```
+#### `TITLE ⇥` 
+```html
+TITLE
+```
+#### `SMALL ⇥` 
+```html
+SMALL
+```
+#### `MEDIUM ⇥` 
+```html
+MEDIUM
+```
+#### `BIG ⇥` 
+```html
+BIG
+```
+#### `P ⇥` 
+```html
+P.options
+```
+#### `SUB ⇥` 
+```html
+SUB.options
+```
+#### `VARIANT_FEATURE1_LIST ⇥` 
+```html
+VARIANT_FEATURE1_LIST
+```
+#### `tsubfolder ⇥` 
+```html
+/srv/service/content-v5/sub-folder/{$PAGE_ID/{$BLOCK.PARENT_ID}/subfoldername/?product={$P.ID}&variant={$P.VARIANT_ID}
+```
+#### `tfor ⇥` 
+```html
+{for $i=1 to $P.STOCK}
+$i
+{/for}
+```
+#### `tvat ⇥` 
+```html
+{vat price=$P.PRICE_SELL vat=$P.VAT}
+```
+#### `tformat ⇥` 
+```html
+{format price=$P.PRICE_SELL}
+```
+#### `|string_format ⇥` 
+```html
+|string_format:'%.1f'
+```
+#### `|date_format ⇥` 
+```html
+|date_format:'Y,m,d,H,i,s'
+```
+#### `|strip_tags|escape ⇥` 
+```html
+|strip_tags|escape:'html'
+```
+#### `|strpos ⇥` 
+```html
+|strpos:''
+```
+#### `|default ⇥` 
+```html
+|default:''
+```
+#### `|replace ⇥` 
+```html
+|replace:'':''
+```
+#### `|count ⇥` 
+```html
+|@count
+```
+#### `| ⇥` 
+```html
+|options
+```
+#### `texchange ⇥` 
+```html
+{exchange price=$P.PRICE_SELL from=$P.TARGET_CURRENCY to='USD'}
+```
+
+#### `THEME_FOLDER ⇥` 
+```html
+THEME_FOLDER
+```
+#### `ASSETS ⇥` 
+```html
+ASSETS
+```
+#### `TABS ⇥` 
+```html
+TABS
+```
+#### `MENU ⇥` 
+```html
+MENUoptions
+```
+#### `titeration ⇥` 
+```html
+$smarty.foreach.name.iteration
+```
+#### `RELATED_PRODUCTS ⇥` 
+```html
+RELATED_PRODUCTS_IDS1_options
+```
+#### `SYMBOL_ ⇥` 
+```html
+SYMBOL_options
+```
+#### `ADDITIONAL_FIELD ⇥` 
+```html
+ADDITIONAL_FIELD_options
+```
+#### `NUMERIC1 ⇥` 
+```html
+NUMERIC1
+```
+#### `COUNTER ⇥` 
+```html
+COUNTER
+```
+#### `debugserver ⇥` 
+```html
+<pre>{$smarty.server|@debug_print_var}</pre>
+```
+#### `explode ⇥` 
+```html
+{assign var="CATARRAY" value=","|explode:$P.CATEGORY_IDS}
+```
+#### `inarray ⇥` 
+```html
+{in_array('20', array('10','20','30'))}
+```
+#### `mathsmarty ⇥` 
+```html
+{math assign="SEPETTUTARI" equation="x*((100+v)/100)*((100-y)/100)" x=$P.PRICE_SELL y=$P.ADDITIONAL_FIELD_1 v=$P.VAT}
+```
+#### `wame ⇥` 
+```html
+https://api.whatsapp.com/send?phone=9{$WHATSAPP_NO}&text=
+```
+#### `jsondecode ⇥` 
+```html
+json_decode($P.VARIANT_DATA, true)
+```
+
+#### `pid ⇥` 
+```html
+{$P.ID}
+```
+#### `bid ⇥` 
+```html
+BLOCK.ID
+```
+#### `jsvoid ⇥` 
+```html
+javascript:void(0)
+```
+#### `|substr ⇥` 
+```html
+|substr:0:5
+```
+#### `urlpage ⇥` 
+```html
+{url type='page' id='68'}
+```
+#### `predebug ⇥` 
+```html
+<pre>{arr|@debug_print_var}</pre>
+```
+#### `var_dump ⇥` 
+```html
+<pre>{$arr|@var_dump}</pre>
+```
+#### `editorfiles ⇥` 
+```html
+/Data/EditorFiles/v5images/
+```
+#### `debug ⇥` 
+```html
+{debug}
+```
+#### `/literal ⇥` 
+```html
+{debug}
+```
+#### `BLOCK ⇥` 
+```html
+BLOCK.options
+```
+#### `SETTING ⇥` 
+```html
+SETTING.options
+```
+#### `IMAGE ⇥` 
+```html
+IMAGE.options
+```
+
+### Services
+
+#### `sretrunnotes ⇥` 
+```html
+/srv/service/order-v4/order-return/${$P.ID}
+```
+#### `ssearch ⇥` 
+```html
+/srv/service/order-v4/order-return/${$P.ID}
+```
+#### `svideo ⇥` 
+```html
+/srv/service/gallery/video-detail/${$P.ID}
+```
+#### `sfastlook ⇥` 
+```html
+/srv/service/product-detail/view/606
+```
+#### `sfolders ⇥` 
+```html
+/srv/service/content/get/block_id/folder_name
+```
+#### `slanguage ⇥` 
+```html
+/srv/service/language/change/tr
+```
+#### `scurrency ⇥` 
+```html
+/srv/shopping/shopping/set-currency/tl
+```
+#### `scountry ⇥` 
+```html
+/srv/shopping/shopping/set-country/TR
+```
+#### `sproductlist ⇥` 
+```html
+/srv/service/content/get-block/1003/category/catID
+```
+#### `scatservice ⇥` 
+```html
+/srv/service/category/get/catID
+```
+#### `scatproduct ⇥` 
+```html
+/srv/service/product/filter/category/catID?pg=1
+```
+
+#### `sgettree ⇥` 
+```html
+/srv/service/category/getTree/catID
+```
+#### `sgetblock ⇥` 
+```html
+/srv/service/content/get-block/1018/content/içerik_id
+```
+#### `sinstallment ⇥` 
+```html
+/srv/service/product-detail/credit-card-installment-list/${$P.ID}/${$P.VARIANT_ID}
+```
+#### `spaymentoptions ⇥` 
+```html
+/srv/service/product-detail/payment-options/${$P.ID}/${$P.VARIANT_ID}
+```
+#### `scampaignproduct ⇥` 
+```html
+/srv/campaign-v2/campaign/get-list-by-type/product/${$P.ID}
+```
+#### `scampaigncart ⇥` 
+```html
+/srv/campaign-v2/campaign/get-list-by-type/cart
+```
+#### `scampaigncat ⇥` 
+```html
+/srv/campaign-v2/campaign/get-list-by-type/category/id
+```
+#### `scart ⇥` 
+```html
+/srv/service/cart/load?link=sepet
+```
+#### `scomment ⇥` 
+```html
+/srv/service/product-detail/comments/${$P.ID}
+```
+#### `scommentpoint ⇥` 
+```html
+/srv/service/product-detail/comment-average/${$P.ID}
+```
+#### `sbrand ⇥` 
+```html
+/srv/service/filter/get/brands
+```
+#### `srelatedblock ⇥` 
+```html
+/srv/service/content/getBlock/1070/product/${$P.ID}
+```
+#### `srelated ⇥` 
+```html
+/srv/service/product/get-related-products/${$P.ID}/1
+```
+#### `ssubstitution ⇥` 
+```html
+/srv/service/product/get-related-products/${$P.ID}/2
+```
+#### `saccessory ⇥` 
+```html
+/srv/service/product/get-related-products/${$P.ID}/3
+```
+
+#### `scomplement ⇥` 
+```html
+/srv/service/product/get-related-products/${$P.ID}/4
+```
+</details>
+
+<details id="SCSS">
+  <summary class="h2 text-primary cursor-pointer">SCSS V5</summary>
+T-Soft V5 için SCSS kod parçacıkları.
+Örnek kullanım.
+
+### SCSS Snippets
+
+#### `transparentize ⇥`  
+```scss
+transparentize($bgPrimary, 0.5);
+```
+#### `darken ⇥`  
+```scss
+darken($bgPrimary, 10%)
+```
+#### `lighten ⇥`  
+```scss
+lighten($bgPrimary, 10%)
+```
+#### `$gridColumns ⇥`  
+```scss
+$gridColumns
+```
+#### `$gridPadding ⇥`  
+```scss
+$gridPadding
+```
+#### `$mobileGridPadding ⇥`  
+```scss
+$mobileGridPadding
+```
+#### `$xxlScreen ⇥`  
+```scss
+$xxlScreen
+```
+#### `$xlScreen ⇥`  
+```scss
+$xlScreen
+```
+#### `$lgScreen ⇥`  
+```scss
+$lgScreen
+```
+#### `$mdScreen ⇥`  
+```scss
+$mdScreen
+```
+#### `$smScreen ⇥`  
+```scss
+$smScreen
+```
+
+
+#### `$bg ⇥`  
+```scss
+$bgoptions
+$bgBody
+$bgPrimary
+$bgSecondary
+$bgWhite
+$bgBlack
+$bgGray
+$bgLight
+$bgDarkGray
+$bgSuccess
+$bgInfo
+$bgWarning
+$bgDanger
+```
+#### `$border ⇥`  
+```scss
+$borderoptions
+$borderBody
+$borderPrimary
+$borderSecondary
+$borderWhite
+$borderBlack
+$borderGray
+$borderLight
+$borderDarkGray
+$borderSuccess
+$borderInfo
+$borderWarning
+$borderDanger
+$borderRadius
+
+```
+#### `$button ⇥`  
+```scss
+$buttonoptions
+$buttonPrimary
+$buttonSecondary
+$buttonWhite
+$buttonBlack
+$buttonGray
+$buttonLight
+$buttonDarkGray
+$buttonSuccess
+$buttonInfo
+$buttonWarning
+$buttonDanger
+
+```
+#### `$text ⇥`  
+```scss
+$textoptions
+$textPrimary
+$textSecondary
+$textWhite
+$textBlack
+$textGray
+$textLight
+$textDarkGray
+$textSuccess
+$textInfo
+$textWarning
+$textDanger
+$textColor
+
+```
+#### `$headingColor ⇥`  
+```scss
+$headingColor
+
+```
+#### `$font ⇥`  
+```scss
+$fontoptions
+$fontH1
+$fontH2
+$fontH3
+$fontText
+$fontMaster
+
+
+```
+#### `clamp ⇥`  
+```scss
+clamp(13px,1vw,20px)
+
+```
+#### `importsetting ⇥`  
+```scss
+@import "setting.scss";
+@import "mixin.scss";
+
+```
+#### `i-scrollbar ⇥`  
+```scss
+ @include scrollbar(5, 5, $bgPrimary);
+
+```
+#### `i-lineclamp ⇥`  
+```scss
+ @include line-clamp(2);
+
+```
+#### `i-j-evenly ⇥`  
+```scss
+  @include justify-content-evenly;
+
+```
+#### `i-j-center ⇥`  
+```scss
+  @include justify-content-center;
+
+```
+#### `i-j-start ⇥`  
+```scss
+ @include justify-content-flex-start;
+
+```
+#### `i-j-end ⇥`  
+```scss
+  @include justify-content-flex-end;
+
+```
+#### `i-j-between ⇥`  
+```scss
+  @include justify-content-between;
+
+```
+#### `i-j-around ⇥`  
+```scss
+   @include justify-content-around;
+
+```
+#### `i-a-end ⇥`  
+```scss
+  @include align-items-flex-end;
+
+```
+#### `i-a-start ⇥`  
+```scss
+  @include align-items-flex-start;
+
+```
+#### `i-row ⇥`  
+```scss
+   @include flex-direction-row;
+
+```
+#### `i-column ⇥`  
+```scss
+   @include flex-direction-column;
+
+```
+#### `i-wrap ⇥`  
+```scss
+   @include flex-wrap;
+
+```
+#### `i-flex ⇥`  
+```scss
+ @include d-flex;
+
+```
+#### `i-inlineflex ⇥`  
+```scss
+ @include d-inline-flex;
+
+```
+#### `i-allcenter ⇥`  
+```scss
+  @include d-flex;
+  @include align-items-center;
+  @include justify-content-center;
+
+```
+#### `i-block ⇥`  
+```scss
+  @include BLOCK {
+  
+  }
+
+```
+#### `boxshadow ⇥`  
+```scss
+box-shadow: 0 0 10px 0 rgb(40 40 40 / 30%);
+
+```
+#### `textshadow ⇥`  
+```scss
+text-shadow: 1px 1px 2px $bgBlack, 0 0 1em $bgBlack, 0 0 0.2em $bgBlack;
+
+```
+#### `lineclamp ⇥`  
+```scss
+display: -webkit-box !important;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+
+```
+#### `mediamin ⇥`  
+```scss
+@media (min-width: $mdScreen){
+
+}
+
+```
+#### `mediamax ⇥`  
+```scss
+@media (max-width: $mdScreen - 1){
+
+}
+
+```
+#### `keyframes ⇥`  
+```scss
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+}
+
+```
+</details>
+
+#### Source
+[MIT](https://github.com/gitorhub/tsoft-v5-snippet/blob/main/README.md)
+#### License
+[MIT](https://github.com/gitorhub/tsoft-v5-snippet/blob/main/LICENCE)
