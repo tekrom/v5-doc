@@ -57,14 +57,14 @@ window["changeVariantImage"]=function(el){
     let variantId=el.dataset.id;
     let item=el.closest(".product-item");
     let endpoint=`/srv/service/product/get-sub-product-images/${productId}/${variantId}`
-    let link=item.querySelector("a.image-wrapper");
+    let link=item ? item.querySelector("a.image-wrapper") :"";
     axios.get(endpoint).then((res)=> {
         let subInfos=res.data.data;
         if(res.data.status== true && subInfos.length){
             let subImg=subInfos[0].ResimUrl?`/Data/K/${subInfos[0].ResimUrl}`:"";
             subImg?item.querySelector(".image-inner img").setAttribute("src", subImg):"";
         }
-        link.setAttribute("href",T.getLink("variantOne",el.dataset.id, link.getAttribute("href")))
+        link ? link.setAttribute("href",T.getLink("variantOne",el.dataset.id, link.getAttribute("href"))) :"";
     })
     .catch((error)=> {
         console.log(error);
