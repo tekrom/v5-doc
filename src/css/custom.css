@@ -749,23 +749,45 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
 .v5-example-overflow-utils .v5-example-overflow {
   height: 150px;
 }
-
+.v5-example-overflow-utils .v5-example-overflow-wide {
+  width: 115%;
+}
 .overflow-auto {
   overflow: auto !important;
 }
-
 .overflow-hidden {
   overflow: hidden !important;
 }
-
 .overflow-visible {
   overflow: visible !important;
 }
-
 .overflow-scroll {
   overflow: scroll !important;
 }
-
+.overflow-x-auto {
+  overflow-x: auto !important;
+}
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+.overflow-x-visible {
+  overflow-x: visible !important;
+}
+.overflow-x-scroll {
+  overflow-x: scroll !important;
+}
+.overflow-y-auto {
+  overflow-y: auto !important;
+}
+.overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+.overflow-y-visible {
+  overflow-y: visible !important;
+}
+.overflow-y-scroll {
+  overflow-y: scroll !important;
+}
 .v5-example-position-utils {
   min-height: 150px;
 }
