@@ -132,31 +132,31 @@ body.lg-on {
 
 @-webkit-keyframes slideInUp {
   from {
-    -webkit-transform: translate3d(0, 30%, 0);
-    transform: translate3d(0, 30%, 0);
-    visibility: visible;
-    opacity: 1;
+      -webkit-transform: translate3d(0, 30%, 0);
+      transform: translate3d(0, 30%, 0);
+      visibility: hidden;
+      opacity: 0;
   }
-
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+      opacity: 1;
   }
 }
 
 @keyframes slideInUp {
   from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-    opacity: 1;
+      -webkit-transform: translate3d(0, 30%, 0);
+      transform: translate3d(0, 30%, 0);
+      visibility: hidden;
+      opacity: 0;
   }
-
   to {
-    -webkit-transform: translate3d(0, -30%, 0);
-    transform: translate3d(0, -30%, 0);
-    opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+      opacity: 1;
   }
 }
 
