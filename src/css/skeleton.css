@@ -3048,45 +3048,6 @@ html:not([dir="rtl"]) .input-group>textarea:not(:last-child) {
   }
 }
 
-.container-fluid {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  float: none;
-  clear: both;
-}
-
-@media (max-width: 767px) {
-  .container-fluid {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
-
-.container {
-  width: 100%;
-  max-width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin: 0 auto;
-  float: none;
-  clear: both;
-}
-
-@media (min-width: 1171px) {
-  .container {
-    width: 1170px;
-  }
-}
-
-@media (min-width: 767px) {
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
 .w-100 {
   width: 100%;
 }
