@@ -1,0 +1,558 @@
+---
+title: Efekler
+---
+
+v5 sistemimizde sizler için önceden hazırlanmış efekleri kolaylık ile kullanabilirsiniz.
+
+### Kullanım Şekli
+- Kapsayıcıya <code>effect-wrapper</code> classı eklenmeli. Sonrasında
+- Efektin uygulanacağı elemente beğendiniz efektin classı eklenmeli.
+
+
+### Örnek Kullanım
+
+```html title="Görselin hover durumunda yakınlaşması"
+<div class="effect-wrapper">
+  ...
+  <div class="overflow-hidden">
+      <img src="product image link" class="hover-scale">
+  </div>
+  ...
+</div>
+```
+
+---
+
+### Görünmez elementin hover durumunda gösterimi (display)
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon d-none hover-block">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+d-none hover-block
+```
+
+### Görünen elementin hover durumunda gizlenmesi (display)
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon hover-none">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+            </div>
+        </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-none
+```
+
+### Görünmez elementin hover durumunda gösterimi (visible)
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon hover-visible">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-visible
+```
+
+### Görünen elementin hover durumunda gizlenmesi (visible)
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon hover-hidden">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-hidden
+```
+
+### Görselin hover durumunda yakınlaşması
+<code>.hover-scale</code> classdan bir önceki kapsayıcıda 
+<code>.overflow-hidden</code> olmasında fayda var.
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image overflow-hidden">
+        <div class="doc-image-example hover-scale">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-scale
+```
+
+### Görselin hover durumunda yakınlaşması (lg)
+<code>.hover-scale-lg</code> classdan bir önceki kapsayıcıda 
+<code>.overflow-hidden</code> olmasında fayda var.
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image overflow-hidden">
+        <div class="doc-image-example hover-scale-lg">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-scale-lg
+```
+
+### Elementin hover durumunda yukarı hareket işlemi
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title hover-to-up">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-to-up
+```
+
+### Elementin hover durumunda aşağı hareket işlemi
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title hover-to-down">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-to-down
+```
+
+### Elementin hover durumunda sol yöne hareket işlemi
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title hover-to-left">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-to-left
+```
+
+### Elementin hover durumunda sağ yöne hareket işlemi
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title hover-to-right">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-to-right
+```
+
+### Elementin hover durumunda gölgelenmesi
+<div class="v5-example-content-effects">
+  <div class="d-inline-block effect-wrapper">
+    <div class="box hover-shadow">
+      <div class="box-icon">
+        <div class="ti-icon">%10</div>
+      </div>
+      <div class="box-image">
+        <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+      <div class="box-info">
+        <div class="box-title">Ürün Adı</div>
+        <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+hover-shadow
+```
+
+### Elementin hover durumunda arkaplan şeffaflık alması
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon hover-bg-transparent">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-bg-transparent
+```
+
+### Elementin hover durumunda ana rengi alması
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title hover-color-primary">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-color-primary
+```
+
+### Elementin hover durumunda arkaplanı ana rengi alması
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title hover-bg-primary">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-bg-primary
+```
+
+### Elementin hover durumunda dış çizgi ana rengi alması
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title border hover-border-primary">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-border-primary
+```
+
+### Görselin hover durumunda siyah beyaz olması
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example hover-grayscale">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-grayscale
+```
+
+### Görselin hover durumunda renklenmesi
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example hover-grayscale-reverse">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-grayscale-reverse
+```
+
+### Görselin hover durumunda bulanık olması
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example hover-blur">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-blur
+```
+
+### Görselin hover durumunda bulanıklık kaybolması
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example hover-blur-reverse">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+                </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-blur-reverse
+```
+
+### Görselin hover durumunda görünür olması
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example hover-opacity">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-opacity
+```
+
+### Görselin hover durumunda şeffaf olması
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image">
+        <div class="doc-image-example hover-opacity-reverse">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+hover-opacity-reverse
+```
+
+### Elementin hover durumunda animasyonsuz uygulanması (transition: none)
+<div class="v5-example-content-effects">
+  <div class="box effect-wrapper">
+    <div class="box-icon">
+      <div class="ti-icon">%10</div>
+    </div>
+    <div class="box-image overflow-hidden">
+        <div class="doc-image-example hover-scale hover-transition-none">
+            <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                <text x="50%" y="50%" fill="#fd6905" dy=".3em">v5</text>
+            </svg>
+        </div>
+    </div>
+    <div class="box-info">
+      <div class="box-title">Ürün Adı</div>
+      <div class="box-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+  </div>
+</div>
+
+```
+<herhangi bir efekt> hover-transition-none
+```

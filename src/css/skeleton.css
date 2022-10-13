@@ -132,31 +132,31 @@ body.lg-on {
 
 @-webkit-keyframes slideInUp {
   from {
-    -webkit-transform: translate3d(0, 30%, 0);
-    transform: translate3d(0, 30%, 0);
-    visibility: visible;
-    opacity: 1;
+      -webkit-transform: translate3d(0, 30%, 0);
+      transform: translate3d(0, 30%, 0);
+      visibility: hidden;
+      opacity: 0;
   }
-
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+      opacity: 1;
   }
 }
 
 @keyframes slideInUp {
   from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-    opacity: 1;
+      -webkit-transform: translate3d(0, 30%, 0);
+      transform: translate3d(0, 30%, 0);
+      visibility: hidden;
+      opacity: 0;
   }
-
   to {
-    -webkit-transform: translate3d(0, -30%, 0);
-    transform: translate3d(0, -30%, 0);
-    opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+      opacity: 1;
   }
 }
 
@@ -3045,45 +3045,6 @@ html:not([dir="rtl"]) .input-group>textarea:not(:last-child) {
   .btn.btn-sm {
     font-size: 12px;
     padding: 7.5px 10px;
-  }
-}
-
-.container-fluid {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  float: none;
-  clear: both;
-}
-
-@media (max-width: 767px) {
-  .container-fluid {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
-
-.container {
-  width: 100%;
-  max-width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin: 0 auto;
-  float: none;
-  clear: both;
-}
-
-@media (min-width: 1171px) {
-  .container {
-    width: 1170px;
-  }
-}
-
-@media (min-width: 767px) {
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
