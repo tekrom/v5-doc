@@ -9,6 +9,7 @@ Kampanya ile tanımlanan yüzdelik indirimler ürün seç seçilerek tablı vitr
 ```html title="smarty "
 
 {if $IS_LOADED_BY_SERVICE == 0}
+    {if $IS_LOADED_BY_SERVICE == 0}
     <div class="col-12">
         <div class="row mb-1">
             <div class="col-12 mb-1">
@@ -18,7 +19,7 @@ Kampanya ile tanımlanan yüzdelik indirimler ürün seç seçilerek tablı vitr
                     </div>
                 {/if}
             </div>
-            <div class="col-12{if $SETTING.TABS|@count > 1} dowry-wrapper{/if}" data-percent="50" data-price="2000">
+            <div class="col-12{if $SETTING.TABS|@count > 1} dowry-wrapper{/if}" {if $SETTING.DISCOUNT_TYPE =="PERCENT"} data-percent="{$SETTING.DISCOUNT_RATE}" {else}data-price="{$SETTING.DISCOUNT_RATE}" {/if}>
                 <div class="dowry-inner">
                     {if $SETTING.TABS|@count > 1}
                         <div class="col loaded active accordion-title" data-toggle="accordion">
@@ -27,7 +28,6 @@ Kampanya ile tanımlanan yüzdelik indirimler ürün seç seçilerek tablı vitr
                                     <span class="col-2 col-md-1 px-1 tab-img">
                                             <img src="{$SETTING.TABS.0.IMG1.PATH|default:$LAZY_LOAD_LOADING_IMAGE}" alt="{$BLOCK.TITLE} - {$SETTING.TABS.TITLE}" width="75" height="75" class="border-round" >
                                         </span>
-
                                 {/if}
                                 <div class="col-10 col-md-11 dowry-infos d-flex align-items-center flex-wrap" style="place-content: flex-start">
                                     <span class="col-12 tab-name fw-bold">{$SETTING.TABS.0.TITLE}</span>
@@ -36,7 +36,6 @@ Kampanya ile tanımlanan yüzdelik indirimler ürün seç seçilerek tablı vitr
                             </div>
                         </div>
                     {/if}
-                    
                     <div id="producttab{$BLOCK.ID}{$BLOCK.PARENT_ID}1"  data-toggle="equalHeight" class="accordion-body dowry-box mb-1" data-selector=".product-detail-card" >
                         {/if}
                             <div class="swiper-container">
@@ -189,7 +188,6 @@ Kampanya ile tanımlanan yüzdelik indirimler ürün seç seçilerek tablı vitr
 ```
 
 ```javascript title="smarty "
-
 const runSlider = (el) => {
   new Swiper(el, {
     slidesPerView: 2,
@@ -249,10 +247,12 @@ const dowry = {
     });
   },
   calculateTotal() {
-    let notdiscounted = 0;
-    let discounted = 0;
-    let extraPercent = T(`.dowry-wrapper`)[0].dataset.percent || 0;
-    let extraPrice = T(`.dowry-wrapper`)[0].dataset.price || 0;
+    let notdiscounted = 0, discounted = 0, extraPercent=0, extraPrice=0;
+      if (SETTING.DISCOUNT_TYPE =='PERCENT') {
+        extraPercent = T(`.dowry-wrapper`)[0].dataset.percent || 0;
+      }else{
+        extraPrice = T(`.dowry-wrapper`)[0].dataset.price || 0;
+      }
     let allSelected = T(`.dowry-inner:not(.active)`).length == 0;
     T.each(T(`.product-item.selected`), function (i, el) {
       notdiscounted += T.priceToFloat(
@@ -773,6 +773,36 @@ dowry.init();
     }
   }
 }
+
+
+
+```
+
+```json
+
+{
+  "setting": [
+    {
+      "xtype": "select",
+      "key": "DISCOUNT_TYPE",
+      "title": "İndirim Türü",
+      "data": "PERCENT",
+      "store": {
+        "PERCENT": "İndirim (Percent)",
+        "PRICE": "Fiyat (Price)"
+      }
+    },
+    {
+      "xtype": "inputnumber",
+      "key": "DISCOUNT_RATE",
+      "title": "İndirim Miktarı",
+      "data": 0
+    }
+
+ 
+  ]
+}
+
 
 
 ```
