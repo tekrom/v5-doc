@@ -147,6 +147,7 @@ module.exports = {
       'api-v5/tr-member-login-methods',
     ],
     '* Extra': [
+      'extra/tr-detail-asorti',
       'extra/tr-detail-vertical-tab',
       'extra/tr-detail-related',
       'extra/tr-filter-close',
