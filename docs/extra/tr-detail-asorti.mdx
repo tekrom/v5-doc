@@ -1,0 +1,82 @@
+---
+title: Ürün Detay Asorti
+---
+
+
+## Ürün detay asorti gösterimi için buradaki yapı kullanılabilir. 
+
+
+<p>
+Ek bilgi alanlarından bir tanesine veri girilmelidir.
+Girilen verinin formatı şu olmalıdır. 
+<code>XXS-8|XS-1|S-2|L-10|XL-13|XXL-1#35</code>
+Burada XXS-XS gibi veriler beden vb ifade eder.
+8-1  gibi değerler yanındaki bedenin miktarını ifade eder.
+# işaretinin sağ tarafı ise asortideki toplam ürün miktarını ifade eder.
+
+</p>
+
+
+
+```html title="smarty"
+{if $P.ADDITIONAL_FIELD_1}
+    {$FIELD_EXPLODE="" value="#"|explode:$P.ADDITIONAL_FIELD_1}
+    {$FIELD_ARRAY="" value="|"|explode:$FIELD_EXPLODE[0]}
+    {$FIELD_TOTAL="" value="|"|explode:$FIELD_EXPLODE[1]}
+
+    <div class="w-100">
+        <div class="asorti-total-count fw-semibold fs-7 py-1">
+            {#asorti_title#}
+        </div>
+    </div>
+    <div class="w-100 asorti-modal text-center border mb-1">
+
+        <div class="w-100 asorti-wrapper d-flex ">
+            <div class="col p-0 asorti-title">
+                <div class="w-100 border p-1 bg-primary text-white">{#asorti_size#}</div>
+                <div class="w-100 border p-1 bg-primary text-white">{#asorti_count#}</div>
+            </div>
+
+            {foreach from=$FIELD_ARRAY item=FIELDS}
+                {$FIELD="" value="-"|explode:$FIELDS}
+                <div class="col p-0 asorti-item">
+                    <div class="w-100 border p-1 asorti-key">{$FIELD[0]}</div>
+                    <div class="w-100 border p-1 asorti-val">{$FIELD[1]}</div>
+                </div>
+            {/foreach}
+            <div class="col p-0 asorti-total-wrapper fw-bold ">
+                <div class="w-100 border p-1 h-100 d-flex flex-wrap align-items-center justify-content-center">
+                    {#asorti_total#} {$FIELD_EXPLODE[1]}{#asorti_total_count#}
+                </div>
+            </div>
+        </div>
+        <div class="w-100 bg-light asorti-total-wrapper fw-bold ">
+            <div class="asorti-count text-center  p-1">
+                {#asorti_total#} {$FIELD_EXPLODE[1]}{#asorti_total_count#}
+            </div>
+            <div class="asorti-piece-price text-center px-1 pb-1">
+                {#price_of_piece#}
+                {vat price=($P.PRICE_SELL / $FIELD_TOTAL[0]) vat=$P.VAT}
+                {$P.TARGET_CURRENCY}
+            </div>
+
+        </div>
+
+    </div>
+{/if}
+
+```
+
+
+
+```conf title="tr.conf language file"
+
+asorti_title="ASORTİ DAĞILIMI"
+asorti_size="Beden"
+asorti_count="Miktar"
+asorti_total="Toplam"
+asorti_total_count="Adet"
+price_of_piece="Birim Fiyat" 
+
+``` 
+
