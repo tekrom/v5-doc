@@ -6,15 +6,15 @@ title: Ürün Detay Asorti
 ## Ürün detay asorti gösterimi için buradaki yapı kullanılabilir. 
 
 
-<p>
-Ek bilgi alanlarından bir tanesine veri girilmelidir.
-Girilen verinin formatı şu olmalıdır. 
-<code>XXS-8|XS-1|S-2|L-10|XL-13|XXL-1#35</code>
-Burada XXS-XS gibi veriler beden vb ifade eder.
-8-1  gibi değerler yanındaki bedenin miktarını ifade eder.
-# işaretinin sağ tarafı ise asortideki toplam ürün miktarını ifade eder.
 
-</p>
+* Ek bilgi alanlarından bir tanesine veri girilmelidir.
+* Girilen verinin formatı şu olmalıdır. 
+* <code>XXS-8|XS-1|S-2|L-10|XL-13|XXL-1#35</code>
+* Burada XXS-XS gibi veriler beden vb ifade eder.
+* 8-1  gibi değerler yanındaki bedenin miktarını ifade eder.
+* \# işaretinin sağ tarafındaki 35 ise asortideki toplam ürün miktarını ifade eder.
+
+
 
 
 
@@ -30,13 +30,11 @@ Burada XXS-XS gibi veriler beden vb ifade eder.
         </div>
     </div>
     <div class="w-100 asorti-modal text-center border mb-1">
-
         <div class="w-100 asorti-wrapper d-flex ">
             <div class="col p-0 asorti-title">
                 <div class="w-100 border p-1 bg-primary text-white">{#asorti_size#}</div>
                 <div class="w-100 border p-1 bg-primary text-white">{#asorti_count#}</div>
             </div>
-
             {foreach from=$FIELD_ARRAY item=FIELDS}
                 {$FIELD="" value="-"|explode:$FIELDS}
                 <div class="col p-0 asorti-item">
@@ -59,9 +57,7 @@ Burada XXS-XS gibi veriler beden vb ifade eder.
                 {vat price=($P.PRICE_SELL / $FIELD_TOTAL[0]) vat=$P.VAT}
                 {$P.TARGET_CURRENCY}
             </div>
-
         </div>
-
     </div>
 {/if}
 
