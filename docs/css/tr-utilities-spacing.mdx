@@ -1,5 +1,5 @@
 ---
-title: Dış Boşluk - İç Boşluk
+title: Dış Boşluk - İç Boşluk - Gap
 ---
 <div class="v5-example-utilities-spacing-devtools">
   <a href="#dış-boşluk-margin" class="text-dark">margin</a>
@@ -14,7 +14,10 @@ title: Dış Boşluk - İç Boşluk
 </div>
 
 ## Kullanım
-Sınıflar için <code>[özellik][nitelik]-[boşluk]</code> veya <code>[özellik][nitelik]-[Kırılma noktası]-[boşluk]</code> kullanarak uygulayabilirsiniz. 
+
+Gap değerleri ile ara boşlukları kolaylıkla sağlayabilirsiniz.
+
+Class için <code>[özellik][nitelik]-[boşluk]</code> veya <code>[özellik][nitelik]-[Kırılma noktası]-[boşluk]</code> kullanarak uygulayabilirsiniz. 
 
 v5 iskelet düzeninde sizler için önceden tanımlanmış classları kullanarak hızlı yol kat edebilirsiniz.
 
@@ -147,5 +150,82 @@ sınır içeriği arasındaki boşluktur. Negatif değerlere izin verilmez.
     <div class="d-inline-block bg-gray border my-1 ml-1 pb-4 pt-2 px-1">
       <strong class="bg-white">.pb-3.pt.2.py-1</strong>
     </div>
+  </div>
+</div>
+
+---
+
+### GAP Değerleri
+
+* <strong>0</strong> - Değerini sıfırlar.
+* <strong>1</strong> - 15px - Genişlik &lt; md = 8px
+* <strong>2</strong> - 30px - Genişlik &lt; md = 16px
+* <strong>3</strong> - 45px - Genişlik &lt; md = 24px
+* <strong>4</strong> - 60px - Genişlik &lt; md = 32px
+* <strong>5</strong> - 75px - Genişlik &lt; md = 40px
+
+#### Örnek Kullanımlar
+
+```html
+<div class="d-flex gap-[değer]">content</div>
+```
+
+<div class="bg-gray p-1 border-bottom border-info d-flex gap-1">
+  <div class="bg-dark text-white p-2">
+    <div>.gap-1</div>
+  </div>
+  <div class="bg-dark text-white p-2">
+    <div>.gap-1</div>
+  </div>
+  <div class="bg-dark text-white p-2">
+    <div>.gap-1</div>
+  </div>
+</div>
+
+<div class="bg-gray p-1 border-bottom border-info d-flex gap-2">
+  <div class="bg-dark text-white p-2">
+    <div>.gap-2</div>
+  </div>
+  <div class="bg-dark text-white p-2">
+    <div>.gap-2</div>
+  </div>
+  <div class="bg-dark text-white p-2">
+    <div>.gap-2</div>
+  </div>
+</div>
+
+<div class="bg-gray p-1 border-bottom border-info d-flex gap-3">
+  <div class="bg-dark text-white p-2">
+    <div>.gap-3</div>
+  </div>
+  <div class="bg-dark text-white p-2">
+    <div>.gap-3</div>
+  </div>
+  <div class="bg-dark text-white p-2">
+    <div>.gap-3</div>
+  </div>
+</div>
+
+<div class="bg-gray p-1 border-bottom border-info d-flex gap-4">
+  <div class="bg-dark text-white p-2">
+    <div>.gap-4</div>
+  </div>
+  <div class="bg-dark text-white p-2">
+    <div>.gap-4</div>
+  </div>
+  <div class="bg-dark text-white p-2">
+    <div>.gap-4</div>
+  </div>
+</div>
+
+<div class="bg-gray p-1 d-flex gap-5">
+  <div class="bg-dark text-white p-2">
+    <div>.gap-5</div>
+  </div>
+  <div class="bg-dark text-white p-2">
+    <div>.gap-5</div>
+  </div>
+  <div class="bg-dark text-white p-2">
+    <div>.gap-5</div>
   </div>
 </div>

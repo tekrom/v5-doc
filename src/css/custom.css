@@ -308,6 +308,54 @@ html[data-theme='dark'] [class*='light-Card'] {
   border-color: #fd6905 !important;
 }
 
+.gap-0 {
+  gap: 0px; }
+
+.gap-1 {
+  gap: 8px; }
+@media (min-width: 768px) {
+  .gap-1 {
+    gap: 15px; } }
+
+.gap-2 {
+  gap: 16px; }
+@media (min-width: 768px) {
+  .gap-2 {
+    gap: 30px; } }
+
+.gap-3 {
+  gap: 24px; }
+@media (min-width: 768px) {
+  .gap-3 {
+    gap: 45px; } }
+
+.gap-4 {
+  gap: 32px; }
+@media (min-width: 768px) {
+  .gap-4 {
+    gap: 60px; } }
+
+.gap-5 {
+  gap: 40px; }
+@media (min-width: 768px) {
+  .gap-5 {
+    gap: 75px; } }
+
+.box-shadow {
+  box-shadow: rgba(17, 17, 26, 0.05) 0 1px 0, rgba(17, 17, 26, 0.1) 0 0 8px; }
+
+.box-shadow-2 {
+  box-shadow: rgba(17, 17, 26, 0.1) 0 0 16px; }
+
+.box-shadow-3 {
+  box-shadow: rgba(17, 17, 26, 0.05) 0 4px 16px, rgba(17, 17, 26, 0.05) 0 8px 32px; }
+
+.box-shadow-4 {
+  box-shadow: rgba(17, 17, 26, 0.1) 0 4px 16px, rgba(17, 17, 26, 0.05) 0 8px 32px; }
+
+.box-shadow-5 {
+  box-shadow: rgba(17, 17, 26, 0.1) 0 1px 0, rgba(17, 17, 26, 0.1) 0 8px 24px, rgba(17, 17, 26, 0.1) 0 16px 48px; }
+    
 /* v5 dokumanda olmayanlar */
 .border {
   border: 1px solid #dee2e6;
