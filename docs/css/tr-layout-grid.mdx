@@ -378,7 +378,7 @@ Tek bir .col-sm-* sınıfı kümesi kullanarak, üst kırılımları belirleme.
                 col-8
             </div>
             <div class="col-sm-4 p-2 border bg-gray">
-                col-8
+                col-4
             </div>
         </div>
     </div>
@@ -525,12 +525,16 @@ sütunları kümesi ekleyin. İç içe satırlar, toplam 12 veya daha az sütun 
 
 ### Değişkenler
 
----
+```scss title="default.scss"
+/* Grid */
+$gridColumns: 12;
+$gridPadding: 15px;
+$mobileGridPadding: 8px;
 
-*
-
-#### Örnek kullanım
-
----
-
-###
+/* Breakpoints */
+$xxlScreen: 1400px;
+$xlScreen: 1170px;
+$lgScreen: 992px;
+$mdScreen: 768px;
+$smScreen: 576px;
+```

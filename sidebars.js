@@ -32,6 +32,7 @@ module.exports = {
       'css/tr-content-images',
       'css/tr-content-animations',
       'css/tr-content-effects',
+      'css/tr-content-overlay',
     ],
     'Araçlar': [
       'css/tr-utilities-flex',

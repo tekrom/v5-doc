@@ -1,0 +1,237 @@
+---
+title: Overlay Bileşeni
+---
+
+Herhangi <code>relative</code> bir kapsayıcının içinde opak bir kapsayıcı yapmanıza yarar.
+
+Önceden hazırlanmış Overlay bileşeninin nasıl kullanıldığına dair örnekler bulabilirsiniz.
+
+<div class="mb-2">
+    <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M104 24H88V8C87.9976 5.87902 87.1539 3.8456 85.6542 2.34583C84.1544 0.846071 82.121 0.00243493 80 0H8C5.87902 0.00243493 3.8456 0.846071 2.34583 2.34583C0.846071 3.8456 0.00243493 5.87902 0 8V80C0.00243493 82.121 0.846071 84.1544 2.34583 85.6542C3.8456 87.1539 5.87902 87.9976 8 88H24V104C24.0024 106.121 24.8461 108.154 26.3458 109.654C27.8456 111.154 29.879 111.998 32 112H104C106.121 111.998 108.154 111.154 109.654 109.654C111.154 108.154 111.998 106.121 112 104V32C111.998 29.879 111.154 27.8456 109.654 26.3458C108.154 24.8461 106.121 24.0024 104 24V24ZM8 80V8H80V24H32C29.879 24.0024 27.8456 24.8461 26.3458 26.3458C24.8461 27.8456 24.0024 29.879 24 32V80H8ZM80 80H69.6564L32 42.344V32H42.3436L80.0048 69.6624L80 80ZM32 53.6564L58.3436 80H32V53.6564ZM80.004 58.348L53.6564 32H80L80.004 58.348ZM32 104V88H80C82.121 87.9976 84.1544 87.1539 85.6542 85.6542C87.1539 84.1544 87.9976 82.121 88 80V32H104V104H32Z" fill="black"/>
+    </svg>
+</div>
+
+---
+
+## Overlay Değerleri
+
+### .overlay-primary
+<div class="bg-gray border-round mb-1 p-3">
+    <div class="v5-example-content-overlay">
+    <div class="box-image mb-2 position-relative">
+            <div class="position-absolute w-100 h-100 inset border-round text-white p-1 m-2 fw-semibold overlay-primary">
+                .overlay-primary
+            </div>
+            <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#000" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div src="overlay-primary">content</div>
+```
+
+### .overlay-secondary
+<div class="bg-gray border-round mb-1 p-3">
+    <div class="v5-example-content-overlay">
+    <div class="box-image mb-2 position-relative">
+            <div class="position-absolute w-100 h-100 inset border-round text-white p-1 m-2 fw-semibold overlay-secondary">
+                .overlay-secondary
+            </div>
+            <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#000" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div src="overlay-secondary">content</div>
+```
+
+### .overlay-white
+<div class="bg-gray border-round mb-1 p-3">
+    <div class="v5-example-content-overlay">
+    <div class="box-image mb-2 position-relative">
+            <div class="position-absolute w-100 h-100 inset border-round text-white p-1 m-2 fw-semibold overlay-white">
+                .overlay-white
+            </div>
+            <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#000" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div src="overlay-white">content</div>
+```
+
+### .overlay-black
+<div class="bg-gray border-round mb-1 p-3">
+    <div class="v5-example-content-overlay">
+    <div class="box-image mb-2 position-relative">
+            <div class="position-absolute w-100 h-100 inset border-round text-white p-1 m-2 fw-semibold overlay-black">
+                .overlay-black
+            </div>
+            <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#000" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div src="overlay-black">content</div>
+```
+
+### .overlay-success
+<div class="bg-gray border-round mb-1 p-3">
+    <div class="v5-example-content-overlay">
+    <div class="box-image mb-2 position-relative">
+            <div class="position-absolute w-100 h-100 inset border-round text-white p-1 m-2 fw-semibold overlay-success">
+                .overlay-success
+            </div>
+            <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#000" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div src="overlay-success">content</div>
+```
+
+### .overlay-info
+<div class="bg-gray border-round mb-1 p-3">
+    <div class="v5-example-content-overlay">
+    <div class="box-image mb-2 position-relative">
+            <div class="position-absolute w-100 h-100 inset border-round text-white p-1 m-2 fw-semibold overlay-info">
+                .overlay-info
+            </div>
+            <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#000" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div src="overlay-info">content</div>
+```
+
+### .overlay-warning
+<div class="bg-gray border-round mb-1 p-3">
+    <div class="v5-example-content-overlay">
+    <div class="box-image mb-2 position-relative">
+            <div class="position-absolute w-100 h-100 inset border-round text-white p-1 m-2 fw-semibold overlay-warning">
+                .overlay-warning
+            </div>
+            <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#000" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div src="overlay-warning">content</div>
+```
+
+### .overlay-danger
+<div class="bg-gray border-round mb-1 p-3">
+    <div class="v5-example-content-overlay">
+    <div class="box-image mb-2 position-relative">
+            <div class="position-absolute w-100 h-100 inset border-round text-white p-1 m-2 fw-semibold overlay-danger">
+                .overlay-danger
+            </div>
+            <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#000" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div src="overlay-danger">content</div>
+```
+
+### .overlay-gray
+<div class="bg-gray border-round mb-1 p-3">
+    <div class="v5-example-content-overlay">
+    <div class="box-image mb-2 position-relative">
+            <div class="position-absolute w-100 h-100 inset border-round text-white p-1 m-2 fw-semibold overlay-gray">
+                .overlay-gray
+            </div>
+            <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#000" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div src="overlay-gray">content</div>
+```
+
+### .overlay-light
+<div class="bg-gray border-round mb-1 p-3">
+    <div class="v5-example-content-overlay">
+    <div class="box-image mb-2 position-relative">
+            <div class="position-absolute w-100 h-100 inset border-round text-white p-1 m-2 fw-semibold overlay-light">
+                .overlay-light
+            </div>
+            <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#000" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div src="overlay-light">content</div>
+```
+
+### .overlay-dark
+<div class="bg-gray border-round mb-1 p-3">
+    <div class="v5-example-content-overlay">
+    <div class="box-image mb-2 position-relative">
+            <div class="position-absolute w-100 h-100 inset border-round text-white p-1 m-2 fw-semibold overlay-dark">
+                .overlay-dark
+            </div>
+            <div class="doc-image-example">
+                <svg class="w-100" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2a2d3e"></rect>
+                    <text x="50%" y="50%" fill="#000" dy=".3em">v5</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div src="overlay-dark">content</div>
+```
