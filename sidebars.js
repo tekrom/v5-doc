@@ -43,6 +43,7 @@ module.exports = {
       'css/tr-utilities-sizing',
       'css/tr-utilities-spacing',
       'css/tr-utilities-text',
+      'css/tr-utilities-shadows',
     ],
     'Bileşenler': [
       'css/tr-components-icons',
