@@ -11,6 +11,8 @@
   --ifm-menu-color-background-active: var(--ifm-color-emphasis-200);
   --ifm-bg-white: #ffffff;
   --ifm-master-border: #ffffff;
+  --soft-yellow: #fffbd9;
+  --border-light: #eaeaea;
 }
 
 html[data-theme='dark'] {
@@ -25,11 +27,16 @@ html[data-theme='dark'] {
   --ifm-menu-color-background-active: #21243d;
   --ifm-bg-white: #0a141c;
   --ifm-master-border: #777777;
-
+  --soft-yellow: #211d00;
+  --border-light: #404040;
 }
 
 .bg-gray {
   background-color: var(--ifm-code-background) !important;
+}
+
+.bg-yellow {
+  background-color: var(--soft-yellow) !important;
 }
 
 .bg-analytics {
@@ -113,6 +120,9 @@ html[data-theme='dark'] [class*='light-Card'] {
   background-image: radial-gradient(circle at 50% 0, #3a416f, #21243d);
 }
 
+code {
+  padding: var(--ifm-code-padding-vertical) var(--ifm-code-padding-horizontal) !important;
+}
 .footer .footer__logo {
   max-width: 6rem;
 }
@@ -1265,18 +1275,31 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
 }
 
 @font-face {
-  font-family: 'tsoft-icon';
-  src: url('../../static/tsoft-icon/font/tsoft-icon.eot?27925698');
-  src: url('../../static/tsoft-icon/font/tsoft-icon.eot?27925698#iefix') format('embedded-opentype'),
-    url('../../static/tsoft-icon/font/tsoft-icon.woff?27925698') format('woff'),
-    url('../../static/tsoft-icon/font/tsoft-icon.ttf?27925698') format('truetype'),
-    url('../../static/tsoft-icon/font/tsoft-icon.svg?27925698#tsoft-icon') format('svg');
+  font-family: 'tsoft-icon-mango';
+  src: url('../../static/tsoft-icon/mango/font/tsoft-icon.woff2?v=1') format('woff2'),
+       url('../../static/tsoft-icon/mango/font/tsoft-icon.woff?=v=1') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tsoft-icon-basic';
+  src: url('../../static/tsoft-icon/basic/font/basic-icon.woff2?v=1') format('woff2'),
+       url('../../static/tsoft-icon/basic/font/basic-icon.woff?v=1') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tsoft-icon-vesti';
+  src: url('../../static/tsoft-icon/vesti/font/vesti-icon.woff2?v=1') format('woff2'),
+       url('../../static/tsoft-icon/vesti/font/vesti-icon.woff?v=1') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 .demo-icon {
-  font-family: "tsoft-icon";
+  font-family: "tsoft-icon-mango";
   font-style: normal;
   font-weight: normal;
   speak: never;
@@ -1295,4 +1318,16 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.demo-icon-mango {
+  font-family: "tsoft-icon-mango";
+}
+
+.demo-icon-basic {
+  font-family: "tsoft-icon-basic";
+}
+
+.demo-icon-vesti {
+  font-family: "tsoft-icon-vesti";
 }

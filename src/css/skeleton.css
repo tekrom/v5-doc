@@ -7759,7 +7759,7 @@ html:not([dir="rtl"]) .border-left-0 {
 }
 
 .border-light {
-  border-color: #eaeaea !important;
+  border-color: var(--border-light) !important;
 }
 
 .border-dark {
