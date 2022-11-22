@@ -7528,65 +7528,94 @@ html:not([dir="rtl"]) .text-right {
   }
 }
 
-ins,
-u,
-.text-underline {
-  text-decoration: underline;
+ins,u,.text-underline {
+  text-decoration: underline !important
 }
 
 .text-lowercase {
-  text-transform: lowercase;
+  text-transform: lowercase !important
 }
 
 .text-uppercase {
-  text-transform: uppercase;
+  text-transform: uppercase !important
+}
+
+.text-capitalize {
+  text-transform: capitalize !important
 }
 
 .text-nowrap {
-  white-space: nowrap;
+  white-space: nowrap !important
 }
 
-del,
-s,
-.text-delete {
-  text-decoration: line-through;
+.text-wrap {
+  white-space: normal !important
+}
+
+.text-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important
+}
+
+.fs-italic {
+  font-style: italic !important
+}
+
+.fs-normal {
+  font-style: normal !important
+}
+
+.fs-larger {
+  font-size: larger !important
+}
+
+.fs-smaller {
+  font-size: smaller !important
+}
+
+del,s,.text-delete {
+  text-decoration: line-through
+}
+
+.fw-lighter {
+  font-weight: lighter
 }
 
 .fw-light {
-  font-weight: 300;
+  font-weight: 300
 }
 
 .fw-regular {
-  font-weight: 400;
+  font-weight: 400
 }
 
 .fw-medium {
-  font-weight: 500;
+  font-weight: 500
 }
 
 .fw-semibold {
-  font-weight: 600;
+  font-weight: 600
 }
 
 .fw-bold {
-  font-weight: 700;
+  font-weight: 700
 }
 
 .fw-extrabold {
-  font-weight: 800;
+  font-weight: 800
 }
 
 .fw-black {
-  font-weight: 900;
+  font-weight: 900
 }
 
 .text-link {
   color: #fd6905 !important;
-  text-decoration: underline;
+  text-decoration: underline
 }
 
 .small-text {
-  font-size: 10px !important;
+  font-size: 10px !important
 }
 
 .text-content {
