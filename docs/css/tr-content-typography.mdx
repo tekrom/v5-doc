@@ -50,9 +50,9 @@ v5, sıfırlama sonrası temel genel görüntüleme, tipografi ve bağlantı sti
 ---
 
 Bir başlığın yazı boyutunu değiştirmek istiyorsunuz ama <code>&lt;h1&gt;</code> ... <code>&lt;h6&gt;</code> etiketlerini 
-kullanamadığınız durumlarda .h1 ile .h6 class'larını kullanabilirsiniz.
+kullanamadığınız durumlarda .h1 ile .h6 class'larını kullanabilirsiniz.<code>h[değer]</code>
 
-<div class="p-2 bg-light">
+<div class="p-2 mb-1 bg-light">
 <p class="h1 m-0">h1. v5 Başlık</p>
 <p class="h2 m-0">h2. v5 Başlık</p>
 <p class="h3 m-0">h3. v5 Başlık</p>
@@ -61,13 +61,8 @@ kullanamadığınız durumlarda .h1 ile .h6 class'larını kullanabilirsiniz.
 <p class="h6 m-0">h6. v5 Başlık</p>
 </div>
 
-```html title="html"
+```html title="Örnek Kullanım"
 <p class="h1">h1. v5 Başlık</p>
-<p class="h2">h2. v5 Başlık</p>
-<p class="h3">h3. v5 Başlık</p>
-<p class="h4">h4. v5 Başlık</p>
-<p class="h5">h5. v5 Başlık</p>
-<p class="h6">h6. v5 Başlık</p>
 ```
 
 ---
@@ -75,7 +70,7 @@ kullanamadığınız durumlarda .h1 ile .h6 class'larını kullanabilirsiniz.
 ### Duyarlı Yazı Boyutu
 <code>.fs-[değer]</code> ile ekran çözünürlüğüne duyarlı başlıklar oluşturabilirsiniz.
 
-<div class="p-2 bg-light">
+<div class="p-2 my-1 bg-light">
 <p class="fs-1 m-0">1. Seviye</p>
 <p class="fs-2 m-0">2. Seviye</p>
 <p class="fs-3 m-0">3. Seviye</p>
@@ -84,6 +79,9 @@ kullanamadığınız durumlarda .h1 ile .h6 class'larını kullanabilirsiniz.
 <p class="fs-6 m-0">6. Seviye</p>
 </div>
 
+```html title="Örnek Kullanım"
+<p class="fs-2">2. Seviye</p>
+```
 ---
 
 ### Büyük ekran başlığı
@@ -92,7 +90,7 @@ sonucu verecek şekilde tasarlanmıştır.
 Öne çıkarılacak daha büyük bir başlığa ihtiyacınız olduğunda, <code>display-1</code> ... <code>display-6</code>
 değelerini kullanabilirsiniz.
 
-<div class="p-2 bg-light">
+<div class="p-2 mb-1 bg-light">
 <p class="display-1 m-0">Gösterim 1</p>
 <p class="display-2 m-0">Gösterim 2</p>
 <p class="display-3 m-0">Gösterim 3</p>
@@ -101,69 +99,8 @@ değelerini kullanabilirsiniz.
 <p class="display-6 m-0">Gösterim 6</p>
 </div>
 
-```html title="html"
-<p class="display-1">Gösterim 1</p>
-<p class="display-2">Gösterim 2</p>
+```html
 <p class="display-3">Gösterim 3</p>
-<p class="display-4">Gösterim 4</p>
-<p class="display-5">Gösterim 5</p>
-<p class="display-6">Gösterim 6</p>
-```
-
-#### Satır içi metin öğeleri
-
-<div class="p-2 bg-light">
-<p><mark>Vurgulanan metin</mark></p>
-<p><del>Üstü çizili metin</del></p>
-<p><s>Artık doğru bilgi olmayan üstü çizili metin</s></p>
-<p><ins>Belgeye yeni eklenen bilgi.</ins></p>
-<p><u>Altı çizili metin</u></p>
-<p><small>Küçük metin satırı</small></p>
-<p><strong>Kalın metin satırı</strong></p>
-<p><em>İtalik metin satırı</em></p>
-</div>
-
-
-```html title="html"
-<mark>Vurgulanan metin</mark>
-<del>Üstü çizili metin</del>
-<s>Artık doğru bilgi olmayan üstü çizili metin</s>
-<ins>Belgeye yeni eklenen bilgi.</ins>
-<u>Altı çizili metin</u>
-<small>Küçük metin satırı</small>
-<strong>Kalın metin satırı</strong>
-<em>İtalik metin satırı</em>
-```
-
-##### Bu etiketlerin anlamları
-
-* <code>&lt;mark&gt;&lt;/mark&gt;</code> Bir metinde belirtilen alanın vurgulanmasına yarar.
-* <code>&lt;del&gt;&lt;/del&gt;</code> etiketi, bir belgeden silinen metni tanımlar.
-* <code>&lt;s&gt;&lt;/s&gt;</code> Bir metin satırının üstünü s ile çizmek artık o bilginin doğru olmadığını belirtir.
-* <code>&lt;ins&gt;&lt;/ins&gt;</code> Belgeye yeni eklenen bilgiyi belli etmek için kullanılır.
-* <code>&lt;u&gt;&lt;/u&gt;</code> Bir metin satırının altını çizmek için kullanabilirsiniz.
-* <code>&lt;small&gt;&lt;/small&gt;</code> Etiketi daha küçük metni tanımlar 
-* <code>&lt;strong&gt;&lt;/strong&gt;</code> İçindeki içerik kalın olarak görüntülenir.
-* <code>&lt;em&gt;&lt;/em&gt;</code> Bir belgede metni italik stil ile göstermenize yarar.
-
-> kaynak: https://www.w3schools.com/tags/
-
-#### Kısaltmalar
-
-<div class="p-2 bg-light">
-<p><abbr title="attribute">attr</abbr></p>
-<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
-</div>
-
-```html title="html"
-<mark>Vurgulanan metin</mark>
-<del>Üstü çizili metin</del>
-<s>Artık doğru bilgi olmayan üstü çizili metin</s>
-<ins>Belgeye yeni eklenen bilgi.</ins>
-<u>Altı çizili metin</u>
-<small>Küçük metin satırı</small>
-<strong>Kalın metin satırı</strong>
-<em>İtalik metin satırı</em>
 ```
 
 ## Alıntılar
@@ -171,20 +108,121 @@ değelerini kullanabilirsiniz.
 Başka bir kaynaktan içerik bloklarını alıntılamak için <code>&lt;blockquote&gt;...&lt;/blockquote&gt;</code> 
 kullanabilirsiniz.
 
-<div class="p-2 bg-light">
+<div class="p-2 bg-light border-round mb-1">
 <blockquote class="blockquote">
   <p>v5 Belgeleri - T-Soft E-Commerce tarafından hazırlanmıştır.</p>
 </blockquote>
 </div>
 
-```html title="html"
+```html
 <blockquote class="blockquote">
   <p>v5 Belgeleri - T-Soft E-Commerce tarafından hazırlanmıştır.</p>
 </blockquote>
 ```
 
-## Listeleme
+## Metin İşlemleri
 
+<div class="table-responsive">
+  <table>
+    <thead>
+      <tr class="bg-dark text-white">
+        <td>Nitelik</td>
+        <td>Class</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-underline">Altı çizili metin</td>
+        <td><code>text-underline</code></td>
+      </tr>
+      <tr>
+        <td class="text-delete">Üstü çizili metin</td>
+        <td><code>text-delete</code></td>
+      </tr>
+      <tr>
+        <td class="fs-italic">Eğik metin</td>
+        <td><code>fs-italic</code></td>
+      </tr>
+      <tr>
+        <td class="text-lowercase">Tüm harfler küçük</td>
+        <td><code>text-lowercase</code></td>
+      </tr>
+      <tr>
+        <td class="text-uppercase">Tüm harfler büyük</td>
+        <td><code>text-uppercase</code></td>
+      </tr>
+      <tr>
+        <td class="text-capitalize">İlk harfler büyük</td>
+        <td><code>text-capitalize</code></td>
+      </tr>
+      <tr>
+        <td class="">Metin aynı satırda devam eder <span class="text-gray" tooltip="&lt;br&gt; etiketi ile karşılaşana kadar" placement="down">[bilgi]</span></td>
+        <td><code>text-nowrap</code></td>
+      </tr>
+      <tr>
+        <td class="">Uzun metini aşağı atar</td>
+        <td><code>text-wrap</code></td>
+      </tr>
+      <tr>
+        <td class="">Uzun kelimeyi aşağı atar</td>
+        <td><code>text-break</code></td>
+      </tr>
+      <tr>
+        <td class="text-small">Yazı boyutu küçük (10px)</td>
+        <td><code>text-small</code></td>
+      </tr>
+      <tr>
+        <td class="fs-smaller">Yazı boyutu küçük (smaller)</td>
+        <td><code>fs-smaller</code></td>
+      </tr>
+      <tr>
+        <td class="fs-normal">Yazı boyutu normal (normal)</td>
+        <td><code>fs-normal</code></td>
+      </tr>
+      <tr>
+        <td class="fs-larger">Yazı boyutu daha büyük (larger)</td>
+        <td><code>fs-larger</code></td>
+      </tr>
+      <tr>
+        <td class="fw-lighter">Yazı kalınlığı ince (lighter)</td>
+        <td><code>fw-lighter</code></td>
+      </tr>
+      <tr>
+        <td class="fw-light">Yazı kalınlığı ince (fw 300)</td>
+        <td><code>fw-light</code></td>
+      </tr>
+      <tr>
+        <td class="fw-regular">Yazı normal (fw 400)</td>
+        <td><code>fw-regular</code></td>
+      </tr>
+      <tr>
+        <td class="fw-medium">Yazı orta (fw 500)</td>
+        <td><code>fw-medium</code></td>
+      </tr>
+      <tr>
+        <td class="fw-semibold">Yazı yarı kalın (fw 600)</td>
+        <td><code>fw-semibold</code></td>
+      </tr>
+      <tr>
+        <td class="fw-bold">Yazı kalın (fw 700)</td>
+        <td><code>fw-bold</code></td>
+      </tr>
+      <tr>
+        <td class="fw-extrabold">Yazı ekstra kalın (fw 800)</td>
+        <td><code>fw-extrabold</code></td>
+      </tr>
+      <tr>
+        <td class="fw-black">Yazı en kalın (fw 900)</td>
+        <td><code>fw-black</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+---
+
+## Listeleme
 
 <ul>
 <li>Liste maddesi</li>
@@ -197,7 +235,7 @@ kullanabilirsiniz.
 <li>Liste maddesi</li>
 </ul>
 
-```html title="html"
+```html
 <ul>
   <li>Liste maddesi</li>
   <li>1. Seviye
@@ -220,7 +258,7 @@ kullanabilirsiniz.
 <li>...</li>
 </ol>
 
-```html title="html"
+```html
 <ol>
 <li>TEKROM</li>
 <li>T-SOFT</li>
@@ -229,3 +267,48 @@ kullanabilirsiniz.
 <li>...</li>
 </ol>
 ```
+
+---
+
+#### Satır içi metin öğeleri (Tarayıcı varsayılan)
+
+<div class="table-responsive">
+  <table>
+    <tbody>
+      <tr>
+        <td><mark>Vurgulama</mark></td>
+        <td><code>&lt;mark&gt;&lt;/mark&gt;</code> Bir metinde belirtilen alanın vurgulanmasına yarar.</td>
+      </tr>
+      <tr>
+        <td><del>Üstü çizili metin</del></td>
+        <td><code>&lt;del&gt;&lt;/del&gt;</code> etiketi, bir belgeden silinen metni tanımlar.</td>
+      </tr>
+      <tr>
+        <td><s>Üstü çizili metin</s></td>
+        <td><code>&lt;s&gt;&lt;/s&gt;</code> Bir metin satırının üstünü s ile çizmek artık o bilginin doğru olmadığını belirtir.</td>
+      </tr>
+      <tr>
+        <td><ins>Belge yeni bilgi</ins></td>
+        <td><code>&lt;ins&gt;&lt;/ins&gt;</code> Belgeye yeni eklenen bilgiyi belli etmek için kullanılır.</td>
+      </tr>
+      <tr>
+        <td><u>Altı çizili metin</u></td>
+        <td><code>&lt;u&gt;&lt;/u&gt;</code> Bir metin satırının altını çizmek için kullanabilirsiniz.</td>
+      </tr>
+      <tr>
+        <td><small>Küçük metin</small></td>
+        <td><code>&lt;small&gt;&lt;/small&gt;</code> Etiketi daha küçük metni tanımlar.</td>
+      </tr>
+      <tr>
+        <td><strong>Kalın metin</strong></td>
+        <td><code>&lt;strong&gt;&lt;/strong&gt;</code> İçindeki içerik kalın olarak görüntülenir.</td>
+      </tr>
+      <tr>
+        <td><em>İtalik metin</em></td>
+        <td><code>&lt;em&gt;&lt;/em&gt;</code> İçindeki içerik kalın olarak görüntülenir.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+> kaynak: https://www.w3schools.com/tags/
