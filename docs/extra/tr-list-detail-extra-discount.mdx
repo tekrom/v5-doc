@@ -1,11 +1,10 @@
 ---
 title: Sepette Extra İndirim
 ---
+
 ## Ürün extra indirim
+
 ```html title="smarty"
-
-
-
 {if $P.NUMERIC1}                                                
     <div class="px-1 extra-discount fw-bold" data-extra="{$P.NUMERIC1}">
     Sepette
@@ -16,28 +15,21 @@ title: Sepette Extra İndirim
         {/if}
     </div>
 {/if}
-
-
-
-
-    {foreach from=$SUB_LIST item=SUB name=variant}
-        <a href="javascript:void(0);"
-        id="{$SUB.TYPE_ID}"
-        data-id="{$SUB.TYPE_ID}"
-        ...
-        ...
-        data-callback="variantCallback"
-
-            class="snap-item {if !$smarty.foreach.variant.last} mr-1{/if} border p-1 sub-button-item{if $SUB.TYPE_ID == $SELECTED && $IS_DEFAULT_VARIANT_ACTIVE|default:1 == 1} selected{/if}{if $SUB.IN_STOCK == false && $NEGATIVE_STOCK == 0} passive{/if}">
-            <span>{$SUB.TYPE}</span>
-        </a>
-    {/foreach}
+{foreach from=$SUB_LIST item=SUB name=variant}
+    <a href="javascript:void(0);"
+    id="{$SUB.TYPE_ID}"
+    data-id="{$SUB.TYPE_ID}"
+    ...
+    ...
+    data-callback="variantCallback"
+        class="snap-item {if !$smarty.foreach.variant.last} mr-1{/if} border p-1 sub-button-item{if $SUB.TYPE_ID == $SELECTED && $IS_DEFAULT_VARIANT_ACTIVE|default:1 == 1} selected{/if}{if $SUB.IN_STOCK == false && $NEGATIVE_STOCK == 0} passive{/if}">
+        <span>{$SUB.TYPE}</span>
+    </a>
+{/foreach}
 ```
 
+## Varyanta göre indirimin güncellenmesi
 
-
-
-## Standart resim değişimi
 ```javascript title="javascript"
 window["extraDiscount"]=function(el){
     let item=el.closest(".product-item, #product-detail");
@@ -50,12 +42,7 @@ window["extraDiscount"]=function(el){
     let cartPrice=oldPrice-(oldPrice*discountPercent*0.01)
     cartPriceEl? cartPriceEl.innerText=T.format(cartPrice) :"";
 }
-
-
-
 window["variantCallback"]=function(el){
     window["extraDiscount"](el)
 }
-
 ``` 
-
