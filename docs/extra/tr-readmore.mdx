@@ -1,0 +1,55 @@
+---
+title: Daha fazla oku
+---
+## Özellikle SEO alanları oluşturmak için kullanılır
+
+
+Kategori Üst Vitrin- Alt Vitrin için kullanılabilir. 
+
+
+
+## Daha fazla oku
+```html title="smarty default"
+<div class="col-12 readmore-wrapper">
+   <div class="readmore-content ease overflow-hidden">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae incidunt laboriosam cumque quibusdam maxime numquam minima dignissimos adipisci cum quisquam laborum suscipit officia quasi dicta doloribus animi illo, culpa laudantium unde! Atque, asperiores fugiat nemo quis odit quasi quaerat impedit aut similique eum perspiciatis at enim ad neque, voluptatem quia magnam nostrum sequi facilis non, sit itaque temporibus illum. Molestias vel, suscipit numquam sapiente accusamus aspernatur ut ullam esse pariatur, minus sed laudantium fuga laboriosam minima totam nihil! Error eum eligendi assumenda facere quisquam libero placeat eos fuga optio. At itaque asperiores neque officia. Exercitationem dolorum corporis sunt quaerat laboriosam quos commodi facere earum iste, aut vero quam voluptatum esse ex assumenda expedita animi, labore magni aliquid ratione officiis reiciendis. Quo nam 
+   </div> 
+   <div class="readmore-btn-wrapper bg-white">
+   <span class="more readmore-btn cursor-pointer d-block py-1 text-underline fw-bold" >{#read_more#}</span>
+   <span class="less readmore-btn cursor-pointer d-block py-1 text-underline fw-bold d-none" >{#read_less#}</span>
+   </div>
+</div>
+```
+
+```javascript title="javascript"
+let content = T(`.readmore-content`);
+let contentHeight = content.height();
+let contentScrollHeight = content[0].scrollHeight;
+if (content && contentHeight >= contentScrollHeight) {
+  T(`.readmore-btn-wrapper`)[0].remove();
+} else {
+  content.height(contentHeight);
+  T(`.more`).attr("data-height", contentScrollHeight);
+  T(`.less`).attr("data-height", contentHeight);
+}
+T(`.readmore-btn`).on(`click`, function (e) {
+  T(`.readmore-btn`).toggleClass("d-none");
+  content.toggleClass("active");
+  content.height(T(this).attr("data-height"));
+});
+```
+
+
+## Select option 
+
+```scss title=""
+@include BLOCK {
+    .readmore-content{
+        transition: all .5s;
+        &:not(.active) {
+            @include line-clamp(4);
+
+        }
+    }
+}
+```
