@@ -58,7 +58,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/hasanunal/v5-doc/edit/dev/',
+            'https://github.com/tekrom/v5-doc/edit/dev/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

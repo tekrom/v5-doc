@@ -2,10 +2,7 @@
 title: Ürün Detay Asorti
 ---
 
-
 ## Ürün detay asorti gösterimi için buradaki yapı kullanılabilir. 
-
-
 
 * Ek bilgi alanlarından bir tanesine veri girilmelidir.
 * Girilen verinin formatı şu olmalıdır. 
@@ -14,14 +11,11 @@ title: Ürün Detay Asorti
 * 8-1  gibi değerler yanındaki bedenin miktarını ifade eder.
 * \# işaretinin sağ tarafındaki 35 ise asortideki toplam ürün miktarını ifade eder. Birim fiyat ve toplam asorti miktarı gösterilmeyecekse bu alan rakam olarak "0" (sıfır) gönderilir.
 
-
-
-<div class="v5-example-alert-info text-black">
+<div class="v5-example-alert-info text-black mb-1">
   Birim fiyat gösterebilmek için #'den sonraki asorti toplam miktarı gerekmektedir. Aksi takdirde birim fiyatı gösteremeyiz.
   Asorti olan ürünlerde ürün kartına girilecek fiyat asorti fiyatıdır.
   Birim fiyat ise asorti fiyatının / asorti miktarına bölümü ile sadece bilgi için detay sayfasında gösterilir.
 </div>
-
 
 ```html title="smarty"
 {if $P.ADDITIONAL_FIELD_1}
@@ -65,19 +59,13 @@ title: Ürün Detay Asorti
         </div>
     </div>
 {/if}
-
 ```
 
-
-
 ```conf title="tr.conf language file"
-
 asorti_title="ASORTİ DAĞILIMI"
 asorti_size="Beden"
 asorti_count="Miktar"
 asorti_total="Toplam"
 asorti_total_count="Adet"
 price_of_piece="Birim Fiyat" 
-
-``` 
-
+```
