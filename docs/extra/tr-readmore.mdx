@@ -23,18 +23,17 @@ Kategori Üst Vitrin- Alt Vitrin için kullanılabilir.
 ## Daha fazla oku Üst Alt Vitrin
 ```html title="Smarty"
 {category id="{$TABLE_ID}" assign="CATEGORY"}
-
 {if $CATEGORY|@count ||  $SHOWCASE_CONTENT}
    <div class="col-12 readmore-wrapper">
       <div class="readmore-content ease overflow-hidden">
          {if $CATEGORY.NAME}
-            <h1 class="category-showcase-title">{$CATEGORY.NAME}</h1>
-         {/if}
-         {if $SHOWCASE_CONTENT}
-            <div id="append-seo-text" class="px-2 py-1"></div>
+            <h2 class="category-name">{$CATEGORY.NAME}</h2>
          {/if}
          {if $CATEGORY.DESCRIPTION}
-            <p class="category-showcase-description text-center">{$CATEGORY.DESCRIPTION}</p>
+            <div class="category-description">{$CATEGORY.DESCRIPTION}</div>
+         {/if}
+         {if $SHOWCASE_CONTENT}
+            <div class="showcase-content">{$SHOWCASE_CONTENT}</div>
          {/if}
       </div>
       <div class="readmore-btn-wrapper bg-white">
@@ -42,7 +41,6 @@ Kategori Üst Vitrin- Alt Vitrin için kullanılabilir.
          <span class="less readmore-btn d-block py-1 text-underline fw-bold d-none">{#read_less#}</span>
       </div>
    </div>
-
 {/if}
 ```
 
