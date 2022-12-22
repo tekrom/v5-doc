@@ -10,44 +10,34 @@ hizalamasını ve boyutlandırılmasını hızla yönetin.
 ## Esnek kutu (Flexbox)
 Kapsayıcıyı esnek kutu modeline geçirmek için <code>d-flex</code> veya <code>d-inline-flex</code> değeri verilmelidir.
 
+<code>d-flex</code> ve <code>d-inline-flex</code> için duyarlı sınıflar mevcuttur.
+
+Responsive bir şekilde kırılım noktalarına göre kullanabilirsiniz. <a href="/docs/css/tr-layout-grid">Detaylı bilgi Izgara Sistemi</a>
+
 <div class="px-0 mb-1 border bg-white bdr-2">
-  <div class="m-0 p-2 w-100">
-    <div class="d-flex bg-gray p-1 justify-content-center">d-flex</div>
+  <div class="p-2">
+    <div class="mb-1 w-100">
+      <div class="d-flex bg-gray p-1 justify-content-center">d-flex</div>
+    </div>
+    <div class="w-100">
+      <div class="d-inline-flex bg-gray p-1">d-inline-flex</div>
+    </div>
   </div>
 </div>
 
 ```html
 <div class="d-flex">d-flex</div>
-```
-
-<div class="px-0 mb-1 border bg-white bdr-2">
-  <div class="m-0 p-2 w-100">
-    <div class="d-inline-flex bg-gray p-1">d-inline-flex</div>
-  </div>
-</div>
-
-```html
 <div class="d-flex">d-inline-flex</div>
 ```
-
-### Duyurlar sınıflar (Responsive)
-<code>d-flex</code> ve <code>d-inline-flex</code> için duyarlı sınıflar mevcuttur.
 
 <div class="px-0 mb-2 mt-2 border bg-light bdr-2">
   <div class="m-0 p-2 w-100">
     <ul>
         <li><code>.d-flex</code></li>
         <li><code>.d-inline-flex</code></li>
-        <li><code>.d-sm-flex</code></li>
-        <li><code>.d-sm-inline-flex</code></li>
         <li><code>.d-md-flex</code></li>
         <li><code>.d-md-inline-flex</code></li>
-        <li><code>.d-lg-flex</code></li>
-        <li><code>.d-lg-inline-flex</code></li>
-        <li><code>.d-xl-flex</code></li>
-        <li><code>.d-xl-inline-flex</code></li>
-        <li><code>.d-xxl-flex</code></li>
-        <li><code>.d-xxl-inline-flex</code></li>
+        ...
     </ul>
   </div>
 </div>
@@ -125,6 +115,12 @@ yönü tersten başlatmak için <code>.flex-direction-column-reverse</code> kull
     <code>wrap-reverse</code> = Öğeler gerektiğinde birden fazla satırda yukarıdan aşağı doğru listelenir.
   </li>
 </ul>
+
+```html
+<div class="flex-nowrap">...</div>
+<div class="flex-wrap">...</div>
+<div class="wrap-reverse">...</div>
+```
 
 ### nowrap
 Varsayılan olarak esnek öğeler tek bir satıra sığmaya çalışırlar. <code>flex-wrap: nowrap;</code>
