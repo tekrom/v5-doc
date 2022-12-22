@@ -8,8 +8,8 @@ Kategori Üst Vitrin- Alt Vitrin için kullanılabilir.
 
 
 
-## Daha fazla oku
-```html title="smarty default"
+## Daha fazla oku SEO
+```html title="Smarty"
 <div class="col-12 readmore-wrapper">
    <div class="readmore-content ease overflow-hidden">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae incidunt laboriosam cumque quibusdam maxime numquam minima dignissimos adipisci cum quisquam laborum suscipit officia quasi dicta doloribus animi illo, culpa laudantium unde! Atque, asperiores fugiat nemo quis odit quasi quaerat impedit aut similique eum perspiciatis at enim ad neque, voluptatem quia magnam nostrum sequi facilis non, sit itaque temporibus illum. Molestias vel, suscipit numquam sapiente accusamus aspernatur ut ullam esse pariatur, minus sed laudantium fuga laboriosam minima totam nihil! Error eum eligendi assumenda facere quisquam libero placeat eos fuga optio. At itaque asperiores neque officia. Exercitationem dolorum corporis sunt quaerat laboriosam quos commodi facere earum iste, aut vero quam voluptatum esse ex assumenda expedita animi, labore magni aliquid ratione officiis reiciendis. Quo nam 
@@ -20,7 +20,33 @@ Kategori Üst Vitrin- Alt Vitrin için kullanılabilir.
    </div>
 </div>
 ```
+## Daha fazla oku Üst Alt Vitrin
+```html title="Smarty"
+{category id="{$TABLE_ID}" assign="CATEGORY"}
 
+{if $CATEGORY|@count ||  $SHOWCASE_CONTENT}
+   <div class="col-12 readmore-wrapper">
+      <div class="readmore-content ease overflow-hidden">
+         {if $CATEGORY.NAME}
+            <h1 class="category-showcase-title">{$CATEGORY.NAME}</h1>
+         {/if}
+         {if $SHOWCASE_CONTENT}
+            <div id="append-seo-text" class="px-2 py-1"></div>
+         {/if}
+         {if $CATEGORY.DESCRIPTION}
+            <p class="category-showcase-description text-center">{$CATEGORY.DESCRIPTION}</p>
+         {/if}
+      </div>
+      <div class="readmore-btn-wrapper bg-white">
+         <span class="more readmore-btn d-block py-1 text-underline fw-bold">{#read_more#}</span>
+         <span class="less readmore-btn d-block py-1 text-underline fw-bold d-none">{#read_less#}</span>
+      </div>
+   </div>
+
+{/if}
+```
+
+## Javascript
 ```javascript title="javascript"
 let content = T(`.readmore-content`);
 let contentHeight = content.height();
@@ -40,9 +66,9 @@ T(`.readmore-btn`).on(`click`, function (e) {
 ```
 
 
-## Select option 
+## Scss
 
-```scss title=""
+```scss title="scss"
 @include BLOCK {
     .readmore-content{
         transition: all .5s;
@@ -52,4 +78,11 @@ T(`.readmore-btn`).on(`click`, function (e) {
         }
     }
 }
+```
+## Dil Değişkenleri 
+
+```conf title="conf"
+read_less="Read Less"
+read_more="Read More"
+
 ```
