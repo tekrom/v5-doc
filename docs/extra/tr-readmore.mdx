@@ -10,13 +10,19 @@ Kategori Üst Vitrin- Alt Vitrin için kullanılabilir.
 
 ## Daha fazla oku SEO
 ```html title="Smarty"
-<div class="col-12 readmore-wrapper">
-   <div class="readmore-content ease overflow-hidden">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae incidunt laboriosam cumque quibusdam maxime numquam minima dignissimos adipisci cum quisquam laborum suscipit officia quasi dicta doloribus animi illo, culpa laudantium unde! Atque, asperiores fugiat nemo quis odit quasi quaerat impedit aut similique eum perspiciatis at enim ad neque, voluptatem quia magnam nostrum sequi facilis non, sit itaque temporibus illum. Molestias vel, suscipit numquam sapiente accusamus aspernatur ut ullam esse pariatur, minus sed laudantium fuga laboriosam minima totam nihil! Error eum eligendi assumenda facere quisquam libero placeat eos fuga optio. At itaque asperiores neque officia. Exercitationem dolorum corporis sunt quaerat laboriosam quos commodi facere earum iste, aut vero quam voluptatum esse ex assumenda expedita animi, labore magni aliquid ratione officiis reiciendis. Quo nam 
-   </div> 
-   <div class="readmore-btn-wrapper bg-white">
-   <span class="more readmore-btn cursor-pointer d-block py-1 text-underline fw-bold" >{#read_more#}</span>
-   <span class="less readmore-btn cursor-pointer d-block py-1 text-underline fw-bold d-none" >{#read_less#}</span>
+<div class="w-100 readmore-wrapper position-relative pb-2">
+   <div class="readmore-content ease overflow-hidden p-1" style="height: 80px;">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae incidunt laboriosam cumque quibusdam
+         maxime  numquam minima dignissimos adipisci cum quisquam laborum suscipit officia quasi dicta doloribus animi illo,
+         culpa  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae incidunt laboriosam cumque quibusdam
+         maxime numquam minima dignissimos adipisci cum quisquam laborum suscipit officia quasi dicta doloribus animi illo,
+         culpa Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae incidunt laboriosam cumque quibusdam
+         maxime numquam minima dignissimos adipisci cum quisquam laborum suscipit officia quasi dicta doloribus animi illo,
+         culpa
+   </div>
+   <div class="readmore-btn-wrapper w-100 position-absolute bottom-0">
+      <span class="p-1 more readmore-btn d-block py-1 text-underline fw-bold">{#read_more#}</span>
+      <span class="p-1 less readmore-btn d-block py-1 text-underline fw-bold d-none">{#read_less#}</span>
    </div>
 </div>
 ```
@@ -24,8 +30,8 @@ Kategori Üst Vitrin- Alt Vitrin için kullanılabilir.
 ```html title="Smarty"
 {category id="{$TABLE_ID}" assign="CATEGORY"}
 {if $CATEGORY|@count ||  $SHOWCASE_CONTENT}
-   <div class="col-12 readmore-wrapper">
-      <div class="readmore-content ease overflow-hidden">
+<div class="w-100 readmore-wrapper position-relative pb-2">
+   <div class="readmore-content ease overflow-hidden p-1" style="height: 80px;">
          {if $CATEGORY.NAME}
             <h2 class="category-name">{$CATEGORY.NAME}</h2>
          {/if}
@@ -35,12 +41,12 @@ Kategori Üst Vitrin- Alt Vitrin için kullanılabilir.
          {if $SHOWCASE_CONTENT}
             <div class="showcase-content">{$SHOWCASE_CONTENT}</div>
          {/if}
-      </div>
-      <div class="readmore-btn-wrapper bg-white">
-         <span class="more readmore-btn d-block py-1 text-underline fw-bold">{#read_more#}</span>
-         <span class="less readmore-btn d-block py-1 text-underline fw-bold d-none">{#read_less#}</span>
-      </div>
    </div>
+   <div class="readmore-btn-wrapper w-100 position-absolute bottom-0">
+      <span class="p-1 more readmore-btn d-block py-1 text-underline fw-bold">{#read_more#}</span>
+      <span class="p-1 less readmore-btn d-block py-1 text-underline fw-bold d-none">{#read_less#}</span>
+   </div>
+</div>
 {/if}
 ```
 
@@ -70,10 +76,6 @@ T(`.readmore-btn`).on(`click`, function (e) {
 @include BLOCK {
     .readmore-content{
         transition: all .5s;
-        &:not(.active) {
-            @include line-clamp(4);
-
-        }
     }
 }
 ```
