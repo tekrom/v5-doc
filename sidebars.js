@@ -159,6 +159,7 @@ module.exports = {
       'extra/tr-list-layout',
       'extra/tr-list-variant-image',
       'extra/tr-readmore',
+      'extra/tr-image-map',
       'extra/tr-showcase-dowry-percent',
     ],
   },
