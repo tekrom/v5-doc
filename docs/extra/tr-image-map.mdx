@@ -36,7 +36,7 @@ alanlarına girilen veriye göre resim üzerinde nokta oluşmaktadır.
                     $IMAGE.DATA3,
                     $IMAGE.DATA4
                     ]}
-            <div class="$IMAGE.COL.ALL} col-sm-{$IMAGE.COL.SM} col-md-{$IMAGE.COL.MD} col-lg-{$IMAGE.COL.LG} col-xl-{$IMAGE.COL.XL}">
+            <div class="{$IMAGE.COL.ALL} col-sm-{$IMAGE.COL.SM} col-md-{$IMAGE.COL.MD} col-lg-{$IMAGE.COL.LG} col-xl-{$IMAGE.COL.XL}">
                 <div href="{$IMAGE.URL}" class="w-100 d-block position-relative effect-wrapper map-point-wrapper" aria-label="{$IMAGE.TITLE}">
                     {if $IMAGE.IMG1.PATH || $IMAGE.IMG2.PATH}
                         <picture class="d-flex align-items-center justify-content-center overflow-hidden">
@@ -166,6 +166,7 @@ alanlarına girilen veriye göre resim üzerinde nokta oluşmaktadır.
       "title": "Overlay Rengi",
       "data": "",
       "store": {
+        "": "overlay yok",
         "overlay-primary": "overlay-primary",
         "overlay-secondary": "overlay-secondary",
         "overlay-white": "overlay-white",
@@ -178,8 +179,7 @@ alanlarına girilen veriye göre resim üzerinde nokta oluşmaktadır.
         "overlay-light": "overlay-light",
         "overlay-dark": "overlay-dark",
         "overlay-body": "overlay-body",
-        "overlay-custom": "overlay-custom",
-        "": "overlay yok"
+        "overlay-custom": "overlay-custom"
       }
     },
     {
