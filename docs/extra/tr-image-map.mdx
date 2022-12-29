@@ -4,161 +4,145 @@ title: Image-map (Resim-Nokta)
 
 ## Banner resimleri üzerine nokta
 
-<div class="p-2 bg-light">
-<p >Banner üzerine nokta ile ürün gösterimi yapmak için kullanılır. 
-Banner Bloğu gelişmiş ayarlar alanındaki</p>
+<div class="p-2 bg-light mb-2 border-round">
+Banner üzerine nokta ile ürün gösterimi yapmak için kullanılır. 
+Banner Bloğu gelişmiş ayarlar alanındaki
 
 - <code>DATA1</code>
 - <code>DATA2</code>
 - <code>DATA3</code>
 - <code>DATA4</code>
 
-<p >
-  alanlarına girilen veriye göre resim üzerinde nokta oluşmaktadır.
-  <code>25|55|1455</code> gibi <code>soldanyüzde|yukarıdanyüzde|ürünID</code>
-  şeklinde değer girilmesi gerekmektedir.{' '}
-</p>
-
+alanlarına girilen veriye göre resim üzerinde nokta oluşmaktadır.
+<code>25|55|1455</code> gibi <code>soldanyüzde|yukarıdanyüzde|ürünID</code>
+şeklinde değer girilmesi gerekmektedir.{' '}
 </div>
+
+<iframe width="100%" height="400" src="https://fd-v5.1ticaret.com/image-point" class="overflow-hidden" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Kod Alanı
 
+### Smarty
 ```html title="Smarty"
 <div class="col-12">
-  {if $SETTING.DISPLAY_TITLE}
-  <div class="block-title mb-2">{$BLOCK.TITLE}</div>
-  {/if}
-  <div class="row">
-    {foreach from=$SETTING.IMAGES item=IMAGE} {$DATA_AREAS = [ $IMAGE.DATA1,
-    $IMAGE.DATA2, $IMAGE.DATA3, $IMAGE.DATA4 ]}
-    <div
-      class="col-12 col-lg-4 {*$IMAGE.COL.ALL} col-sm-{$IMAGE.COL.SM} col-md-{$IMAGE.COL.MD} col-lg-{$IMAGE.COL.LG} col-xl-{$IMAGE.COL.XL*} mb-2"
-    >
-      <div
-        href="{$IMAGE.URL}"
-        class="w-100 d-block position-relative effect-wrapper map-point-wrapper"
-        aria-label="{$IMAGE.TITLE}"
-      >
-        {if $IMAGE.IMG1.PATH || $IMAGE.IMG2.PATH}
-        <picture
-          class="d-flex align-items-center justify-content-center overflow-hidden"
-        >
-          {if $IMAGE.IMG1.PATH} <img {if $IS_LAZY_LOAD_ACTIVE == '1'}
-          src="{$LAZY_LOAD_LOADING_IMAGE}" data-src="{$IMAGE.IMG1.PATH}"
-          class="lazyload w-100 ease border-round" loading="lazy" {else}
-          src="{$IMAGE.IMG1.PATH}" class="w-100 ease border-round" {/if}
-          width="{$IMAGE.IMG1.WIDTH}" height="{$IMAGE.IMG1.HEIGHT}"
-          alt="{$IMAGE.TITLE}"> {/if}
-          <div class="position-absolute inset {$SETTING.BG_OVERLAY}"></div>
-        </picture>
-        {foreach from=$DATA_AREAS item=DATA key=key name=name} {assign var="D"
-        value="|"|explode:$DATA} {product id="{$D[2]}" assign="P"}
-        <span
-          class="d-flex align-items-center justify-content-center banner-description position-absolute cursor-pointer border border-circle border-white map-point"
-          style="left:{$D[0]}%; top:{$D[1]}%;"
-        >
-          <div class="dropdown">
-            <span
-              class="dropdown-title border border-circle d-flex align-items-center {$SETTING.DOT_COLOR|default:'bg-white'}"
-              data-toggle="dropdown"
-            >
-            </span>
-            <div
-              class="dropdown-menu border-round {if $D[0]>50} right-100 left-auto {/if} {if $D[1]>50} bottom-100 top-auto{/if}"
-            >
-              <div class="w-100 product-item">
-                <a href="{$P.URL}" class="image-wrapper">
-                  <picture class="image-inner">
-                    <img src="{$P.IMAGE.SMALL}" class="" loading="lazy" />
-                  </picture>
-                </a>
-                <div class="d-flex flex-wrap gap-1  map-product-info">
-                  <a
-                    href="{$P.URL}"
-                    class="w-100 mt-1 fw-semibold text-dark product-title"
-                    >{$P.TITLE}</a
-                  >
-                  <div class="w-100  product-price-wrapper d-flex flex-wrap">
-                    {if $P.IS_DISPLAY_DISCOUNTED_ACTIVE == 1}
-                    <div
-                      class="mr-1 product-discounted-price text-delete {if $P.DISCOUNT_PERCENT <= 0}d-none{/if}"
-                    >
-                      <span class="product-price-not-discounted"
-                        >{vat price=$P.PRICE_NOT_DISCOUNTED vat=$P.VAT}</span
-                      >
-                      {$P.TARGET_CURRENCY}
-                    </div>
+    {if $SETTING.DISPLAY_TITLE}
+        <div class="block-title mb-2">{$BLOCK.TITLE}</div>
+    {/if}
+    <div class="row">
+        {foreach from=$SETTING.IMAGES item=IMAGE}
+            {$DATA_AREAS = [
+                    $IMAGE.DATA1,
+                    $IMAGE.DATA2,
+                    $IMAGE.DATA3,
+                    $IMAGE.DATA4
+                    ]}
+            <div class="$IMAGE.COL.ALL} col-sm-{$IMAGE.COL.SM} col-md-{$IMAGE.COL.MD} col-lg-{$IMAGE.COL.LG} col-xl-{$IMAGE.COL.XL}">
+                <div href="{$IMAGE.URL}" class="w-100 d-block position-relative effect-wrapper map-point-wrapper" aria-label="{$IMAGE.TITLE}">
+                    {if $IMAGE.IMG1.PATH || $IMAGE.IMG2.PATH}
+                        <picture class="d-flex align-items-center justify-content-center overflow-hidden">
+                            {if $IMAGE.IMG1.PATH}
+                                <img {if $IS_LAZY_LOAD_ACTIVE == '1'} src="{$LAZY_LOAD_LOADING_IMAGE}" data-src="{$IMAGE.IMG1.PATH}" class="{if $SETTING.EFFECT_BG_BRIGHTNESS}map-point-bg-brightness{/if} w-100 ease border-round lazyload" loading="lazy" {else} src="{$IMAGE.IMG1.PATH}" class="{if $SETTING.EFFECT_BG_BRIGHTNESS}map-point-bg-brightness{/if} w-100 ease border-round" {/if} width="{$IMAGE.IMG1.WIDTH}" height="{$IMAGE.IMG1.HEIGHT}" alt="{$IMAGE.TITLE}">
+                            {/if}
+                            <div class="position-absolute inset {$SETTING.BG_OVERLAY}"></div>
+                        </picture>
+                        {foreach from=$DATA_AREAS item=DATA key=key name=name}
+                            {assign var="D" value="|"|explode:$DATA}
+                            {product id="{$D[2]}" assign="P"}
+                            <span class="d-flex align-items-center justify-content-center position-absolute cursor-pointer border border-circle border-white map-point {if $SETTING.EFFECT_PULSE}effect-pulse{/if}" style="left:{$D[0]}%; top:{$D[1]}%;">
+                                <div class="dropdown">
+                                    <span class="dropdown-title border border-circle d-flex align-items-center {$SETTING.DOT_COLOR|default:'bg-white'}" data-toggle="dropdown">
+                                    </span>
+                                    <div class="dropdown-menu border-round {if $D[0]>50} right-100 left-auto {else} left-100 {/if} {if $D[1]>50} bottom-100 top-auto {else} top-100 {/if}">
+                                        <div class="w-100 product-item">
+                                            <a href="{$P.URL}" class="image-wrapper">
+                                                <picture class="image-inner">
+                                                    <img src="{$P.IMAGE.SMALL}" class="" loading="lazy">
+                                                </picture>
+                                            </a>
+                                            <div class="d-flex flex-wrap gap-1  map-product-info">
+                                                <a href="{$P.URL}" class="w-100 mt-1 fw-semibold text-dark product-title">{$P.TITLE}</a>
+                                                <div class="w-100  product-price-wrapper d-flex flex-wrap">
+                                                    {if $P.IS_DISPLAY_DISCOUNTED_ACTIVE == 1}
+                                                        <div class="mr-1 product-discounted-price text-delete {if $P.DISCOUNT_PERCENT <= 0}d-none{/if}">
+                                                            <span class="product-price-not-discounted">{vat price=$P.PRICE_NOT_DISCOUNTED vat=$P.VAT}</span>
+                                                            {$P.TARGET_CURRENCY}
+                                                        </div>
+                                                    {/if}
+                                                    <div class="current-price">
+                                                        {if $P.DISPLAY_VAT === "1"}
+                                                            <strong class="fw-black product-price">{vat price=$P.PRICE_SELL vat=$P.VAT}</strong>
+                                                            {$P.TARGET_CURRENCY}
+                                                        {else}
+                                                            <strong class="fw-black product-price-not-vat">{format price=$P.PRICE_SELL}</strong>
+                                                            {$P.TARGET_CURRENCY} <i class="ti-plus"></i> {#vat#}
+                                                        {/if}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        {/foreach}
                     {/if}
-                    <div class="current-price">
-                      {if $P.DISPLAY_VAT === "1"}
-                      <strong class="fw-black product-price"
-                        >{vat price=$P.PRICE_SELL vat=$P.VAT}</strong
-                      >
-                      {$P.TARGET_CURRENCY} {else}
-                      <strong class="fw-black product-price-not-vat"
-                        >{format price=$P.PRICE_SELL}</strong
-                      >
-                      {$P.TARGET_CURRENCY} <i class="ti-plus"></i> {#vat#} {/if}
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </span>
-        {/foreach} {/if}
-      </div>
+        {/foreach}
     </div>
-    {/foreach}
-  </div>
 </div>
 ```
 
-## Scss
-
+### Scss
 ```scss title="scss"
 @include BLOCK {
-  .map-point-wrapper {
-    img {
-      transition: all 0.5s;
+    .map-point-wrapper {
+        &:hover {
+            .map-point-bg-brightness {
+                filter: brightness(0.75);
+                transition-duration: 0.5s;
+            }
+        }
+        .map-point {
+            padding: 3px;
+            .dropdown {
+                &-title {
+                    width: clamp(13px, 1vw, 20px);
+                    aspect-ratio: 1;
+                }
+                &-menu {
+                    max-width: clamp(120px, 10vw, 170px);
+                }
+            }
+            &.effect-pulse {
+                animation: effect-pulse 1500ms infinite;
+            }
+            @keyframes effect-pulse {
+                0% {
+                    box-shadow: 0 0 0 1px $bgWhite;
+                }
+                100% {
+                    box-shadow: 0 0 0 8px transparent;
+                }
+            }
+        }
+        .left-auto {
+            left: auto !important;
+        }
+        .top-auto {
+            top: auto !important;
+        }
     }
-    &:hover {
-      img {
-        filter: brightness(0.75);
-        transition: all 0.5s;
-      }
-    }
-  }
-  .map-point {
-    padding: 3px;
-    .dropdown {
-      .dropdown-title {
-        width: clamp(13px, 1vw, 20px);
-        aspect-ratio: 1;
-      }
-      .dropdown-menu {
-        max-width: clamp(120px, 10vw, 170px);
-      }
-    }
-  }
-  .left-auto {
-    left: auto !important;
-  }
-  .top-auto {
-    top: auto !important;
-  }
 }
 ```
 
-## Setting
-
+### Setting
 ```json title="json"
 {
   "setting": [
     {
       "xtype": "select",
       "key": "DOT_COLOR",
-      "title": "Yazı Rengi",
+      "title": "Nokta Rengi",
       "data": "bg-white",
       "store": {
         "bg-primary": "bg-primary",
@@ -197,6 +181,18 @@ Banner Bloğu gelişmiş ayarlar alanındaki</p>
         "overlay-custom": "overlay-custom",
         "": "overlay yok"
       }
+    },
+    {
+      "xtype": "checkbox",
+      "key": "EFFECT_BG_BRIGHTNESS",
+      "title": "Hover Arkaplan Efekti",
+      "data": 0
+    },
+    {
+      "xtype": "checkbox",
+      "key": "EFFECT_PULSE",
+      "title": "Nokta Efekti",
+      "data": 0
     }
   ]
 }
