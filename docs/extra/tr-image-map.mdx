@@ -29,26 +29,25 @@ alanlarına girilen veriye göre resim üzerinde nokta oluşmaktadır.
                 $IMAGE.DATA3,
                 $IMAGE.DATA4
                 ]}
-            <div
-                class="col-{$IMAGE.COL.ALL} col-sm-{$IMAGE.COL.SM} col-md-{$IMAGE.COL.MD} col-lg-{$IMAGE.COL.LG} col-xl-{$IMAGE.COL.XL} mb-2">
-                <div href="{$IMAGE.URL}" class="w-100 d-block position-relative effect-wrapper" aria-label="{$IMAGE.TITLE}">
+            <div class="col-12 col-lg-4 {*$IMAGE.COL.ALL} col-sm-{$IMAGE.COL.SM} col-md-{$IMAGE.COL.MD} col-lg-{$IMAGE.COL.LG} col-xl-{$IMAGE.COL.XL*} mb-2">
+                <div href="{$IMAGE.URL}" class="w-100 d-block position-relative effect-wrapper map-point-wrapper" aria-label="{$IMAGE.TITLE}">
                     {if $IMAGE.IMG1.PATH || $IMAGE.IMG2.PATH}
                         <picture class="d-flex align-items-center justify-content-center overflow-hidden">
                             {if $IMAGE.IMG1.PATH}
-                                <img {if $IS_LAZY_LOAD_ACTIVE == '1'}
-                                        src="{$LAZY_LOAD_LOADING_IMAGE}" data-src="{$IMAGE.IMG1.PATH}" class="lazyload w-100" loading="lazy"
-                                    {else}
-                                        src="{$IMAGE.IMG1.PATH}" class="w-100" 
+                                <img {if $IS_LAZY_LOAD_ACTIVE == '1'} src="{$LAZY_LOAD_LOADING_IMAGE}" data-src="{$IMAGE.IMG1.PATH}"
+                                    class="lazyload w-100 ease border-round" loading="lazy" {else} src="{$IMAGE.IMG1.PATH}" class="w-100 ease border-round" 
                                     {/if}
-                                       width="{$IMAGE.IMG1.WIDTH}" height="{$IMAGE.IMG1.HEIGHT}" alt="{$IMAGE.TITLE}">
+                                    width="{$IMAGE.IMG1.WIDTH}" height="{$IMAGE.IMG1.HEIGHT}" alt="{$IMAGE.TITLE}">
                             {/if}
+                            <div class="position-absolute inset {$SETTING.BG_OVERLAY}"></div>
                         </picture>
                         {foreach from=$DATA_AREAS item=DATA key=key name=name}
                             {assign var="D" value="|"|explode:$DATA}
                             {product id="{$D[2]}" assign="P"}
-                            <span class="d-flex align-items-center justify-content-center banner-description position-absolute cursor-pointer border border-circle border-white map-point" style="left:{$D[0]}%; top:{$D[1]}%;">
+                            <span class="d-flex align-items-center justify-content-center banner-description position-absolute cursor-pointer border border-circle border-white map-point"
+                                style="left:{$D[0]}%; top:{$D[1]}%;">
                                 <div class="dropdown">
-                                    <span class="dropdown-title border border-circle d-flex align-items-center bg-white" data-toggle="dropdown">
+                                    <span class="dropdown-title border border-circle d-flex align-items-center {$SETTING.DOT_COLOR|default:'bg-white'}" data-toggle="dropdown">
                                     </span>
                                     <div
                                         class="dropdown-menu border-round {if $D[0]>50} right-100 left-auto {/if} {if $D[1]>50} bottom-100 top-auto{/if}">
@@ -93,13 +92,23 @@ alanlarına girilen veriye göre resim üzerinde nokta oluşmaktadır.
 ## Scss
 ```scss title="scss"
 @include BLOCK {
+    .map-point-wrapper{
+        img{
+            transition: all .5s;
+        }
+        &:hover{
+            img{
+                filter: brightness(0.75);
+                transition: all .5s;
+            }
+        }
+    }
     .map-point{
-        width: 30px;
-        height: 30px;
+        padding:3px;
         .dropdown{
             .dropdown-title{
-                width: 20px;
-                height: 20px;
+                width: clamp(13px,1vw,20px);
+                aspect-ratio: 1;
             }
              .dropdown-menu{
                 max-width: clamp(120px,10vw,170px);
@@ -113,4 +122,56 @@ alanlarına girilen veriye göre resim üzerinde nokta oluşmaktadır.
         top: auto !important;
     }
 }
+```
+## Setting
+```json title="json"
+{
+  "setting": [
+
+    {
+      "xtype": "select",
+      "key": "DOT_COLOR",
+      "title": "Yazı Rengi",
+      "data": "bg-white",
+      "store": {
+        "bg-primary": "bg-primary",
+        "bg-secondary": "bg-secondary",
+        "bg-white": "bg-white",
+        "bg-black": "bg-black",
+        "bg-success": "bg-success",
+        "bg-info": "bg-info",
+        "bg-warning": "bg-warning",
+        "bg-danger": "bg-danger",
+        "bg-gray": "bg-gray",
+        "bg-light": "bg-light",
+        "bg-dark": "bg-dark",
+        "bg-body": "bg-body",
+        "bg-custom": "bg-custom"
+      }
+    },
+    {
+      "xtype": "select",
+      "key": "BG_OVERLAY",
+      "title": "Overlay Rengi",
+      "data": "",
+      "store": {
+        "overlay-primary": "overlay-primary",
+        "overlay-secondary": "overlay-secondary",
+        "overlay-white": "overlay-white",
+        "overlay-black": "overlay-black",
+        "overlay-success": "overlay-success",
+        "overlay-info": "overlay-info",
+        "overlay-warning": "overlay-warning",
+        "overlay-danger": "overlay-danger",
+        "overlay-gray": "overlay-gray",
+        "overlay-light": "overlay-light",
+        "overlay-dark": "overlay-dark",
+        "overlay-body": "overlay-body",
+        "overlay-custom": "overlay-custom",
+        "": "overlay yok"
+      }
+    }
+  ]
+}
+
 ```
