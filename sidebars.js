@@ -150,6 +150,7 @@ module.exports = {
     '* Extra': [
       'extra/tr-detail-asorti',
       'extra/tr-detail-vertical-tab',
+      'extra/tr-detail-change-main-image',
       'extra/tr-filter-close',
       'extra/tr-footer-social-media',
       'extra/tr-lightgallery',

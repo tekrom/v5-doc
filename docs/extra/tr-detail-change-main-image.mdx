@@ -1,0 +1,29 @@
+---
+title: Ürün Detay Hover Resim Değişimi
+---
+## Ürün Detay Hover Durumunda Resim Değişimi
+
+Ürün detay sayfasında varyant resimlerinin üzerine mouse ile gelindiğinde ana ürün resminin değişmesini sağlar.
+
+Bunun çalışması için ilişkili ya da alt ürünlerin üzerine hover yapılan seçeneklerinin resim olması gerekir.
+
+
+
+
+
+
+```javascript title="javascript"
+    T(`.sub-one a, .sub-one-related a`).on(`mouseenter`, function(e) {
+        const el = T(e.target.querySelector('img')).attr("src");    
+        T(".product-detail-images .swiper-slide.swiper-slide-active img").attr("src", el.replace("K.",'O.'))
+    });
+    T(`.sub-one,.sub-one-related`).on(`mouseleave`, function(e) {
+        T(".product-detail-images .swiper-slide.swiper-slide-active img").attr("src",  T(".product-detail-images .swiper-slide.swiper-slide-active").attr("href").replace("B.","O."))
+    });
+```
+
+
+
+
+
+
