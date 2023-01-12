@@ -53,7 +53,9 @@ Kategori Üst Vitrin- Alt Vitrin için kullanılabilir.
 ## Javascript
 ```javascript title="javascript"
 let content = T(`.readmore-content`);
-let contentHeight = content.height();
+let contentImg=T(`.readmore-content img`); // resim olduğu durumlarda
+
+let contentHeight = parseInt(content.height()) + parseInt(contentImg.height()); // contentImg alanı resim olan durumlar için
 let contentScrollHeight = content[0].scrollHeight;
 if (content && contentHeight >= contentScrollHeight) {
   T(`.readmore-btn-wrapper`)[0].remove();
