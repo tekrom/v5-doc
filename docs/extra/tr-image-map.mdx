@@ -16,8 +16,14 @@ Banner Bloğu gelişmiş ayarlar alanındaki
 alanlarına girilen veriye göre resim üzerinde nokta oluşmaktadır.
 
 <code>25|55|1455</code> gibi <code>soldanyüzde|yukarıdanyüzde|ürünID</code>
-şeklinde değer girilmesi gerekmektedir.{' '}
+şeklinde değer girilmesi gerekmektedir.
 </div>
+
+Ürün eklenecek olan koordinatın alınması için ise panele giriş yapılmış olması gerekmektedir. Koordinat eklenmesi istenen alana tıklanması yeterlidir.
+Tıklanılan alanın yüzde koordinatları kopyalama paneline <code>25|55</code> (Soldan yüzde|Yukarıdan yüzde) gibi  kaydedilmektedir. 
+Otomatik olarak kopyalanan bu alan DATA alanlarından herhangi birine yapıştırılabilir. Sonra da <code>|2456</code> gibi ürün id eklenirse işlem tamamlanmış olur. 
+
+Neticede DATA alanımız <code>25|55|1455</code> yani <code>soldanyüzde|yukarıdanyüzde|ürünID</code> haline gelmiş olur. 
 
 <iframe
   width="100%"
@@ -67,7 +73,7 @@ alanlarına girilen veriye göre resim üzerinde nokta oluşmaktadır.
         {foreach from=$DATA_AREAS item=DATA key=key name=name} {assign var="D"
         value="|"|explode:$DATA} {product id="{$D[2]}" assign="P"}
         <span
-          class="d-flex align-items-center justify-content-center position-absolute cursor-pointer border border-circle border-white map-point {if $SETTING.EFFECT_PULSE}effect-pulse{/if}"
+          class="d-flex align-items-center justify-content-center position-absolute cursor-pointer border border-circle border-white map-point translate-middle {if $SETTING.EFFECT_PULSE}effect-pulse{/if}"
           style="left:{$D[0]}%; top:{$D[1]}%;"
         >
           <div class="dropdown">
