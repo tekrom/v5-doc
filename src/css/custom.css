@@ -1459,31 +1459,39 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
 }
 
 @font-face {
+  font-family: 'tsoft-icon-default';
+  src: url('../../static/tsoft-icon/default/font/tsoft-icon.woff2?v=1') format('woff2'),
+       url('../../static/tsoft-icon/default/font/tsoft-icon.woff?=v=1') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'tsoft-icon-mango';
-  src: url('../../static/tsoft-icon/mango/font/tsoft-icon.woff2?v=1') format('woff2'),
-       url('../../static/tsoft-icon/mango/font/tsoft-icon.woff?=v=1') format('woff');
+  src: url('../../static/tsoft-icon/mango/mango-icon.woff2?v=1') format('woff2'),
+       url('../../static/tsoft-icon/mango/mango-icon.woff?v=1') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'tsoft-icon-basic';
-  src: url('../../static/tsoft-icon/basic/font/basic-icon.woff2?v=1') format('woff2'),
-       url('../../static/tsoft-icon/basic/font/basic-icon.woff?v=1') format('woff');
+  src: url('../../static/tsoft-icon/basic/basic-icon.woff2?v=1') format('woff2'),
+       url('../../static/tsoft-icon/basic/basic-icon.woff?v=1') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'tsoft-icon-vesti';
-  src: url('../../static/tsoft-icon/vesti/font/vesti-icon.woff2?v=1') format('woff2'),
-       url('../../static/tsoft-icon/vesti/font/vesti-icon.woff?v=1') format('woff');
+  src: url('../../static/tsoft-icon/vesti/vesti-icon.woff2?v=1') format('woff2'),
+       url('../../static/tsoft-icon/vesti/vesti-icon.woff?v=1') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 .demo-icon {
-  font-family: "tsoft-icon-mango";
+  font-family: "tsoft-icon-default";
   font-style: normal;
   font-weight: normal;
   speak: never;
@@ -1502,6 +1510,10 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.demo-icon-default {
+  font-family: "tsoft-icon-default";
 }
 
 .demo-icon-mango {
