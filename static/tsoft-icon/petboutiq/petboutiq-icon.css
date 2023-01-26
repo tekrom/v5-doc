@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'petboutiq-icon';
+  src: url('/theme/v5-petboutiq/assets/fonts/petboutiq-icon.woff2?v=1')
+      format('woff2'),
+    url('/theme/v5-petboutiq/assets/fonts/petboutiq-icon.woff?v=1')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ti-heart-o::before,
+.ti-truck-o::before,
+.ti-basket::before,
+.ti-search-o::before,
+.ti-purse::before,
+.ti-shuffle::before,
+.ti-search::before,
+.ti-user::before,
+.ti-gift::before,
+.ti-stock-alert::before,
+.ti-database::before,
+.ti-location::before,
+.credit-card-alt::before,
+.ti-clipboard::before,
+.ti-calendar::before,
+.ti-user-delete::before,
+.ti-mail-outline::before,
+.ti-pencil::before,
+.ti-remittance::before,
+.ti-order-track::before {
+  font-family: 'petboutiq-icon';
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: inherit;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ti-heart-o::before {
+  content: '\e800';
+}
+.ti-truck-o::before {
+  content: '\e801';
+}
+.ti-basket::before {
+  content: '\e802';
+}
+.ti-search-o::before {
+  content: '\e803';
+}
+.ti-purse::before {
+  content: '\e804';
+}
+.ti-shuffle::before {
+  content: '\e805';
+}
+.ti-search::before {
+  content: '\e806';
+}
+.ti-user::before {
+  content: '\e807';
+}
+.ti-gift::before {
+  content: '\e808';
+}
+.ti-stock-alert::before {
+  content: '\e809';
+}
+.ti-database::before {
+  content: '\e80a';
+}
+.ti-location::before {
+  content: '\e80b';
+}
+.credit-card-alt::before {
+  content: '\e80d';
+}
+.ti-clipboard::before {
+  content: '\e80e';
+}
+.ti-calendar::before {
+  content: '\e810';
+}
+.ti-user-delete::before {
+  content: '\e811';
+}
+.ti-mail-outline::before {
+  content: '\e812';
+}
+.ti-pencil::before {
+  content: '\e813';
+}
+.ti-remittance::before {
+  content: '\e814';
+}
+.ti-order-track::before {
+  content: '\e80c';
+}

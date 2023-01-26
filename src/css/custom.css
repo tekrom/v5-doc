@@ -1490,6 +1490,14 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'tsoft-icon-petboutiq';
+  src: url('../../static/tsoft-icon/petboutiq/petboutiq-icon.woff2?v=1') format('woff2'),
+       url('../../static/tsoft-icon/petboutiq/petboutiq-icon.woff?v=1') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .demo-icon {
   font-family: "tsoft-icon-default";
   font-style: normal;
@@ -1526,4 +1534,8 @@ html[data-theme='dark'] .v5-example-border-utils .v5-example-border {
 
 .demo-icon-vesti {
   font-family: "tsoft-icon-vesti";
+}
+
+.demo-icon-petboutiq {
+  font-family: "tsoft-icon-petboutiq";
 }
