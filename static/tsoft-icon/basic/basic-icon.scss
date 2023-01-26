@@ -5,27 +5,27 @@
   font-weight: normal;
   font-style: normal;
 }
-.ti-arrow-left:before,
-.ti-arrow-right:before,
-.ti-heart-o:before,
-.ti-basket-outline:before,
-.ti-user:before,
-.ti-gift:before,
-.ti-database:before,
-.ti-location:before,
-.ti-bell:before,
-.ti-heart:before,
-.ti-dollar:before,
-.ti-bell-o:before,
-.ti-chat-alt:before,
-.ti-power-off:before,
-.ti-credit-card-alt:before,
-.ti-clipboard:before,
-.ti-user-delete:before,
-.ti-recommend:before,
-.ti-play:before,
-.ti-calendar:before,
-.ti-share:before {
+.ti-arrow-left::before,
+.ti-arrow-right::before,
+.ti-heart-o::before,
+.ti-basket-outline::before,
+.ti-user::before,
+.ti-gift::before,
+.ti-database::before,
+.ti-location::before,
+.ti-bell::before,
+.ti-heart::before,
+.ti-dollar::before,
+.ti-bell-o::before,
+.ti-chat-alt::before,
+.ti-power-off::before,
+.ti-credit-card-alt::before,
+.ti-clipboard::before,
+.ti-user-delete::before,
+.ti-recommend::before,
+.ti-play::before,
+.ti-calendar::before,
+.ti-share::before {
   font-family: 'basic-icon';
   font-style: normal;
   font-weight: normal;
@@ -39,66 +39,66 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.ti-arrow-left:before {
+.ti-arrow-left::before {
   content: '\b800';
 }
-.ti-arrow-right:before {
+.ti-arrow-right::before {
   content: '\b801';
 }
-.ti-heart-o:before {
+.ti-heart-o::before {
   content: '\b802';
 }
-.ti-basket-outline:before {
+.ti-basket-outline::before {
   content: '\b803';
 }
-.ti-user:before {
+.ti-user::before {
   content: '\b804';
 }
-.ti-gift:before {
+.ti-gift::before {
   content: '\b805';
 }
-.ti-database:before {
+.ti-database::before {
   content: '\b807';
 }
-.ti-location:before {
+.ti-location::before {
   content: '\b808';
 }
-.ti-bell:before {
+.ti-bell::before {
   content: '\b809';
 }
-.ti-heart:before {
+.ti-heart::before {
   content: '\b80a';
 }
-.ti-dollar:before {
+.ti-dollar::before {
   content: '\b80b';
 }
-.ti-bell-o:before {
+.ti-bell-o::before {
   content: '\b80c';
 }
-.ti-chat-alt:before {
+.ti-chat-alt::before {
   content: '\b80d';
 }
-.ti-power-off:before {
+.ti-power-off::before {
   content: '\b80e';
 }
-.ti-credit-card-alt:before {
+.ti-credit-card-alt::before {
   content: '\b80f';
 }
-.ti-clipboard:before {
+.ti-clipboard::before {
   content: '\b810';
 }
-.ti-user-delete:before {
+.ti-user-delete::before {
   content: '\b811';
 }
-.ti-recommend:before {
+.ti-recommend::before {
   content: '\b812';
 }
-.ti-play:before {
+.ti-play::before {
   content: '\b813';
 }
-.ti-calendar:before {
+.ti-calendar::before {
   content: '\b814';
 }
-.ti-share:before {
+.ti-share::before {
   content: '\b815';
 }

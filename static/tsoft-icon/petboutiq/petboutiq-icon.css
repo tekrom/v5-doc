@@ -27,7 +27,8 @@
 .ti-mail-outline::before,
 .ti-pencil::before,
 .ti-remittance::before,
-.ti-order-track::before {
+.ti-order-track::before,
+.ti-home::before {
   font-family: 'petboutiq-icon';
   font-style: normal;
   font-weight: normal;
@@ -101,4 +102,7 @@
 }
 .ti-order-track::before {
   content: '\e80c';
+}
+.ti-home:before {
+  content: '\e80f';
 }

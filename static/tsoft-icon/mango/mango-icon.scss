@@ -6,25 +6,25 @@
   font-style: normal;
 }
 
-.ti-basket:before,
-.ti-search:before,
-.ti-shuffle:before,
-.ti-trash-o:before,
-.ti-box:before,
-.ti-basket-outline:before,
-.ti-gift:before,
-.ti-database:before,
-.ti-stock:before,
-.ti-remittance:before,
-.ti-alert-list:before,
-.ti-credit-card-alt:before,
-.ti-clipboard:before,
-.ti-user-delete:before,
-.ti-calendar:before,
-.ti-mail-outline:before,
-.ti-user:before,
-.ti-heart-o:before,
-.ti-heart-o-2x:before {
+.ti-basket::before,
+.ti-search::before,
+.ti-shuffle::before,
+.ti-trash-o::before,
+.ti-box::before,
+.ti-basket-outline::before,
+.ti-gift::before,
+.ti-database::before,
+.ti-stock::before,
+.ti-remittance::before,
+.ti-alert-list::before,
+.ti-credit-card-alt::before,
+.ti-clipboard::before,
+.ti-user-delete::before,
+.ti-calendar::before,
+.ti-mail-outline::before,
+.ti-user::before,
+.ti-heart-o::before,
+.ti-heart-o-2x::before {
   font-family: 'mango-icon';
   font-style: normal;
   font-weight: normal;
@@ -38,60 +38,60 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.ti-basket:before {
+.ti-basket::before {
   content: '\e800';
 }
-.ti-search:before {
+.ti-search::before {
   content: '\e801';
 }
-.ti-shuffle:before {
+.ti-shuffle::before {
   content: '\e802';
 }
-.ti-trash-o:before {
+.ti-trash-o::before {
   content: '\e803';
 }
-.ti-box:before {
+.ti-box::before {
   content: '\e804';
 }
-.ti-basket-outline:before {
+.ti-basket-outline::before {
   content: '\e805';
 }
-.ti-gift:before {
+.ti-gift::before {
   content: '\e807';
 }
-.ti-database:before {
+.ti-database::before {
   content: '\e808';
 }
-.ti-stock:before {
+.ti-stock::before {
   content: '\e809';
 }
-.ti-remittance:before {
+.ti-remittance::before {
   content: '\e80a';
 }
-.ti-alert-list:before {
+.ti-alert-list::before {
   content: '\e80b';
 }
-.ti-credit-card-alt:before {
+.ti-credit-card-alt::before {
   content: '\e80c';
 }
-.ti-clipboard:before {
+.ti-clipboard::before {
   content: '\e80d';
 }
-.ti-user-delete:before {
+.ti-user-delete::before {
   content: '\e80e';
 }
-.ti-calendar:before {
+.ti-calendar::before {
   content: '\e80f';
 }
-.ti-mail-outline:before {
+.ti-mail-outline::before {
   content: '\e810';
 }
-.ti-user:before {
+.ti-user::before {
   content: '\e811';
 }
-.ti-heart-o:before {
+.ti-heart-o::before {
   content: '\e812';
 }
-.ti-heart-o-2x:before {
+.ti-heart-o-2x::before {
   content: '\e806';
 }
