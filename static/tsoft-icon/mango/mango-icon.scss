@@ -12,6 +12,7 @@
 .ti-trash-o::before,
 .ti-box::before,
 .ti-basket-outline::before,
+.ti-heart-o-bold::before,
 .ti-gift::before,
 .ti-database::before,
 .ti-stock::before,
@@ -24,7 +25,15 @@
 .ti-mail-outline::before,
 .ti-user::before,
 .ti-heart-o::before,
-.ti-heart-o-2x::before {
+.ti-location-outline::before,
+.ti-pencil::before,
+.ti-phone::before,
+.ti-volume-phone::before,
+.ti-location::before,
+.ti-arrow-up::before,
+.ti-arrow-down::before,
+.ti-arrow-right::before,
+.ti-arrow-left::before {
   font-family: 'mango-icon';
   font-style: normal;
   font-weight: normal;
@@ -55,6 +64,9 @@
 }
 .ti-basket-outline::before {
   content: '\e805';
+}
+.ti-heart-o-bold::before {
+  content: '\e806';
 }
 .ti-gift::before {
   content: '\e807';
@@ -92,6 +104,30 @@
 .ti-heart-o::before {
   content: '\e812';
 }
-.ti-heart-o-2x::before {
-  content: '\e806';
+.ti-location-outline::before {
+  content: '\e813';
+}
+.ti-pencil::before {
+  content: '\e814';
+}
+.ti-phone::before {
+  content: '\e81f';
+}
+.ti-volume-phone::before {
+  content: '\e815';
+}
+.ti-location::before {
+  content: '\e816';
+}
+.ti-arrow-up::before {
+  content: '\e81b';
+}
+.ti-arrow-down::before {
+  content: '\e81c';
+}
+.ti-arrow-right::before {
+  content: '\e81d';
+}
+.ti-arrow-left::before {
+  content: '\e81e';
 }
