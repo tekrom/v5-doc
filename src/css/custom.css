@@ -38,14 +38,13 @@ html[data-theme='dark'] {
   --border-light: #404040;
   --soft-blue: #002a61;
   --content-bg: #202020;
-  --color-secondary: #343434;
+  --color-secondary: #8c8c8c;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: inherit;
 }
 
 .bg-gray {
-  background-color: var(--ifm-code-background) !important;
-}
-
-.bg-secondary {
   background-color: var(--ifm-code-background) !important;
 }
 
