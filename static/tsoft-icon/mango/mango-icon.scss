@@ -29,11 +29,7 @@
 .ti-pencil::before,
 .ti-phone::before,
 .ti-volume-phone::before,
-.ti-location::before,
-.ti-arrow-up::before,
-.ti-arrow-down::before,
-.ti-arrow-right::before,
-.ti-arrow-left::before {
+.ti-location::before {
   font-family: 'mango-icon';
   font-style: normal;
   font-weight: normal;
@@ -118,16 +114,4 @@
 }
 .ti-location::before {
   content: '\e816';
-}
-.ti-arrow-up::before {
-  content: '\e81b';
-}
-.ti-arrow-down::before {
-  content: '\e81c';
-}
-.ti-arrow-right::before {
-  content: '\e81d';
-}
-.ti-arrow-left::before {
-  content: '\e81e';
 }

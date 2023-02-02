@@ -1,4 +1,3 @@
-
 .ti-basket::before { content: '\e800'; } /* '' */
 .ti-search::before { content: '\e801'; } /* '' */
 .ti-shuffle::before { content: '\e802'; } /* '' */
@@ -20,10 +19,6 @@
 .ti-heart-o::before { content: '\e812'; } /* '' */
 .ti-location-outline::before { content: '\e813'; } /* '' */
 .ti-pencil::before { content: '\e814'; } /* '' */
-.ti-phone::before { content: '\e81f'; } /* '' */
 .ti-volume-phone::before { content: '\e815'; } /* '' */
 .ti-location::before { content: '\e816'; } /* '' */
-.ti-arrow-up::before { content: '\e81b'; } /* '' */
-.ti-arrow-down::before { content: '\e81c'; } /* '' */
-.ti-arrow-right::before { content: '\e81d'; } /* '' */
-.ti-arrow-left::before { content: '\e81e'; } /* '' */
+.ti-phone::before { content: '\e81f'; } /* '' */
