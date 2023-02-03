@@ -12,7 +12,7 @@
 .ti-trash-o::before,
 .ti-box::before,
 .ti-basket-outline::before,
-.ti-heart-o-bold::before,
+.ti-heart-o-2x::before,
 .ti-gift::before,
 .ti-database::before,
 .ti-stock::before,
@@ -27,9 +27,10 @@
 .ti-heart-o::before,
 .ti-location-outline::before,
 .ti-pencil::before,
-.ti-phone::before,
 .ti-volume-phone::before,
-.ti-location::before {
+.ti-location::before,
+.ti-power-off::before,
+.ti-phone::before {
   font-family: 'mango-icon';
   font-style: normal;
   font-weight: normal;
@@ -61,7 +62,7 @@
 .ti-basket-outline::before {
   content: '\e805';
 }
-.ti-heart-o-bold::before {
+.ti-heart-o-2x::before {
   content: '\e806';
 }
 .ti-gift::before {
@@ -106,12 +107,15 @@
 .ti-pencil::before {
   content: '\e814';
 }
-.ti-phone::before {
-  content: '\e81f';
-}
 .ti-volume-phone::before {
   content: '\e815';
 }
 .ti-location::before {
   content: '\e816';
+}
+.ti-power-off::before {
+  content: '\e818';
+}
+.ti-phone::before {
+  content: '\e81f';
 }

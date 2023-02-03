@@ -4,7 +4,7 @@
 .ti-trash-o::before { content: '\e803'; } /* '' */
 .ti-box::before { content: '\e804'; } /* '' */
 .ti-basket-outline::before { content: '\e805'; } /* '' */
-.ti-heart-o-bold::before { content: '\e806'; } /* '' */
+.ti-heart-o-2x::before { content: '\e806'; } /* '' */
 .ti-gift::before { content: '\e807'; } /* '' */
 .ti-database::before { content: '\e808'; } /* '' */
 .ti-stock::before { content: '\e809'; } /* '' */
@@ -21,4 +21,5 @@
 .ti-pencil::before { content: '\e814'; } /* '' */
 .ti-volume-phone::before { content: '\e815'; } /* '' */
 .ti-location::before { content: '\e816'; } /* '' */
+.ti-power-off::before { content: '\e818'; } /* '' */
 .ti-phone::before { content: '\e81f'; } /* '' */
