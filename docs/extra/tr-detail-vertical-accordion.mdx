@@ -1,0 +1,148 @@
+---
+title: Ürün Detay Alt Alta Akordion
+---
+## Ürün detay tabların akordion olarak gösterilmesi
+Ürün detay sayfası alt alta yapılan tablar için bu yapı kullanılabilir. Birine tıklandığında diğeri kapanır.
+
+
+```html title="smarty"
+<div class="col-12 product-detail-tab-container">
+<div class="w-100">
+    <div id="product-detail-tab" class="tab-nav tab-content list-style-none d-flex flex-wrap">
+        <div class="w-100 active">
+            <a class="d-flex align-items-center" id="tab-product-features" href="#product-features" data-toggle="tab">{#features#}</a>
+        </div>
+        <div id="product-features" class="w-100 p-1 tab-pane active">
+            <div id="product-fullbody" class="mb-1">
+                {$P.DETAIL}
+            </div>
+            {if $P.IS_PRODUCT_SIZE_ACTIVE == true || $P.WEIGHT != '' || $P.WARRANTY_INFO != '' || $P.DELIVERY_INFO != ''}
+                <div class="col-12 col-md-4 mb-1 border border-bottom-0">
+                    {if $P.IS_PRODUCT_SIZE_ACTIVE == true}
+                        <div class="row border-bottom fw-semibold">
+                            <div class="col-6 py-1 border-right">{#dimension#}</div>
+                            <div class="col-6 py-1">{$P.WIDTH} x {$P.HEIGHT} x {$P.DEPTH}</div>
+                        </div>
+                    {/if}
+                    {if $P.WEIGHT != ''}
+                        <div class="row border-bottom fw-semibold">
+                            <div class="col-6 py-1 border-right">{#weight#}</div>
+                            <div class="col-6 py-1">{$P.WEIGHT}</div>
+                        </div>
+                    {/if}
+                    {if $P.WARRANTY_INFO != ''}
+                        <div class="row border-bottom fw-semibold">
+                            <div class="col-6 py-1 border-right">{#warranty#}</div>
+                            <div class="col-6 py-1">{$P.WARRANTY_INFO}</div>
+                        </div>
+                    {/if}
+                    {if $P.DELIVERY_INFO != ''}
+                        <div class="row border-bottom fw-semibold">
+                            <div class="col-6 py-1 border-right">{#delivery#}</div>
+                            <div class="col-6 py-1">{$P.DELIVERY_INFO}</div>
+                        </div>
+                    {/if}
+                </div>
+            {/if}
+            {if $FILTER_PROPERTY_LIST|@count > 0}
+                <div class="col-12 border border-bottom-0">
+                    <div class="row border-bottom">
+                        <div class="p-1 fw-bold text-primary text-underline">{#features#}</div>
+                    </div>
+                    {foreach $FILTER_PROPERTY_LIST as $F}
+                        {if $F.VALUE != ''}
+                            <div class="row border-bottom fw-semibold">
+                                <div class="col-6 py-1 border-right">{$F.KEY}</div>
+                                <div class="col-6 py-1">{$F.VALUE|replace:',':', '}</div>
+                            </div>
+                        {/if}
+                    {/foreach}
+                </div>
+            {/if}
+        </div>
+        {if $P.IS_DISPLAY_PRODUCT != true}
+            <div class="w-100">
+                <a class="d-flex align-items-center" id="tab-product-payment" href="#product-payment" data-toggle="tab" data-href="/srv/service/content-v5/sub-folder/{$BLOCK.PAGE_ID}/{$BLOCK.PARENT_ID}/installment-list?isHtml=1&product={$P.ID}">{#payment#}</a>
+            </div>
+            <div id="product-payment" class="w-100 p-1 tab-pane"></div>
+        {/if}
+        {if $IS_COMMENT_RATE_ACTIVE == 1}
+            <div class="w-100">
+                <a class="d-flex align-items-center" id="tab-product-comments" href="#product-comments" data-toggle="tab" data-href="/srv/service/content-v5/sub-folder/{$BLOCK.PAGE_ID}/{$BLOCK.PARENT_ID}/comments?product={$P.ID}">{#comments#}{if $P.COMMENT_COUNT > 0} ({$P.COMMENT_COUNT}){/if}</a>
+            </div>
+            <div id="product-comments" class="w-100 p-1 tab-pane"></div>
+        {/if}
+        {if $IS_RECOMMENDATION_ACTIVE == 1}
+            <div class="w-100">
+                <a class="d-flex align-items-center" id="tab-product-recommend" href="#product-recommend" data-toggle="tab" data-href="/srv/service/content-v5/sub-folder/{$BLOCK.PAGE_ID}/{$BLOCK.PARENT_ID}/recommend?product={$P.ID}">{#recommend#}</a>
+            </div>
+            <div id="product-recommend" class="w-100 p-1 tab-pane"></div>
+        {/if}
+        <div class="w-100">
+            <a class="d-flex align-items-center" id="tab-product-return" href="#product-return" data-toggle="tab" data-href="/srv/service/content-v5/sub-folder/{$BLOCK.PAGE_ID}/{$BLOCK.PARENT_ID}/product-return?product={$P.ID}">{#product_return#}</a>
+        </div>
+        <div id="product-return" class="w-100 p-1 tab-pane"></div>
+        {if $P.DOCUMENT_INFO != ''}
+            <div class="w-100">
+                <a class="d-flex align-items-center" id="tab-product-document" href="#product-document" data-toggle="tab">{#document#}</a>
+            </div>
+            <div id="product-document" class="w-100 p-1 tab-pane">
+            {$P.DOCUMENT_INFO}
+        </div>
+        {/if}
+        {if $P.IS_VIDEO_ACTIVE == 1}
+            <div class="w-100">
+                <a class="d-flex align-items-center" id="tab-product-video" href="#product-video" data-toggle="tab">{#video#}</a>
+            </div>
+            <div id="product-video" class="w-100 p-1 tab-pane">
+            {if $P.VIDEO_INFO.Baslik}
+                <div class="block-title mb-1">{$P.VIDEO_INFO.Baslik}</div>
+            {/if}
+            {if $P.VIDEO_INFO.Embed}
+                <div class="w-100 video-popup">{$P.VIDEO_INFO.Embed}</div>
+            {/if}
+        </div>
+        {/if}
+        {if $IS_CALL_ME_ACTIVE == 1}
+            <div class="w-100">
+                <a class="d-flex align-items-center" id="tab-product-callme" href="#product-callme" data-toggle="tab" data-href="/srv/service/content-v5/sub-folder/{$BLOCK.PAGE_ID}/{$BLOCK.PARENT_ID}/call-me?product={$P.ID}">{#callme#}</a>
+            </div>
+            <div id="product-callme" class="w-100 p-1 tab-pane"></div>
+        {/if}
+        {if $IS_QUICK_MESSAGE_ACTIVE == 1}
+            <div class="w-100">
+                <a class="d-flex align-items-center" id="tab-product-quick-message" href="#product-quick-message" data-toggle="tab" data-href="/srv/service/content-v5/sub-folder/{$BLOCK.PAGE_ID}/{$BLOCK.PARENT_ID}/quick-message?product={$P.ID}">{#quick_message#}</a>
+            </div>
+            <div id="product-quick-message" class="w-100 p-1 tab-pane"></div>
+        {/if}
+        {if $IS_SUGGESTION_BOX_ACTIVE == 1}
+            <div class="w-100">
+                <a class="d-flex align-items-center" id="tab-product-suggestion-box" href="#product-suggestion-box" data-toggle="tab" data-href="/srv/service/content-v5/sub-folder/{$BLOCK.PAGE_ID}/{$BLOCK.PARENT_ID}/suggestion-box?product={$P.ID}">{#suggestion_box#}</a>
+            </div>
+            <div id="product-suggestion-box" class="w-100 p-1 tab-pane"></div>
+        {/if}
+    </div>
+</div>
+</div>
+```
+
+
+```scss title="scss"
+
+#product-detail-tab [data-toggle="tab"]{
+    padding:1rem;
+    border-bottom: 1px solid #ddd;
+    
+}
+#product-detail-tab .tab-pane{
+max-height: 300px;
+overflow: auto;    
+}
+
+```
+
+
+
+
+
+
