@@ -22,15 +22,15 @@ title: Sepette Extra İndirim
 ## Varyanta göre indirimin güncellenmesi
 ```javascript title="javascript"
 window["extraDiscount"]=function(el){
-    let item=el.closest(".product-item, #product-detail");
-    let dataEl=item.querySelector("[data-extra]");
-    let cartPriceEl=item.querySelector(".cart-price");
+    let item=el.closest(".product-item, #product-detail"),
+        dataEl=item.querySelector("[data-extra]"),
+        cartPriceEl=item.querySelector(".cart-price");
     if (!dataEl) return false;
-    let productPrice=item.querySelector(".product-price");
-    let discountPercent=parseFloat(dataEl.getAttribute("data-extra"));
-    let oldPrice=T.priceToFloat(productPrice.innerText);
-    let cartPrice=oldPrice-(oldPrice*discountPercent*0.01)
-    cartPriceEl? cartPriceEl.innerText=T.format(cartPrice) :"";
+    let productPrice=item.querySelector(".product-price"),
+        discountPercent=parseFloat(dataEl.getAttribute("data-extra")),
+        oldPrice=T.priceToFloat(productPrice.innerText),
+        cartPrice=oldPrice-(oldPrice*discountPercent*0.01);
+        cartPriceEl? cartPriceEl.innerText=T.format(cartPrice) :"";
 }
 window["variantCallback"]=function(el){
     window["extraDiscount"](el)
