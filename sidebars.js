@@ -149,7 +149,6 @@ module.exports = {
     ],
     '* Extra': [
       'extra/tr-detail-asorti',
-      'extra/tr-detail-vertical-tab',
       'extra/tr-detail-vertical-accordion',
       'extra/tr-detail-change-main-image',
       'extra/tr-filter-close',
