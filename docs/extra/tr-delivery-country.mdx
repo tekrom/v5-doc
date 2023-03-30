@@ -1,0 +1,21 @@
+---
+title: Teslimat Ülkesi
+---
+
+## Teslimat Ülkesi (Delivery Country)
+
+
+<div class="v5-example-alert-info text-black mb-1">
+Teslimat ülkesi seçiminde aşağıdaki yapı kullanılabilir. 
+</div>
+
+```html title="smarty"
+{if $EEXPORT_COUNTRIES|@count>0}
+    <select class="bg-transparent pl-0 form-control  text-body" onchange="fetch('/srv/shopping/shopping/set-country/'+this.options[this.selectedIndex].value);location.reload()">
+        {foreach from=$EEXPORT_COUNTRIES item=COUNTRY }
+            <option value="{$COUNTRY.code}" {if $COUNTRY.selected} selected {/if}>{$COUNTRY.name}</option>
+        {/foreach}
+    </select>
+{/if}
+
+```

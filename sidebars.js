@@ -162,6 +162,7 @@ module.exports = {
       'extra/tr-readmore',
       'extra/tr-image-map',
       'extra/tr-showcase-dowry-percent',
+      'extra/tr-delivery-country',
     ],
   },
 };
