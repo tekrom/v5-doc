@@ -62,3 +62,31 @@ Akordeon menü bileşeni ile daraltılabilir bloklar oluşturabilirsiniz.
 </div>
 <div class="accordion-body">Akerdeon menü içeriği</div>
 ```
+
+
+### Biri açılırken diğeri kapanan akordion
+
+* Akordeon menüsünde bir alan açıldığında diğerinin kapanması isteniyorsa kapsayıcıya  <code>accordion-wrapper</code> classının verilmesi gerekiyor. 
+
+
+```html title="Örnek kullanımı - 1"
+
+<div class="accordion-wrapper">
+    <div class="accordion-title" data-toggle="accordion">
+        Akerdeon menü başlığı
+        <span class="icon-wrapper">
+            <i class="ti ti-plus"></i>
+            <i class="ti ti-minus"></i>
+        </span>
+    </div>
+    <div class="accordion-body">Akerdeon menü içeriği</div>
+    <div class="accordion-title" data-toggle="accordion">
+        Akerdeon menü başlığı
+        <span class="icon-wrapper">
+            <i class="ti ti-plus"></i>
+            <i class="ti ti-minus"></i>
+        </span>
+    </div>
+    <div class="accordion-body">Akerdeon menü içeriği</div>
+</div>
+```
