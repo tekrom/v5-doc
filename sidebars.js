@@ -14,6 +14,7 @@ module.exports = {
     'Bilgi': [
       'info/tr-scss',
       'info/tr-smarty',
+      'info/tr-setting-json',
     ],
     'Yerleşim': [
       'css/tr-layout-containers',

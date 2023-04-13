@@ -1,0 +1,230 @@
+---
+title: setting.json
+---
+
+v5 Projelerinde bloka özel ayarlar ekleyebileceğiniz setting.json adı altında bir dosya geliştirilmiştir.
+
+
+## Kullanılabilir Ayarlar
+
+### Checkbox
+
+<div class="card-setting mb-2">
+    <div class="card-setting-title">
+        <i class="demo-icon demo-icon-default ti-th-large"></i>
+        <strong>Blok Ayarı Görünümü</strong>
+        <small class="d-block">Bu ayar ile onay kutusu oluşturabilirsiniz.</small>
+    </div>
+    <div class="card-setting-content">
+        <label for="cb1" class="card-setting-content-title">Onay Kutusu</label>
+        <input class="tgl tgl-light" id="cb1" type="checkbox"/>
+        <label class="tgl-btn" for="cb1"></label>
+    </div>
+</div>
+
+```json
+{
+    "xtype": "checkbox",
+    "key": "IS_RESIZE",
+    "title": "test checkbox",
+    "data": 1
+},
+```
+
+<div class="table-responsive">
+  <table class="mt-1">
+    <tbody class="text-center">
+      <tr>
+        <th scope="row" class="fw-normal"><code>xtype</code></th>
+        <td>checkbox</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>key</code></th>
+        <td>değişken adı</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>title</code></th>
+        <td>başlık</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>data</code></th>
+        <td>true | false</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+### Select
+
+<div class="card-setting mb-2">
+    <div class="card-setting-title">
+        <i class="demo-icon demo-icon-default ti-th-large"></i>
+        <strong>Blok Ayarı Görünümü</strong>
+        <small class="d-block">Bu ayar ile açılır liste oluşturabilirsiniz.</small>
+    </div>
+    <div class="card-setting-content">
+        <label for="cb1" class="card-setting-content-title">Açılır Liste</label>
+        <select class="card-setting-content-select">
+            <option value="0">Gösterme</option>
+            <option value="1">İlişkili (ilgili) Ürünleri Göster</option>
+            <option value="2">İkame Ürünleri Göster</option>
+            <option value="3">Askesuar Ürünleri Göster</option>
+        </select>
+    </div>
+</div>
+
+```json
+{
+    "xtype": "select",
+    "key": "RELATED_PRODUCT_NUMBER",
+    "title": "İlişkili Ürün Gösterimi",
+    "data": "0",
+    "store": {
+        "0": "Gösterme",
+        "1": "İlişkili (ilgili) Ürünleri Göster",
+        "2": "İkame Ürünleri Göster",
+        "3": "Askesuar Ürünleri Göster"
+    }
+},
+```
+
+<div class="table-responsive">
+  <table class="mt-1">
+    <tbody class="text-center">
+      <tr>
+        <th scope="row" class="fw-normal"><code>xtype</code></th>
+        <td>select</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>key</code></th>
+        <td>değişken adı</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>title</code></th>
+        <td>başlık</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>data</code></th>
+        <td>true | false</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>store</code></th>
+        <td>option list</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+### Multi Select
+
+<div class="card-setting mb-2">
+    <div class="card-setting-title">
+        <i class="demo-icon demo-icon-default ti-th-large"></i>
+        <strong>Blok Ayarları</strong>
+        <small class="d-block">Bu ayar ile çoklu seçim listesi oluşturabilirsiniz.</small>
+    </div>
+    <div class="card-setting-content">
+        <label for="multi-select" class="card-setting-content-title">Çoklu Seçim</label>
+        <select id="multi-select" class="card-setting-content-multiselect" multiple>
+            <option value="FILTERS">Filtreler</option>
+            <option value="VARIANTS">Variantlar</option>
+            <option value="CATEGORIES">Kategoriler</option>
+            <option value="BRANDS">Markalar</option>
+            <option value="PRICE">Fiyat Aralığı</option>
+            <option value="MODELS">Model Listesi</option>
+            <option value="SUPPLIERS">Tedarikçi</option>
+        </select>
+    </div>
+</div>
+
+```json
+{
+    "xtype": "multiselect",
+    "key": "PARAMS",
+    "title": "Filtrede Gösterilecek Alanlar",
+    "data": [
+        "FILTERS",
+        "VARIANTS",
+        "CATEGORIES",
+        "BRANDS",
+        "PRICE",
+        "MODELS",
+        "SUPPLIERS"
+    ],
+    "store": {
+        "FILTERS": "Filtreler",
+        "VARIANTS": "Variantlar",
+        "CATEGORIES": "Kategoriler",
+        "BRANDS": "Markalar",
+        "PRICE": "Fiyat Aralığı",
+        "MODELS": "Model Listesi",
+        "SUPPLIERS": "Tedarikçi"
+    }
+},
+```
+
+<div class="table-responsive">
+  <table class="mt-1">
+    <tbody class="text-center">
+      <tr>
+        <th scope="row" class="fw-normal"><code>xtype</code></th>
+        <td>checkbox</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>key</code></th>
+        <td>checkbox</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>title</code></th>
+        <td>checkbox</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>data</code></th>
+        <td>checkbox</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+### Editor
+
+![editor](data:image/png;base64,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)
+
+```json
+{
+    "xtype": "editor",
+    "key": "CONTENT",
+    "title": "İçerik",
+    "data": ""
+},
+```
+
+<div class="table-responsive">
+  <table class="mt-1">
+    <tbody class="text-center">
+      <tr>
+        <th scope="row" class="fw-normal"><code>xtype</code></th>
+        <td>editor</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>key</code></th>
+        <td>değişken adı</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>title</code></th>
+        <td>başlık</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>data</code></th>
+        <td>""</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
