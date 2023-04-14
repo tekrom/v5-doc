@@ -704,9 +704,6 @@ code {
 .tgl {
   display: none;
 }
-.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
-  box-sizing: border-box;
-}
 .tgl::-moz-selection, .tgl:after::-moz-selection, .tgl:before::-moz-selection, .tgl *::-moz-selection, .tgl *:after::-moz-selection, .tgl *:before::-moz-selection, .tgl + .tgl-btn::-moz-selection {
   background: none;
 }
@@ -726,20 +723,20 @@ code {
           user-select: none;
 }
 .tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
-  position: relative;
   display: block;
+  position: absolute;
   content: "";
-  width: 50%;
-  height: 100%;
+  width: calc(50% - 4px);
+  height: calc(100% - 4px);
 }
 .tgl + .tgl-btn:after {
-  left: 0;
+  left: 2px;
 }
 .tgl + .tgl-btn:before {
   display: none;
 }
 .tgl:checked + .tgl-btn:after {
-  left: 50%;
+  left: calc(50% + 2px);
 }
 
 .tgl-light + .tgl-btn {
