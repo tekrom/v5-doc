@@ -682,6 +682,7 @@ code {
   font-weight: 600;
 }
 .card-setting .card-setting-content .card-setting-content-select {
+  background-color: var(--ifm-bg-white);
   border-radius: 4px;
   border-color: var(--ifm-code-background);
   padding: 5px;
@@ -690,6 +691,7 @@ code {
   font-size: 0.95rem;
 }
 .card-setting .card-setting-content .card-setting-content-multiselect {
+  background-color: var(--ifm-bg-white);
   border-radius: 4px;
   border-color: var(--ifm-code-background);
   padding: 5px;
@@ -697,9 +699,6 @@ code {
   font-weight: 600;
   font-size: 0.95rem;
   width: 250px;
-}
-.card-setting .card-setting-content .card-setting-content-editor {
-  
 }
 .tgl {
   display: none;
