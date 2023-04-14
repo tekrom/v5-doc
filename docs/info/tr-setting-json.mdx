@@ -2,10 +2,58 @@
 title: setting.json
 ---
 
-v5 Projelerinde bloka özel ayarlar ekleyebileceğiniz setting.json adı altında bir dosya geliştirilmiştir.
+v5 Projelerinde blok için özel ayarlar ekleyebileceğiniz dosya-adi.json adı altında bir dosya geliştirilmiştir.
 
 
 ## Kullanılabilir Ayarlar
+
+### Input
+
+<div class="card-setting mb-2">
+    <div class="card-setting-title">
+        <i class="demo-icon demo-icon-default ti-th-large"></i>
+        <strong>Blok Ayarları</strong>
+        <small class="d-block">Bu ayar ile input oluşturabilirsiniz.</small>
+    </div>
+    <div class="card-setting-content">
+        <label for="setting-input" class="card-setting-content-title">Input Alanı</label>
+        <input class="form-control form-control-md w-auto bg-transparent" id="setting-input" type="text"/>
+    </div>
+</div>
+
+```json
+{
+  "xtype": "input",
+  "key": "MAP_URL",
+  "title": "Harita HTML Kod",
+  "data": ""
+}
+```
+
+<div class="table-responsive">
+  <table class="mt-1">
+    <tbody class="text-center">
+      <tr>
+        <th scope="row" class="fw-normal"><code>xtype</code></th>
+        <td>input</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>key</code></th>
+        <td>değişken adı</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>title</code></th>
+        <td>başlık</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>data</code></th>
+        <td>varsayılan değer</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
 
 ### Checkbox
 
@@ -24,10 +72,10 @@ v5 Projelerinde bloka özel ayarlar ekleyebileceğiniz setting.json adı altınd
 
 ```json
 {
-    "xtype": "checkbox",
-    "key": "IS_RESIZE",
-    "title": "test checkbox",
-    "data": 1
+  "xtype": "checkbox",
+  "key": "IS_RESIZE",
+  "title": "test checkbox",
+  "data": 1
 },
 ```
 
@@ -65,8 +113,8 @@ v5 Projelerinde bloka özel ayarlar ekleyebileceğiniz setting.json adı altınd
         <small class="d-block">Bu ayar ile açılır liste oluşturabilirsiniz.</small>
     </div>
     <div class="card-setting-content">
-        <label for="cb1" class="card-setting-content-title">Açılır Liste</label>
-        <select class="card-setting-content-select">
+        <label for="cb2" class="card-setting-content-title">Açılır Liste</label>
+        <select class="card-setting-content-select" id="cb2">
             <option value="0">Gösterme</option>
             <option value="1">İlişkili (ilgili) Ürünleri Göster</option>
             <option value="2">İkame Ürünleri Göster</option>
@@ -77,16 +125,16 @@ v5 Projelerinde bloka özel ayarlar ekleyebileceğiniz setting.json adı altınd
 
 ```json
 {
-    "xtype": "select",
-    "key": "RELATED_PRODUCT_NUMBER",
-    "title": "İlişkili Ürün Gösterimi",
-    "data": "0",
-    "store": {
-        "0": "Gösterme",
-        "1": "İlişkili (ilgili) Ürünleri Göster",
-        "2": "İkame Ürünleri Göster",
-        "3": "Askesuar Ürünleri Göster"
-    }
+  "xtype": "select",
+  "key": "RELATED_PRODUCT_NUMBER",
+  "title": "İlişkili Ürün Gösterimi",
+  "data": "0",
+  "store": {
+    "0": "Gösterme",
+    "1": "İlişkili (ilgili) Ürünleri Göster",
+    "2": "İkame Ürünleri Göster",
+    "3": "Askesuar Ürünleri Göster"
+  }
 },
 ```
 
@@ -107,11 +155,11 @@ v5 Projelerinde bloka özel ayarlar ekleyebileceğiniz setting.json adı altınd
       </tr>
       <tr>
         <th scope="row" class="fw-normal"><code>data</code></th>
-        <td>true | false</td>
+        <td>varsayılan değer</td>
       </tr>
       <tr>
         <th scope="row" class="fw-normal"><code>store</code></th>
-        <td>option list</td>
+        <td>seçilebilir değer</td>
       </tr>
     </tbody>
   </table>
@@ -143,27 +191,27 @@ v5 Projelerinde bloka özel ayarlar ekleyebileceğiniz setting.json adı altınd
 
 ```json
 {
-    "xtype": "multiselect",
-    "key": "PARAMS",
-    "title": "Filtrede Gösterilecek Alanlar",
-    "data": [
-        "FILTERS",
-        "VARIANTS",
-        "CATEGORIES",
-        "BRANDS",
-        "PRICE",
-        "MODELS",
-        "SUPPLIERS"
-    ],
-    "store": {
-        "FILTERS": "Filtreler",
-        "VARIANTS": "Variantlar",
-        "CATEGORIES": "Kategoriler",
-        "BRANDS": "Markalar",
-        "PRICE": "Fiyat Aralığı",
-        "MODELS": "Model Listesi",
-        "SUPPLIERS": "Tedarikçi"
-    }
+"xtype": "multiselect",
+"key": "PARAMS",
+"title": "Filtrede Gösterilecek Alanlar",
+"data": [
+  "FILTERS",
+  "VARIANTS",
+  "CATEGORIES",
+  "BRANDS",
+  "PRICE",
+  "MODELS",
+  "SUPPLIERS"
+],
+"store": {
+  "FILTERS": "Filtreler",
+  "VARIANTS": "Variantlar",
+  "CATEGORIES": "Kategoriler",
+  "BRANDS": "Markalar",
+  "PRICE": "Fiyat Aralığı",
+  "MODELS": "Model Listesi",
+  "SUPPLIERS": "Tedarikçi"
+}
 },
 ```
 
@@ -172,19 +220,23 @@ v5 Projelerinde bloka özel ayarlar ekleyebileceğiniz setting.json adı altınd
     <tbody class="text-center">
       <tr>
         <th scope="row" class="fw-normal"><code>xtype</code></th>
-        <td>checkbox</td>
+        <td>multiselect</td>
       </tr>
       <tr>
         <th scope="row" class="fw-normal"><code>key</code></th>
-        <td>checkbox</td>
+        <td>değişken adı</td>
       </tr>
       <tr>
         <th scope="row" class="fw-normal"><code>title</code></th>
-        <td>checkbox</td>
+        <td>başlık</td>
       </tr>
       <tr>
         <th scope="row" class="fw-normal"><code>data</code></th>
-        <td>checkbox</td>
+        <td>varsayılan değer</td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-normal"><code>store</code></th>
+        <td>seçilebilir değer</td>
       </tr>
     </tbody>
   </table>
@@ -198,10 +250,10 @@ v5 Projelerinde bloka özel ayarlar ekleyebileceğiniz setting.json adı altınd
 
 ```json
 {
-    "xtype": "editor",
-    "key": "CONTENT",
-    "title": "İçerik",
-    "data": ""
+  "xtype": "editor",
+  "key": "CONTENT",
+  "title": "İçerik",
+  "data": ""
 },
 ```
 
@@ -222,7 +274,7 @@ v5 Projelerinde bloka özel ayarlar ekleyebileceğiniz setting.json adı altınd
       </tr>
       <tr>
         <th scope="row" class="fw-normal"><code>data</code></th>
-        <td>""</td>
+        <td>varsayılan değer</td>
       </tr>
     </tbody>
   </table>
