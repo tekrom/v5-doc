@@ -700,58 +700,6 @@ code {
   font-size: 0.95rem;
   width: 250px;
 }
-.tgl {
-  display: none;
-}
-.tgl::-moz-selection, .tgl:after::-moz-selection, .tgl:before::-moz-selection, .tgl *::-moz-selection, .tgl *:after::-moz-selection, .tgl *:before::-moz-selection, .tgl + .tgl-btn::-moz-selection {
-  background: none;
-}
-.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
-  background: none;
-}
-.tgl + .tgl-btn {
-  outline: 0;
-  display: block;
-  width: 4em;
-  height: 2em;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
-  display: block;
-  position: absolute;
-  content: "";
-  width: calc(50% - 4px);
-  height: calc(100% - 4px);
-}
-.tgl + .tgl-btn:after {
-  left: 2px;
-}
-.tgl + .tgl-btn:before {
-  display: none;
-}
-.tgl:checked + .tgl-btn:after {
-  left: calc(50% + 2px);
-}
-
-.tgl-light + .tgl-btn {
-  background: #E4E7EA;
-  border-radius: 2em;
-  padding: 2px;
-  transition: all 0.4s ease;
-}
-.tgl-light + .tgl-btn:after {
-  border-radius: 50%;
-  background: var(--ifm-bg-white);
-  transition: all 0.2s ease;
-}
-.tgl-light:checked + .tgl-btn {
-  background: #F38123;
-}
 
 .border {
   border: 1px solid var(--border-light);
