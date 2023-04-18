@@ -7,6 +7,7 @@
 }
 .ti-arrow-left::before,
 .ti-arrow-right::before,
+.ti-heart::before,
 .ti-heart-o::before,
 .ti-basket-outline::before,
 .ti-user::before,
@@ -14,7 +15,6 @@
 .ti-database::before,
 .ti-location::before,
 .ti-bell::before,
-.ti-heart::before,
 .ti-dollar::before,
 .ti-bell-o::before,
 .ti-chat-alt::before,
@@ -45,6 +45,9 @@
 .ti-arrow-right::before {
   content: '\b801';
 }
+.ti-heart::before {
+  content: '\b80a';
+}
 .ti-heart-o::before {
   content: '\b802';
 }
@@ -65,9 +68,6 @@
 }
 .ti-bell::before {
   content: '\b809';
-}
-.ti-heart::before {
-  content: '\b80a';
 }
 .ti-dollar::before {
   content: '\b80b';
@@ -101,4 +101,7 @@
 }
 .ti-share::before {
   content: '\b815';
+}
+.fav-added .ti-heart-o:before {
+  content: '\b80a';
 }
