@@ -126,19 +126,6 @@ title: Ürün Detay Alt Alta Akordion
 </div>
 ```
 
-
-```scss title="scss"
-
-#product-detail-tab [data-toggle="accordion"]{
-    padding:1rem;
-    border: 1px solid #ddd;
-}
-#product-detail-tab .accordion-body{
-max-height: 300px;
-overflow: auto;    
-}
-
-```
 ```javascript title="js"
 
 const detailAccordionLoader=function(title) {
@@ -157,6 +144,24 @@ T(`.product-detail-tab-container [data-toggle="accordion"]`).on('click', functio
 });
 
 ```
+
+
+```scss title="scss"
+
+#product-detail-tab {
+    [data-toggle="accordion"]{
+        padding:1rem;
+        border: 1px solid #ddd;
+    }
+    .accordion-body{
+    max-height: 300px;
+    overflow: auto;    
+    }
+}
+
+
+```
+
 
 
 
