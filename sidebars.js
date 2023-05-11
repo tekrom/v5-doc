@@ -12,6 +12,7 @@ module.exports = {
       'tr-vscode-extension',
     ],
     'Bilgi': [
+      'info/tr-tree-folder',
       'info/tr-scss',
       'info/tr-smarty',
       'info/tr-setting-json',
