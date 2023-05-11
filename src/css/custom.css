@@ -655,6 +655,10 @@ code {
   }
 }
 /* v5 dokumanda olmayanlar */
+.tree-folder-iframe {
+  aspect-ratio: auto;
+  height: 615px;
+}
 .card-setting {
   background-color: var(--ifm-bg-white);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
@@ -734,6 +738,10 @@ code {
 
 table {
   display: inline-table !important;
+}
+
+.not-aspect-ratio {
+  aspect-ratio: auto;
 }
 
 .min-vh-75 {
