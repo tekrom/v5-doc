@@ -40,6 +40,11 @@ body {
   margin-right: 15px;
   cursor: pointer;
 }
+@media screen and (min-width: 900px) {
+  .tree-folder-header .fullscreen {
+    display:none;
+  }
+}
 .tree-folder-url {
   color: #fff;
   font-family: monospace;
