@@ -22,5 +22,5 @@ document.querySelector('.btn-open-all-close').addEventListener("click", function
 Fancybox.bind("[data-fancybox]", {});
 
 function fullScreen() {
-    window.open("https://v5-doc.tsoftthemes.com/tree-folder/", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,width=1200,height=600");
+    window.open("https://v5-doc.tsoftthemes.com/tree-folder/", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,width=1170,height=600");
 }
