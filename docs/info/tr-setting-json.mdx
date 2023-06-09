@@ -4,6 +4,38 @@ title: setting.json
 
 v5 Projelerinde blok için özel ayarlar ekleyebileceğiniz dosya-adi.json adı altında bir dosya geliştirilmiştir.
 
+##### Yapısı
+
+```json
+{
+  "setting": [
+    {
+      "xtype": "select",
+      "key": "TEXT_POSITION",
+      "title": "#title_select_1#",
+      "data": "effect-wrapper",
+      "store": {
+        "effect-value": "select_1_no_effect"
+      }
+    }
+  ],
+  "language": {
+    "tr": {
+      "#title_select_1#": "Yazı Boyutu",
+      "#select_1_no_effect#": "Efekt Yok"
+    },
+    "en": {
+      "#title_select_1#": "Font Size",
+      "#select_1_no_effect#": "No Effect"
+    }
+  }
+}
+```
+<code>language</code> içerisinde isteğiniz dillerin değişkenlerini tanımlayıp kullanabilirsiniz.
+
+<div class="v5-example-alert-info text-black mt-1">
+  varsayılan dil <div class="badge-rounded-pill">en</div> (İngilizce) olarak ayarlanmıştır.
+</div>
 
 ## Kullanılabilir Ayarlar
 
