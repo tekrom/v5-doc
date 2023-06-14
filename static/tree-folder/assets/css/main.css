@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.tree-folder-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #212529;
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding: 5px 10px;
+  z-index: 2;
+}
+.tree-folder-header .fullscreen {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIgOUgwdjVoNXYtMkgyVjlaTTAgNWgyVjJoM1YwSDB2NVptMTIgN0g5djJoNVY5aC0ydjNaTTkgMHYyaDN2M2gyVjBIOVoiIGZpbGw9IiNmZmZmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xhc3M9ImZpbGwtMDAwMDAwIj48L3BhdGg+PC9zdmc+');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+@media screen and (min-width: 900px) {
+  .tree-folder-header .fullscreen {
+    display:none;
+  }
+}
+.tree-folder-url {
+  color: #fff;
+  font-family: monospace;
+}
+.btn-open-all-close {
+  background-color: #444;
+  color: #fff;
+  padding: 5px 15px;
+  width: 140px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+}
+.btn-open-all-close:not(.active)::after {
+  content: 'Kapat';
+}
+.btn-open-all-close.active {
+  background-color: #6a6a6a;
+}
+.btn-open-all-close.active::after {
+  content: 'Aç';
+}
+.fancybox__container {
+  padding: 30px;
+}
+.fancybox__content {
+  padding: 0;
+}
+
+.tree-folder-wrapper {
+  height: 100%;
+  padding: 0 10px;
+}
+
+.tree-folder-wrapper .directory-list {
+  margin: 0;
+  padding: 0;
+}
+
+.tree-folder-wrapper .directory-list .folder,
+.tree-folder-wrapper .directory-list .folder > a {
+  color: #777;
+  font-weight: bold;
+}
+
+.tree-folder-wrapper .directory-list a:hover {
+  border-color: #eee;
+  color: #000;
+}
+
+.tree-folder-wrapper .directory-list ul {
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: 1px dashed #ddd;
+}
+
+.tree-folder-wrapper .directory-list li {
+  list-style: none;
+  color: #888;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.tree-folder-wrapper .directory-list li a {
+  border-bottom: 1px solid transparent;
+  color: #888;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tree-folder-wrapper .directory-list li.folder {
+  display: block;
+  cursor: se-resize;
+  overflow: hidden;
+  max-height: 20px;
+  transition: all 300ms;
+}
+.tree-folder-wrapper .directory-list li.folder.active {
+  color: #444;
+  cursor: nw-resize;
+  max-height: 500px;
+}
+.tree-folder-wrapper .directory-list li::before {
+  content: '';
+  height: 20px;
+  vertical-align: middle;
+  width: 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='lightgrey' d='M85.714,42.857V87.5c0,1.487-0.521,2.752-1.562,3.794c-1.042,1.041-2.308,1.562-3.795,1.562H19.643 c-1.488,0-2.753-0.521-3.794-1.562c-1.042-1.042-1.562-2.307-1.562-3.794v-75c0-1.487,0.521-2.752,1.562-3.794 c1.041-1.041,2.306-1.562,3.794-1.562H50V37.5c0,1.488,0.521,2.753,1.562,3.795s2.307,1.562,3.795,1.562H85.714z M85.546,35.714 H57.143V7.311c3.05,0.558,5.505,1.767,7.366,3.627l17.41,17.411C83.78,30.209,84.989,32.665,85.546,35.714z' /></svg>");
+  background-position: center 2px;
+  background-size: 60% auto;
+}
+.tree-folder-wrapper .directory-list li.folder::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='lightblue' d='M96.429,37.5v39.286c0,3.423-1.228,6.361-3.684,8.817c-2.455,2.455-5.395,3.683-8.816,3.683H16.071 c-3.423,0-6.362-1.228-8.817-3.683c-2.456-2.456-3.683-5.395-3.683-8.817V23.214c0-3.422,1.228-6.362,3.683-8.817 c2.455-2.456,5.394-3.683,8.817-3.683h17.857c3.422,0,6.362,1.228,8.817,3.683c2.455,2.455,3.683,5.395,3.683,8.817V25h37.5 c3.422,0,6.361,1.228,8.816,3.683C95.201,31.138,96.429,34.078,96.429,37.5z' /></svg>");
+  background-position: center;
+  background-size: 75% auto;
+}
+.tree-folder-wrapper .directory-list li.folder span.star {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tree-folder-wrapper .directory-list li.folder span .icon {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYxMiA3OTI7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA2MTIgNzkyIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGQ0FGMTc7fQo8L3N0eWxlPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01NjIsMzk2YzAtMTQxLjQtMTE0LjYtMjU2LTI1Ni0yNTZTNTAsMjU0LjYsNTAsMzk2czExNC42LDI1NiwyNTYsMjU2UzU2Miw1MzcuNCw1NjIsMzk2TDU2MiwzOTZ6ICAgIE00OTkuMywzNTIuNkw0MTUuNSw0NTFsMTAsMTI4LjhMMzA2LDUzMC41bC0xMTkuNSw0OS4zbDEwLTEyOC44bC04My44LTk4LjRsMTI1LjYtMzAuM0wzMDYsMjEyLjJsNjcuNiwxMTAuMUw0OTkuMywzNTIuNiAgIEw0OTkuMywzNTIuNnoiLz48L2c+PC9zdmc+');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.tooltip {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+.tooltip::before {
+  content: attr(data-tooltip);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, calc(100% - 10px));
+  background: #181d39;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 0 15px;
+  height: 24px;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+.tooltip::after {
+  content: '';
+  border: 4px solid transparent;
+  border-bottom-color: #181d39;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, calc(100% - 2px));
+  display: none;
+}
+.tooltip.copied::before {
+  content: attr(data-copied);
+}
+.tooltip:hover::before,
+.tooltip:hover::after {
+  display: flex;
+}
