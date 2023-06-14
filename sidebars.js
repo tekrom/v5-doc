@@ -152,6 +152,7 @@ module.exports = {
       'extra/tr-detail-asorti',
       'extra/tr-detail-vertical-accordion',
       'extra/tr-detail-change-main-image',
+      'extra/tr-detail-which-store',
       'extra/tr-filter-close',
       'extra/tr-footer-social-media',
       'extra/tr-lightgallery',
