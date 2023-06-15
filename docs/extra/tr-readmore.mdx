@@ -2,12 +2,7 @@
 title: Daha fazla oku
 ---
 ## Özellikle SEO alanları oluşturmak için kullanılır
-
-
 Kategori Üst Vitrin- Alt Vitrin için kullanılabilir. 
-
-
-
 ## Daha fazla oku SEO
 ```html title="Smarty"
 <div class="w-100 readmore-wrapper position-relative pb-2">
@@ -49,13 +44,14 @@ Kategori Üst Vitrin- Alt Vitrin için kullanılabilir.
 </div>
 {/if}
 ```
-
 ## Javascript
 ```javascript title="javascript"
 let content = T(`.readmore-content`);
 let contentImg=T(`.readmore-content img`); // resim olduğu durumlarda
-
-let contentHeight = parseInt(content.height()) + parseInt(contentImg.height()); // contentImg alanı resim olan durumlar için
+let contentHeight = parseInt(content.height());
+if(contentImg.length){
+   contentHeight+=parseInt(contentImg.height()); // contentImg alanı resim olan durumlar için
+}
 let contentScrollHeight = content[0].scrollHeight;
 if (content && contentHeight >= contentScrollHeight) {
   T(`.readmore-btn-wrapper`)[0].remove();
@@ -70,10 +66,7 @@ T(`.readmore-btn`).on(`click`, function (e) {
   content.height(T(this).attr("data-height"));
 });
 ```
-
-
 ## Scss
-
 ```scss title="scss"
 @include BLOCK {
     .readmore-content{
@@ -86,9 +79,7 @@ T(`.readmore-btn`).on(`click`, function (e) {
 }
 ```
 ## Dil Değişkenleri 
-
 ```conf title="conf"
 read_less="Read Less"
 read_more="Read More"
-
 ```
