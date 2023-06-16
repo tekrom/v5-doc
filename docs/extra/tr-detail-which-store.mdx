@@ -1,0 +1,60 @@
+---
+title: Ü Detay Hangi Mağaza
+---
+## Hangi mağazada ne kadar stok kaldığını gösterir
+
+
+Mağaza bazlı stok göstermek isteyen sitelerimiz Tsoft ERP departmanına hangi mağazada ne kadar stok kaldığına dair verileri göndermek durumundadırlar.
+Sistem şu şekilde çalışır
+Tsoft tarafı ana ürünün webservis kodunu karşı tarafa iletir.
+Karşı taraf bu veriler ışığında Tsoft ERP departmanına aşağıdaki verileri döner.
+Eğer ürünün varyantı varsa tüm varyantların verilerilerini döner.
+
+ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şekilde olmalıdır.
+
+
+
+
+<p>
+<code>ItemCode</code>: Ürün (Varsa alt ürünün) webservis kodu
+</p>
+
+<p>
+<code>StoreDescription</code>: Mağaza Adı
+</p>
+
+<p>
+<code>StoreCode</code>: Mağaza Kodu 
+</p>
+
+<p>
+<code>TsoftStoreWsCode</code>: Tsoft alt yapısındaki mağaza web servis kodu
+</p>
+
+<p>
+<code>AvailableStock</code>: Ürün (Varsa alt ürünün) stok miktarı
+</p>
+
+
+
+```json title="ERP departmanına gönderilmesi gereken format"
+
+ {
+   "ItemCode": "Y2169174_089_01",
+   "StoreDescription": "İstanbul Nişantaşı",
+   "StoreCode": "11",
+   "TsoftStoreWsCode": "T10",
+   "AvailableStock": 0
+   },
+
+
+```
+
+<p>
+<code>TsoftStoreWsCode</code>: Ekleyebilmek için  <code>/srv/service/store/store-list/</code> servisi kullanılabilir. 
+
+</p>
+<p>
+<code>www.siteadi.com//srv/service/store/store-list/ </code> gibi
+
+</p>
