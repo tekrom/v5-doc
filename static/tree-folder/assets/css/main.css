@@ -199,3 +199,7 @@ body {
 .tooltip:hover::after {
   display: flex;
 }
+.has-iframe .fancybox__content {
+  width: 100% !important;
+  height: 100% !important;
+}
