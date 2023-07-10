@@ -16,6 +16,9 @@ https://sachinchoolur.github.io/lightgallery.js/docs/api.html
 ## Örnek Kullanımlar
 
 ### Görsel için
+Eğer döngü arasındaki resimlerden sadece bazılarını göstermek istiyorsak selector değerine göstermek istediğimiz classı yazmalıyız.
+Örneğin ürün detay sayfasında resimlerin arasında video göstermek istiyorsak ama bu videonun lightgallerye dahil olmasını istiniyorsak selector'u kullanabiliriz. Sadece göstermek istediğmiz resimlere özel class verip selectore onu eklemeliyiz.
+
 ```javascript title="javascript"
  lightGallery('#image-gallery', {
     actualSize : false,
@@ -24,28 +27,73 @@ https://sachinchoolur.github.io/lightgallery.js/docs/api.html
     animateThumb: false,
     showThumbByDefault: true,
     thumbWidth : 60,
+    //selector: '.show-only-this-class' 
 });
 ```
 
+Burada "show-only-this-class" classı olanlar sadece lightgalleryde kullanılabilir. 
+
 ```html title="html"
 <div id="image-gallery">
-    <a href="/test1.jpg"><img src="/test1.jpg"></a>
+    <a href="/test1.jpg" class="show-only-this-class"><img src="/test1.jpg"></a>
+    <a href="/test2.jpg" class="show-only-this-class"><img src="/test2.jpg"></a>
     <a href="/test2.jpg"><img src="/test2.jpg"></a>
 </div>
 ```
 ### Video için
+Videolar veya resim içinde video göstermek için de poster eklemek faydalı olacaktır. Böylece trafik kullanımı azalmış olacaktır.
+Eğer embed kodu eklenmek istenirse <code>data-iframe="true"</code> eklenmelidir. 
+Ama sadece video linki iletmek için data-iframe eklemeye gerek yoktur. 
+
+
+
 ```javascript title="javascript"
 lightGallery(document.getElementById('video-gallery'));
 ```
 
+
+
 ```html title="html"
 <div id="video-gallery">
-  <a href="https://www.youtube.com/watch?v=meBbDqAXago" data-poster="video-poster1.jpg" >
-      <img src="img/thumb1.jpg" />
-  </a>
-  <a href="https://vimeo.com/1084537" data-poster="video-poster2.jpg">
-      <img src="img/thumb2.jpg" />
-  </a>
+    <!-- Sadece resim -->
+
+    <a href="img/img1.jpg">
+        <img src="img/thumb1.jpg" />
+    </a>
+
+    <!-- YouTube Video --->
+    <a  href="//www.youtube.com/watch?v=EIUJfXk3_3w"
+        data-poster="...poster.jpg">
+        <img src="img/thumb1.jpg" />
+    </a>
+
+        <!-- YouTube Embed Video linki --->
+    <a  href="https://www.youtube.com/embed/5X669BF5dDY"
+        data-iframe="true" 
+        data-poster="...poster.jpg" >
+        <img src="img/thumb1.jpg" />
+    </a>
+
+    <!-- VImeo Video --->
+    <a  href="//vimeo.com/112836958"
+        data-poster="...poster.jpg">
+        <img src="img/thumb1.jpg" />
+    </a>
+
+    <!-- Wistia Video embed --->
+    <a  data-iframe="true"
+        href="https://private-sharing.wistia.com/medias/mwhrulrucj"
+        data-poster="...poster.jpg"> 
+        <img src="img/thumb1.jpg" />
+    </a>
+
+    <!-- HTML5 Video --->
+    <a  data-html='<video ><source src="/Data/EditorFiles/v5-design/video.mp4" type="video/mp4"></video>'
+        data-poster="...poster.jpg">
+        <img src="img/thumb1.jpg" />
+    </a>
+
+
 </div>
 ```
 
