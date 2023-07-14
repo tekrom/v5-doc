@@ -1,0 +1,74 @@
+---
+title: Cari Hareketler (ERP)
+---
+## Bayilerin ERP ile gelen cari hareketleri
+
+Bayi olan sitelerde bayi cari bilgilerini göstermek isteyen sitelerimiz T-SoftERP departmanına cari bilgilerini aşağıdaki formatta göndermelidirler. 
+
+
+
+
+ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şekilde olmalıdır.
+
+
+
+
+<p>
+<code>CUSTOMER_CODE</code>: Üye kodu
+</p>
+<p>
+<code>COMPANY_NAME</code>: Şirket ismi
+</p>
+
+<p>
+<code>EMAIL</code>: E-posta adresi
+</p>
+<p>
+<code>TIMESTAMP</code>: Tarih zamanı
+</p>
+<p>
+<code>DEBT</code>: Borç
+</p>
+<p>
+<code>CREDIT</code>: Alacak
+</p>
+<p>
+<code>BALANCE</code>: Bakiye
+</p>
+<p>
+<code>BALANCE_TEXT</code>: Alacak mı veya borç mu olduğu
+</p>
+<p>
+<code>TOTAL_DEBT</code>: toplam borç
+</p>
+<p>
+<code>TOTAL_CREDIT</code>: Toplam alacak
+</p>
+<p>
+<code>TOTAL_BALANCE</code>: Toplam bakiye
+</p>
+
+
+
+```json title="ERP departmanına gönderilmesi gereken format"
+
+ 
+[
+  {
+  "CUSTOMER_CODE": "T111",
+  "COMPANY_NAME": "COMPANY NAME",
+  "EMAIL": "info@email.com",
+  "TIMESTAMP": 1667854800,
+  "TRANSACTION_TYPE": "Toptan Satış Fat.",
+  "DEBT": 1234.45,
+  "CREDIT": 0,
+  "BALANCE": 67890.05,
+  "BALANCE_TEXT": "B", // A-B (Alacak veya Borç)
+  "TOTAL_DEBT": 1098644.379999999,
+  "TOTAL_CREDIT": 716105.520000001,
+  "TOTAL_BALANCE": 3825382.86
+}
+]
+
+
+```

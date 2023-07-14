@@ -150,10 +150,10 @@ module.exports = {
       'api-v5/tr-member-login-methods',
     ],
     '* Extra': [
-      'extra/tr-detail-asorti',
+      'extra/tr-detail-asorti-ERP',
       'extra/tr-detail-vertical-accordion',
       'extra/tr-detail-change-main-image',
-      'extra/tr-detail-which-store',
+      'extra/tr-detail-which-store-ERP',
       'extra/tr-list-horizontal-sort',
       'extra/tr-list-instock',
       'extra/tr-list-variant-image',
@@ -164,6 +164,7 @@ module.exports = {
       'extra/tr-image-map',
       'extra/tr-showcase-dowry-percent',
       'extra/tr-delivery-country',
+      'extra/tr-customer-current-payment-cari-ERP',
     ],
   },
 };
