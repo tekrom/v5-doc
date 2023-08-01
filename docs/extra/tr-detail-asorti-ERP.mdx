@@ -6,7 +6,7 @@ title: Ü Detay Asorti (ERP)
 
 * Ek bilgi alanlarından bir tanesine veri girilmelidir.
 * Girilen verinin formatı şu olmalıdır. 
-* <code>XXS-8|XS-1|S-2|L-10|XL-13|XXL-1#35</code>
+* <code>XXS:8|XS:1|S:2|L:10|XL:13|XXL:1#35</code>
 * Burada XXS-XS gibi veriler beden vb ifade eder.
 * 8-1  gibi değerler yanındaki bedenin miktarını ifade eder.
 * \# işaretinin sağ tarafındaki 35 ise asortideki toplam ürün miktarını ifade eder. Birim fiyat ve toplam asorti miktarı gösterilmeyecekse bu alan rakam olarak "0" (sıfır) gönderilir.
@@ -21,7 +21,7 @@ title: Ü Detay Asorti (ERP)
 {if $P.ADDITIONAL_FIELD_1}
     {$FIELD_EXPLODE="" value="#"|explode:$P.ADDITIONAL_FIELD_1}
     {$FIELD_ARRAY="" value="|"|explode:$FIELD_EXPLODE[0]}
-    {$FIELD_TOTAL="" value="|"|explode:$FIELD_EXPLODE[1]}
+    {$FIELD_TOTAL=$FIELD_EXPLODE[1]}
 
          <div class=" mb-1 asorti-wrapper">
             <div class="w-100 d-flex justify-content-between border border-round">
@@ -30,12 +30,12 @@ title: Ü Detay Asorti (ERP)
                 </div>
                 <div class="asorti-total-wrapper fw-bold d-flex align-items-center gap-1 px-1 text-primary">
                     <div class="asorti-count text-center ">
-                        {#asorti_total#} {$FIELD_EXPLODE[1]} {#asorti_total_count#}
+                        {#asorti_total#} {$FIELD_TOTAL} {#asorti_total_count#}
                     </div>
                     
                     <div class="asorti-piece-price text-center ">
                         {#price_of_piece#}
-                        {vat price=($P.PRICE_SELL / $FIELD_TOTAL[0]) vat=$P.VAT}
+                        {vat price=($P.PRICE_SELL / $FIELD_TOTAL) vat=$P.VAT}
                         {$P.TARGET_CURRENCY}
                     </div>
                 </div>
@@ -47,7 +47,7 @@ title: Ü Detay Asorti (ERP)
                         <div class="w-100 border p-1 ">{#asorti_count#}</div>
                     </div>
                     {foreach from=$FIELD_ARRAY item=FIELDS}
-                        {$FIELD="" value="-"|explode:$FIELDS}
+                        {$FIELD="" value=":"|explode:$FIELDS}
                         <div class="col p-0 asorti-item">
                             <div class="w-100 border p-1 asorti-key">{$FIELD[0]}</div>
                             <div class="w-100 border p-1 asorti-val">{$FIELD[1]}</div>
@@ -55,7 +55,7 @@ title: Ü Detay Asorti (ERP)
                     {/foreach}
                     {* <div class="col p-0 asorti-total-wrapper fw-bold ">
                         <div class="w-100 border p-1 h-100 d-flex flex-wrap align-items-center justify-content-center">
-                            {#asorti_total#} {$FIELD_EXPLODE[1]}{#asorti_total_count#}
+                            {#asorti_total#} {$FIELD_TOTAL} {#asorti_total_count#}
                         </div>
                     </div> *}
                 </div>

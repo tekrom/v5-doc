@@ -39,6 +39,9 @@ ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şeki
 <code>BALANCE_TEXT</code>: Alacak mı veya borç mu olduğu
 </p>
 <p>
+<code>CURRENCY</code>: Para birimi
+</p>
+<p>
 <code>TOTAL_DEBT</code>: toplam borç
 </p>
 <p>
@@ -55,19 +58,20 @@ ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şeki
  
 [
   {
-  "CUSTOMER_CODE": "T111",
-  "COMPANY_NAME": "COMPANY NAME",
-  "EMAIL": "info@email.com",
-  "TIMESTAMP": 1667854800,
-  "TRANSACTION_TYPE": "Toptan Satış Fat.",
-  "DEBT": 1234.45,
-  "CREDIT": 0,
-  "BALANCE": 67890.05,
-  "BALANCE_TEXT": "B", // A-B (Alacak veya Borç)
-  "TOTAL_DEBT": 1098644.379999999,
-  "TOTAL_CREDIT": 716105.520000001,
-  "TOTAL_BALANCE": 3825382.86
-}
+    "CUSTOMER_CODE": "T111",
+    "COMPANY_NAME": "COMPANY NAME",
+    "EMAIL": "info@email.com",
+    "TIMESTAMP": 1667854800,
+    "TRANSACTION_TYPE": "Toptan Satış Fat.",
+    "DEBT": 1234.45,
+    "CREDIT": 0,
+    "BALANCE": 67890.05,
+    "BALANCE_TEXT": "B", // A-B (Alacak veya Borç)
+    "CURRENCY": "TL",
+    "TOTAL_DEBT": 1098644.379999999,
+    "TOTAL_CREDIT": 716105.520000001,
+    "TOTAL_BALANCE": 3825382.86
+  }
 ]
 
 
