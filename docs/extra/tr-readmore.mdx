@@ -3,79 +3,71 @@ title: Daha fazla oku
 ---
 ## Özellikle SEO alanları oluşturmak için kullanılır
 Kategori Üst Vitrin- Alt Vitrin için kullanılabilir. 
-## Daha fazla oku SEO
-```html title="Smarty"
-<div class="w-100 readmore-wrapper position-relative pb-2">
-   <div class="readmore-content ease overflow-hidden p-1" style="height: 80px;">
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae incidunt laboriosam cumque quibusdam
-         maxime  numquam minima dignissimos adipisci cum quisquam laborum suscipit officia quasi dicta doloribus animi illo,
-         culpa  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae incidunt laboriosam cumque quibusdam
-         maxime numquam minima dignissimos adipisci cum quisquam laborum suscipit officia quasi dicta doloribus animi illo,
-         culpa Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae incidunt laboriosam cumque quibusdam
-         maxime numquam minima dignissimos adipisci cum quisquam laborum suscipit officia quasi dicta doloribus animi illo,
-         culpa
-   </div>
-   <div class="readmore-btn-wrapper w-100 position-absolute bottom-0">
-      <span class="p-1 more readmore-btn d-block py-1 text-underline fw-bold">{#read_more#}</span>
-      <span class="p-1 less readmore-btn d-block py-1 text-underline fw-bold d-none">{#read_less#}</span>
-   </div>
-</div>
-```
+
 ## Daha fazla oku Üst Alt Vitrin
 ```html title="Smarty"
 {category id="{$TABLE_ID}" assign="CATEGORY"}
 {if $CATEGORY|@count ||  $SHOWCASE_CONTENT}
-<div class="w-100 readmore-wrapper position-relative pb-2">
-   <div class="readmore-content ease overflow-hidden p-1" style="height: 80px;">
-         {if $CATEGORY.NAME}
-            <h2 class="category-name">{$CATEGORY.NAME}</h2>
-         {/if}
-         {if $CATEGORY.DESCRIPTION}
-            <div class="category-description">{$CATEGORY.DESCRIPTION}</div>
-         {/if}
-         {if $SHOWCASE_CONTENT}
-            <div class="showcase-content">{$SHOWCASE_CONTENT}</div>
-         {/if}
-   </div>
-   <div class="readmore-btn-wrapper w-100 position-absolute bottom-0">
-      <span class="p-1 more readmore-btn d-block py-1 text-underline fw-bold">{#read_more#}</span>
-      <span class="p-1 less readmore-btn d-block py-1 text-underline fw-bold d-none">{#read_less#}</span>
-   </div>
-</div>
+    {if $SHOWCASE_CONTENT != ""}
+        <div class="col-12 px-0 my-1">
+            <div class="w-100 readmore-wrapper position-relative pb-5 pb-sm-3 px-0">
+                <div class="readmore-content-{$BLOCK.ID} ease overflow-hidden p-1 top-bottom-info" style="height: 140px;">
+                {if $CATEGORY.NAME}
+                    <h2 class="category-name">{$CATEGORY.NAME}</h2>
+                 {/if}
+                 {if $CATEGORY.DESCRIPTION}
+                    <div class="category-description">{$CATEGORY.DESCRIPTION}</div>
+                 {/if}
+                    {if $SHOWCASE_CONTENT}
+                        <div class="showcase-content-{$BLOCK.ID}">{$SHOWCASE_CONTENT}</div>
+                    {/if}
+                </div>
+                <div class="readmore-btn-wrapper px-1 w-100 position-absolute bottom-0">
+                    <span class="more-{$BLOCK.ID} readmore-btn-{$BLOCK.ID} py-1 fw-bold">{#read_more#}</span>
+                    <span class="less-{$BLOCK.ID} readmore-btn-{$BLOCK.ID} py-1 fw-bold d-none">{#read_less#}</span>
+                </div>
+            </div>
+        </div>
+    {/if}
 {/if}
 ```
 ## Javascript
 ```javascript title="javascript"
-let content = T(`.readmore-content`);
-let contentImg=T(`.readmore-content img`); // resim olduğu durumlarda
-let contentHeight = parseInt(content.height());
-if(contentImg.length){
-   contentHeight+=parseInt(contentImg.height()); // contentImg alanı resim olan durumlar için
+let content = T(`.readmore-content-${BLOCK.ID}`);
+if (content.length) {
+  let contentHeight = content.height();
+  let contentScrollHeight = content[0].scrollHeight;
+  if (content && contentHeight >= contentScrollHeight) {
+    T(`.readmore-btn-wrapper`)[0].remove();
+  } else {
+    content.height(contentHeight);
+    T(`.more-${BLOCK.ID}`).attr("data-height", contentScrollHeight);
+    T(`.less-${BLOCK.ID}`).attr("data-height", contentHeight);
+  }
+
+  T(`.readmore-btn-${BLOCK.ID}`).on(`click`, function (e) {
+    T(`.readmore-btn-${BLOCK.ID}`).toggleClass("d-none");
+    content.toggleClass("active");
+    content.height(T(this).attr("data-height"));
+  });
 }
-let contentScrollHeight = content[0].scrollHeight;
-if (content && contentHeight >= contentScrollHeight) {
-  T(`.readmore-btn-wrapper`)[0].remove();
-} else {
-  content.height(contentHeight);
-  T(`.more`).attr("data-height", contentScrollHeight);
-  T(`.less`).attr("data-height", contentHeight);
-}
-T(`.readmore-btn`).on(`click`, function (e) {
-  T(`.readmore-btn`).toggleClass("d-none");
-  content.toggleClass("active");
-  content.height(T(this).attr("data-height"));
-});
 ```
 ## Scss
 ```scss title="scss"
 @include BLOCK {
-    .readmore-content{
-        transition: all .5s;
+  .top-bottom-info {
+    line-height: 166%;
+  }
+  [class^="readmore-btn-"] {
+    span {
+      color: $textPrimary;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: underline;
     }
-    .readmore-btn-wrapper{
-        background: rgb(255,255,255);
-        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 100%);
-    }
+  }
 }
 ```
 ## Dil Değişkenleri 
