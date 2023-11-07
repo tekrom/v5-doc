@@ -4,10 +4,10 @@ title: Ü Detay Mağaza Stok (ERP)
 ## Hangi mağazada ne kadar stok kaldığını gösterir
 
 
-Mağaza bazlı stok göstermek isteyen sitelerimiz Tsoft ERP departmanına hangi mağazada ne kadar stok kaldığına dair verileri göndermek durumundadırlar.
+Mağaza bazlı stok göstermek isteyen sitelerimiz T-Soft ERP departmanına hangi mağazada ne kadar stok kaldığına dair verileri göndermek durumundadırlar.
 Sistem şu şekilde çalışır
-Tsoft tarafı ana ürünün webservis kodunu karşı tarafa iletir.
-Karşı taraf bu veriler ışığında Tsoft ERP departmanına aşağıdaki verileri döner.
+T-Soft tarafı ana ürünün webservis kodunu karşı tarafa iletir.
+Karşı taraf bu veriler ışığında T-Soft ERP departmanına aşağıdaki verileri döner.
 Eğer ürünün varyantı varsa tüm varyantların verilerilerini döner.
 
 ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şekilde olmalıdır.
@@ -16,7 +16,7 @@ ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şeki
 
 
 <p>
-<code>ItemCode</code>: Ürün (Varsa alt ürünün) webservis kodu
+<code>ItemCode</code>: Ürün varyantının webservis kodu
 </p>
 
 <p>
@@ -28,7 +28,7 @@ ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şeki
 </p>
 
 <p>
-<code>TsoftStoreWsCode</code>: Tsoft alt yapısındaki mağaza web servis kodu
+<code>TsoftStoreWsCode</code>: T-Soft alt yapısındaki mağaza web servis kodu
 </p>
 
 <p>
@@ -56,5 +56,11 @@ ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şeki
 </p>
 <p>
 <code>www.siteadi.com/srv/service/store/store-list/ </code> gibi
+
+</p>
+
+Tüm bunların sonucunda eğer Hangi Mağazada Var lisansı aktif ise 
+<p>
+<code>www.siteadi.com/Diger/Erp/erp.php?operation=Store&code=ANAURUNWSKODU123 </code> gibi bir endpointten veriler döner ve önyüzde gösterim sağlanır.
 
 </p>
