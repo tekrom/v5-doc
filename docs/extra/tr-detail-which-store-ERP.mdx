@@ -8,7 +8,7 @@ Mağaza bazlı stok göstermek isteyen sitelerimiz T-Soft ERP departmanına hang
 Sistem şu şekilde çalışır
 T-Soft tarafı ana ürünün webservis kodunu karşı tarafa iletir.
 Karşı taraf bu veriler ışığında T-Soft ERP departmanına aşağıdaki verileri döner.
-Eğer ürünün varyantı varsa tüm varyantların verilerilerini döner.
+Eğer ürünün varyantı varsa üründeki tüm varyantların verilerilerini döner.
 
 ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şekilde olmalıdır.
 
@@ -16,23 +16,19 @@ ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şeki
 
 
 <p>
-<code>ItemCode</code>: Ürün varyantının webservis kodu
+<code>ITEM_CODE</code>: Ürün varyantının (yoksa ürünün) webservis kodu
 </p>
 
 <p>
-<code>StoreDescription</code>: Mağaza Adı
+<code>STORE_DESCRIPTION</code>: Mağaza Adı
 </p>
 
 <p>
-<code>StoreCode</code>: Mağaza Kodu 
+<code>STORE_CODE</code>: Mağaza Kodu (T-Soft Altyapısındaki web servis kodu da bu koda eşitlenmelidir. )
 </p>
 
 <p>
-<code>TsoftStoreWsCode</code>: T-Soft alt yapısındaki mağaza web servis kodu
-</p>
-
-<p>
-<code>AvailableStock</code>: Ürün (Varsa alt ürünün) stok miktarı
+<code>AVAILABLE_STOCK</code>:Ürün varyantının (yoksa ürünün) stok miktarı
 </p>
 
 
@@ -40,22 +36,27 @@ ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şeki
 ```json title="ERP departmanına gönderilmesi gereken format"
 
  {
-   "ItemCode": "Y2169174_089_01",
-   "StoreDescription": "İstanbul Nişantaşı",
-   "StoreCode": "11",
-   "TsoftStoreWsCode": "T10",
-   "AvailableStock": 0
+   "ITEM_CODE": "Y2169174_089_01",
+   "STORE_DESCRIPTION": "İstanbul Nişantaşı",
+   "STORE_CODE": "T11",
+   "AVAILABLE_STOCK": 0
    },
 
 
 ```
 
 <p>
-<code>TsoftStoreWsCode</code>: Ekleyebilmek için  <code>/srv/service/store/store-list/</code> servisi kullanılabilir. 
+<code>STORE_CODE</code> değeri aynı zamanda T-Soft altyapısındaki mağazaların ws_code değeri ile aynı olmalıdır. </p>
 
-</p>
 <p>
-<code>www.siteadi.com/srv/service/store/store-list/ </code> gibi
+Eğer T-Soft altyapısındaki websitenizde mağazalar web servis kodu alanı yönetilebilir durumda değil ise Ayarlar > Genel Ayarlar alanından <code>Mağaza Web Servis Kodu Yönetilebilsin</code> ayarı aktif edilmelidir. 
+</p>
+
+ <code>www.siteadi.com/srv/service/store/store-list/</code> servisinde de T-Soft altyapısındaki mağazalar görünmektedir.  
+
+
+<p>
+
 
 </p>
 
@@ -64,3 +65,11 @@ Tüm bunların sonucunda eğer Hangi Mağazada Var lisansı aktif ise
 <code>www.siteadi.com/Diger/Erp/erp.php?operation=Store&code=ANAURUNWSKODU123 </code> gibi bir endpointten veriler döner ve önyüzde gösterim sağlanır.
 
 </p>
+
+
+
+
+
+        
+
+
