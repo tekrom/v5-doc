@@ -25,6 +25,7 @@ function Home() {
             <div>
               T-Soft ana sayfasına gitmek için <a href="https://tsoft.com.tr" target="_blank">Tıkla</a>
             </div>
+          
           </Text>
         </SectionHeader>
       </Section>
