@@ -98,7 +98,6 @@ module.exports = {
     ],
     '* Servisler V5': [
       'api-v5/tr-general',
-      'api-v5/tr-filemanager',
       'api-v5/tr-address',
       'api-v5/tr-messages',
       'api-v5/tr-member-login-methods',
