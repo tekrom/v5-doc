@@ -5,7 +5,7 @@ title: Sepette Extra İndirim
 ```html title="smarty"
     {if $P.NUMERIC1 && $P.IS_DISPLAY_PRODUCT == 0}
         <div class="col-auto text-content text-center border border-round border-primary fw-semibold extra-format" data-extra="{$P.NUMERIC1}">
-        {capture assign=PRICE} <strong class="text-primary"><span class="cart-price">{vat price=($P.PRICE_SELL - ($P.PRICE_SELL * $P.NUMERIC1/100)) vat=$P.VAT}</span>{$P.CURRENCY}</strong>{/capture}
+        {capture assign=PRICE} <strong class="text-primary"><span class="cart-price">{vat price=($P.PRICE_SELL - ($P.PRICE_SELL * $P.NUMERIC1/100)) vat=$P.VAT}</span>{$P.TARGET_CURRENCY}</strong>{/capture}
         {{#extra_cart_desc#}|replace:'%DISCOUNT%':$P.NUMERIC1|replace:"%PRICE%":$PRICE}
         </div>
     {/if}
