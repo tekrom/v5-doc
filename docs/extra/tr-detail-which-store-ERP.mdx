@@ -16,19 +16,22 @@ ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şeki
 
 
 <p>
-<code>ITEM_CODE</code>: Ürün varyantının (yoksa ürünün) webservis kodu
+<code>item_code</code>: Ürün varyantının (yoksa ürünün) webservis kodu
 </p>
 
 <p>
-<code>STORE_DESCRIPTION</code>: Mağaza Adı
+<code>store_description</code>: Mağaza Adı
 </p>
 
 <p>
-<code>STORE_CODE</code>: Mağaza Kodu (T-Soft Altyapısındaki web servis kodu da bu koda eşitlenmelidir. )
+<code>store_code</code>: Mağaza Kodu (T-Soft Altyapısındaki web servis kodu da bu koda eşitlenmelidir. )
+</p>
+<p>
+<code>ws_code</code>: T-Soft Mağazasındaki Kodu (T-Soft Altyapısındaki web servis kodu da bu koda eşitlenmelidir.)
 </p>
 
 <p>
-<code>AVAILABLE_STOCK</code>:Ürün varyantının (yoksa ürünün) stok miktarı
+<code>avaliable_stock</code>:Ürün varyantının (yoksa ürünün) stok miktarı
 </p>
 
 
@@ -36,10 +39,11 @@ ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şeki
 ```json title="ERP departmanına gönderilmesi gereken format"
 
  {
-   "ITEM_CODE": "Y2169174_089_01",
-   "STORE_DESCRIPTION": "İstanbul Nişantaşı",
-   "STORE_CODE": "T11",
-   "AVAILABLE_STOCK": 0
+"item_code": "4111853009",
+"store_description": "KAHRAMANMARAŞ PİAZZA AVM T-SOFT MAĞAZA",
+"store_code": "3200",
+"ws_code": "3200",
+"avaliable_stock": 1
    },
 
 

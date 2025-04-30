@@ -14,41 +14,44 @@ ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şeki
 
 
 <p>
-<code>CUSTOMER_CODE</code>: Üye kodu
+<code>customer_code</code>: Üye kodu
 </p>
 <p>
-<code>COMPANY_NAME</code>: Şirket ismi
+<code>company_name</code>: Şirket ismi
 </p>
 
 <p>
-<code>EMAIL</code>: E-posta adresi
+<code>email</code>: E-posta adresi
 </p>
 <p>
-<code>TIMESTAMP</code>: Tarih zamanı
+<code>timestamp</code>: Tarih zamanı
 </p>
 <p>
-<code>DEBT</code>: Borç
+<code>transaction_type</code>: Ödeme türü
 </p>
 <p>
-<code>CREDIT</code>: Alacak
+<code>debt</code>: Borç
 </p>
 <p>
-<code>BALANCE</code>: Bakiye
+<code>credit</code>: Alacak
 </p>
 <p>
-<code>BALANCE_TEXT</code>: Alacak mı veya borç mu olduğu
+<code>balance</code>: Bakiye
 </p>
 <p>
-<code>CURRENCY</code>: Para birimi
+<code>balance_text</code>: Alacak mı veya borç mu olduğu
 </p>
 <p>
-<code>TOTAL_DEBT</code>: toplam borç
+<code>currency</code>: Para birimi
 </p>
 <p>
-<code>TOTAL_CREDIT</code>: Toplam alacak
+<code>total_debt</code>: toplam borç
 </p>
 <p>
-<code>TOTAL_BALANCE</code>: Toplam bakiye
+<code>total_credit</code>: Toplam alacak
+</p>
+<p>
+<code>otal_balance</code>: Toplam bakiye
 </p>
 
 
@@ -58,19 +61,19 @@ ERP departmanına gönderilmesi gereken veriler ve verilerin  formatı şu şeki
  
 [
   {
-    "CUSTOMER_CODE": "T111",
-    "COMPANY_NAME": "COMPANY NAME",
-    "EMAIL": "info@email.com",
-    "TIMESTAMP": 1667854800,
-    "TRANSACTION_TYPE": "Toptan Satış Fat.",
-    "DEBT": 1234.45,
-    "CREDIT": 0,
-    "BALANCE": 67890.05,
-    "BALANCE_TEXT": "B", // A-B (Alacak veya Borç)
-    "CURRENCY": "TL",
-    "TOTAL_DEBT": 1098644.379999999,
-    "TOTAL_CREDIT": 716105.520000001,
-    "TOTAL_BALANCE": 3825382.86
+  "customer_code": "T111",
+  "company_name": "COMPANY NAME",
+  "email": "info@email.com",
+  "timestamp": 1667854800,
+  "transaction_type": "Toptan Satış Fat.",
+  "debt": 1234.45,
+  "credit": 0,
+  "balance": 67890.05,
+  "balance_text": "B",
+  "currency": "TL",
+  "total_debt": 1098644.379999999,
+  "total_credit": 716105.520000001,
+  "total_balance": 3825382.86
   }
 ]
 
